@@ -3,4 +3,4 @@ class Mule.Routers.Submissions extends Backbone.Router
     '':'index'
 
   index: ->
-    alert "home page"
+

@@ -35,6 +35,7 @@ end
 
 group :test, :development do
   gem 'jasmine-rails'
+  gem "jasmine-jquery-rails", "~> 2.0.2"
 end
 
 # Use ActiveModel has_secure_password
