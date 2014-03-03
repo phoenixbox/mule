@@ -1,4 +1,4 @@
-describe 'submission view', ->
+describe 'Submission view', ->
   beforeEach ->
     $('body').append('<ul id="submissionList"></ul>')
     @submissionView = new Mule.Views.SubmissionsIndex({model: new Mule.Models.Submission()})
@@ -13,5 +13,6 @@ describe 'submission view', ->
   it 'should have a class of submissions', ->
     expect(@submissionView.el.className).toBe('submissions')
 
-  it 'should be backed by a model instance', ->
+  it 'should be backed by a model instance with default values', ->
     expect(@submissionView.model).toBeDefined()
+    expect(@submissionView.model.get('done')).toBe(false)

@@ -5,3 +5,6 @@ class Mule.Views.SubmissionsIndex extends Backbone.View
   tagName: 'li'
 
   className: 'submissions'
+
+  render: ->
+    @$el.html(@template(submission: @model));
