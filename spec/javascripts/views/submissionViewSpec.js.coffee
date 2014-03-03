@@ -12,3 +12,6 @@ describe 'submission view', ->
 
   it 'should have a class of submissions', ->
     expect(@submissionView.el.className).toBe('submissions')
+
+  it 'should be backed by a model instance', ->
+    expect(@submissionView.model).toBeDefined()
