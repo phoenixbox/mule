@@ -9,8 +9,9 @@ describe 'Submission View Rendering', ->
 
   describe 'Rendering', ->
     it 'returns the view object', ->
-      expect(@view.render()).toEqual(@view)
+      expect(@view.render()).toEqual(@view.el)
 
-    it 'produces the correct markup', ->
+    it 'produces the correct markup structure and content', ->
       @view.render()
-      expect(@view.el.innerHTML).toContain('<label class="submission-content">Submission Content</label>')
+      expect(@view.el).toContainElement('label.submission-content')
+      expect(@view.el.innerHTML).toEqual('<label class="submission-content">Submission Content</label>')

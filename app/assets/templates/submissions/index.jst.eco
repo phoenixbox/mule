@@ -1,1 +1,1 @@
-<label class="submission-content"><%= @submission.get('text') %></label>
+<label class="submission-content"><%= @submission.get('text') %></label
