@@ -101,22 +101,32 @@ html {
       }
       .subheaderCopy {
         position: fixed;
+        width: 70%;
         top: 75%;
         left: 16%;
         z-index: 1;
+        .row {
+          background-color: white;
+          height: 60px;
 
+          .col-md-4 {
+            text-align: center;
+            vertical-align: middle;
+            line-height: 60px;
+            height: 100%;
+            border: 1px solid $mule-aqua;
+            color: $mule-aqua;
+            font-size: 40px;
+            font-family: $melbourne_light_font;
+            letter-spacing:5px
+          }
+        }
         .keyword {
           float: left;
           height: 100%;
           width: 260px;
           overflow: auto;
           margin-left: 50px;
-        }
-        p {
-          color: white;
-          font-size: 40px;
-          font-family: $melbourne_light_font;
-          letter-spacing:5px
         }
       }
     }

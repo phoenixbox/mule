@@ -17,17 +17,13 @@
   <div class='headerCopy'>
     <h2>The Moving Revolution</h2>
   </div>
-  <span class='subheaderCopy'>
-    <div class='keyword'>
-      <p>Trust</p>
+  <div class='subheaderCopy'>
+    <div class="row">
+      <div class="col-md-4">Trust</div>
+      <div class="col-md-4">Transparency</div>
+      <div class="col-md-4">Control</div>
     </div>
-    <div class='keyword'>
-      <p>Transparency</p>
-    </div>
-    <div class='keyword'>
-      <p>Control</p>
-    </div>
-  </span>
+  </div>
 </div>
 <div class='header'></div>
 <div class='content'>
