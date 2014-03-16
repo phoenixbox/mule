@@ -12,8 +12,10 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require twitter/bootstrap
 //= require jasmine-jquery
 //= require turbolinks
+//= require bootstrap
 //= require underscore
 //= require backbone
 //= require mule

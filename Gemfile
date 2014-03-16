@@ -14,6 +14,9 @@ gem 'uglifier', '>= 1.3.0'
 
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '~> 4.0.0'
+gem 'compass-rails', '~> 1.1.6'
+gem 'bootstrap-sass', '~> 3.1.1.0'
+gem 'twitter-bootstrap-rails', '~> 2.2.8'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
@@ -35,7 +38,7 @@ end
 
 group :test, :development do
   gem 'jasmine-rails'
-  gem "jasmine-jquery-rails", "~> 2.0.2"
+  gem 'jasmine-jquery-rails', '~> 2.0.2'
 end
 
 # Use ActiveModel has_secure_password

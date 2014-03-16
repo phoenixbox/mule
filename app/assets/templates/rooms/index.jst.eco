@@ -1,0 +1,14 @@
+<div id='nav'>
+  <div id='logo'></div>
+</div>
+<div id='hero'>
+  <div class="jumbotron">
+    <div class="container">
+      <h1>Welcome to the Mule Revolution</h1>
+      <p>Transparency Control Safety</p>
+      <p><a class="btn btn-primary btn-lg" role="button">Get Started</a></p>
+    </div>
+  </div>
+</div>
+<div id='cta'></div>
+<div id='footer'></div>

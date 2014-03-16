@@ -5,7 +5,7 @@ window.Mule =
   Routers: {}
 
   initialize: ->
-    new Mule.Routers.Submissions()
+    new Mule.Routers()
     Backbone.history.start()
 
 $(document).ready ->
