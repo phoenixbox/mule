@@ -1,14 +1,44 @@
 <div id='nav'>
   <div id='logo'></div>
 </div>
-<div id='hero'>
+<!-- <div id='hero'>
   <div class="jumbotron">
     <div class="container">
-      <h1>Welcome to the Mule Revolution</h1>
+      <h1>Mule</h1>
+      <h2>Welcome to the moving revolution</h2>
       <p>Transparency Control Safety</p>
       <p><a class="btn btn-primary btn-lg" role="button">Get Started</a></p>
     </div>
   </div>
+</div> -->
+<div class='opening'>
+  <div class='heroImage'>
+  </div>
+  <div class='headerCopy'>
+    <h2>The Moving Revolution</h2>
+  </div>
+  <span class='subheaderCopy'>
+    <div class='keyword'>
+      <p>Trust</p>
+    </div>
+    <div class='keyword'>
+      <p>Transparency</p>
+    </div>
+    <div class='keyword'>
+      <p>Control</p>
+    </div>
+  </span>
 </div>
-<div id='cta'></div>
+<div class='header'></div>
+<div class='content'>
+  <div class='firstArticle'>
+    <div id='cta'>
+      <div class='section'>
+        <div class='number'></div>
+        <div class='title'></div>
+        <div class='text'></div>
+      </div>
+    </div>
+  </div>
+</div>
 <div id='footer'></div>
