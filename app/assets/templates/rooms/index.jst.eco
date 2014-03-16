@@ -1,23 +1,17 @@
 <div id='nav'>
   <div id='logo'></div>
 </div>
-<!-- <div id='hero'>
-  <div class="jumbotron">
-    <div class="container">
-      <h1>Mule</h1>
-      <h2>Welcome to the moving revolution</h2>
-      <p>Transparency Control Safety</p>
-      <p><a class="btn btn-primary btn-lg" role="button">Get Started</a></p>
+<div class='opening'>
+  <div class='hero-image'>
+  </div>
+  <div class='header-copy'>
+    <div class="row">
+       <div class="col-md-12">
+          <h2>The Moving Revolution</h2>
+       </div>
     </div>
   </div>
-</div> -->
-<div class='opening'>
-  <div class='heroImage'>
-  </div>
-  <div class='headerCopy'>
-    <h2>The Moving Revolution</h2>
-  </div>
-  <div class='subheaderCopy'>
+  <div class='subheader-copy'>
     <div class="row">
       <div class="col-md-4">Trust</div>
       <div class="col-md-4">Transparency</div>
@@ -25,14 +19,70 @@
     </div>
   </div>
 </div>
-<div class='header'></div>
 <div class='content'>
-  <div class='firstArticle'>
-    <div id='cta'>
-      <div class='section'>
-        <div class='number'></div>
-        <div class='title'></div>
-        <div class='text'></div>
+  <div class='mule-process'>
+    <div class='points'>
+      <div class='row'>
+        <div class="col-md-4">
+          <div class='bounding-box'>
+            <div class='number'></div>
+            <div class='title'></div>
+            <div class='blurb'></div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class='bounding-box'>
+            <div class='number'></div>
+            <div class='title'></div>
+            <div class='blurb'></div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class='bounding-box'>
+            <div class='number'></div>
+            <div class='title'></div>
+            <div class='blurb'></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class='cta'>
+    <div class='row'>
+      <div class="col-md-12">
+        <div class='action-block'>
+          <div class='title'></div>
+          <div class='action-icon'></div>
+          <div class='subheader'></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class='message-reinforce'>
+    <div class='row'>
+      <div class=class="col-md-4">
+        <div class='header'></div>
+        <div class='blurb'></div>
+      </div>
+      <div class=class="col-md-4">
+        <div class='header'></div>
+        <div class='blurb'></div>
+      </div>
+      <div class=class="col-md-4">
+        <div class='header'></div>
+        <div class='blurb'></div>
+      </div>
+    </div>
+    <div class='row'>
+      <div class="col-md-12">
+        <!-- <div id='logo'></div>
+        <div class='subheader-copy'>
+          <div class="row">
+            <div class="col-md-4">Trust</div>
+            <div class="col-md-4">Transparency</div>
+            <div class="col-md-4">Control</div>
+          </div>
+        </div> -->
       </div>
     </div>
   </div>

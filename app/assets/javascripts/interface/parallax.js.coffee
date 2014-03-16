@@ -2,13 +2,13 @@ parallaxScroll = () =>
   currentScrollPosition = $(this).scrollTop()
   $('.opening').css
     'background-position' : '50% ' + ( -currentScrollPosition / 4 ) + 'px'
-  $('.heroImage').css
+  $('.hero-image').css
     'margin-top' : ( currentScrollPosition / 4 ) + "px"
     'opacity' : 1 - ( currentScrollPosition / 250 )
-  $('.headerCopy').css
+  $('.header-copy').css
     'margin-top' : ( currentScrollPosition / 4 ) + "px"
     'opacity' : 1 - ( currentScrollPosition / 250 )
-  $('.subheaderCopy').css
+  $('.subheader-copy').css
     'margin-top' : ( currentScrollPosition / 4 ) + "px"
     'opacity' : 1 - ( currentScrollPosition / 250 )
 
