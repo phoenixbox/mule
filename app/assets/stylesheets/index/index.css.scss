@@ -127,13 +127,32 @@ html {
             border: 5px solid white;
             box-sizing: border-box;
 
-            .number {
-              margin-top: 4%;
-              height: 30%;
-              width: 25%;
+            .number-one {
+              margin: 4% auto;
+              height: 100px;
+              width: 60px;
               left: 50%;
-              margin: 0 auto;
-              background-color: $mule-grey;
+              background-image: image-url("one_140.png");
+              background-size: cover;
+              background-repeat: no-repeat;
+            }
+            .number-two {
+              margin: 4% auto;
+              height: 100px;
+              width: 60px;
+              left: 50%;
+              background-image: image-url("two_140.png");
+              background-size: cover;
+              background-repeat: no-repeat;
+            }
+            .number-three {
+              margin: 4% auto;
+              height: 100px;
+              width: 60px;
+              left: 50%;
+              background-image: image-url("three_140.png");
+              background-size: cover;
+              background-repeat: no-repeat;
             }
             .title {
               margin-top: 4%;

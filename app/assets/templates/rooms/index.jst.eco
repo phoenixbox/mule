@@ -25,21 +25,21 @@
       <div class='row'>
         <div class="col-md-4">
           <div class='bounding-box'>
-            <div class='number'></div>
+            <div class='number-one'></div>
             <div class='title'></div>
             <div class='blurb'></div>
           </div>
         </div>
         <div class="col-md-4">
           <div class='bounding-box'>
-            <div class='number'></div>
+            <div class='number-two'></div>
             <div class='title'></div>
             <div class='blurb'></div>
           </div>
         </div>
         <div class="col-md-4">
           <div class='bounding-box'>
-            <div class='number'></div>
+            <div class='number-three'></div>
             <div class='title'></div>
             <div class='blurb'></div>
           </div>
