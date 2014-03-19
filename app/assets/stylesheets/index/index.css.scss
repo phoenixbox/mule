@@ -102,48 +102,8 @@ html {
         }
       }
     }
-
-    // .header {
-    //   position: absolute;
-    //   top: 100%;
-    //   left: 0;
-    //   width: 100%;
-    //   background: #F5F7FA;
-    //   z-index: 200;
-
-    //   a {
-    //     color: #434A54;
-    //     width: 25%;
-    //     float: left;
-    //     font-size: 20px;
-    //     padding-top: 20px;
-    //     padding-bottom: 20px;
-        // border: 1px solid black;
-        // box-sizing: border-box;
-    //     color: #F5F7FA;
-    //     background: #434A54;
-    //   }
-    // }
-
-    // .sideBar {
-    //   width: 25%;
-    //   height: calc(unquote('100% - 70px'));
-    //   height: calc(unquote('100% - 70px'));
-    //   position: absolute;
-    //   top: calc(unquote('100% + 70px'));
-    //   top: -webkit-calc(unquote('100% + 70px'));
-    //   left: 0;
-    //   color: #434A54;
-
-    //   ul {
-    //     padding-top: 100px;
-
-    //     li {
-    //       padding: 20px;
-    //       list-style-type: none;
-    //     }
-    //   }
-    // }
+    // border: 1px solid black;
+    // box-sizing: border-box;
     .content {
       width: 100%;
       height: 100%;
@@ -157,39 +117,34 @@ html {
       .mule-process {
         background-color: $mule-aqua;
         position: relative;
+        height: 360px;
 
         .col-md-4 {
-          height: 350px;
-
-          .stretch {
-              width: 100%;
-              display: inline-block;
-              font-size: 0;
-              line-height: 0
-          }
-
           .bounding-box {
             vertical-align: top;
             margin: 10px auto;
-            height: 330px;
-            width:95%;
+            height: 340px;
+            width: 75%;
             border: 5px solid white;
             box-sizing: border-box;
 
             .number {
-              height: 26.4%;
-              width: 100%;
+              margin-top: 4%;
+              height: 30%;
+              width: 25%;
+              left: 50%;
+              margin: 0 auto;
               background-color: $mule-grey;
             }
             .title {
-              margin-top: 2%;
-              height: 12%;
+              margin-top: 4%;
+              height: 13%;
               width: 100%;
               background-color: $mule-grey;
             }
             .blurb {
-              margin-top: 2%;
-              height: 56.7%;
+              margin-top: 4%;
+              height: 50%;
               width: 100%;
               background-color: $mule-grey;
             }
@@ -207,35 +162,36 @@ html {
             line-height: 1.8;
             padding: 5px 15px;
           }
-
-          .title {
-
-          }
-          .text {
-
-          }
         }
       }
       .cta {
         .col-md-12 {
-          background-color: green;
-          height: 100%;
-          border: 3px solid white;
-          box-sizing: border-box;
+          background-color: white;
 
           .action-block {
             margin: 0 auto;
             width: 50%;
-            background-color: $mule-grey;
-            height: 480px;
+            height: 100%;
 
             .title {
-              background-color: white;
+              color: $mule-aqua;
               height: 100px;
+              letter-spacing: 5px;
+              font-size: 65px;
+              font-family: $bebas_neue_font;
+              text-align: center;
+              vertical-align: middle;
             }
             .action-icon {
-              background-color: white;
-              height: 280px;
+              background-color: $mule-grey;
+              background-image: image-url("notes_icon_400.png");
+              background-repeat: no-repeat;
+              background-position: center;
+              background-size:contain;
+              height: 400px;
+              width: 500px;
+              left: 50%;
+              margin: 0 auto;
             }
             .subheader {
               background-color: white;
@@ -246,19 +202,18 @@ html {
       }
       .message-reinforce {
         background-color: $mule-aqua;
+        height:100%;
 
         .row {
-          height:100%;
+          height:200px;
           .col-md-4 {
-            height: 600px;
-            border: 3px solid white;
+            height: 400px;
+            border: 5px solid red;
             box-sizing: border-box;
           }
           .col-md-12 {
             background-color: $mule-grey;
             height: 200px;
-            border: 3px solid white;
-            box-sizing: border-box;
           }
         }
       }
