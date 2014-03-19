@@ -49,17 +49,28 @@
   </div>
   <div class='cta'>
     <div class='row'>
-      <div class="col-md-12">
-        <div class='action-block'>
-          <div class='title'>START</div>
-          <div class='action-icon'></div>
-          <div class='subheader'></div>
+      <div class="col-md-4">
+        <div class='bounding-box'>
+          <div class='blurb'></div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class='bounding-box'>
+          <div class='action-block'>
+            <div class='title'>START</div>
+            <div class='action-icon'></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class='bounding-box'>
+          <div class='blurb'></div>
         </div>
       </div>
     </div>
   </div>
   <div class='message-reinforce'>
-    <div class='row'>
+    <!-- <div class='row'> -->
       <!-- <div class="col-md-12">
         <div id='logo'></div>
         <div class='subheader-copy'>
@@ -70,7 +81,7 @@
           </div>
         </div>
       </div> -->
-    </div>
+    <!-- </div> -->
     <div class='row'>
       <div class=class="col-md-4">
         <div class='header'></div>
