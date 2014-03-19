@@ -83,17 +83,26 @@
       </div> -->
     <!-- </div> -->
     <div class='row'>
-      <div class=class="col-md-4">
-        <div class='header'></div>
-        <div class='blurb'></div>
+      <div class="col-md-4">
+        <div class='bounding-box'>
+          <div class='number'></div>
+          <div class='title'></div>
+          <div class='blurb'></div>
+        </div>
       </div>
-      <div class=class="col-md-4">
-        <div class='header'></div>
-        <div class='blurb'></div>
+      <div class="col-md-4">
+        <div class='bounding-box'>
+          <div class='number'></div>
+          <div class='title'></div>
+          <div class='blurb'></div>
+        </div>
       </div>
-      <div class=class="col-md-4">
-        <div class='header'></div>
-        <div class='blurb'></div>
+      <div class="col-md-4">
+        <div class='bounding-box'>
+          <div class='number'></div>
+          <div class='title'></div>
+          <div class='blurb'></div>
+        </div>
       </div>
     </div>
   </div>
