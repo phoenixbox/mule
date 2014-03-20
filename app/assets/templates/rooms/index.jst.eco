@@ -26,21 +26,21 @@
         <div class="col-md-4">
           <div class='bounding-box'>
             <div class='number-one'></div>
-            <div class='title'></div>
-            <div class='blurb'></div>
+            <div class='title'>Inventory</div>
+            <div class='blurb'>The first step in any move is taking account of your valuable possession you want to move from point A to point B. Using Mule's simple inventory app, we can help you with this necessary task and give you a sense of what needs to go and what needs to stay.</div>
           </div>
         </div>
         <div class="col-md-4">
           <div class='bounding-box'>
             <div class='number-two'></div>
-            <div class='title'></div>
-            <div class='blurb'></div>
+            <div class='title'>Tender</div>
+            <div class='blurb'>Mule's unique marketplace allows you to anonymize your inventory so that you can get competitive bids from our collection of qualified service providers. Our rule of transparency for service providers is that their bids must be fixed, which means no hidden charges for you, not now, not ever.</div>
           </div>
         </div>
         <div class="col-md-4">
           <div class='bounding-box'>
             <div class='number-three'></div>
-            <div class='title'></div>
+            <div class='title'>Guide</div>
             <div class='blurb'></div>
           </div>
         </div>
