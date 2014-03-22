@@ -4,7 +4,7 @@ class Mule.Views.RoomsIndex extends Backbone.View
 
   # tagName: 'li'
   events:
-    'click .action-block': '_callToAction'
+    'click #startInventory': '_startInventory'
 
   className: 'rooms'
 
@@ -15,6 +15,9 @@ class Mule.Views.RoomsIndex extends Backbone.View
     @$el.html(@template(room: @model));
     @
 
-  _callToAction: (e) ->
-    @.modal()
-
+  _startInventory: (e) ->
+    email = $('input').val()
+    if email.length > 0
+      alert(email)
+    else
+      alert("You must enter an email")

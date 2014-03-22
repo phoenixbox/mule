@@ -135,7 +135,7 @@
         </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-primary">Start!</button>
+        <button type="button" class="btn btn-primary" id="startInventory">Start!</button>
       </div>
     </div>
   </div>
