@@ -51,7 +51,9 @@
     <div class='row'>
       <div class="col-md-4">
         <div class='bounding-box'>
-          <div class='blurb'></div>
+          <div class='blurb'>
+            Take a quik walk throughout your house to get an idea of what will be part of your move, then enter the results in here.
+          </div>
         </div>
       </div>
       <div class="col-md-4">
@@ -64,45 +66,38 @@
       </div>
       <div class="col-md-4">
         <div class='bounding-box'>
-          <div class='blurb'></div>
+          <div class='blurb'>
+             Mule provides competitive bids from our qualified service providers based on your inventory. Bids are fixed, so the cost is completely transparent.
+          </div>
         </div>
       </div>
     </div>
   </div>
   <div class='message-reinforce'>
-    <!-- <div class='row'> -->
-      <!-- <div class="col-md-12">
-        <div id='logo'></div>
-        <div class='subheader-copy'>
-          <div class="row">
-            <div class="col-md-4">Trust</div>
-            <div class="col-md-4">Transparency</div>
-            <div class="col-md-4">Control</div>
-          </div>
-        </div>
-      </div> -->
-    <!-- </div> -->
     <div class='row'>
       <div class="col-md-4">
         <div class='bounding-box'>
-          <div class='number'></div>
-          <div class='title'></div>
-          <div class='blurb'></div>
+          <div class='title'>Trust</div>
+          <div class='blurb'>We select only the most reputable service providers for the Mule marketplace to ensure the integrity of your move. Our movers are all AMA and BBB accredited businesses with hundreds of years experience between them to give you peace of mind.</div>
         </div>
       </div>
       <div class="col-md-4">
         <div class='bounding-box'>
-          <div class='number'></div>
-          <div class='title'></div>
-          <div class='blurb'></div>
+          <div class='title'>Transparency</div>
+          <div class='blurb'>Through Mule, our movers provide you with all the information you need to make an informed decision. Our policy of full transparency means you always know where you stand and that your move is protected.</div>
         </div>
       </div>
       <div class="col-md-4">
         <div class='bounding-box'>
-          <div class='number'></div>
-          <div class='title'></div>
-          <div class='blurb'></div>
+          <div class='title'>Control</div>
+          <div class='blurb'>Mule guides you through the moving process, breaking it down into small manageable steps with plenty of advice along the way. Your Mule profile will contain all the information you need to stay in total control.</div>
         </div>
+      </div>
+    </div>
+    <div class='row'>
+      <div class="col-md-12">
+        <div class='footer-logo'></div>
+        <div class='blurb'></div>
       </div>
     </div>
   </div>
