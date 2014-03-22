@@ -2,13 +2,14 @@ class Mule.Views.RoomsIndex extends Backbone.View
 
   template: JST['rooms/index']
 
-  # tagName: 'li'
   events:
     'click #startInventory': '_startInventory'
 
   className: 'rooms'
 
-  initialize: ->
+  initialize: (options) ->
+    @app        = options.app
+    @router     = @app.router
     @collection.on('reset', @render, this)
 
   render: ->
@@ -16,8 +17,6 @@ class Mule.Views.RoomsIndex extends Backbone.View
     @
 
   _startInventory: (e) ->
-    email = $('input').val()
-    if email.length > 0
-      alert(email)
-    else
-      alert("You must enter an email")
+    @$el.parents().children().find('.modal-backdrop').remove()
+    @$el.remove()
+    @router.navigate("inventory", trigger: true)

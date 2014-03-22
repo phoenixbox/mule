@@ -5,8 +5,8 @@ window.Mule =
   Routers: {}
 
   initialize: ->
-    new Mule.Routers()
-    Backbone.history.start()
+    @router = new Mule.Routers(app: this)
+    Backbone.history.start({pushState: true})
 
 $(document).ready ->
   Mule.initialize()
