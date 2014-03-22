@@ -122,8 +122,8 @@ html {
           .bounding-box {
             vertical-align: top;
             margin: 10px auto;
-            height: 340px;
-            width: 75%;
+            height: 380px;
+            width: 85%;
             border: 5px solid white;
             box-sizing: border-box;
 
@@ -155,16 +155,24 @@ html {
               background-repeat: no-repeat;
             }
             .title {
-              margin-top: 4%;
+              color: white;
+              font-family: $bebas_neue_font;
+              font-size: 30px;
+              letter-spacing: 5px;
+              text-align: center;
+              vertical-align: middle;
               height: 13%;
               width: 100%;
-              background-color: $mule-grey;
             }
             .blurb {
+              color: white;
               margin-top: 4%;
+              letter-spacing: -0.5px;
               height: 50%;
               width: 100%;
-              background-color: $mule-grey;
+              padding: 0px 10px 0px 10px;
+              font-family: $melbourne_light_font;
+              font-size: 18px;
             }
           }
 
