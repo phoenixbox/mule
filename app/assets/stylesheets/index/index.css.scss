@@ -4,6 +4,11 @@ $bebas_neue_font: BebasNeueFont;
 $melbourne_light_font: MelbourneLightFont;
 
 html {
+  .modal {
+    width: 630px;
+    margin-left: -310px;
+  }
+
   height: 100%;
   body {
     background: transparent;
@@ -120,12 +125,17 @@ html {
 
         .col-md-4 {
           .bounding-box {
-            vertical-align: top;
-            margin: 10px auto;
-            height: 380px;
-            width: 85%;
-            border: 5px solid white;
-            box-sizing: border-box;
+             vertical-align: top;
+             margin: 10px auto;
+             height: 405px;
+             width: 85%;
+             padding-top: 10px;
+
+            .border-box {
+              height: 380px;
+              border: 5px solid white;
+              box-sizing: border-box;
+            }
 
             .number-one {
               margin: 4% auto;
@@ -266,7 +276,7 @@ html {
           .bounding-box {
             vertical-align: top;
             margin: 10px auto;
-            height: 340px;
+            height: 270px;
             width: 85%;
 
             .number {
@@ -295,34 +305,49 @@ html {
               box-sizing: border-box;
             }
             .blurb {
-              margin-top: 4%;
-              height: 230px;
+              color: white;
+              letter-spacing: -0.5px;
+              height: 50%;
               width: 100%;
-              background-color: $mule-grey;
+              padding: 0px 10px 0px 10px;
+              font-family: $melbourne_light_font;
+              font-size: 18px;
+              line-height: 150%;
             }
           }
         }
         .col-md-12 {
-          height: 400px;
+          height: 320px;
           background-color: white;
 
           .footer-logo {
             width:70%;
-            margin: 0 auto;
-            background-color: $mule-grey;
+            margin: 20px auto;
             height: 200px;
+            background-image: image-url("mule_logo_landscape_400_aqua.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            left: 50%;
           }
           .blurb {
-            background-color: red;
-            height: 150px;
-            width: 50%;
+            top: 30%;
             margin: 0 auto;
+            width: 100%;
+            color: $mule-aqua;
+            font-family: $melbourne_light_font;
+            font-size: 32px;
+            text-align: center;
           }
         }
       }
     }
     #footer {
-
+      .col-md-12 {
+        height: 100px;
+        width: 100%;
+        background-color: $mule-aqua;
+      }
     }
   }
 }

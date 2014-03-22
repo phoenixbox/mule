@@ -25,23 +25,29 @@
       <div class='row'>
         <div class="col-md-4">
           <div class='bounding-box'>
-            <div class='number-one'></div>
-            <div class='title'>Inventory</div>
-            <div class='blurb'>Let us help you with the first step of your move, taking inventory. Our simple app helps you organize everything that needs to be part of your move, all in one handy list.</div>
+            <div class='border-box'>
+              <div class='number-one'></div>
+              <div class='title'>Inventory</div>
+              <div class='blurb'>Let us help you with the first step of your move, taking inventory. Our simple app helps you organize everything that needs to be part of your move, all in one handy list.</div>
+            </div>
           </div>
         </div>
         <div class="col-md-4">
           <div class='bounding-box'>
-            <div class='number-two'></div>
-            <div class='title'>Tender</div>
-            <div class='blurb'>Mule's unique marketplace lets our collection of qualified service providers bid for the chance to win your business. Our rule is that their bids must be fixed, which means no hidden charges for you, not now, not ever.</div>
+            <div class='border-box'>
+              <div class='number-two'></div>
+              <div class='title'>Tender</div>
+              <div class='blurb'>Mule's unique marketplace lets our collection of qualified service providers bid for the chance to win your business. Our rule is that their bids must be fixed, which means no hidden charges for you, not now, not ever.</div>
+            </div>
           </div>
         </div>
         <div class="col-md-4">
           <div class='bounding-box'>
-            <div class='number-three'></div>
-            <div class='title'>Guide</div>
-            <div class='blurb'>When you accept an offer you like, we protect your money in escrow until your move is completed. We provide all the necessary guidance and information related to your move to ensure that you are protected and happy during this big moving moment of your life.</div>
+            <div class='border-box'>
+              <div class='number-three'></div>
+              <div class='title'>Guide</div>
+              <div class='blurb'>When you accept an offer you like, we protect your money in escrow until your move is completed. We provide all the necessary guidance and information related to your move to ensure that you are protected and happy during this big moving moment of your life.</div>
+            </div>
           </div>
         </div>
       </div>
@@ -52,13 +58,13 @@
       <div class="col-md-4">
         <div class='bounding-box'>
           <div class='blurb'>
-            Take a quik walk throughout your house to get an idea of what will be part of your move, then enter the results in here.
+            Take a quick walk throughout your house to get an idea of what will be part of your move, then enter the results in here.
           </div>
         </div>
       </div>
       <div class="col-md-4">
         <div class='bounding-box'>
-          <div class='action-block'>
+          <div class='action-block' data-toggle="modal" data-target="#myModal">
             <div class='title'>START</div>
             <div class='action-icon'></div>
           </div>
@@ -67,7 +73,7 @@
       <div class="col-md-4">
         <div class='bounding-box'>
           <div class='blurb'>
-             Mule provides competitive bids from our qualified service providers based on your inventory. Bids are fixed, so the cost is completely transparent.
+             Mule generates competitive bids from our qualified service providers based on your inventory. Bids are fixed, so the cost is completely transparent, always.
           </div>
         </div>
       </div>
@@ -97,9 +103,40 @@
     <div class='row'>
       <div class="col-md-12">
         <div class='footer-logo'></div>
-        <div class='blurb'></div>
+        <div class='blurb'>Empowering People Through The Big Moves In Life</div>
+      </div>
+    </div>
+  </div>
+  <div id='footer'>
+    <div class='row'>
+      <div class="col-md-12">
       </div>
     </div>
   </div>
 </div>
-<div id='footer'></div>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+      </div>
+      <div class="modal-body">
+        <form class="form-horizontal">
+        <fieldset>
+        <legend>Enter your email below so we can send your inventory list to you!</legend>
+        <!-- Text input-->
+        <div class="form-group">
+          <div class="col-md-12">
+          <input id="textinput" name="textinput" type="text" placeholder="you@email.com" class="form-control input-md">
+          </div>
+        </div>
+
+        </fieldset>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary">Start!</button>
+      </div>
+    </div>
+  </div>
+</div>
