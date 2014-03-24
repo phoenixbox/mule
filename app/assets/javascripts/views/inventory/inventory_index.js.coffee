@@ -5,18 +5,24 @@ class Mule.Views.InventoryIndex extends Backbone.View
   collection: Mule.Collections.Rooms
 
   events:
-    'click .inventory-wrapper': '_test'
+    'click .inventory-wrapper': '_append'
+
 
   className: 'inventory'
 
   initialize: (options) ->
     @app        = options.app
     @router     = @app.router
-    # @collection.on('reset', @render, this)
+    @posessionView = new Mule.Views.Room(app: @app)
+    @_addClickListers
 
   render: ->
     @$el.html(@template(rooms: @collection));
     @
 
-  _test: ->
-    alert('Keep going, remember you are sprinting')
+  _append: ->
+    @$('.inventory-wrapper').append(@posessionView.render().el)
+
+  _addClickListers: =>
+    $("select + label").each (e) ->
+      $e.on('click', -> @prev().focus().click())
