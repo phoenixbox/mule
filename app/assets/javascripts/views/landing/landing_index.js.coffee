@@ -1,6 +1,6 @@
-class Mule.Views.RoomsIndex extends Backbone.View
+class Mule.Views.LandingIndex extends Backbone.View
 
-  template: JST['rooms/index']
+  template: JST['landing/index']
 
   events:
     'click #startInventory': '_startInventory'

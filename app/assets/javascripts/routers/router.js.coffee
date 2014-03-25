@@ -9,7 +9,7 @@ class Mule.Routers extends Backbone.Router
     @collection = new Mule.Collections.Rooms()
 
   index: ->
-    view = new Mule.Views.RoomsIndex(app: @app, collection: @collection)
+    view = new Mule.Views.LandingIndex(app: @app, collection: @collection)
     $('#wrapper').html(view.render().el)
 
   inventory: ->
