@@ -3,32 +3,24 @@ $mule-grey: #6f6f6f;
 $bebas_neue_font: BebasNeueFont;
 $melbourne_light_font: MelbourneLightFont;
 
-h1.summaryHeader {
-    color: white;
-    font-size: 65px;
-    font-family: $bebas_neue_font;
-    letter-spacing:5px;
-    top: 0px;
-    position: relative;
-    z-index: 2;
-}
-
 .inventory-wrapper {
-  margin-top: 10px;
   background-color: white;
   height: 100%;
   width: 90%;
   left: 50%;
   margin: 0 auto;
-  opacity: 0.8;
+
+  .summaryHeader {
+    color: $mule-aqua;
+    font-size: 65px;
+    font-family: $bebas_neue_font;
+    letter-spacing:5px;
+  }
 
   .summary {
     width: 95%;
     height: 100%;
-    background-color: red;
-    opacity: 1;
     margin: 0 auto;
-
 
     table {
       background-color: grey;
@@ -40,5 +32,38 @@ h1.summaryHeader {
       height: 80px;
     }
   }
+  .total {
+    width: 95%;
+    height: 80px;
+    left: 50%;
+    margin: 0 auto;
+    background-color: white;
+    padding-top: 10px;
 
+    .title {
+      width: 100%;
+      font-size: 12pt;
+      text-align: center;
+    }
+
+    .weight-estimation,  .inventory-submit {
+      width: 15%;
+      height: 50px;
+      float:left;
+      position:relative;
+    }
+
+    .packaging-estimation {
+      width: 70%;
+      height: 50px;
+      float:left;
+      position:relative;
+
+      .box-group-item {
+        width:25%;
+        font-size: 12px;
+        float: left;
+      }
+    }
+  }
 }

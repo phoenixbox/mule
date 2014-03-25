@@ -11,9 +11,8 @@
  *= require_self
  *= require_tree .
  */
-@import "index/_modal";
-@import "index/index";
-@import "index/index";
+@import "landing/_modal";
+@import "landing/index";
 @import "inventory/index";
 @import "inventory/room";
 @import "variables";

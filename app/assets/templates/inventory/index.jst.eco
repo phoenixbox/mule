@@ -1,37 +1,64 @@
 <div id='nav'>
   <div id='logo'></div>
 </div>
-<h1 class='summaryHeader'>Inventory Summary</h1>
 <div class='inventory-wrapper'>
-  <div class="row">
-    <div class='summary'>
-      <div class="col-md-12">
-        <table>
-          <tbody>
-            <tr>
-              <td>Jill</td>
-              <td>Jill</td>
-              <td>Smith</td>
-              <td>Smith</td>
-              <td>50</td>
-            </tr>
-            <tr>
-              <td>Jill</td>
-              <td>Jill</td>
-              <td>Smith</td>
-              <td>Smith</td>
-              <td>50</td>
-            </tr>
-            <tr>
-              <td>Jill</td>
-              <td>Jill</td>
-              <td>Smith</td>
-              <td>Smith</td>
-              <td>50</td>
-            </tr>
-          </tbody>
-        </table>
+  <div class='summaryHeader'>Inventory Summary</div>
+  <div class="summary row">
+    <div class="col-md-12">
+      <table>
+        <tbody>
+          <tr>
+            <td>Beds & Mattresses</td>
+            <td>Sofas</td>
+            <td>Chairs</td>
+            <td>Tables</td>
+            <td>Cabinets & Bookcases</td>
+          </tr>
+          <tr>
+            <td>Stereo</td>
+            <td>TV's</td>
+            <td>Computers</td>
+            <td>Lamps</td>
+            <td>Bookcases</td>
+          </tr>
+          <tr>
+            <td>Mirrors</td>
+            <td>Paintings</td>
+            <td>Kitchen Appliances</td>
+            <td>Outdoor Furniture</td>
+            <td>Other & Specialty</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="total row">
+    <div class="weight-estimation">
+      <div class="title">Weight Estimation</div>
+      <div class="poundage">2500lbs</div>
+    </div>
+    <div class="packaging-estimation">
+      <div class="title">Packaging Estimation</div>
+      <div class="box-group-item">
+          <div class="badge">3</div>
+          Wardrobe Box <sub>(24" x 23" x 48")</sub>
       </div>
+      <div class="box-group-item">
+          <div class="badge">8</div>
+          Large Box <sub>(20" x 20" x 18")</sub>
+      </div>
+      <div class="box-group-item">
+          <div class="badge">12</div>
+          Medium Box <sub>(16" x 16" x 18")</sub>
+      </div>
+      <div class="box-group-item">
+          <div class="badge">16</div>
+          Small Box <sub>(12" x 12.5" x 17")</sub>
+      </div>
+    </div>
+    <div class="inventory-submit">
+      <div class="title">All Done</div>
+      <button type="button" class="btn btn-default">Finish!</button>
     </div>
   </div>
 </div>
