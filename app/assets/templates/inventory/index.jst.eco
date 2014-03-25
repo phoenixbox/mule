@@ -61,4 +61,9 @@
       <button type="button" class="btn btn-default">Finish!</button>
     </div>
   </div>
+  <div class="additions row">
+    <div class="add-a-room">
+      <button type="button" class="btn btn-default addRoom">Add a Room</button>
+    </div>
+  </div>
 </div>

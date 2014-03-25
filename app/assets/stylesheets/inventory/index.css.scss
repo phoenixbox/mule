@@ -66,4 +66,16 @@ $melbourne_light_font: MelbourneLightFont;
       }
     }
   }
+  .additions {
+    width: 95%;
+    height: 40px;
+    left: 50%;
+    margin: 0 auto;
+    background-color: white;
+
+    button {
+      margin-left: 15px;
+      float: left;
+    }
+  }
 }
