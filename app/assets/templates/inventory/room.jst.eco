@@ -3,7 +3,7 @@
     <div class="room-inventory">
       <div class='header'>
         <div class='toggle'></div>
-        <div class='name'></div>
+        <div class='name'>Room One</div>
       </div>
       <div class='contents-form'>
         <div class="wpcf7" id="wpcf7-f156-p143-o1 formwrap">
