@@ -42,6 +42,26 @@ $mule-aqua: #43C1C7;
   legend {
     width: 80%;
   }
+
+  .residence-choice {
+    left: 50%;
+    margin: 0 auto 30px;
+    width: 130px;
+    height: 150px;
+    background-image: image-url("house_icon_aqua_260.png");
+    background-repeat: no-repeat;
+    background-size:cover;
+  }
+  .dont-worry {
+    font-size: 12px;
+    width: 100
+  }
+
+  .room-numbers {
+    width: 70%;
+    left: 50%;
+    margin: 0 auto;
+  }
 }
 
 .modal.fade{
@@ -92,6 +112,14 @@ $mule-aqua: #43C1C7;
   -webkit-box-shadow:inset 0 1px 0 #ffffff;
   -moz-box-shadow:inset 0 1px 0 #ffffff;
   box-shadow:inset 0 1px 0 #ffffff;
+
+  .form-info {
+    width: 80%;
+    font-size: 12px;
+    float: left;
+    text-align: left;
+    height: 100%;
+  }
 }
 
 .modal-footer:before,.modal-footer:after{
