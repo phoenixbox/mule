@@ -22,14 +22,45 @@ $melbourne_light_font: MelbourneLightFont;
     height: 100%;
     margin: 0 auto;
 
-    table {
+    .summary-table {
       background-color: grey;
     }
 
     td {
-      color: white;
       width: 500px;
-      height: 80px;
+      height: 150px;
+      &.item-cell {
+        .description {
+          width: 50%;
+          float:left;
+
+          .table-image {
+            width: 100px;
+            height: 100px;
+            background-image: image-url("bed_icon_aqua_240.png");
+            background-repeat: no-repeat;
+            background-size:cover;
+            margin: 0 auto;
+            position: relative;
+          }
+          .item-type {
+            width: 100%;
+            float: left;
+            text-align: center;
+          }
+        }
+        .quantity {
+          width: 48%;
+          float: right;
+          .counter {
+            margin-top: 20%;
+            margin-bottom: 10%;
+          }
+          .item-stepper {
+            margin-top: 20%;
+          }
+        }
+      }
     }
   }
   .total {

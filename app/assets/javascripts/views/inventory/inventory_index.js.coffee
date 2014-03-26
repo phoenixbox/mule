@@ -7,7 +7,6 @@ class Mule.Views.InventoryIndex extends Backbone.View
   events:
     'click .addRoom': '_append'
 
-
   className: 'inventory'
 
   initialize: (options) ->
@@ -16,9 +15,14 @@ class Mule.Views.InventoryIndex extends Backbone.View
     @_addClickListers
 
   render: ->
-    @$el.html(@template(rooms: @collection));
+    @_renderTableCells()
+    @$el.html(@template(rooms: @collection))
     @
 
   _append: ->
-    @posessionView = new Mule.Views.Room(app: @app)
-    @$('.inventory-wrapper').append(@posessionView.render().el)
+    roomFormView = new Mule.Views.Room(app: @app)
+    @$('.inventory-wrapper').append(roomFormView.render().el)
+
+  _renderTableCells: ->
+    itemView = new Mule.Views.Item(app: @app)
+    @$el.find('.summary-table')

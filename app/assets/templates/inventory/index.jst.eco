@@ -5,10 +5,25 @@
   <div class='summaryHeader'>Inventory Summary</div>
   <div class="summary row">
     <div class="col-md-12">
-      <table>
+      <table class='summary-table'>
         <tbody>
           <tr>
-            <td>Beds & Mattresses</td>
+            <td class='item-cell'>
+              <div class='description'>
+                <div class='table-image'>
+                </div>
+                <div class='item-type'>
+                  Beds
+                </div>
+              </div>
+              <div class='quantity'>
+                <div class="badge counter">10</div>
+                <div class="item-stepper">
+                  <button type="button" class="btn btn-default">-</button>
+                  <button type="button" class="btn btn-default">+</button>
+                </div>
+              </div>
+            </td>
             <td>Sofas</td>
             <td>Chairs</td>
             <td>Tables</td>
