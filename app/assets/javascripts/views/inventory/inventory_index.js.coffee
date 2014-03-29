@@ -12,11 +12,10 @@ class Mule.Views.InventoryIndex extends Backbone.View
   initialize: (options) ->
     @app        = options.app
     @router     = @app.router
-    @_addClickListers
 
   render: ->
     @_renderTableCells()
-    @$el.html(@template(rooms: @collection))
+    @$el.html(@template(rooms: @_itemTypes(), itemsPerRow: @_itemsPerRow()))
     @
 
   _append: ->
@@ -26,3 +25,10 @@ class Mule.Views.InventoryIndex extends Backbone.View
   _renderTableCells: ->
     itemView = new Mule.Views.Item(app: @app)
     @$el.find('.summary-table')
+
+  _itemTypes: ->
+    ['beds','sofas','chairs','tables','cabinets','stereos','tv\'s','computers','lamps','bookcases','mirrors','paintings','kitchen appliances','pianos', 'other']
+
+  _itemsPerRow: ->
+    # Zero based index count
+    4

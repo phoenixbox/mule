@@ -8,40 +8,13 @@
       <table class='summary-table'>
         <tbody>
           <tr>
-            <td class='item-cell'>
-              <div class='description'>
-                <div class='table-image'>
-                </div>
-                <div class='item-type'>
-                  Beds
-                </div>
-              </div>
-              <div class='quantity'>
-                <div class="badge counter">10</div>
-                <div class="item-stepper">
-                  <button type="button" class="btn btn-default">-</button>
-                  <button type="button" class="btn btn-default">+</button>
-                </div>
-              </div>
-            </td>
-            <td>Sofas</td>
-            <td>Chairs</td>
-            <td>Tables</td>
-            <td>Cabinets & Bookcases</td>
+            <%- render_partial 'inventory/items_row', rooms:  @rooms.splice(0,@itemsPerRow) %>
           </tr>
           <tr>
-            <td>Stereo</td>
-            <td>TV's</td>
-            <td>Computers</td>
-            <td>Lamps</td>
-            <td>Bookcases</td>
+            <%- render_partial 'inventory/items_row', rooms:  @rooms.splice(0,@itemsPerRow) %>
           </tr>
           <tr>
-            <td>Mirrors</td>
-            <td>Paintings</td>
-            <td>Kitchen Appliances</td>
-            <td>Outdoor Furniture</td>
-            <td>Other & Specialty</td>
+            <%- render_partial 'inventory/items_row', rooms:  @rooms.splice(0,@itemsPerRow) %>
           </tr>
         </tbody>
       </table>

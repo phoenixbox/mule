@@ -93,7 +93,7 @@ html {
             line-height: 60px;
             height: 100%;
             color: white;
-            font-size: 40px;
+            font-size: 52px;
             font-family: $melbourne_light_font;
             letter-spacing:5px
           }
@@ -121,6 +121,21 @@ html {
       .mule-process {
         background-color: $mule-aqua;
         position: relative;
+
+        .process-header {
+          text-align: center;
+          vertical-align: middle;
+          line-height: 60px;
+          height: 100%;
+          color: white;
+          font-size: 52px;
+          font-family: $bebas_neue_font;
+          letter-spacing: 5px;
+          padding-top: 2%;
+          max-width: 95%;
+          left: 50%;
+          margin: 0 auto;
+        }
 
         .col-md-4 {
           .bounding-box {

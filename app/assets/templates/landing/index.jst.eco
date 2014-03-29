@@ -1,17 +1,17 @@
-<div id='nav'>
-  <div id='logo'></div>
+<div id="nav">
+  <div id="logo"></div>
 </div>
-<div class='opening'>
-  <div class='hero-image'>
+<div class="opening">
+  <div class="hero-image">
   </div>
-  <div class='header-copy'>
+  <div class="header-copy">
     <div class="row">
        <div class="col-md-12">
           <h2>The Moving Revolution</h2>
        </div>
     </div>
   </div>
-  <div class='subheader-copy'>
+  <div class="subheader-copy">
     <div class="row">
       <div class="col-md-4">Trust</div>
       <div class="col-md-4">Transparency</div>
@@ -19,141 +19,102 @@
     </div>
   </div>
 </div>
-<div class='content'>
-  <div class='mule-process'>
-    <div class='points'>
-      <div class='row'>
+<div class="content">
+  <div class="mule-process">
+    <div class="points">
+      <div class="process-header">
+        Mule's 3 step process changes how people move house
+      </div>
+      <div class="row">
         <div class="col-md-4">
-          <div class='bounding-box'>
-            <div class='border-box'>
-              <div class='number-one'></div>
-              <div class='title'>Inventory</div>
-              <div class='blurb'>Let us help you with the first step of your move, taking inventory. Our simple app helps you organize everything that needs to be part of your move, all in one handy list.</div>
+          <div class="bounding-box">
+            <div class="border-box">
+              <div class="number-one"></div>
+              <div class="title">Inventory</div>
+              <div class="blurb">Let us help you with the first step of your move, taking inventory. Our simple app helps you organize everything that needs to be part of your move, all in one handy list.</div>
             </div>
           </div>
         </div>
         <div class="col-md-4">
-          <div class='bounding-box'>
-            <div class='border-box'>
-              <div class='number-two'></div>
-              <div class='title'>Tender</div>
-              <div class='blurb'>Mule's unique marketplace lets our collection of qualified service providers bid for the chance to win your business. Our rule is that their bids must be fixed, which means no hidden charges for you, not now, not ever.</div>
+          <div class="bounding-box">
+            <div class="border-box">
+              <div class="number-two"></div>
+              <div class="title">Tender</div>
+              <div class="blurb">Mule"s unique marketplace lets our collection of qualified service providers bid for the chance to win your business. Our rule is that their bids must be fixed, which means no hidden charges for you, not now, not ever.</div>
             </div>
           </div>
         </div>
         <div class="col-md-4">
-          <div class='bounding-box'>
-            <div class='border-box'>
-              <div class='number-three'></div>
-              <div class='title'>Guide</div>
-              <div class='blurb'>When you accept an offer you like, we protect your money in escrow until your move is completed. We provide all the necessary guidance and information related to your move to ensure that you are protected and happy during this big moving moment of your life.</div>
+          <div class="bounding-box">
+            <div class="border-box">
+              <div class="number-three"></div>
+              <div class="title">Guide</div>
+              <div class="blurb">When you accept an offer you like, we protect your money in escrow until your move is completed. We provide all the necessary guidance and information related to your move to ensure that you are protected and happy during this big moving moment of your life.</div>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <div class='cta'>
-    <div class='row'>
+  <div class="cta">
+    <div class="row">
       <div class="col-md-4">
-        <div class='bounding-box'>
-          <div class='blurb'>
+        <div class="bounding-box">
+          <div class="blurb">
             Take a quick walk throughout your house to get an idea of what will be part of your move, then enter the results in here.
           </div>
         </div>
       </div>
       <div class="col-md-4">
-        <div class='bounding-box'>
-          <div class='action-block' data-toggle="modal" data-target="#myModal">
-            <div class='title'>START</div>
-            <div class='action-icon'></div>
+        <div class="bounding-box">
+          <div class="action-block" data-toggle="modal" data-target="#myModal">
+            <div class="title">START</div>
+            <div class="action-icon"></div>
           </div>
         </div>
       </div>
       <div class="col-md-4">
-        <div class='bounding-box'>
-          <div class='blurb'>
+        <div class="bounding-box">
+          <div class="blurb">
              Mule generates competitive bids from our qualified service providers based on your inventory. Bids are fixed, so the cost is completely transparent, always.
           </div>
         </div>
       </div>
     </div>
   </div>
-  <div class='message-reinforce'>
-    <div class='row'>
+  <div class="message-reinforce">
+    <div class="row">
       <div class="col-md-4">
-        <div class='bounding-box'>
-          <div class='title'>Trust</div>
-          <div class='blurb'>We select only the most reputable service providers for the Mule marketplace to ensure the integrity of your move. Our movers are all AMA and BBB accredited businesses with hundreds of years experience between them to give you peace of mind.</div>
+        <div class="bounding-box">
+          <div class="title">Trust</div>
+          <div class="blurb">We select only the most reputable service providers for the Mule marketplace to ensure the integrity of your move. Our movers are all AMA and BBB accredited businesses with hundreds of years experience between them to give you peace of mind.</div>
         </div>
       </div>
       <div class="col-md-4">
-        <div class='bounding-box'>
-          <div class='title'>Transparency</div>
-          <div class='blurb'>Through Mule, our movers provide you with all the information you need to make an informed decision. Our policy of full transparency means you always know the fixed costs involved, where you stand and that your move is protected.</div>
+        <div class="bounding-box">
+          <div class="title">Transparency</div>
+          <div class="blurb">Through Mule, our movers provide you with all the information you need to make an informed decision. Our policy of full transparency means you always know the fixed costs involved, where you stand and that your move is protected.</div>
         </div>
       </div>
       <div class="col-md-4">
-        <div class='bounding-box'>
-          <div class='title'>Control</div>
-          <div class='blurb'>Mule guides you through the moving process, breaking it down into small manageable steps with plenty of advice along the way. Your Mule profile will contain all the information you need to stay in total control, from inventory lists to pre move damage reports, and liability protection. With Mule, you are in safe hands.</div>
+        <div class="bounding-box">
+          <div class="title">Control</div>
+          <div class="blurb">Mule guides you through the moving process, breaking it down into small manageable steps with plenty of advice along the way. Your Mule profile will contain all the information you need to stay in total control, from inventory lists to pre move damage reports, and liability protection. With Mule, you are in safe hands.</div>
         </div>
       </div>
     </div>
-    <div class='row'>
+    <div class="row">
       <div class="col-md-12">
-        <div class='footer-logo'></div>
-        <div class='blurb'>Empowering People Through The Big Moves In Life</div>
+        <div class="footer-logo"></div>
+        <div class="blurb">Empowering People Through The Big Moves In Life</div>
       </div>
     </div>
   </div>
-  <div id='footer'>
-    <div class='row'>
+  <div id="footer">
+    <div class="row">
       <div class="col-md-12">
       </div>
     </div>
   </div>
 </div>
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-      </div>
-      <div class="modal-body">
-        <form class="form-horizontal">
-        <fieldset>
-        <legend>Let us know your *email and the approx. number of rooms in your house so we can get started</legend>
-        <div class='dont-worry'>Don't worry you can add rooms and take them away later :)</div>
-        <div class='residence-choice'>
-          <div class='residence-type-house'></div>
-          <!-- <div class='residence-type-business'></div> -->
-        </div>
-        <!-- Text input-->
-        <div class="form-group">
-          <div class="col-md-12">
-          <input id="textinput" name="textinput" type="text" placeholder="you@email.com" class="form-control input-md">
-          </div>
-        </div>
-        <select class="form-control room-numbers">
-          <option>1</option>
-          <option>2</option>
-          <option>3</option>
-          <option>4</option>
-          <option>5</option>
-          <option>6</option>
-          <option>7</option>
-          <option>8</option>
-          <option>9</option>
-          <option>10+</option>
-        </select>
-        </fieldset>
-        </form>
-      </div>
-      <div class="modal-footer">
-        <div class='form-info'>* We will send your inventory list to you by email so even if you dont use Mule you will be one step closer to a less stressful move :)</div>
-        <button type="button" class="btn btn-primary" id="startInventory">Start!</button>
-      </div>
-    </div>
-  </div>
-</div>
+<%- render_partial 'landing/start_inventory_modal' %>

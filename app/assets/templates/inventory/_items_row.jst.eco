@@ -1,0 +1,18 @@
+<% for room in @rooms: %>
+  <td class='item-cell'>
+    <div class='description'>
+      <div class='table-image'>
+      </div>
+      <div class='item-type'>
+        <%= room %>
+      </div>
+    </div>
+    <div class='quantity'>
+      <div class="badge counter">10</div>
+      <div class="item-stepper">
+        <button type="button" class="btn btn-default">-</button>
+        <button type="button" class="btn btn-default">+</button>
+      </div>
+    </div>
+  </td>
+<% end %>
