@@ -29,7 +29,7 @@ class Mule.Views.InventoryIndex extends Backbone.View
     @_wrapCellGroupsWithRow(@$('td'))
 
   _itemTypes: ->
-    ['beds','sofas','chairs','tables','cabinets','stereos','tv\'s','computers','lamps','bookcases','mirrors','paintings','kitchen appliances','pianos', 'other']
+    ['beds','sofas','chairs','tables','cabinets','stereos','tv\'s','computers','lamps','bookcases','mirrors','paintings','appliances','pianos', 'other']
 
   _itemsPerRow: ->
     5

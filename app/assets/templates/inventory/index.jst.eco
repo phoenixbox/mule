@@ -2,7 +2,7 @@
   <div id='logo'></div>
 </div>
 <div class='inventory-wrapper'>
-  <div class='summaryHeader'>Inventory Summary</div>
+  <div class='summaryHeader'>Your Inventory Summary</div>
   <div class="summary row">
     <div class="col-md-12">
       <table class='summary-table'>

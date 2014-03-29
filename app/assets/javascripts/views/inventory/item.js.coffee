@@ -16,8 +16,8 @@ class Mule.Views.Item extends Backbone.View
     @render()
 
   render: ->
-    @$el.html(@template(name: @name));
+    @$el.html(@template(name: @name, viewContext: @));
     @
 
-  _createCell: ->
-    @$('.inventory-wrapper').append(@.render().el)
+  _titleCase: (string) ->
+    string.charAt(0).toUpperCase() + string.slice(1);

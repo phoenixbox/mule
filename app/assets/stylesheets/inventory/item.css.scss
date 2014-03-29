@@ -1,11 +1,16 @@
+$mule-aqua: #43C1C7;
+$mule-grey: #6f6f6f;
+$bebas_neue_font: BebasNeueFont;
+$melbourne_light_font: MelbourneLightFont;
+
 .item-cell {
   .description {
     width: 50%;
     float:left;
 
     .table-image {
-      width: 100px;
-      height: 100px;
+      width: 80px;
+      height: 80px;
       background-repeat: no-repeat;
       background-size: cover;
       margin: 0 auto;
@@ -47,7 +52,7 @@
       &.paintings {
         background-image: image-url("icons/painting_icon_aqua_240.png");
       }
-      &.kitchen {
+      &.appliances {
         background-image: image-url("icons/kitchen_appliances_icon_aqua_240.png");
       }
       &.pianos {
@@ -61,6 +66,8 @@
       width: 100%;
       float: left;
       text-align: center;
+      font-family: $melbourne_light_font;
+      font-size: 18px;
     }
   }
   .quantity {

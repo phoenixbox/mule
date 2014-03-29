@@ -35,14 +35,18 @@ $melbourne_light_font: MelbourneLightFont;
     width: 95%;
     height: 80px;
     left: 50%;
+    padding-top: 20px;
     margin: 0 auto;
+    margin-top: 20px auto 0px;
+    border-top: 1px solid $mule-aqua;
     background-color: white;
-    padding-top: 10px;
 
     .title {
       width: 100%;
-      font-size: 12pt;
+      font-size: 20px;
       text-align: center;
+      font-family: $melbourne_light_font;
+      color: $mule-grey;
     }
 
     .weight-estimation,  .inventory-submit {
@@ -69,7 +73,7 @@ $melbourne_light_font: MelbourneLightFont;
     width: 95%;
     height: 40px;
     left: 50%;
-    margin: 0 auto;
+    margin: 10px auto;
     background-color: white;
 
     button {

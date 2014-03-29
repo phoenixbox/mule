@@ -2,7 +2,7 @@
   <div class='table-image <%= @name %>'>
   </div>
   <div class='item-type'>
-    <%= @name %>
+    <%= @viewContext._titleCase(@name) %>
   </div>
 </div>
 <div class='quantity'>
