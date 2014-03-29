@@ -1,7 +1,7 @@
 <% for room in @rooms: %>
   <td class='item-cell'>
     <div class='description'>
-      <div class='table-image'>
+      <div class='table-image <%=room %>'>
       </div>
       <div class='item-type'>
         <%= room %>

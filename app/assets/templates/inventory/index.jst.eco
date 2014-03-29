@@ -7,15 +7,6 @@
     <div class="col-md-12">
       <table class='summary-table'>
         <tbody>
-          <tr>
-            <%- render_partial 'inventory/items_row', rooms:  @rooms.splice(0,@itemsPerRow) %>
-          </tr>
-          <tr>
-            <%- render_partial 'inventory/items_row', rooms:  @rooms.splice(0,@itemsPerRow) %>
-          </tr>
-          <tr>
-            <%- render_partial 'inventory/items_row', rooms:  @rooms.splice(0,@itemsPerRow) %>
-          </tr>
         </tbody>
       </table>
     </div>

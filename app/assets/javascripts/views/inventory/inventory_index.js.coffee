@@ -14,21 +14,29 @@ class Mule.Views.InventoryIndex extends Backbone.View
     @router     = @app.router
 
   render: ->
-    @_renderTableCells()
-    @$el.html(@template(rooms: @_itemTypes(), itemsPerRow: @_itemsPerRow()))
+    @$el.html(@template())
+    @_renderTable()
     @
 
   _append: ->
     roomFormView = new Mule.Views.Room(app: @app)
     @$('.inventory-wrapper').append(roomFormView.render().el)
 
-  _renderTableCells: ->
-    itemView = new Mule.Views.Item(app: @app)
-    @$el.find('.summary-table')
+  _renderTable: ->
+    _.each @_itemTypes(), (item) =>
+      itemView = new Mule.Views.Item(app: @app, name: item)
+      @$('.summary-table > tbody:last').append(itemView.render().el);
+    @_wrapCellGroupsWithRow(@$('td'))
 
   _itemTypes: ->
     ['beds','sofas','chairs','tables','cabinets','stereos','tv\'s','computers','lamps','bookcases','mirrors','paintings','kitchen appliances','pianos', 'other']
 
   _itemsPerRow: ->
-    # Zero based index count
-    4
+    5
+
+  _desiredNumberOfRows: (numberOfCells) ->
+    numberOfCells/@_itemsPerRow()
+
+  _wrapCellGroupsWithRow: (cells) ->
+    numberOfRows = @_desiredNumberOfRows(cells.length)
+    $(cells.splice(0,5)).wrapAll( "<tr/>") for [1..numberOfRows]
