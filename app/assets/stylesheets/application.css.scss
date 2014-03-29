@@ -11,10 +11,14 @@
  *= require_self
  *= require_tree .
  */
+ // Landing page styles
 @import "landing/_modal";
 @import "landing/index";
+// Inventory page styles
 @import "inventory/index";
+@import "inventory/item";
 @import "inventory/room";
+
 @import "variables";
 @import "imports";
 @import "fonts";

@@ -156,7 +156,7 @@ html {
               height: 100px;
               width: 60px;
               left: 50%;
-              background-image: image-url("one_140.png");
+              background-image: image-url("icons/one_140.png");
               background-size: cover;
               background-repeat: no-repeat;
             }
@@ -165,7 +165,7 @@ html {
               height: 100px;
               width: 60px;
               left: 50%;
-              background-image: image-url("two_140.png");
+              background-image: image-url("icons/two_140.png");
               background-size: cover;
               background-repeat: no-repeat;
             }
@@ -174,7 +174,7 @@ html {
               height: 100px;
               width: 60px;
               left: 50%;
-              background-image: image-url("three_140.png");
+              background-image: image-url("icons/three_140.png");
               background-size: cover;
               background-repeat: no-repeat;
             }
@@ -268,7 +268,7 @@ html {
                 color: $mule-dark-aqua;
               }
               .action-icon {
-                background-image: image-url("notes_icon_400.png");
+                background-image: image-url("icons/notes_icon_400.png");
                 background-repeat: no-repeat;
                 background-position: center;
                 background-size:contain;
@@ -279,7 +279,7 @@ html {
               }
               .action-icon:hover {
                 cursor: pointer;
-                background-image: image-url("notes_icon_dark_aqua_400.png");
+                background-image: image-url("icons/notes_icon_dark_aqua_400.png");
               }
             }
           }
