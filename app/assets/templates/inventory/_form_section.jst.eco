@@ -1,0 +1,2 @@
+<div class="category-title"><%= @title %></div>
+<div>Bananagram</div>

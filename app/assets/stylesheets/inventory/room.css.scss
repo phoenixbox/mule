@@ -96,7 +96,19 @@ $melbourne_light_font: MelbourneLightFont;
   .contents-form {
     margin-top: 20px;
     display: none;
-    height: 220px;
+    height: 100%;
+
+    .row {
+      margin-bottom: 10px;
+      border-bottom: 1px solid $mule-aqua;
+
+      .category-title {
+        color: $mule-aqua;
+        font-family: $melbourne_light_font;
+        font-size: 24px;
+        text-align: center;
+      }
+    }
 
     .form-section {
       width: 25%;
