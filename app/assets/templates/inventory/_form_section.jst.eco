@@ -1,2 +1,19 @@
 <div class="category-title"><%= @title %></div>
-<div>Bananagram</div>
+<% for item in @category: %>
+   <td class='item-cell'>
+     <div class='description'>
+       <div class='table-image'>
+       </div>
+       <div class='item-type'>
+         <%= item %>
+       </div>
+     </div>
+     <div class='quantity'>
+       <div class="badge counter">10</div>
+       <div class="item-stepper">
+         <button type="button decrement" class="btn btn-default">-</button>
+         <button type="button increment" class="btn btn-default">+</button>
+       </div>
+     </div>
+   </td>
+ <% end %>

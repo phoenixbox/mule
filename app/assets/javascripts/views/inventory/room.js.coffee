@@ -13,7 +13,7 @@ class Mule.Views.Room extends Backbone.View
     @router     = @app.router
 
   render: ->
-    @$el.html(@template(categories: @_categoryOptions));
+    @$el.html(@template(categories: @_categoryOptions()));
     @
 
   _categoryOptions: ->
