@@ -1,0 +1,15 @@
+<div class="item-container">
+  <div class='description'>
+    <div class='image <%= @title %>'></div>
+    <div class='type'>
+      <%= @item %>
+    </div>
+  </div>
+  <div class='quantity'>
+    <div class="badge counter">0</div>
+    <div class="stepper">
+    <button type="button" class="btn btn-default decrement">-</button>
+    <button type="button" class="btn btn-default increment">+</button>
+    </div>
+  </div>
+</div>

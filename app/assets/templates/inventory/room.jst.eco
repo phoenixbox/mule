@@ -34,46 +34,46 @@
         </div>
         <div class="col-md-4">
           <div class="category">
-            <div class="category-title">Chairs</div>
+            <%- render_partial 'inventory/form_section', {title: 'chairs', category: @categories.chairs} %>
           </div>
         </div>
         <div class="col-md-4">
           <div class="category">
-            <div class="category-title">Tables</div>
+            <%- render_partial 'inventory/form_section', {title: 'tables', category: @categories.tables} %>
           </div>
           <div class="category">
-            <div class="category-title">Lamps</div>
+            <%- render_partial 'inventory/form_section', {title: 'lamps', category: @categories.lamps} %>
           </div>
         </div>
       </div>
       <div class='row'>
         <div class="col-md-8">
           <div class="category">
-            <div class="category-title">Storage</div>
+            <%- render_partial 'inventory/form_section', {title: 'storage', category: @categories.storage} %>
           </div>
         </div>
         <div class="col-md-4">
           <div class="category">
-            <div class="category-title">Electronics</div>
+            <%- render_partial 'inventory/form_section', {title: 'electronics', category: @categories.electronics} %>
           </div>
         </div>
       </div>
       <div class='row'>
         <div class="col-md-6">
           <div class="category">
-            <div class="category-title">Music</div>
+            <%- render_partial 'inventory/form_section', {title: 'music', category: @categories.music} %>
           </div>
         </div>
         <div class="col-md-6">
           <div class="category">
-            <div class="category-title">Appliances</div>
+            <%- render_partial 'inventory/form_section', {title: 'appliances', category: @categories.appliances} %>
           </div>
         </div>
       </div>
       <div class='row'>
         <div class="col-md-12">
           <div class="category">
-            <div class="category-title">Other</div>
+            <%- render_partial 'inventory/form_section', {title: 'other', category: @categories.other} %>
           </div>
         </div>
       </div>

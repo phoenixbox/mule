@@ -105,13 +105,28 @@ $melbourne_light_font: MelbourneLightFont;
       margin-bottom: 20px;
       min-height: 100px;
 
-      .category-title {
-        color: $mule-aqua;
-        font-family: $melbourne_light_font;
-        font-size: 24px;
-        text-align: center;
-        border-bottom: solid 1px;
+      .category {
+        .category-title {
+          color: $mule-aqua;
+          font-family: $melbourne_light_font;
+          font-size: 24px;
+          text-align: center;
+          border-bottom: solid 1px;
+
+        }
+        .sub-category {
+            border-bottom: 1px dashed $mule-aqua;
+
+          .title {
+            text-align: left;
+            font-family: $melbourne_light_font;
+            font-size: 22px;
+            color: $mule-aqua;
+            padding: 5px 0px 5px 0px;
+          }
+        }
       }
+
       .item-container {
         height: 60px;
 

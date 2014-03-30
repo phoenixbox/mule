@@ -1,0 +1,22 @@
+<div class='sub-category'>
+  <div class='title'>
+    <%= _.keys(@item) %>
+  </div>
+  <% for subItem in _.values(@item): %>
+    <div class="item-container">
+      <div class='description'>
+        <div class='image <%= subItem %>'></div>
+        <div class='type'>
+          <%= subItem %>
+        </div>
+      </div>
+      <div class='quantity'>
+        <div class="badge counter">0</div>
+        <div class="stepper">
+        <button type="button" class="btn btn-default decrement">-</button>
+        <button type="button" class="btn btn-default increment">+</button>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>

@@ -25,21 +25,21 @@ class Mule.Views.Room extends Backbone.View
       "tables": [ {"dining": ["2 seat","4 seat","6 seat","8 seat"]},
                   "coffee", "side", "office"
               ],
+      "lamps": ["floor", "table"],
       "storage": [ {"wardrobes": ["dresser","freestanding"]},
                     "bookcase",
                     {"cabinets": ["china","filing","entertainment center"]},
                     {"misc": ["storage bin","suitcase","dufflebag","trunk"]},
                 ],
       "electronics": ["tv", "stereo", "speakers", "computer", "printer"],
-      "lamps": ["floor", "table"],
       "music": [  {"pianos": ["grand","baby","upright"]},
                   "drums",
                   "instrument"
               ],
+      "appliances": ["air conditioner","dryer","washer"],
       "other":  ["mirror","picture","rugs","chandelier","stroller","car seat","plants","grill",
                 {"kids": ["play house","play pen","dollhouse"]},
-                {"sports": ["skis","snowboard","bicycle","golf clubs","pool table", "ping pong"]},
-                {"appliances": ["air conditioner","dryer","washer"]}
+                {"sports": ["skis","snowboard","bicycle","golf clubs","pool table", "ping pong"]}
               ]
     }
 
