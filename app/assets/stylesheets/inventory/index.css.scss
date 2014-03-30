@@ -71,9 +71,10 @@ $melbourne_light_font: MelbourneLightFont;
   }
   .additions {
     width: 95%;
-    height: 40px;
+    height: 50px;
     left: 50%;
     margin: 10px auto;
+    border-bottom: 1px solid $mule-aqua;
     background-color: white;
 
     button {

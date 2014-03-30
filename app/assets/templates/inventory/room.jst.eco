@@ -1,7 +1,28 @@
 <div class="room-inventory">
   <div class='header'>
-    <div class='toggle'></div>
-    <div class='name'>Room Name</div>
+    <div class='toggle'>
+      <span class="glyphicon glyphicon-chevron-right"></span>
+    </div>
+    <div class='header-details'>
+      <div class='name'>Room Name</div>
+      <div class='contents-summary'>
+        <div class='furniture-count'>
+          <div class="title">Items of Furniture:</div>
+          <div class="counter">10</div>
+        </div>
+        <div class='packaging-count'>
+
+          <div class="title">
+            <div class="box-icon"></div>
+            Boxes:
+          </div>
+          <div class="counter">10</div>
+        </div>
+        <div class='completion-indicator'>
+          <span class="glyphicon glyphicon glyphicon-ok"></span>
+        </div>
+      </div>
+    </div>
   </div>
   <div class='contents-form'>
     <form action="#">

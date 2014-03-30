@@ -1,26 +1,112 @@
-$colorscheme:#1b7b5b;
-$hoverscheme:#c4c4c4;
+$mule-aqua: #43C1C7;
+$mule-grey: #6f6f6f;
+$bebas_neue_font: BebasNeueFont;
+$melbourne_light_font: MelbourneLightFont;
 
 .room {
-  border-top: 1px solid;
-  height: 280px;
-  width: 90%;
+  height: 100%;
+  width: 95%;
   left: 50%;
   margin: 10px auto 10px;
-  background-color: white;
 
-  .name {
-    margin-top: 10px;
+  .header {
+    height: 40px;
+    width: 100%;
+    background-color: $mule-aqua;
+
+    .toggle {
+      width: 5%;
+      height: 100%;
+      font-size: 20px;
+      float: left;
+      background-color: purple;
+
+      .glyphicon {
+        top: 8px;
+        color: white;
+      }
+    }
+
+    .header-details {
+      width: 95%;
+      float:left;
+
+      .name {
+        height: 100%;
+        width: 20%;
+        float:left;
+        color: white;
+        font-family: $melbourne_light_font;
+        font-size: 24px;
+        background-color: grey;
+        text-align: center;
+        padding-top: 4px;
+      }
+      .contents-summary {
+        height: 100%;
+        width: 80%;
+        float:left;
+
+        .furniture-count, .packaging-count, .completion-indicator {
+          color: white;
+          font-family: $bebas_neue_font;
+          font-size: 24px;
+          padding-top: 4px;
+          float: left;
+        }
+
+        .furniture-count, .packaging-count {
+          width: 47.5%;
+
+          .title {
+            float: left;
+            margin-left: 10%;
+          }
+          .counter {
+            height: 32px;
+            width: 60px;
+            float: left;
+            text-align: center;
+            line-height: 31.5px;
+            margin-left: 5%;
+          }
+        }
+        .packaging-count {
+          .box-icon {
+            float: left;
+            height: 30px;
+            width: 30px;
+            margin: 2px 10px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-image: image-url("icons/box_icon_aqua_60.png");
+          }
+        }
+        .completion-indicator {
+          width: 5%;
+          height: 100%;
+
+          .glyphicon {
+            font-size: 20px;
+          }
+        }
+      }
+    }
   }
-
-  .form-section {
-    width: 25%;
-    padding: 10px;
-    float: left;
-  }
-
-  .save-form {
+  .contents-form {
     margin-top: 20px;
-    float: right;
+    display: none;
+    height: 220px;
+
+    .form-section {
+      width: 25%;
+      padding: 10px;
+      float: left;
+    }
+
+    .save-form {
+      margin-top: 20px;
+      float: right;
+    }
   }
 }
