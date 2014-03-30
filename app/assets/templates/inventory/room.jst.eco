@@ -8,7 +8,7 @@
       <div class='contents-summary'>
         <div class='furniture-count'>
           <div class="title">Items of Furniture:</div>
-          <div class="counter">10</div>
+          <div class="counter">0</div>
         </div>
         <div class='packaging-count'>
 
@@ -16,7 +16,7 @@
             <div class="box-icon"></div>
             Boxes:
           </div>
-          <div class="counter">10</div>
+          <div class="counter">0</div>
         </div>
         <div class='completion-indicator'>
           <span class="glyphicon glyphicon glyphicon-remove"></span>
@@ -29,7 +29,7 @@
       <div class='row'>
         <div class="col-md-4">
           <div class="category">
-            <%- render_partial 'inventory/form_section', title: 'Sofas', category: @categories.sofas %>
+            <%- render_partial 'inventory/form_section', {title: 'sofas', category: @categories.sofas} %>
           </div>
         </div>
         <div class="col-md-4">

@@ -7,6 +7,8 @@ class Mule.Views.Room extends Backbone.View
   events:
     'click .toggle': '_toggleRoom'
     'click .save-form': '_saveForm'
+    'click .decrement': '_updateCounter'
+    'click .increment': '_updateCounter'
 
   initialize: (options) ->
     @app        = options.app
@@ -18,7 +20,7 @@ class Mule.Views.Room extends Backbone.View
 
   _categoryOptions: ->
     {
-      "sofas": ["loveseat", "2 seat", "3 seat", "4 seat", "futon", "sectional"],
+      "sofas": ["2 seat", "3 seat", "4 seat", "futon", "sectional"],
       "chairs": ["chair", "stool", "office", "lounge", "folding", "bean bag", "bench"],
       "tables": [ {"dining": ["2 seat","4 seat","6 seat","8 seat"]},
                   "coffee", "side", "office"
@@ -40,6 +42,16 @@ class Mule.Views.Room extends Backbone.View
                 {"appliances": ["air conditioner","dryer","washer"]}
               ]
     }
+
+  _updateCounter: (e) ->
+    $target = $(e.target)
+    $counter = $target.parents('.quantity').children('.counter')
+    $value = parseInt($counter.text())
+    if $target.is('.decrement')
+      $value -= 1
+    else
+      $value += 1
+    $counter.text($value).toString()
 
   _toggleRoom: (e) ->
     $target = $(e.target)

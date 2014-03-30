@@ -99,17 +99,65 @@ $melbourne_light_font: MelbourneLightFont;
     height: 100%;
 
     .row {
+      text-transform:capitalize;
       margin-bottom: 10px;
       border-bottom: 1px solid $mule-aqua;
+      margin-bottom: 20px;
+      min-height: 100px;
 
       .category-title {
         color: $mule-aqua;
         font-family: $melbourne_light_font;
         font-size: 24px;
         text-align: center;
+        border-bottom: solid 1px;
+      }
+      .item-container {
+        height: 60px;
+
+        .description, .quantity {
+          height:100%;
+          float: left;
+        }
+        .description {
+          width: 60%;
+
+          .image{
+            width: 36%;
+            height: 100%;
+            float: left;
+            background-repeat: no-repeat;
+            background-size: cover;
+            left: 50%;
+            margin: 0 auto;
+
+            &.sofas {
+              background-image: image-url("icons/sofa_icon_aqua_240.png");
+            }
+          }
+          .type {
+            width: 64%;
+            font-family: $melbourne_light_font;
+            font-size: 16px;
+            float: left;
+            margin-top: 10%;
+          }
+        }
+        .quantity {
+          width: 40%;
+          padding-top: 10px;
+
+          .counter {
+            float: left;
+            width: 20%;
+            margin-top: 8px;
+          }
+          .stepper {
+
+          }
+        }
       }
     }
-
     .form-section {
       width: 25%;
       padding: 10px;
