@@ -146,8 +146,41 @@ $melbourne_light_font: MelbourneLightFont;
             left: 50%;
             margin: 0 auto;
 
-            &.sofas {
+            &.seat {
               background-image: image-url("icons/sofa_icon_aqua_240.png");
+            }
+            &.seat {
+              background-image: image-url("icons/sofa_icon_aqua_240.png");
+            }
+            &.seat {
+              background-image: image-url("icons/sofa_icon_aqua_240.png");
+            }
+            &.futon {
+              background-image: image-url("icons/sofa_icon_aqua_240.png");
+            }
+            &.sectional {
+              background-image: image-url("icons/sectioned_sofa_icon_aqua_240.png");
+            }
+            &.chair {
+              background-image: image-url("icons/chair_icon_aqua_240.png");
+            }
+            &.stool {
+              background-image: image-url("icons/stool_icon_aqua_240.png");
+            }
+            &.office {
+              background-image: image-url("icons/office_icon_aqua_240.png");
+            }
+            &.lounge {
+              background-image: image-url("icons/lounge_icon_aqua_240.png");
+            }
+            &.folding {
+              background-image: image-url("icons/folding_icon_aqua_240.png");
+            }
+            &.bean {
+              background-image: image-url("icons/bean_icon_aqua_240.png");
+            }
+            &.bench {
+              background-image: image-url("icons/bench_icon_aqua_240.png");
             }
           }
           .type {
