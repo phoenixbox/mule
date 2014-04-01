@@ -15,34 +15,48 @@
     <div class="weight-estimation">
       <div class="title">Weight Estimation</div>
       <div class="poundage">2500lbs</div>
+      <div class="add-a-room">
+        <button type="button" class="btn btn-default addRoom">Add a Room</button>
+      </div>
     </div>
     <div class="packaging-estimation">
       <div class="title">Packaging Estimation</div>
       <div class="box-group-item">
-          <div class="badge">3</div>
-          Wardrobe Box <sub>(24" x 23" x 48")</sub>
-      </div>
-      <div class="box-group-item">
+        <div class="wardrobe-box-icon"></div>
+        <div class="details">
           <div class="badge">8</div>
-          Large Box <sub>(20" x 20" x 18")</sub>
+          <div class="title">Wardrobe Box</div>
+          <div class="dimensions"><sub>(24" x 23" x 48")</sub></div>
+        </div>
       </div>
       <div class="box-group-item">
+        <div class="box-icon"></div>
+        <div class="details">
+          <div class="badge">8</div>
+          <div class="title">Large Box</div>
+          <div class="dimensions"><sub>(20" x 20" x 18")</sub></div>
+        </div>
+      </div>
+      <div class="box-group-item">
+        <div class="box-medium-icon"></div>
+        <div class="details">
           <div class="badge">12</div>
-          Medium Box <sub>(16" x 16" x 18")</sub>
+          <div class="title">Medium Box</div>
+          <div class="dimensions"><sub>(16" x 16" x 18")</sub></div>
+        </div>
       </div>
       <div class="box-group-item">
+        <div class="box-small-icon"></div>
+        <div class="details">
           <div class="badge">16</div>
-          Small Box <sub>(12" x 12.5" x 17")</sub>
+          <div class="title">Small Box</div>
+          <div class="dimensions"><sub>(12" x 12.5" x 17")</sub></div>
+        </div>
       </div>
     </div>
     <div class="inventory-submit">
       <div class="title">All Done</div>
       <button type="button" class="btn btn-default">Finish!</button>
-    </div>
-  </div>
-  <div class="additions row">
-    <div class="add-a-room">
-      <button type="button" class="btn btn-default addRoom">Add a Room</button>
     </div>
   </div>
 </div>

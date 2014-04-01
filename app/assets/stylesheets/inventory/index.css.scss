@@ -33,11 +33,9 @@ $melbourne_light_font: MelbourneLightFont;
   }
   .total {
     width: 95%;
-    height: 80px;
+    height: 100%;
     left: 50%;
-    padding-top: 20px;
-    margin: 0 auto;
-    margin-top: 20px auto 0px;
+    margin: 0 auto 30px;
     border-top: 1px solid $mule-aqua;
     background-color: white;
 
@@ -45,6 +43,7 @@ $melbourne_light_font: MelbourneLightFont;
       width: 100%;
       font-size: 20px;
       text-align: center;
+      padding: 10px 0px 10px 0px;
       font-family: $melbourne_light_font;
       color: $mule-grey;
     }
@@ -56,30 +55,53 @@ $melbourne_light_font: MelbourneLightFont;
       position:relative;
     }
 
+    .weight-estimation {
+      button {
+        margin-top: 22px;
+      }
+    }
+
     .packaging-estimation {
       width: 70%;
-      height: 50px;
+      height: 100%;
       float:left;
-      position:relative;
 
       .box-group-item {
         width:25%;
         font-size: 12px;
         float: left;
-      }
-    }
-  }
-  .additions {
-    width: 95%;
-    height: 50px;
-    left: 50%;
-    margin: 10px auto;
-    border-bottom: 1px solid $mule-aqua;
-    background-color: white;
 
-    button {
-      margin-left: 15px;
-      float: left;
+        .details, .wardrobe-box-icon, .box-icon, .box-medium-icon, .box-small-icon {
+          float: left;
+        }
+
+        .details {
+          width: 63%;
+        }
+
+        .wardrobe-box-icon, .box-icon, .box-medium-icon, .box-small-icon {
+          background-repeat: no-repeat;
+          background-size: cover;
+          height: 75px;
+          width: 75px;
+        }
+
+        .wardrobe-box-icon {
+          background-image: image-url("icons/wardrobe_box_icon_aqua_240.png");
+        }
+
+        .box-icon {
+          background-image: image-url("icons/box_icon_aqua_240.png");
+        }
+
+        .box-medium-icon {
+          background-image: image-url("icons/box_medium_icon_aqua_240.png");
+        }
+
+        .box-small-icon {
+          background-image: image-url("icons/box_small_icon_aqua_240.png");
+        }
+      }
     }
   }
 }
