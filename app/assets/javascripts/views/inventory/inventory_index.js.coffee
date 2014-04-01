@@ -12,11 +12,17 @@ class Mule.Views.InventoryIndex extends Backbone.View
   initialize: (options) ->
     @app        = options.app
     @router     = @app.router
+    @
 
   render: ->
     @$el.html(@template())
     @_renderTable()
+    @_appendChosenNumberOfRooms()
     @
+
+  _appendChosenNumberOfRooms: ->
+    rooms = parseInt(window.localStorage.roomNumber)
+    @_append() for [1..rooms]
 
   _append: ->
     roomFormView = new Mule.Views.Room(app: @app)

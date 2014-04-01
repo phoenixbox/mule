@@ -17,6 +17,8 @@ class Mule.Views.LandingIndex extends Backbone.View
     @
 
   _startInventory: (e) ->
+    room_number = @.$el.find('.room-numbers').find(":selected").text()
+    window.localStorage.setItem("roomNumber",room_number);
     @$el.parents().children().find('.modal-backdrop').remove()
     @$el.remove()
     @router.navigate("inventory", trigger: true)
