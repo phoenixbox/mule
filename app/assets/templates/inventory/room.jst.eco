@@ -4,7 +4,10 @@
       <span class="glyphicon glyphicon-chevron-right"></span>
     </div>
     <div class='header-details'>
-      <div class='name'>Room Name</div>
+      <div class='name'>
+        <input class="room-name-input" type="text" placeholder="Room Name" readonly required/>
+        <span class="glyphicon glyphicon-pencil"></span>
+      </div>
       <div class='contents-summary'>
         <div class='furniture-count'>
           <div class="title">Items of Furniture:</div>
