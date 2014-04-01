@@ -905,7 +905,7 @@ html body #footer .col-md-12 {
 }
 /* line 161, /Users/shanerogers/Desktop/dev/mule/app/assets/stylesheets/inventory/room.css.scss */
 .room .contents-form .row .item-container .description .image.sectional {
-  background-image: url(/images/icons/sectioned_sofa_icon_aqua_240.png);
+  background-image: url(/assets/icons/sectioned_sofa_icon_aqua_240.png);
 }
 /* line 164, /Users/shanerogers/Desktop/dev/mule/app/assets/stylesheets/inventory/room.css.scss */
 .room .contents-form .row .item-container .description .image.chair {
@@ -913,7 +913,7 @@ html body #footer .col-md-12 {
 }
 /* line 167, /Users/shanerogers/Desktop/dev/mule/app/assets/stylesheets/inventory/room.css.scss */
 .room .contents-form .row .item-container .description .image.stool {
-  background-image: url(/images/icons/stool_icon_aqua_240.png);
+  background-image: url(/assets/icons/stool_icon_aqua_240.png);
 }
 /* line 170, /Users/shanerogers/Desktop/dev/mule/app/assets/stylesheets/inventory/room.css.scss */
 .room .contents-form .row .item-container .description .image.office {
@@ -933,7 +933,7 @@ html body #footer .col-md-12 {
 }
 /* line 182, /Users/shanerogers/Desktop/dev/mule/app/assets/stylesheets/inventory/room.css.scss */
 .room .contents-form .row .item-container .description .image.bench {
-  background-image: url(/images/icons/bench_icon_aqua_240.png);
+  background-image: url(/assets/icons/bench_icon_aqua_240.png);
 }
 /* line 186, /Users/shanerogers/Desktop/dev/mule/app/assets/stylesheets/inventory/room.css.scss */
 .room .contents-form .row .item-container .description .type {
@@ -20367,7 +20367,7 @@ button.close {
 }
 /* line 161, /Users/shanerogers/Desktop/dev/mule/app/assets/stylesheets/inventory/room.css.scss */
 .room .contents-form .row .item-container .description .image.sectional {
-  background-image: url(/images/icons/sectioned_sofa_icon_aqua_240.png);
+  background-image: url(/assets/icons/sectioned_sofa_icon_aqua_240.png);
 }
 /* line 164, /Users/shanerogers/Desktop/dev/mule/app/assets/stylesheets/inventory/room.css.scss */
 .room .contents-form .row .item-container .description .image.chair {
@@ -20375,7 +20375,7 @@ button.close {
 }
 /* line 167, /Users/shanerogers/Desktop/dev/mule/app/assets/stylesheets/inventory/room.css.scss */
 .room .contents-form .row .item-container .description .image.stool {
-  background-image: url(/images/icons/stool_icon_aqua_240.png);
+  background-image: url(/assets/icons/stool_icon_aqua_240.png);
 }
 /* line 170, /Users/shanerogers/Desktop/dev/mule/app/assets/stylesheets/inventory/room.css.scss */
 .room .contents-form .row .item-container .description .image.office {
@@ -20395,7 +20395,7 @@ button.close {
 }
 /* line 182, /Users/shanerogers/Desktop/dev/mule/app/assets/stylesheets/inventory/room.css.scss */
 .room .contents-form .row .item-container .description .image.bench {
-  background-image: url(/images/icons/bench_icon_aqua_240.png);
+  background-image: url(/assets/icons/bench_icon_aqua_240.png);
 }
 /* line 186, /Users/shanerogers/Desktop/dev/mule/app/assets/stylesheets/inventory/room.css.scss */
 .room .contents-form .row .item-container .description .type {

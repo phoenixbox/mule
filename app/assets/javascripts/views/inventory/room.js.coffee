@@ -6,7 +6,7 @@ class Mule.Views.Room extends Backbone.View
 
   events:
     'click .toggle': '_toggleRoom'
-    'click .save-form': '_saveForm'
+    'click .save-form': '_saveRoom'
     'click .decrement': '_updateCounter'
     'click .increment': '_updateCounter'
 
@@ -58,7 +58,8 @@ class Mule.Views.Room extends Backbone.View
     $roomDrawer = @_findDrawer($target)
     @_toggleDrawer($roomDrawer, $target)
 
-  _saveForm: (e) ->
+  _saveRoom: (e) ->
+    e.preventDefault()
     $target = $(e.target)
     $roomDrawer = @_findDrawer($target)
 
