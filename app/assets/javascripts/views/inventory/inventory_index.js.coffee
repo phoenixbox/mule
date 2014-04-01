@@ -6,7 +6,6 @@ class Mule.Views.InventoryIndex extends Backbone.View
 
   events:
     'click .addRoom': '_append'
-    'click .glyphicon-pencil': '_toggleEditable'
 
   className: 'inventory'
 
@@ -20,22 +19,6 @@ class Mule.Views.InventoryIndex extends Backbone.View
     @_renderTable()
     @_appendChosenNumberOfRooms()
     @
-
-  _toggleEditable: (e) ->
-    e.preventDefault()
-    $target = $(e.target)
-    $input = $target.parents('.name').children('.room-name-input')
-
-    $input.keydown (e) =>
-      if e.keyCode == 13
-        $input.attr('readonly', true)
-
-    if $input.prop('readonly')
-      $input.attr('readonly', false)
-      $input.focus()
-
-    $input.blur =>
-        $input.attr('readonly', true)
 
   _appendChosenNumberOfRooms: ->
     rooms = parseInt(window.localStorage.roomNumber)
