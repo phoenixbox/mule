@@ -1,8 +1,8 @@
 <div class='sub-category'>
   <div class='title'>
-    <%= _.keys(@item) %>
+    <%= @title %>
   </div>
-  <% for subItem in _.values(@item): %>
+  <% for subItem in @items: %>
     <div class="item-container">
       <div class='description'>
         <div class='image <%= subItem %>'></div>

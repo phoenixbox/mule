@@ -19,34 +19,15 @@ class Mule.Views.Room extends Backbone.View
     @totalFurnitureCount = 0
 
   render: ->
-    @$el.html(@template(categories: @_categoryOptions()));
+    @$el.html(@template(categories: @_categoryOptions(), view: @));
     @totalFurnitureCounter = @.$el.find('.furniture-for-room')
     @
 
-  _categoryOptions: ->
-    {
-      "sofas": ["2 seat", "3 seat", "4 seat", "futon", "sectional"],
-      "chairs": ["chair", "stool", "office", "lounge", "folding", "bean bag", "bench"],
-      "tables": [ {"dining": ["2 seat","4 seat","6 seat","8 seat"]},
-                  "coffee", "side", "office"
-              ],
-      "lamps": ["floor", "table"],
-      "storage": [ {"wardrobes": ["dresser","freestanding"]},
-                    "bookcase",
-                    {"cabinets": ["china","filing","entertainment center"]},
-                    {"misc": ["storage bin","suitcase","dufflebag","trunk"]},
-                ],
-      "electronics": ["tv", "stereo", "speakers", "computer", "printer"],
-      "music": [  {"pianos": ["grand","baby","upright"]},
-                  "drums",
-                  "instrument"
-              ],
-      "appliances": ["air conditioner","dryer","washer"],
-      "other":  ["mirror","picture","rugs","chandelier","stroller","car seat","plants","grill",
-                {"kids": ["play house","play pen","dollhouse"]},
-                {"sports": ["skis","snowboard","bicycle","golf clubs","pool table", "ping pong"]}
-              ]
-    }
+  _items: (collection) ->
+    _.first(_.values(collection))
+
+  _title: (collection) ->
+    _.keys(collection)
 
   _toggleEditable: (e) ->
     @delegate.trigger("nameRoom")
@@ -110,3 +91,117 @@ class Mule.Views.Room extends Backbone.View
           target.addClass('glyphicon-chevron-down').removeClass('glyphicon-chevron-right')
         else
           target.addClass('glyphicon-chevron-right').removeClass('glyphicon-chevron-down')
+
+  _categoryOptions: ->
+    {
+        "sofas": [
+            "2 seat",
+            "3 seat",
+            "4 seat",
+            "futon",
+            "sectional"
+        ],
+        "chairs": [
+            "chair",
+            "stool",
+            "office",
+            "lounge",
+            "folding",
+            "bean bag",
+            "bench"
+        ],
+        "tables": [
+            {
+                "dining": [
+                    "2 seat",
+                    "4 seat",
+                    "6 seat",
+                    "8 seat"
+                ]
+            },
+            "coffee",
+            "side",
+            "office"
+        ],
+        "lamps": [
+            "floor",
+            "table"
+        ],
+        "storage": [
+            {
+                "wardrobes": [
+                    "dresser",
+                    "freestanding"
+                ]
+            },
+            "bookcase",
+            {
+                "cabinets": [
+                    "china",
+                    "filing",
+                    "entertainment center"
+                ]
+            },
+            {
+                "misc": [
+                    "storage bin",
+                    "suitcase",
+                    "dufflebag",
+                    "trunk"
+                ]
+            }
+        ],
+        "electronics": [
+            "tv",
+            "stereo",
+            "speakers",
+            "computer",
+            "printer"
+        ],
+        "music": [
+            "drums",
+            "instrument",
+            {
+                "pianos": [
+                    "grand",
+                    "baby",
+                    "upright"
+                ]
+            }
+        ],
+        "appliances": [
+            "fridge",
+            "freezer",
+            "oven",
+            "air conditioner",
+            "dryer",
+            "washer"
+        ],
+        "other": [
+            "mirror",
+            "picture",
+            "rugs",
+            "chandelier",
+            "stroller",
+            "car seat",
+            "plants",
+            "grill",
+            {
+                "kids": [
+                    "play house",
+                    "play pen",
+                    "dollhouse"
+                ]
+            },
+            {
+                "sports": [
+                    "skis",
+                    "snowboard",
+                    "bicycle",
+                    "golf clubs",
+                    "pool table",
+                    "ping pong"
+                ]
+            }
+        ]
+    }

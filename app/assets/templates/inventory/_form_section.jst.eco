@@ -1,7 +1,7 @@
 <div class="category-title"><%= @title %></div>
 <% for item in @category: %>
-  <% if item.constructor == Object: %>
-    <%- render_partial 'inventory/sub_item_form_segment', item: item %>
+  <% if _.isUndefined(item[0]): %>
+    <%- render_partial 'inventory/sub_item_form_segment', {items: _.first(_.values(item)), title: _.keys(item), view: @view } %>
   <% else: %>
     <%- render_partial 'inventory/item_form_segment', { title: @title, item: item } %>
   <% end %>

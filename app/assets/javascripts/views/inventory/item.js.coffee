@@ -16,7 +16,7 @@ class Mule.Views.Item extends Backbone.View
     @render()
 
   render: ->
-    @$el.html(@template(name: @name, viewContext: @));
+    @$el.html(@template(name: @name, view: @));
     @
 
   _titleCase: (string) ->
