@@ -104,7 +104,7 @@ class Mule.Views.Room extends Backbone.View
 
   _toggleDrawer: (drawer, target) ->
     drawer.slideToggle
-      duration: 0
+      duration: 200
       complete: ->
         if drawer.is(':visible')
           target.addClass('glyphicon-chevron-down').removeClass('glyphicon-chevron-right')
