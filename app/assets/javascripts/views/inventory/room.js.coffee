@@ -5,7 +5,8 @@ class Mule.Views.Room extends Backbone.View
   className: 'room'
 
   events:
-    'click .toggle': '_toggleRoom'
+    'click .toggle-room': '_toggleRoom'
+    'click .toggle-category': '_toggleCategory'
     'click .save-form': '_saveRoom'
     'click .decrement': '_updateCounters'
     'click .increment': '_updateCounters'
@@ -49,30 +50,44 @@ class Mule.Views.Room extends Backbone.View
 
   _updateCounters: (e) ->
     $target = $(e.target)
+
     $itemCounter = $target.parents('.quantity').children('.counter')
     $itemCounterValue = parseInt($itemCounter.text())
+
+    $categoryCounter = $target.parents('.category-container').children('.category-header').find('.counter')
+    $categoryCounterValue = parseInt($categoryCounter.text())
 
     if $target.is('.decrement')
       $itemCounterValue -= 1
       @totalFurnitureCount -= 1
+      $categoryCounterValue -=1
     else
       @delegate.trigger("explainFurnitureCount")
       $itemCounterValue += 1
       @totalFurnitureCount += 1
+      $categoryCounterValue +=1
 
     $itemCounter.text($itemCounterValue).toString()
+    $categoryCounter.text($categoryCounterValue).toString()
     @totalFurnitureCounter.text(@totalFurnitureCount.toString())
 
   _toggleRoom: (e) ->
-    @delegate.trigger("incrementItemCount")
+    @delegate.trigger("showCategory")
     $target = $(e.target)
-    $roomDrawer = @_findDrawer($target)
+    $roomDrawer = @_findRoomDrawer($target)
     @_toggleDrawer($roomDrawer, $target)
 
+  _toggleCategory: (e) ->
+    @delegate.trigger("incrementItemCount")
+    $target = $(e.target)
+    $categoryDrawer = $target.parents('.category-container').children('.category-dropdown')
+    @_toggleDrawer($categoryDrawer, $target)
+
   _saveRoom: (e) ->
+    @delegate.trigger("roomComplete")
     e.preventDefault()
     $target = $(e.target)
-    $roomDrawer = @_findDrawer($target)
+    $roomDrawer = @_findRoomDrawer($target)
     $icon = $target.parents('.room-inventory').find('.completion-indicator').children()
     $icon.addClass('glyphicon-ok')
 
@@ -80,7 +95,7 @@ class Mule.Views.Room extends Backbone.View
 
     @_toggleDrawer($roomDrawer, $chevron)
 
-  _findDrawer: (target) ->
+  _findRoomDrawer: (target) ->
     target.parents('.room-inventory').children('.contents-form')
 
   _toggleDrawer: (drawer, target) ->

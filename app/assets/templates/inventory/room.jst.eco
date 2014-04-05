@@ -1,6 +1,6 @@
 <div class="room-inventory">
   <div class='header'>
-    <div class='toggle'>
+    <div class='toggle-room'>
       <span class="glyphicon glyphicon-chevron-right"></span>
     </div>
     <div class='header-details'>
@@ -13,14 +13,13 @@
           <div class="title">Items of Furniture:</div>
           <div class="counter furniture-for-room">0</div>
         </div>
-        <div class='packaging-count'>
-
-          <div class="title">
+        <!-- <div class='packaging-count'>
+          <div class="box-title">
             <div class="box-icon"></div>
             Boxes:
           </div>
           <div class="counter">0</div>
-        </div>
+        </div> -->
         <div class='completion-indicator'>
           <span class="glyphicon"></span>
         </div>

@@ -103,8 +103,26 @@ class Mule.Views.InventoryIndex extends Backbone.View
       my: "bottom left"
       at: "top center"
       setup: (tour, options) ->
-        options.view.bind "incrementItemCount", @incrementItemCount
+        options.view.bind "showCategory", @showCategory
         target: options.view.$el.find('.glyphicon-chevron-right')
+      teardown: (tour, options) ->
+        options.view.unbind "showCategory", @showCategory
+        return
+      bind: ["showCategory"]
+      showCategory: (tour) ->
+        waitForDrawer = () ->
+          tour.next()
+          return
+        setTimeout(waitForDrawer, 500)
+    }
+    {
+      content: "<p>Super!</p>" + "<p>" + "  Here we see the broad categories of furnitute options to select from, click the arrow to reveal the" + "<b>" + "bed" + "</b>" + " options</p>"
+      highlightTarget: true
+      my: "bottom left"
+      at: "top center"
+      setup: (tour, options) ->
+        options.view.bind "incrementItemCount", @incrementItemCount
+        target: options.view.$el.find('.category-reveal')
       teardown: (tour, options) ->
         options.view.unbind "incrementItemCount", @incrementItemCount
         return
@@ -140,6 +158,24 @@ class Mule.Views.InventoryIndex extends Backbone.View
       setup: (tour, options) ->
         target: options.view.$el.find('.furniture-for-room')
       teardown: (tour, options) ->
+        topPosition = $(options.view.$el.find('.save-form')[0]).position().top
+        $('body').animate({scrollTop:topPosition}, 600);
+        return
+    }
+    {
+      content: "<p>Yahoo!</p>" + "<p>" + "  Finished with this room? Just click" + "<b>" + "DONE "+ "</b>" + " to mark it ready.</p>"
+      highlightTarget: true
+      my: "top center"
+      at: "bottom center"
+      setup: (tour, options) ->
+        options.view.bind "roomComplete", @roomComplete
+        target: options.view.$el.find('.save-form')
+      teardown: (tour, options) ->
+        options.view.unbind "roomComplete", @roomComplete
+        return
+      bind: ["roomComplete"]
+      roomComplete: (tour) ->
+        tour.next()
         return
     }
   ]
