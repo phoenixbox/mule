@@ -6,7 +6,6 @@ class Mule.Views.InventoryIndex extends Backbone.View
 
   events:
     'click .addRoom': '_append'
-    'click #logo' : '_startTour'
 
   className: 'inventory'
 
@@ -19,32 +18,10 @@ class Mule.Views.InventoryIndex extends Backbone.View
     @$el.html(@template())
     @_renderTable()
     @_appendChosenNumberOfRooms()
-    # @_startTour()
     @
 
-  _startTour: ->
-    tour = new Tourist.Tour(
-      successStep: @_successStep()
-      tipClass: "Bootstrap"
-      tipOptions:
-        showEffect: "slidein"
-      steps: @_steps()
-      stepOptions:
-        # pass in the view so the tour steps can use it
-        view: @
-    )
-    tour.start()
-
-  _appendChosenNumberOfRooms: ->
-    rooms = parseInt(window.localStorage.roomNumber)
-    @_append() for [1..rooms]
-    @_toggleFirstRoom()
-
-  _toggleFirstRoom: ->
-    $(_.first(@.$el.find('.glyphicon-chevron-right'))).click()
-
   _append: ->
-    roomFormView = new Mule.Views.Room(app: @app)
+    roomFormView = new Mule.Views.Room(app: @app, delegate:@)
     @$('.inventory-wrapper').append(roomFormView.render().el)
 
   _renderTable: ->
@@ -52,6 +29,25 @@ class Mule.Views.InventoryIndex extends Backbone.View
       itemView = new Mule.Views.Item(app: @app, name: item)
       @$('.summary-table > tbody:last').append(itemView.render().el);
     @_wrapCellGroupsWithRow(@$('td'))
+
+  _startTour: ->
+    $tour = new Tourist.Tour(
+      successStep: @_successStep()
+      tipClass: "Bootstrap"
+      tipOptions:
+        showEffect: "slidein"
+      steps: @_steps()
+      stepOptions:
+        view: @
+    )
+    run = () ->
+      $tour.start()
+    setTimeout(run, 500)
+
+  _appendChosenNumberOfRooms: ->
+    rooms = parseInt(window.localStorage.roomNumber)
+    @_append() for [1..rooms]
+    @_startTour()
 
   _itemTypes: ->
     ['beds','sofas','chairs','tables','cabinets','stereos','tv\'s','computers','lamps','bookcases','mirrors','paintings','appliances','pianos', 'other']
@@ -68,54 +64,89 @@ class Mule.Views.InventoryIndex extends Backbone.View
 
   _steps: -> [
     {
-      content: "<p>Lets start by naming your first room</p>" + "<p class=\"action\">" + "  Click the pencil and type in your room's name." + "</p>"
+      content: "<p>Lets get started!</p>" + "<p class=\"action\">" + "  Click the pencil to give your first room a name" + "</p>"
       highlightTarget: true
-      my: "bottom center"
+      my: "bottom left"
       at: "top center"
       target: @.$el.find('.glyphicon-pencil')
       setup: (tour, options) ->
-        # We can control the view passed in via stepOptions
-        # options.view.reset()
-        options.View.bind "roomNameEdited", @_roomNameEdited
-        # options.view.enable()
+        options.view.bind "nameRoom", @nameRoom
         return
       teardown: (tour, options) ->
-        # Disallow more kitten selection
-        # options.view.disable()
-        options.view.unbind "roomNameEdited", @_roomNameEdited
+        options.view.unbind "nameRoom", @nameRoom
         return
-      # a function name in bind allows you to reference
-      # it with `this` in setup and teardown
-      bind: ["roomNameEdited"]
-      _roomNameEdited: (tour, options, view, kitten) ->
-        # User clicks a kitten, we move to the next step
+      bind: ["nameRoom"]
+      nameRoom: (tour) ->
         tour.next()
         return
     }
     {
-      # Step 2
-      content: "<p>Lets add some items of furniture to your room</p>" + "<p class=\"action\">" + "Click the arrow to see the furniture options" + "</p>"
+      content: "<p>Great!</p>" + "<p>" + "  Enter the most suitable name for your room, when you are done, click next" + "</p>"
       highlightTarget: true
       nextButton: true
       my: "bottom center"
       at: "top center"
       setup: (tour, options) ->
-        # we can contextually modify the step's configuraton.
-        # Whatever returned here will override the initial
-        # values. Here we point to the user's kitten.
-        target: @.$el.find('.glyphicon-chevron-right')
+        options.view.bind "showRoom", @showRoom
+        target: options.view.$el.find('.room-name-input')
       teardown: (tour, options) ->
-        # Enable so the user click kittens after the tour
-        options.view.enable()
+        options.view.unbind "showRoom", @showRoom
+        return
+      bind: ["showRoom"]
+      showRoom: (tour) ->
+        tour.next()
+        return
+    }
+    {
+      content: "<p>Awesome!</p>" + "<p>" + "  Now for the fun part :) Click the arrow to reveal the furniture options for your room" + "</p>"
+      highlightTarget: true
+      my: "bottom left"
+      at: "top center"
+      setup: (tour, options) ->
+        options.view.bind "incrementItemCount", @incrementItemCount
+        target: options.view.$el.find('.glyphicon-chevron-right')
+      teardown: (tour, options) ->
+        options.view.unbind "incrementItemCount", @incrementItemCount
+        return
+      bind: ["incrementItemCount"]
+      incrementItemCount: (tour) ->
+        waitForDrawer = () ->
+          tour.next()
+          return
+        setTimeout(waitForDrawer, 500)
+    }
+    {
+      content: "<p>Wahoo!</p>" + "<p>" + "  This is the good stuff. Click on the plus button to increase the furniture count by one" + "</p>"
+      highlightTarget: true
+      my: "top right"
+      at: "bottom center"
+      setup: (tour, options) ->
+        options.view.bind "explainFurnitureCount", @explainFurnitureCount
+        target: $(_.first(options.view.$el.find('.increment')))
+      teardown: (tour, options) ->
+        options.view.unbind "explainFurnitureCount", @explainFurnitureCount
+        return
+      bind: ["explainFurnitureCount"]
+      explainFurnitureCount: (tour) ->
+        tour.next()
+        return
+    }
+    {
+      content: "<p>Woot!</p>" + "<p>" + "  When you add a furniture item, the total furniture item count for the room is updated" + "</p>"
+      nextButton: true
+      highlightTarget: true
+      my: "top center"
+      at: "bottom center"
+      setup: (tour, options) ->
+        target: options.view.$el.find('.furniture-for-room')
+      teardown: (tour, options) ->
         return
     }
   ]
   _successStep: ->
-    # Final step after a successful run through
-    content: "<p>Nice job, this is a success step.</p>" + "<p>Notice you can now choose either kitten.</p>"
-    closeButton: true
+    content: "<p>Nice job! Now you know your way around</p>" + "<p>Take a walk around your house and add your furniture to your rooms list. When you are done just click here!</p>"
     nextButton: true
     highlightTarget: true
-    my: "left center"
-    at: "right center"
-    target: @.$el.find('.glyphicon-pencil')
+    my: "bottom right"
+    at: "top center"
+    target: @.$el.find('.finish')

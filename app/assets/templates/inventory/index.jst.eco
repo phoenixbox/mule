@@ -54,7 +54,7 @@
         <div class="inventory-submit">
           <div class="button-container">
             <button type="button" class="btn btn-default addRoom">Add a Room</button>
-            <button type="button" class="btn btn-default">Finish!</button>
+            <button type="button" class="btn btn-default finish">Finish!</button>
           </div>
         </div>
       </div>

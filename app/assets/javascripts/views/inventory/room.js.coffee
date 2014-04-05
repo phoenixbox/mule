@@ -7,18 +7,21 @@ class Mule.Views.Room extends Backbone.View
   events:
     'click .toggle': '_toggleRoom'
     'click .save-form': '_saveRoom'
-    'click .decrement': '_updateCounter'
-    'click .increment': '_updateCounter'
+    'click .decrement': '_updateCounters'
+    'click .increment': '_updateCounters'
     'click .glyphicon-pencil': '_toggleEditable'
     'click .glyphicon-remove': '_toggleCompletedState'
     'click .glyphicon-ok': '_toggleCompletedState'
 
   initialize: (options) ->
     @app        = options.app
+    @delegate   = options.delegate
     @router     = @app.router
+    @totalFurnitureCount = 0
 
   render: ->
     @$el.html(@template(categories: @_categoryOptions()));
+    @totalFurnitureCounter = @.$el.find('.furniture-for-room')
     @
 
   _categoryOptions: ->
@@ -47,6 +50,7 @@ class Mule.Views.Room extends Backbone.View
     }
 
   _toggleEditable: (e) ->
+    @delegate.trigger("nameRoom")
     e.preventDefault()
     $target = $(e.target)
     $input = $target.parents('.name').children('.room-name-input')
@@ -60,19 +64,26 @@ class Mule.Views.Room extends Backbone.View
       $input.focus()
 
     $input.blur =>
-        $input.attr('readonly', true)
+      $input.attr('readonly', true)
 
-  _updateCounter: (e) ->
+  _updateCounters: (e) ->
     $target = $(e.target)
-    $counter = $target.parents('.quantity').children('.counter')
-    $value = parseInt($counter.text())
+    $itemCounter = $target.parents('.quantity').children('.counter')
+    $itemCounterValue = parseInt($itemCounter.text())
+
     if $target.is('.decrement')
-      $value -= 1
+      $itemCounterValue -= 1
+      @totalFurnitureCount -= 1
     else
-      $value += 1
-    $counter.text($value).toString()
+      @delegate.trigger("explainFurnitureCount")
+      $itemCounterValue += 1
+      @totalFurnitureCount += 1
+
+    $itemCounter.text($itemCounterValue).toString()
+    @totalFurnitureCounter.text(@totalFurnitureCount.toString())
 
   _toggleRoom: (e) ->
+    @delegate.trigger("incrementItemCount")
     $target = $(e.target)
     $roomDrawer = @_findDrawer($target)
     @_toggleDrawer($roomDrawer, $target)

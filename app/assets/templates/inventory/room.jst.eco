@@ -11,7 +11,7 @@
       <div class='contents-summary'>
         <div class='furniture-count'>
           <div class="title">Items of Furniture:</div>
-          <div class="counter">0</div>
+          <div class="counter furniture-for-room">0</div>
         </div>
         <div class='packaging-count'>
 
