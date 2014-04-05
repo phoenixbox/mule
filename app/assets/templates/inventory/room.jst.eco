@@ -22,7 +22,7 @@
           <div class="counter">0</div>
         </div>
         <div class='completion-indicator'>
-          <span class="glyphicon glyphicon glyphicon-remove"></span>
+          <span class="glyphicon"></span>
         </div>
       </div>
     </div>

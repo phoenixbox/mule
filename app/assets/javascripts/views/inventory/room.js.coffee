@@ -11,7 +11,6 @@ class Mule.Views.Room extends Backbone.View
     'click .increment': '_updateCounters'
     'click .glyphicon-pencil': '_toggleEditable'
     'click .glyphicon-remove': '_toggleCompletedState'
-    'click .glyphicon-ok': '_toggleCompletedState'
 
   initialize: (options) ->
     @app        = options.app
@@ -57,6 +56,7 @@ class Mule.Views.Room extends Backbone.View
 
     $input.keydown (e) =>
       if e.keyCode == 13
+
         $input.attr('readonly', true)
 
     if $input.prop('readonly')
@@ -92,26 +92,12 @@ class Mule.Views.Room extends Backbone.View
     e.preventDefault()
     $target = $(e.target)
     $roomDrawer = @_findDrawer($target)
-
-    $icon = $target.parents('.room-inventory').find('.glyphicon-remove')
-    $icon.addClass('glyphicon-ok').removeClass('glyphicon-remove')
+    $icon = $target.parents('.room-inventory').find('.completion-indicator').children()
+    $icon.addClass('glyphicon-ok')
 
     $chevron = $target.parents('.room-inventory').find('.glyphicon-chevron-down')
 
     @_toggleDrawer($roomDrawer, $chevron)
-
-  _toggleCompletedState: (e) ->
-    e.preventDefault()
-    $target = $(e.target)
-    @_addOrReplaceTick($target)
-
-  _addOrReplaceTick: (target) ->
-    $icon = target.parents('.room-inventory').find('.glyphicon-remove')
-    if $icon.length > 0
-      $icon.addClass('glyphicon-ok').removeClass('glyphicon-remove')
-    else
-      $icon = target.parents('.room-inventory').find('.glyphicon-ok')
-      $icon.addClass('glyphicon-remove').removeClass('glyphicon-ok')
 
   _findDrawer: (target) ->
     target.parents('.room-inventory').children('.contents-form')

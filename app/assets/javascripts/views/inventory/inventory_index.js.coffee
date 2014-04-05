@@ -81,7 +81,7 @@ class Mule.Views.InventoryIndex extends Backbone.View
         return
     }
     {
-      content: "<p>Great!</p>" + "<p>" + "  Enter the most suitable name for your room, when you are done, click next" + "</p>"
+      content: "<p>Great!</p>" + "<p>" + "  Enter the most suitable name for your room, when you are done, click "+ "<b>" + "Next Step"+ "</b>" + "</p>"
       highlightTarget: true
       nextButton: true
       my: "bottom center"
