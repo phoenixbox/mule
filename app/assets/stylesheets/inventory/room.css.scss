@@ -139,11 +139,11 @@ $melbourne_light_font: MelbourneLightFont;
     margin-top: 20px;
     display: none;
     height: 100%;
+    padding-bottom: 40px;
 
     .row {
       text-transform:capitalize;
       margin-bottom: 10px;
-      border-bottom: 1px solid $mule-aqua;
       margin-bottom: 20px;
       min-height: 100px;
 
@@ -336,8 +336,20 @@ $melbourne_light_font: MelbourneLightFont;
     }
 
     .save-form {
-      margin-top: 20px;
+      border: none;
+      background-color: #43c1c7;
+      color: white;
+      font-family: $bebas_neue_font;
+      font-size: 36px;
+      line-height: 28px;
+      letter-spacing: 2px;
+      padding-top: 10px;
       float: right;
+      width: 100%;
+
+      &:hover {
+        background-color: purple;
+      }
     }
   }
 }
