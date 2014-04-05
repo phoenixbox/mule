@@ -94,10 +94,40 @@ class Mule.Views.Room extends Backbone.View
 
   _categoryOptions: ->
     {
+        "beds": [
+          {
+              "king": [
+                  "frame",
+                  "box spring",
+                  "mattress"
+              ]
+          },
+          {
+              "queen": [
+                  "frame",
+                  "box spring",
+                  "mattress"
+              ]
+          },
+          {
+              "single": [
+                  "frame",
+                  "box spring",
+                  "mattress"
+              ]
+          },
+          {
+              "toddler": [
+                  "frame",
+                  "box spring",
+                  "mattress"
+              ]
+          }
+        ],
         "sofas": [
             "2 seat",
             "3 seat",
-            "4 seat",
+            "+4 seat",
             "futon",
             "sectional"
         ],
@@ -116,16 +146,22 @@ class Mule.Views.Room extends Backbone.View
                     "2 seat",
                     "4 seat",
                     "6 seat",
-                    "8 seat"
+                    "+8 seat"
                 ]
             },
             "coffee",
             "side",
             "office"
         ],
-        "lamps": [
-            "floor",
-            "table"
+        "lighting": [
+            "ceiling fixture",
+            "chandelier",
+            {
+                "lamps": [
+                    "floor",
+                    "table"
+                ]
+            }
         ],
         "storage": [
             {
@@ -134,7 +170,6 @@ class Mule.Views.Room extends Backbone.View
                     "freestanding"
                 ]
             },
-            "bookcase",
             {
                 "cabinets": [
                     "china",
@@ -143,7 +178,8 @@ class Mule.Views.Room extends Backbone.View
                 ]
             },
             {
-                "misc": [
+                "miscellaneous": [
+                    "bookcase",
                     "storage bin",
                     "suitcase",
                     "dufflebag",
@@ -178,14 +214,17 @@ class Mule.Views.Room extends Backbone.View
             "washer"
         ],
         "other": [
-            "mirror",
-            "picture",
-            "rugs",
-            "chandelier",
-            "stroller",
-            "car seat",
-            "plants",
-            "grill",
+            {
+                "miscellaneous": [
+                    "mirror",
+                    "picture",
+                    "rugs",
+                    "stroller",
+                    "car seat",
+                    "plants",
+                    "grill"
+                ]
+            },
             {
                 "kids": [
                     "play house",

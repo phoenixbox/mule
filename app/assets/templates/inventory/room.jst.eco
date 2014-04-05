@@ -32,51 +32,56 @@
       <div class='row'>
         <div class="col-md-4">
           <div class="category">
-            <%- render_partial 'inventory/form_section', {title: 'sofas', category: @categories.sofas, view: @view} %>
+            <%- render_partial 'inventory/form_section', {title: 'beds', category: @categories.beds, view: @view} %>
           </div>
         </div>
         <div class="col-md-4">
-          <div class="category">
-            <%- render_partial 'inventory/form_section', {title: 'chairs', category: @categories.chairs, view: @view} %>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="category">
-            <%- render_partial 'inventory/form_section', {title: 'tables', category: @categories.tables, view: @view} %>
-          </div>
-          <div class="category">
-            <%- render_partial 'inventory/form_section', {title: 'lamps', category: @categories.lamps, view: @view} %>
-          </div>
-        </div>
-      </div>
-      <div class='row'>
-        <div class="col-md-8">
           <div class="category">
             <%- render_partial 'inventory/form_section', {title: 'storage', category: @categories.storage, view: @view} %>
           </div>
         </div>
         <div class="col-md-4">
           <div class="category">
-            <%- render_partial 'inventory/form_section', {title: 'electronics', category: @categories.electronics, view: @view} %>
+            <%- render_partial 'inventory/form_section', {title: 'chairs', category: @categories.chairs, view: @view} %>
+          </div>
+          <div class="category">
+            <%- render_partial 'inventory/form_section', {title: 'tables', category: @categories.tables, view: @view} %>
+          </div>
+        </div>
+      </div>
+      <div class='row'>
+        <div class="col-md-4">
+          <div class="category">
+            <%- render_partial 'inventory/form_section', {title: 'sofas', category: @categories.sofas, view: @view} %>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="category">
+            <%- render_partial 'inventory/form_section', {title: 'lamps', category: @categories.lighting, view: @view} %>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="category">
+            <%- render_partial 'inventory/form_section', {title: 'music', category: @categories.music, view: @view} %>
           </div>
         </div>
       </div>
       <div class='row'>
         <div class="col-md-6">
           <div class="category">
-            <%- render_partial 'inventory/form_section', {title: 'music', category: @categories.music, view: @view} %>
+            <%- render_partial 'inventory/form_section', {title: 'appliances', category: @categories.appliances, view: @view} %>
           </div>
         </div>
         <div class="col-md-6">
           <div class="category">
-            <%- render_partial 'inventory/form_section', {title: 'appliances', category: @categories.appliances, view: @view} %>
+            <%- render_partial 'inventory/form_section', {title: 'electronics', category: @categories.electronics, view: @view} %>
           </div>
         </div>
       </div>
       <div class='row'>
         <div class="col-md-12">
           <div class="category">
-            <%- render_partial 'inventory/form_multi_section', {title: 'other', category: @categories.other, view: @view} %>
+            <%- render_partial 'inventory/form_three_column_section', {title: 'other', category: @categories.other, view: @view} %>
           </div>
         </div>
       </div>
