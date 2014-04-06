@@ -1,5 +1,5 @@
 $mule-aqua: #43C1C7;
-$mule-grey: #6f6f6f;
+$mule-gray: #6f6f6f;
 $bebas_neue_font: BebasNeueFont;
 $melbourne_light_font: MelbourneLightFont;
 
@@ -23,7 +23,7 @@ $melbourne_light_font: MelbourneLightFont;
       height: 100%;
       font-size: 20px;
       float: left;
-      background-color: purple;
+      background-color: lightblue;
 
       .glyphicon {
         top: 8px;
@@ -42,7 +42,7 @@ $melbourne_light_font: MelbourneLightFont;
 
       .name {
         height: 100%;
-        width: 160px;
+        width: 35%;
         float:left;
         color: white;
         font-family: $melbourne_light_font;
@@ -50,10 +50,10 @@ $melbourne_light_font: MelbourneLightFont;
         text-align: center;
 
         input {
-          color: white;
+          color: gray;
           height: 40px;
           width: 75%;
-          background-color: grey;
+          background-color: lightgray;
           float: left;
           border: none;
           border-radius: 0;
@@ -62,32 +62,32 @@ $melbourne_light_font: MelbourneLightFont;
 
         }
         input::-webkit-input-placeholder {
-           color: white;
+           color: gray;
         }
 
         input:-moz-placeholder {
-           color: white;
+           color: gray;
         }
 
         input::-moz-placeholder {
-           color: white;
+           color: gray;
         }
 
         input:-ms-input-placeholder {
-           color: white;
+           color: gray;
         }
 
         span {
           height: 20px;
-          width: 20px;
-          margin: 10px 10px;
+          width: 25%;
+          margin: 10px 0;
           float: left;
           font-size: 18px;
         }
       }
       .contents-summary {
         height: 100%;
-        width: auto;
+        width: 65%;
         float:left;
 
         .furniture-count, .packaging-count, .completion-indicator {
@@ -136,8 +136,7 @@ $melbourne_light_font: MelbourneLightFont;
         .completion-indicator {
           width: 5%;
           height: 100%;
-          position: fixed;
-          right: 80px;
+          float: right;
 
           .glyphicon {
             font-size: 20px;
@@ -147,7 +146,6 @@ $melbourne_light_font: MelbourneLightFont;
     }
   }
   .contents-form {
-    margin-top: 20px;
     display: none;
     height: 100%;
     padding-bottom: 40px;
@@ -167,20 +165,19 @@ $melbourne_light_font: MelbourneLightFont;
 
           .category-dropdown {
             display: none;
-            color: grey;
+            color: gray;
           }
           .category-header {
             height: 40px;
             width: 100%;
-            background-color: purple;
-            font-family: $bebas_neue_font;
+            font-family: $melbourne_light_font;
 
             .toggle-category {
               width: 15%;
               height: 100%;
               font-size: 20px;
               float: left;
-              background-color: gray;
+              background-color: lightblue;
 
               .glyphicon {
                 top: 8px;
@@ -190,24 +187,26 @@ $melbourne_light_font: MelbourneLightFont;
             .details {
               width: 85%;
               float: left;
-              background-color: purple;
+              background-color: lightgray;
               height: 100%;
+              color: gray;
 
               .title {
                 float: left;
                 width: 50%;
                 text-align: left;
                 padding-left: 10px;
-                font-size: 26px;
-                padding-top: 2px;
+                font-size: 22px;
+                padding-top: 6px;
               }
 
               .contents-summary{
                 float:left;
                 width: 50%;
+                font-family: $bebas_neue_font;
 
                 .item-title, .furniture-for-category {
-                  font-size: 20px;
+                  font-size: 15px;
                   letter-spacing: 1px;
                   padding-top: 6px;
                   padding-right: 10px;
@@ -399,20 +398,23 @@ $melbourne_light_font: MelbourneLightFont;
       float: left;
     }
 
-    .save-form {
-      border: none;
-      background-color: #43c1c7;
-      color: white;
-      font-family: $bebas_neue_font;
-      font-size: 36px;
-      line-height: 28px;
-      letter-spacing: 2px;
-      padding-top: 10px;
-      float: right;
-      width: 100%;
+    .save {
 
-      &:hover {
-        background-color: purple;
+      .save-form {
+        border: none;
+        background-color: #43c1c7;
+        color: white;
+        font-family: $bebas_neue_font;
+        font-size: 36px;
+        line-height: 28px;
+        letter-spacing: 2px;
+        padding-top: 10px;
+        float: right;
+        width: 100%;
+
+        &:hover {
+          background-color: lightblue;
+        }
       }
     }
   }

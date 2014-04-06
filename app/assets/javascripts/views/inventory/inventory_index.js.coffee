@@ -18,7 +18,11 @@ class Mule.Views.InventoryIndex extends Backbone.View
     @$el.html(@template())
     @_renderTable()
     @_appendChosenNumberOfRooms()
+    @_adjustBackground()
     @
+
+  _adjustBackground: ->
+    $('#wrapper').css({"background-image":"none","background-color":"lightcyan"})
 
   _append: ->
     roomFormView = new Mule.Views.Room(app: @app, delegate:@)
@@ -116,7 +120,7 @@ class Mule.Views.InventoryIndex extends Backbone.View
         setTimeout(waitForDrawer, 500)
     }
     {
-      content: "<p>Super!</p>" + "<p>" + "  Here we see the broad categories of furnitute options to select from, click the arrow to reveal the" + "<b>" + "bed" + "</b>" + " options</p>"
+      content: "<p>Super!</p>" + "<p>" + "  Here we see the broad categories of furnitute options to select from, click the arrow to reveal the " + "<b>" + "bed" + "</b>" + " options</p>"
       highlightTarget: true
       my: "bottom left"
       at: "top center"
@@ -143,6 +147,8 @@ class Mule.Views.InventoryIndex extends Backbone.View
         target: $(_.first(options.view.$el.find('.increment')))
       teardown: (tour, options) ->
         options.view.unbind "explainFurnitureCount", @explainFurnitureCount
+        topPosition = $(options.view.$el.find('.room-inventory')[0]).position().top
+        $('body').animate({scrollTop:topPosition}, 600);
         return
       bind: ["explainFurnitureCount"]
       explainFurnitureCount: (tour) ->
@@ -163,7 +169,7 @@ class Mule.Views.InventoryIndex extends Backbone.View
         return
     }
     {
-      content: "<p>Yahoo!</p>" + "<p>" + "  Finished with this room? Just click" + "<b>" + "DONE "+ "</b>" + " to mark it ready.</p>"
+      content: "<p>Yahoo!</p>" + "<p>" + "  Lets mark this room done for the moment. Just click " + "<b>" + "DONE "+ "</b>" + " to mark it ready.</p>"
       highlightTarget: true
       my: "top center"
       at: "bottom center"

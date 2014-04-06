@@ -84,7 +84,7 @@
           </div>
         </div>
       </div>
-      <div>
+      <div class="save">
         <input class="save-form" name="saveForm" type="submit" value="DONE">
       </div>
     </form>

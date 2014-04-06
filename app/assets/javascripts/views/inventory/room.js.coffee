@@ -77,11 +77,21 @@ class Mule.Views.Room extends Backbone.View
     $roomDrawer = @_findRoomDrawer($target)
     @_toggleDrawer($roomDrawer, $target)
 
+    targetScrollPosition = $target.position().top
+    @_scrollToTargetPosition(targetScrollPosition)
+
+
   _toggleCategory: (e) ->
     @delegate.trigger("incrementItemCount")
     $target = $(e.target)
     $categoryDrawer = $target.parents('.category-container').children('.category-dropdown')
     @_toggleDrawer($categoryDrawer, $target)
+
+    targetScrollPosition = $target.parents('.row').position().top + $target.position().top
+    @_scrollToTargetPosition(targetScrollPosition)
+
+  _scrollToTargetPosition: (targetPosition) ->
+    $('body').animate({scrollTop:targetPosition}, 600);
 
   _saveRoom: (e) ->
     @delegate.trigger("roomComplete")
