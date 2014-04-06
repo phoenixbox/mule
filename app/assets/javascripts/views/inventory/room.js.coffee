@@ -80,7 +80,6 @@ class Mule.Views.Room extends Backbone.View
     targetScrollPosition = $target.position().top
     @_scrollToTargetPosition(targetScrollPosition)
 
-
   _toggleCategory: (e) ->
     @delegate.trigger("incrementItemCount")
     $target = $(e.target)

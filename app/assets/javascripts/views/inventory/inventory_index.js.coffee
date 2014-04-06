@@ -149,6 +149,7 @@ class Mule.Views.InventoryIndex extends Backbone.View
         options.view.unbind "explainFurnitureCount", @explainFurnitureCount
         topPosition = $(options.view.$el.find('.room-inventory')[0]).position().top
         $('body').animate({scrollTop:topPosition}, 600);
+
         return
       bind: ["explainFurnitureCount"]
       explainFurnitureCount: (tour) ->
@@ -169,6 +170,7 @@ class Mule.Views.InventoryIndex extends Backbone.View
         return
     }
     {
+
       content: "<p>Yahoo!</p>" + "<p>" + "  Lets mark this room done for the moment. Just click " + "<b>" + "DONE "+ "</b>" + " to mark it ready.</p>"
       highlightTarget: true
       my: "top center"

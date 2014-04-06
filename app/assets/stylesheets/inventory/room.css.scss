@@ -43,6 +43,7 @@ $melbourne_light_font: MelbourneLightFont;
       .name {
         height: 100%;
         width: 35%;
+
         float:left;
         color: white;
         font-family: $melbourne_light_font;
@@ -166,11 +167,13 @@ $melbourne_light_font: MelbourneLightFont;
           .category-dropdown {
             display: none;
             color: gray;
+
           }
           .category-header {
             height: 40px;
             width: 100%;
             font-family: $melbourne_light_font;
+
 
             .toggle-category {
               width: 15%;
@@ -178,6 +181,7 @@ $melbourne_light_font: MelbourneLightFont;
               font-size: 20px;
               float: left;
               background-color: lightblue;
+
 
               .glyphicon {
                 top: 8px;
@@ -191,6 +195,7 @@ $melbourne_light_font: MelbourneLightFont;
               height: 100%;
               color: gray;
 
+
               .title {
                 float: left;
                 width: 50%;
@@ -198,6 +203,7 @@ $melbourne_light_font: MelbourneLightFont;
                 padding-left: 10px;
                 font-size: 22px;
                 padding-top: 6px;
+
               }
 
               .contents-summary{
