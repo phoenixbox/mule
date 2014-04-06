@@ -26,7 +26,7 @@ class Mule.Views.InventoryIndex extends Backbone.View
 
   _append: ->
     roomFormView = new Mule.Views.Room(app: @app, delegate:@)
-    @$('.inventory-wrapper').append(roomFormView.render().el)
+    @$('.rooms-wrapper').append(roomFormView.render().el)
 
   _renderTable: ->
     _.each @_itemTypes(), (item) =>
