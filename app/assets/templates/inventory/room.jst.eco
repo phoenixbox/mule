@@ -1,0 +1,92 @@
+<div class="room-inventory">
+  <div class='header'>
+    <div class='toggle-room'>
+      <span class="glyphicon glyphicon-chevron-right"></span>
+    </div>
+    <div class='header-details'>
+      <div class='name'>
+        <input class="room-name-input" type="text" placeholder="Room Name" readonly required/>
+        <span class="glyphicon glyphicon-pencil"></span>
+      </div>
+      <div class='contents-summary'>
+        <div class='furniture-count'>
+          <div class="title">Items of Furniture:</div>
+          <div class="counter furniture-for-room">0</div>
+        </div>
+        <!-- <div class='packaging-count'>
+          <div class="box-title">
+            <div class="box-icon"></div>
+            Boxes:
+          </div>
+          <div class="counter">0</div>
+        </div> -->
+        <div class='completion-indicator'>
+          <span class="glyphicon"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class='contents-form'>
+    <form action="#">
+      <div class='row'>
+        <div class="col-md-4">
+          <div class="category">
+            <%- render_partial 'inventory/form_section', {title: 'beds', category: @categories.beds, view: @view} %>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="category">
+            <%- render_partial 'inventory/form_section', {title: 'storage', category: @categories.storage, view: @view} %>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="category">
+            <%- render_partial 'inventory/form_section', {title: 'chairs', category: @categories.chairs, view: @view} %>
+          </div>
+          <div class="category">
+            <%- render_partial 'inventory/form_section', {title: 'tables', category: @categories.tables, view: @view} %>
+          </div>
+        </div>
+      </div>
+      <div class='row'>
+        <div class="col-md-4">
+          <div class="category">
+            <%- render_partial 'inventory/form_section', {title: 'sofas', category: @categories.sofas, view: @view} %>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="category">
+            <%- render_partial 'inventory/form_section', {title: 'lamps', category: @categories.lighting, view: @view} %>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="category">
+            <%- render_partial 'inventory/form_section', {title: 'music', category: @categories.music, view: @view} %>
+          </div>
+        </div>
+      </div>
+      <div class='row'>
+        <div class="col-md-6">
+          <div class="category">
+            <%- render_partial 'inventory/form_section', {title: 'appliances', category: @categories.appliances, view: @view} %>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="category">
+            <%- render_partial 'inventory/form_section', {title: 'electronics', category: @categories.electronics, view: @view} %>
+          </div>
+        </div>
+      </div>
+      <div class='row'>
+        <div class="col-md-12">
+          <div class="category">
+            <%- render_partial 'inventory/form_three_column_section', {title: 'other', category: @categories.other, view: @view} %>
+          </div>
+        </div>
+      </div>
+      <div>
+        <input class="save-form" name="saveForm" type="submit" value="DONE">
+      </div>
+    </form>
+  </div>
+</div>

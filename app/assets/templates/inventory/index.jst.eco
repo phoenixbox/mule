@@ -1,0 +1,63 @@
+<div id='nav'>
+  <div id='logo'></div>
+</div>
+<div class='inventory-wrapper'>
+  <div class='summaryHeader'>Your Inventory Summary</div>
+  <div class="summary row">
+    <div class="col-md-12">
+      <table class='summary-table'>
+        <tbody>
+        </tbody>
+      </table>
+      <div class="total row">
+        <div class="packaging-estimation">
+          <div class="title">Packaging Estimation</div>
+          <div class="box-group-item">
+            <div class="wardrobe-box-icon"></div>
+            <div class="details">
+              <div class="badge">8</div>
+              <div class="title">Wardrobe</div>
+              <div class="dimensions"><sub>(24" x 23" x 48")</sub></div>
+            </div>
+          </div>
+          <div class="box-group-item">
+            <div class="box-icon"></div>
+            <div class="details">
+              <div class="badge">8</div>
+              <div class="title">Large</div>
+              <div class="dimensions"><sub>(20" x 20" x 18")</sub></div>
+            </div>
+          </div>
+          <div class="box-group-item">
+            <div class="box-medium-icon"></div>
+            <div class="details">
+              <div class="badge">12</div>
+              <div class="title">Medium</div>
+              <div class="dimensions"><sub>(16" x 16" x 18")</sub></div>
+            </div>
+          </div>
+          <div class="box-group-item">
+            <div class="box-small-icon"></div>
+            <div class="details">
+              <div class="badge">16</div>
+              <div class="title">Small</div>
+              <div class="dimensions"><sub>(12" x 12.5" x 17")</sub></div>
+            </div>
+          </div>
+        </div>
+        <div class="weight-estimation">
+          <div class="title">Weight Estimation</div>
+          <div class="poundage">2500lbs</div>
+          <div class="add-a-room">
+          </div>
+        </div>
+        <div class="inventory-submit">
+          <div class="button-container">
+            <button type="button" class="btn btn-default addRoom">Add a Room</button>
+            <button type="button" class="btn btn-default finish">Finish!</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

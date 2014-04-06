@@ -1,0 +1,419 @@
+$mule-aqua: #43C1C7;
+$mule-grey: #6f6f6f;
+$bebas_neue_font: BebasNeueFont;
+$melbourne_light_font: MelbourneLightFont;
+
+.room {
+  height: 100%;
+  width: 95%;
+  left: 50%;
+  margin: 10px auto 10px;
+
+  .header {
+    height: 40px;
+    width: 100%;
+    background-color: $mule-aqua;
+
+    span {
+      cursor: pointer;
+    }
+
+    .toggle-room {
+      width: 5%;
+      height: 100%;
+      font-size: 20px;
+      float: left;
+      background-color: purple;
+
+      .glyphicon {
+        top: 8px;
+        color: white;
+      }
+    }
+
+    .header-details {
+      height: 100%;
+      width: 95%;
+      float:left;
+
+      .glyphicon-pencil:hover {
+        color: purple;
+      }
+
+      .name {
+        height: 100%;
+        width: 160px;
+        float:left;
+        color: white;
+        font-family: $melbourne_light_font;
+        font-size: 24px;
+        text-align: center;
+
+        input {
+          color: white;
+          height: 40px;
+          width: 75%;
+          background-color: grey;
+          float: left;
+          border: none;
+          border-radius: 0;
+          padding-left: 15px;
+          font-size: 15px
+
+        }
+        input::-webkit-input-placeholder {
+           color: white;
+        }
+
+        input:-moz-placeholder {
+           color: white;
+        }
+
+        input::-moz-placeholder {
+           color: white;
+        }
+
+        input:-ms-input-placeholder {
+           color: white;
+        }
+
+        span {
+          height: 20px;
+          width: 20px;
+          margin: 10px 10px;
+          float: left;
+          font-size: 18px;
+        }
+      }
+      .contents-summary {
+        height: 100%;
+        width: auto;
+        float:left;
+
+        .furniture-count, .packaging-count, .completion-indicator {
+          color: white;
+          font-family: $bebas_neue_font;
+          font-size: 24px;
+          padding-top: 4px;
+          float: left;
+        }
+
+        .furniture-count, .packaging-count {
+          .title {
+            float: left;
+            margin-left: 10%;
+          }
+          .counter {
+            height: 32px;
+            width: 40px;
+            float: left;
+            text-align: center;
+            line-height: 31.5px;
+            margin-left: 5%;
+            padding-top: 2px;
+          }
+        }
+        .furniture-count {
+          width: 240px;
+        }
+        .packaging-count {
+          width: 15%;
+
+          .box-title {
+
+          }
+
+          .box-icon {
+            float: left;
+            height: 30px;
+            width: 30px;
+            margin: 2px 10px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-image: image-url("icons/box_icon_aqua_60.png");
+          }
+        }
+        .completion-indicator {
+          width: 5%;
+          height: 100%;
+          position: fixed;
+          right: 80px;
+
+          .glyphicon {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+  }
+  .contents-form {
+    margin-top: 20px;
+    display: none;
+    height: 100%;
+    padding-bottom: 40px;
+
+    .row {
+      text-transform:capitalize;
+      width: 98%;
+      left: 50%;
+      margin: 0 auto;
+      margin-top: 10px;
+
+      .category {
+        margin-bottom: 10px;
+
+        .category-container {
+          color: white;
+
+          .category-dropdown {
+            display: none;
+            color: grey;
+          }
+          .category-header {
+            height: 40px;
+            width: 100%;
+            background-color: purple;
+            font-family: $bebas_neue_font;
+
+            .toggle-category {
+              width: 15%;
+              height: 100%;
+              font-size: 20px;
+              float: left;
+              background-color: gray;
+
+              .glyphicon {
+                top: 8px;
+                color: white;
+              }
+            }
+            .details {
+              width: 85%;
+              float: left;
+              background-color: purple;
+              height: 100%;
+
+              .title {
+                float: left;
+                width: 50%;
+                text-align: left;
+                padding-left: 10px;
+                font-size: 26px;
+                padding-top: 2px;
+              }
+
+              .contents-summary{
+                float:left;
+                width: 50%;
+
+                .item-title, .furniture-for-category {
+                  font-size: 20px;
+                  letter-spacing: 1px;
+                  padding-top: 6px;
+                  padding-right: 10px;
+                  float: right;
+                }
+              }
+            }
+          }
+          .sub-category {
+            &:not(:last-child){
+              border-bottom: 1px dashed $mule-aqua;
+              padding-bottom: 20px;
+            }
+
+            .title {
+              text-align: left;
+              font-family: $melbourne_light_font;
+              font-size: 22px;
+              // color: $mule-aqua;
+              padding: 5px 0px 5px 0px;
+            }
+          }
+        }
+      }
+
+      .item-container {
+        height: 60px;
+
+        .description, .quantity {
+          height:100%;
+          float: left;
+        }
+        .description {
+          width: 60%;
+
+          .image{
+            width: 60px;
+            height: 60px;
+            float: left;
+            background-repeat: no-repeat;
+            background-size: cover;
+            left: 50%;
+            margin: 0 auto;
+
+            &.seat {
+              background-image: image-url("icons/sofa_icon_aqua_240.png");
+            }
+            &.futon {
+              background-image: image-url("icons/sofa_icon_aqua_240.png");
+            }
+            &.sectional {
+              background-image: image-url("icons/sectioned_sofa_icon_aqua_240.png");
+            }
+            &.chair {
+              background-image: image-url("icons/chair_icon_aqua_240.png");
+            }
+            &.stool {
+              background-image: image-url("icons/stool_icon_aqua_240.png");
+            }
+            &.office {
+              background-image: image-url("icons/office_chair_icon_aqua_240.png");
+            }
+            &.lounge {
+              background-image: image-url("icons/lounge_chair_icon_aqua_240.png");
+            }
+            &.folding {
+              background-image: image-url("icons/fold_chair_icon_aqua_240.png");
+            }
+            &.bean {
+              background-image: image-url("icons/bean_bag_icon_aqua_240.png");
+            }
+            &.bench {
+              background-image: image-url("icons/bench_icon_aqua_240.png");
+            }
+            &.coffee {
+              background-image: image-url("icons/coffee_table_icon_aqua_240.png");
+            }
+            &.side {
+              background-image: image-url("icons/side_table_icon_aqua_240.png");
+            }
+            &.floor {
+              background-image: image-url("icons/lamp_icon_aqua_240.png");
+            }
+            &.table {
+              background-image: image-url("icons/table_lamp_icon_aqua_240.png");
+            }
+            &.dresser {
+              background-image: image-url("icons/dresser_icon_aqua_240.png");
+            }
+            &.bookcase {
+              background-image: image-url("icons/bookcase_icon_aqua_240.png");
+            }
+            &.china {
+              background-image: image-url("icons/china_cabinet_icon_aqua_240.png");
+            }
+            &.storage {
+              background-image: image-url("icons/stroage_box_icon_aqua_240.png");
+            }
+            &.tv {
+              background-image: image-url("icons/tv_icon_aqua_240.png");
+            }
+            &.stereo {
+              background-image: image-url("icons/stereo_icon_aqua_240.png");
+            }
+            &.speakers {
+              background-image: image-url("icons/speakers_icon_aqua_240.png");
+            }
+            &.computer {
+              background-image: image-url("icons/computer_icon_aqua_240.png");
+            }
+            &.printer {
+              background-image: image-url("icons/printer_icon_aqua_240.png");
+            }
+            &.grand {
+              background-image: image-url("icons/piano_icon_aqua_240.png");
+            }
+            &.drums {
+              background-image: image-url("icons/drum_set_icon_aqua_240.png");
+            }
+            &.instrument {
+              background-image: image-url("icons/instrument_icon_aqua_240.png");
+            }
+            &.air {
+              background-image: image-url("icons/air_con_icon_aqua_240.png");
+            }
+            &.dryer {
+              background-image: image-url("icons/dryer_icon_aqua_240.png");
+            }
+            &.washer {
+              background-image: image-url("icons/washer_icon_aqua_240.png");
+            }
+            &.mirror {
+              background-image: image-url("icons/mirror_icon_aqua_240.png");
+            }
+            &.picture {
+              background-image: image-url("icons/painting_icon_aqua_240.png");
+            }
+            &.rugs {
+              background-image: image-url("icons/rug_icon_aqua_240.png");
+            }
+            &.chandelier {
+              background-image: image-url("icons/chandelier_icon_aqua_240.png");
+            }
+            &.stroller {
+              background-image: image-url("icons/stroller_icon_aqua_240.png");
+            }
+            &.car {
+              background-image: image-url("icons/car_seat_icon_aqua_240.png");
+            }
+            &.plants {
+              background-image: image-url("icons/plant_icon_aqua_240.png");
+            }
+            &.grill {
+              background-image: image-url("icons/grill_icon_aqua_240.png");
+            }
+            &.play {
+              background-image: image-url("icons/teddy_icon_aqua_240.png");
+            }
+            &.skis {
+              background-image: image-url("icons/winter_sports_icon_aqua_240.png");
+            }
+          }
+          .type {
+            width: 64%;
+            font-family: $melbourne_light_font;
+            font-size: 16px;
+            float: left;
+            margin-top: 10%;
+          }
+        }
+        .quantity {
+          width: 40%;
+          padding-top: 10px;
+
+          .counter {
+            float: left;
+            width: 20%;
+            margin-top: 8px;
+          }
+          .stepper {
+
+          }
+        }
+      }
+    }
+    .form-section {
+      width: 25%;
+      padding: 10px;
+      float: left;
+    }
+
+    .save-form {
+      border: none;
+      background-color: #43c1c7;
+      color: white;
+      font-family: $bebas_neue_font;
+      font-size: 36px;
+      line-height: 28px;
+      letter-spacing: 2px;
+      padding-top: 10px;
+      float: right;
+      width: 100%;
+
+      &:hover {
+        background-color: purple;
+      }
+    }
+  }
+}

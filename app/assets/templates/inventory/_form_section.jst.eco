@@ -1,0 +1,27 @@
+<div class="category-container">
+	<div class='category-header'>
+	  <div class='toggle-category'>
+	    <span class="category-reveal glyphicon glyphicon-chevron-right"></span>
+	  </div>
+	  <div class='details'>
+	    <div class='title'>
+	      <%= @title %>
+	    </div>
+	    <div class='contents-summary'>
+        <div class="item-title">Items</div>
+	      <div class='furniture-count'>
+	        <div class="counter furniture-for-category">0</div>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<div class="category-dropdown">
+		<% for item in @category: %>
+		  <% if _.isUndefined(item[0]): %>
+		    <%- render_partial 'inventory/sub_item_form_segment', {items: _.first(_.values(item)), title: _.keys(item), view: @view } %>
+		  <% else: %>
+		    <%- render_partial 'inventory/item_form_segment', { title: @title, item: item } %>
+		  <% end %>
+		<% end %>
+	</div>
+</div>

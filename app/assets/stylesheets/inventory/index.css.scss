@@ -1,0 +1,115 @@
+$mule-aqua: #43C1C7;
+$mule-grey: #6f6f6f;
+$bebas_neue_font: BebasNeueFont;
+$melbourne_light_font: MelbourneLightFont;
+
+.inventory-wrapper {
+  background-color: white;
+  height: 100%;
+  width: 90%;
+  left: 50%;
+  margin: 0 auto;
+
+  .summaryHeader {
+    color: $mule-aqua;
+    font-size: 65px;
+    font-family: $bebas_neue_font;
+    letter-spacing:5px;
+  }
+
+  .summary {
+    width: 95%;
+    height: 100%;
+    margin: 0 auto;
+
+    .summary-table {
+      background-color: white;
+      width: 60%;
+      float: left;
+    }
+
+    td {
+      height: 100px;
+    }
+  }
+  .total {
+    width: 40%;
+    height: 100%;
+    left: 50%;
+    margin: 0 auto 30px;
+    border-top: 1px solid #43c1c7;
+    background-color: white;
+    float: left;
+
+    .title {
+      width: 100%;
+      font-size: 20px;
+      text-align: center;
+      padding: 10px 0px 10px 0px;
+      font-family: $melbourne_light_font;
+      color: $mule-grey;
+    }
+
+    .weight-estimation,  .inventory-submit {
+      width: 50%;
+      height: 50px;
+      float:left;
+      position:relative;
+    }
+
+    .inventory-submit {
+      .button-container {
+        margin-top: 40px;
+      }
+    }
+
+    .weight-estimation {
+      button {
+        margin-top: 22px;
+      }
+    }
+
+    .packaging-estimation {
+      width: 100%;
+      height: 225px;
+      float: left;
+
+      .box-group-item {
+        width: 25%;
+        font-size: 12px;
+        float: left;
+
+        .details, .wardrobe-box-icon, .box-icon, .box-medium-icon, .box-small-icon {
+          float: left;
+        }
+
+        .details {
+          width: 56%;
+        }
+
+        .wardrobe-box-icon, .box-icon, .box-medium-icon, .box-small-icon {
+          background-repeat: no-repeat;
+          background-size: cover;
+          height: 75px;
+          width: 75px;
+        }
+
+        .wardrobe-box-icon {
+          background-image: image-url("icons/wardrobe_box_icon_aqua_240.png");
+        }
+
+        .box-icon {
+          background-image: image-url("icons/box_icon_aqua_240.png");
+        }
+
+        .box-medium-icon {
+          background-image: image-url("icons/box_medium_icon_aqua_240.png");
+        }
+
+        .box-small-icon {
+          background-image: image-url("icons/box_small_icon_aqua_240.png");
+        }
+      }
+    }
+  }
+}
