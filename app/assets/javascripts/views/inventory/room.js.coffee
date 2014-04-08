@@ -30,6 +30,8 @@ class Mule.Views.Room extends Backbone.View
   _title: (collection) ->
     _.keys(collection)
 
+  _getLayout: (collection) ->
+
   _toggleEditable: (e) ->
     @delegate.trigger("nameRoom")
     e.preventDefault()

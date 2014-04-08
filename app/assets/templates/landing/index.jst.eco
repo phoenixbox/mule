@@ -23,7 +23,7 @@
   <div class="mule-process">
     <div class="points">
       <div class="process-header">
-        Mule's 3 step process changes how people move house
+        Mule's Free 3 step process changes how people move house
       </div>
       <div class="row">
         <div class="col-md-4">
@@ -31,7 +31,7 @@
             <div class="border-box">
               <div class="number-one"></div>
               <div class="title">Inventory</div>
-              <div class="blurb">Let us help you with the first step of your move, taking inventory. Our simple app helps you organize everything that needs to be part of your move, all in one handy list.</div>
+              <div class="blurb">Let us help you with the first step of your move, taking inventory. Our free simple app helps you organize everything that needs to be part of your move, all in one handy list.</div>
             </div>
           </div>
         </div>
@@ -49,7 +49,7 @@
             <div class="border-box">
               <div class="number-three"></div>
               <div class="title">Guide</div>
-              <div class="blurb">When you accept an offer you like, we protect your money in escrow until your move is completed. We provide all the necessary guidance and information related to your move to ensure that you are protected and happy during this big moving moment of your life.</div>
+              <div class="blurb">When you accept an offer you like, we protect your money in escrow until your move is completed. We provide all the necessary guidance and information related to your move for free to ensure that you are protected and happy during this big moving moment of your life.</div>
             </div>
           </div>
         </div>
@@ -61,7 +61,7 @@
       <div class="col-md-4">
         <div class="bounding-box">
           <div class="blurb">
-            Take a quick walk throughout your house to get an idea of what will be part of your move, then enter the results in here.
+            Take a quick walk throughout your house to get an idea of what will be part of your move, then start to make a list by using our free app.
           </div>
         </div>
       </div>
@@ -106,7 +106,12 @@
     <div class="row">
       <div class="col-md-12">
         <div class="footer-logo"></div>
-        <div class="blurb">Empowering People Through The Big Moves In Life</div>
+        <div class="blurb">
+          <p>Empowering People Through The Big Moves In Life</p>
+          </div>
+        <div class="sub-blurb" data-toggle="modal" data-target="#myModal">
+          <p>Click here to get started for free!</p>
+        </div>
       </div>
     </div>
   </div>

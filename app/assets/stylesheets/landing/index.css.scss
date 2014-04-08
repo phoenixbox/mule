@@ -292,7 +292,7 @@ html {
           .bounding-box {
             vertical-align: top;
             margin: 10px auto;
-            height: 270px;
+            height: 100%;
             width: 85%;
 
             .number {
@@ -333,7 +333,7 @@ html {
           }
         }
         .col-md-12 {
-          height: 320px;
+          height: 340px;
           background-color: white;
 
           .footer-logo {
@@ -346,14 +346,24 @@ html {
             background-size: contain;
             left: 50%;
           }
-          .blurb {
+          .blurb, .sub-blurb {
             top: 30%;
             margin: 0 auto;
             width: 100%;
             color: $mule-aqua;
             font-family: $melbourne_light_font;
-            font-size: 32px;
             text-align: center;
+          }
+          .blurb {
+            font-size: 32px;
+          }
+          .sub-blurb {
+            cursor: pointer;
+            font-size: 22px;
+
+            &:hover {
+              color: purple;
+            }
           }
         }
       }
