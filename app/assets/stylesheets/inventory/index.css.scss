@@ -127,12 +127,6 @@ $melbourne_light_font: MelbourneLightFont;
       position:relative;
     }
 
-    .inventory-submit {
-      .button-container {
-        margin-top: 40px;
-      }
-    }
-
     .weight-estimation {
       button {
         margin-top: 22px;
@@ -194,6 +188,29 @@ $melbourne_light_font: MelbourneLightFont;
       height: 40px;
       width: 100%;
       background-color: green;
+      .button-container {
+        margin-top: 40px;
+
+        button {
+          color: white;
+          background-color: $mule-aqua;
+          border: none;
+          border-radius: 0px;
+          height: 40px;
+          width: 15%;
+          font-family: $melbourne_light_font;
+          font-size: 18px;
+          text-shadow: 0px 0px 0px rgba(255, 255, 255, 0);
+        }
+
+        .addRoom {
+          float: left;
+        }
+        .finish {
+          float: right;
+        }
+      }
+
     }
   }
 }
