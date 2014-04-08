@@ -17,8 +17,20 @@ class Mule.Views.LandingIndex extends Backbone.View
     @
 
   _startInventory: (e) ->
-    room_number = @.$el.find('.room-numbers').find(":selected").text()
-    window.localStorage.setItem("roomNumber",room_number);
-    @$el.parents().children().find('.modal-backdrop').remove()
-    @$el.remove()
-    @router.navigate("inventory", trigger: true)
+    email = @.$el.find('input').val()
+    $.ajax({
+      type: "POST",
+      url: "/users",
+      data: { user: { email: email } },
+      success:(data) =>
+        room_number = @.$el.find('.room-numbers').find(":selected").text()
+        window.localStorage.setItem("roomNumber",room_number,);
+        window.localStorage.setItem("email",data.email,);
+        @$el.parents().children().find('.modal-backdrop').remove()
+        @$el.remove()
+        @router.navigate("inventory", trigger: true)
+      error:(data) =>
+        error = JSON.parse(data.responseText).errors[0]
+        alert("Sorry: " + error)
+        console.log("Error saving user: " + error)
+    })

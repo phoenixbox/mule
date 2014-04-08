@@ -18,6 +18,11 @@ $melbourne_light_font: MelbourneLightFont;
     letter-spacing:5px;
   }
 
+  .personalization {
+    font-size: 30px;
+    font-family: $melbourne_light_font;
+  }
+
   .summary {
     width: 80%;
     margin: 0 auto;

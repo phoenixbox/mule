@@ -12,10 +12,11 @@ class Mule.Views.InventoryIndex extends Backbone.View
   initialize: (options) ->
     @app        = options.app
     @router     = @app.router
+    @user = window.localStorage.email
     @
 
   render: ->
-    @$el.html(@template())
+    @$el.html(@template(user: @user))
     @_renderTable()
     @_appendChosenNumberOfRooms()
     @_adjustBackground()

@@ -19,6 +19,8 @@ gem 'bootstrap-sass', '~> 3.1.1.0'
 gem 'twitter-bootstrap-rails', '~> 2.2.8'
 gem 'font-awesome-rails', '~> 4.0.3.1'
 
+gem 'pry'
+
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
