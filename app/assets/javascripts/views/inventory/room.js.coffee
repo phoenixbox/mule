@@ -8,6 +8,7 @@ class Mule.Views.Room extends Backbone.View
     'click .toggle-room': '_toggleRoom'
     'click .toggle-category': '_toggleCategory'
     'click .save-form': '_saveRoom'
+    'click .save-category': '_doneWithCategory'
     'click .decrement': '_updateCounters'
     'click .increment': '_updateCounters'
     'click .glyphicon-pencil': '_toggleEditable'
@@ -86,6 +87,7 @@ class Mule.Views.Room extends Backbone.View
     @_scrollToTargetPosition(targetScrollPosition)
 
   _toggleCategory: (e) ->
+    e.preventDefault()
     @delegate.trigger("incrementItemCount")
     $target = $(e.target)
     $categoryDrawer = $target.parents('.category-container').children('.category-dropdown')
@@ -93,6 +95,12 @@ class Mule.Views.Room extends Backbone.View
 
     targetScrollPosition = $target.parents('.row').position().top + $target.position().top
     @_scrollToTargetPosition(targetScrollPosition)
+
+  _doneWithCategory: (e) ->
+    e.preventDefault()
+    $target = $(e.target)
+    $chevron = $target.parents('.category-container').find('.glyphicon-chevron-down')
+    $chevron.click()
 
   _scrollToTargetPosition: (targetPosition) ->
     $('body').animate({scrollTop:targetPosition}, 600);

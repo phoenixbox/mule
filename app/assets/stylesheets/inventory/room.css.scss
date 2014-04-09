@@ -236,6 +236,23 @@ $melbourne_light_font: MelbourneLightFont;
               padding: 5px 0px 5px 0px;
             }
           }
+          .save-category {
+            border: none;
+            background-color: #43c1c7;
+            color: white;
+            font-family: $bebas_neue_font;
+            font-size: 26px;
+            line-height: 18px;
+            letter-spacing: 2px;
+            padding-top: 9px;
+            margin-bottom: 10px;
+            float: right;
+            width: 100%;
+
+            &:hover {
+              background-color: lightblue;
+            }
+          }
         }
       }
 

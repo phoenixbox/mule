@@ -80,7 +80,7 @@
           </div>
         </div>
       <div class="save">
-        <input class="save-form" name="saveForm" type="submit" value="DONE">
+        <input class="save-form" name="saveForm" type="submit" value="DONE WITH ROOM">
       </div>
     </form>
   </div>
