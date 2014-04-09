@@ -259,6 +259,16 @@ $melbourne_light_font: MelbourneLightFont;
       .item-container {
         height: 60px;
 
+        .counter {
+          float: left;
+          width: 25px;
+          margin-top: 8px;
+          height: 25px;
+          border-radius: 12.5px;
+          line-height: 20px;
+          padding-right: 5px;
+        }
+
         .description, .quantity {
           height:100%;
           float: left;
