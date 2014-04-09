@@ -13,6 +13,7 @@ class Mule.Views.InventoryIndex extends Backbone.View
     @app        = options.app
     @router     = @app.router
     @user = window.localStorage.email
+    @totalFurnitureCount = 0
     @
 
   render: ->
@@ -20,7 +21,12 @@ class Mule.Views.InventoryIndex extends Backbone.View
     @_renderTable()
     @_appendChosenNumberOfRooms()
     @_adjustBackground()
+    @totalFurnitureCounter = @.$el.find('.furniture-for-house')
     @
+
+  _incrementTotal: (amount) ->
+    @totalFurnitureCount += amount
+    @totalFurnitureCounter.text(@totalFurnitureCount.toString())
 
   _adjustBackground: ->
     $('#wrapper').css({"background-image":"none","background-color":"lightcyan"})
@@ -52,7 +58,7 @@ class Mule.Views.InventoryIndex extends Backbone.View
   _appendChosenNumberOfRooms: ->
     rooms = parseInt(window.localStorage.roomNumber)
     @_append() for [1..rooms]
-    @_startTour()
+    # @_startTour()
 
   _itemTypes: ->
     ['beds','sofas','chairs','tables','cabinets','stereos','tv\'s','computers','lamps','bookcases','mirrors','paintings','appliances','pianos', 'other']

@@ -34,6 +34,11 @@
             <%- render_partial 'inventory/form_double_column_section', {title: 'beds', category: @categories.beds, view: @view, columnLayout: {column_width: 6, splice: 2}} %>
           </div>
         </div>
+        <div class="col-md-12">
+          <div class="category">
+            <%- render_partial 'inventory/form_double_column_section', {title: 'chairs', category: @categories.chairs, view: @view, columnLayout: {column_width: 6, splice: 3}} %>
+          </div>
+        </div>
       <div class="save">
         <input class="save-form" name="saveForm" type="submit" value="DONE">
       </div>

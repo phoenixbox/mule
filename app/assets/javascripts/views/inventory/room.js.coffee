@@ -17,12 +17,11 @@ class Mule.Views.Room extends Backbone.View
     @app        = options.app
     @delegate   = options.delegate
     @router     = @app.router
-    @totalFurnitureCount = 0
+    @roomFurnitureCount = 0
 
   render: ->
-    # restart at incrementing the room and then the house count
     @$el.html(@template(categories: @_categoryOptions(), view: @))
-    @totalFurnitureCounter = @.$el.find('.furniture-for-room')
+    @roomFurnitureCounter = @.$el.find('.furniture-for-room')
     @
 
   _items: (collection) ->
@@ -62,18 +61,19 @@ class Mule.Views.Room extends Backbone.View
 
     if $target.is('.decrement')
       $itemCounterValue -= 1
-      @totalFurnitureCount -= 1
+      @roomFurnitureCount -=1
+      @delegate._incrementTotal(-1)
       $categoryCounterValue -=1
     else
       @delegate.trigger("explainFurnitureCount")
       $itemCounterValue += 1
-      @totalFurnitureCount += 1
+      @roomFurnitureCount +=1
+      @delegate._incrementTotal(+1)
       $categoryCounterValue +=1
 
-    debugger
     $itemCounter.text($itemCounterValue).toString()
     $categoryCounter.text($categoryCounterValue).toString()
-    @totalFurnitureCounter.text(@totalFurnitureCount.toString())
+    @roomFurnitureCounter.text(@roomFurnitureCount.toString())
 
   _toggleRoom: (e) ->
     @delegate.trigger("showCategory")
