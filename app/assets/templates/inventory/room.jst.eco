@@ -36,7 +36,47 @@
         </div>
         <div class="col-md-12">
           <div class="category">
+            <%- render_partial 'inventory/form_double_column_section', {title: 'sofas', category: @categories.sofas, view: @view, columnLayout: {column_width: 6, splice: 3}} %>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="category">
             <%- render_partial 'inventory/form_double_column_section', {title: 'chairs', category: @categories.chairs, view: @view, columnLayout: {column_width: 6, splice: 3}} %>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="category">
+            <%- render_partial 'inventory/form_double_column_section', {title: 'tables', category: @categories.tables, view: @view, columnLayout: {column_width: 6, splice: 1}} %>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="category">
+            <%- render_partial 'inventory/form_double_column_section', {title: 'lighting', category: @categories.lighting, view: @view, columnLayout: {column_width: 6, splice: 1}} %>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="category">
+            <%- render_partial 'inventory/form_double_column_section', {title: 'storage', category: @categories.storage, view: @view, columnLayout: {column_width: 6, splice: 2}} %>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="category">
+            <%- render_partial 'inventory/form_double_column_section', {title: 'electronics', category: @categories.electronics, view: @view, columnLayout: {column_width: 6, splice: 3}} %>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="category">
+            <%- render_partial 'inventory/form_double_column_section', {title: 'music', category: @categories.music, view: @view, columnLayout: {column_width: 6, splice: 1}} %>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="category">
+            <%- render_partial 'inventory/form_double_column_section', {title: 'appliances', category: @categories.appliances, view: @view, columnLayout: {column_width: 6, splice: 3}} %>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="category">
+            <%- render_partial 'inventory/form_double_column_section', {title: 'other', category: @categories.other, view: @view, columnLayout: {column_width: 6, splice: 2}} %>
           </div>
         </div>
       <div class="save">

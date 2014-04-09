@@ -171,20 +171,28 @@ class Mule.Views.Room extends Backbone.View
         ],
         "tables": [
             {
+                "general": [
+                    "coffee",
+                    "side",
+                    "office"
+                ]
+            },
+            {
                 "dining": [
                     "2 seat",
                     "4 seat",
                     "6 seat",
                     "+8 seat"
                 ]
-            },
-            "coffee",
-            "side",
-            "office"
+            }
         ],
         "lighting": [
-            "ceiling fixture",
-            "chandelier",
+            {
+                "general": [
+                    "ceiling fixture",
+                    "chandelier"
+                ]
+            },
             {
                 "lamps": [
                     "floor",
@@ -224,8 +232,12 @@ class Mule.Views.Room extends Backbone.View
             "printer"
         ],
         "music": [
-            "drums",
-            "instrument",
+            {
+                "general": [
+                    "drums",
+                    "instrument"
+                ]
+            },
             {
                 "pianos": [
                     "grand",
