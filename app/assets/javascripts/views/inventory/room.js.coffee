@@ -20,7 +20,8 @@ class Mule.Views.Room extends Backbone.View
     @totalFurnitureCount = 0
 
   render: ->
-    @$el.html(@template(categories: @_categoryOptions(), view: @));
+    # restart at incrementing the room and then the house count
+    @$el.html(@template(categories: @_categoryOptions(), view: @))
     @totalFurnitureCounter = @.$el.find('.furniture-for-room')
     @
 
@@ -69,6 +70,7 @@ class Mule.Views.Room extends Backbone.View
       @totalFurnitureCount += 1
       $categoryCounterValue +=1
 
+    debugger
     $itemCounter.text($itemCounterValue).toString()
     $categoryCounter.text($categoryCounterValue).toString()
     @totalFurnitureCounter.text(@totalFurnitureCount.toString())

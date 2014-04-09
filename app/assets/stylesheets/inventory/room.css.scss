@@ -138,6 +138,7 @@ $melbourne_light_font: MelbourneLightFont;
           width: 5%;
           height: 100%;
           float: right;
+          margin-right: 10px;
 
           .glyphicon {
             font-size: 20px;
@@ -212,7 +213,8 @@ $melbourne_light_font: MelbourneLightFont;
                 font-family: $bebas_neue_font;
 
                 .item-title, .furniture-for-category {
-                  font-size: 15px;
+                  color: white;
+                  font-size: 20px;
                   letter-spacing: 1px;
                   padding-top: 6px;
                   padding-right: 10px;
