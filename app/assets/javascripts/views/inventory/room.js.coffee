@@ -60,16 +60,17 @@ class Mule.Views.Room extends Backbone.View
     $categoryCounterValue = parseInt($categoryCounter.text())
 
     if $target.is('.decrement')
-      $itemCounterValue -= 1
-      @roomFurnitureCount -=1
-      @delegate._incrementTotal(-1)
-      $categoryCounterValue -=1
+      if $itemCounterValue > 0
+        $itemCounterValue -=1
+        if $categoryCounterValue > 0 then $categoryCounterValue -=1
+        if @roomFurnitureCount > 0 then @roomFurnitureCount -=1
+        @delegate._incrementTotal(-1)
     else
       @delegate.trigger("explainFurnitureCount")
       $itemCounterValue += 1
+      $categoryCounterValue +=1
       @roomFurnitureCount +=1
       @delegate._incrementTotal(+1)
-      $categoryCounterValue +=1
 
     $itemCounter.text($itemCounterValue).toString()
     $categoryCounter.text($categoryCounterValue).toString()
