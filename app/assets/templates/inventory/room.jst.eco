@@ -5,7 +5,7 @@
     </div>
     <div class='header-details'>
       <div class='name'>
-        <input class="room-name-input" type="text" placeholder="Room Name" readonly required/>
+        <input class="room-name-input" type="text" placeholder="Room Name"/>
         <span class="glyphicon glyphicon-pencil"></span>
       </div>
       <div class='contents-summary'>

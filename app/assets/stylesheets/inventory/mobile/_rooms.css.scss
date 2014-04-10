@@ -27,10 +27,9 @@ and (max-device-width : 568px) {
 
 				.rooms-wrapper {
 					width: 100%;
+					min-height: 0px;
 
 					.overview {
-				    background-color: red;
-
 						.button-container {
 							.room-totalizer {
 								width: 50%;
@@ -55,7 +54,7 @@ and (max-device-width : 568px) {
 					}
 					.room {
 						width: 97%;
-						margin: 4px auto 10px;
+						margin: 4px auto 4px;
 
 						.header{
 							.toggle-room {
@@ -68,6 +67,8 @@ and (max-device-width : 568px) {
 									width: 40%;
 
 									input {
+										line-height: 15px;
+										padding-left: 5px;
 										width: 100%;
 									}
 									span {
@@ -100,6 +101,48 @@ and (max-device-width : 568px) {
 										width: 20%;
 										margin-right: 0px;
 										padding-top: 4px;
+									}
+								}
+							}
+						}
+						.room-inventory {
+							.contents-form {
+								form {
+									margin: 0px;
+								}
+
+								.row {
+									margin-top: 4px;
+
+									.col-md-12 {
+										padding-left: 0px;
+										padding-right: 0px;
+									}
+
+									.category {
+										margin-bottom: 4px;
+
+										.category-container {
+											.category-header {
+												height: 35px;
+
+												.details {
+
+													.title, .contents-summary {
+														font-size: 18px;
+														font-family: $melbourne_light_font;
+													}
+													.title {
+														padding-top: 6px;
+													}
+													.contents-summary {
+														.item-title, .furniture-for-category {
+															color: grey;
+														}
+													}
+												}
+											}
+										}
 									}
 								}
 							}
