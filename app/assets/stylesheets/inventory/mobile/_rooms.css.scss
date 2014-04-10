@@ -36,12 +36,14 @@ and (max-device-width : 568px) {
 
 								.description {
 									font-size: 16px;
-									width: 80%;
+									width: 78%;
 								}
 
 								.furniture-for-house {
-									width: 20%;
-									padding-top: 0px
+									width: 16%;
+									padding-top: 0px;
+									padding-left: 4px;
+									text-align: center;
 								}
 							}
 
