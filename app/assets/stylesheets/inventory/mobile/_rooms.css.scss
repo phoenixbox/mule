@@ -1,0 +1,136 @@
+$melbourne_light_font: MelbourneLightFont;
+
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 568px) {
+	html {
+		body {
+			padding: 0px;
+			max-width: 100%;
+			overflow-x: hidden;
+
+			.logo {
+				left: 10px;
+			}
+
+			.inventory-wrapper {
+				width: 100%;
+
+				.personalization {
+					padding: 10px 0px;
+				}
+
+				.summary-header {
+					font-size: 42px;
+					padding-top: 20px;
+				}
+
+				.rooms-wrapper {
+					width: 100%;
+
+					.overview {
+				    background-color: red;
+
+						.button-container {
+							.room-totalizer {
+								width: 50%;
+
+								.description {
+									font-size: 16px;
+									width: 80%;
+								}
+
+								.furniture-for-house {
+									width: 20%;
+									padding-top: 0px
+								}
+							}
+
+							button {
+								padding: 0px;
+								font-size: 16px;
+								width: 25%;
+							}
+						}
+					}
+					.room {
+						width: 97%;
+						margin: 4px auto 10px;
+
+						.header{
+							.toggle-room {
+								width: 10%;
+							}
+					 		.header-details{
+								width: 90%;
+
+								.name {
+									width: 40%;
+
+									input {
+										width: 100%;
+									}
+									span {
+										display: none;
+									}
+								}
+					 			.contents-summary {
+									width: 60%;
+
+									.furniture-count {
+										width: 80%;
+										padding-top: 8px;
+
+										.title, .furniture-for-room {
+											font-family: $melbourne_light_font;
+											font-size: 16px;
+										}
+										.title {
+											margin-left: 4%;
+										}
+										.furniture-for-room {
+
+										}
+										.counter {
+											width: auto;
+											line-height: 22px;
+										}
+									}
+									.completion-indicator {
+										width: 20%;
+										margin-right: 0px;
+										padding-top: 4px;
+									}
+								}
+							}
+						}
+					}
+				}
+
+				.summary {
+					width:90%;
+
+					.process {
+						.header {
+							width:100%;
+
+							.description {
+								ul {
+									margin: 0px;
+								}
+								li {
+									margin: 0 4%;
+								}
+							}
+						}
+						.steps {
+							.step {
+								margin: 0px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

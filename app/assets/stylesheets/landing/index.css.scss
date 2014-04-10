@@ -18,12 +18,12 @@ html {
     height: 100%;
     width: 100%;
 
-    #nav {
+    .nav {
       height: 75px;
       background-color: $mule-aqua;
     }
 
-    #logo {
+    .logo {
       top: 12px;
       position:relative;
       background-image: image-url("mule_logo_landscape_100.png");
@@ -31,7 +31,11 @@ html {
       background-size:cover;
       height: 51px;
       width: 100px;
-      left: 50px;
+
+      @media only screen
+      and (min-width : 1224px) {
+        left: 50px;
+      }
       background-color: transparent;
     }
 

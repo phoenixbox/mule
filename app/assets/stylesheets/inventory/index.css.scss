@@ -2,6 +2,7 @@ $mule-aqua: #43C1C7;
 $mule-grey: #6f6f6f;
 $bebas_neue_font: BebasNeueFont;
 $melbourne_light_font: MelbourneLightFont;
+$screen-sm-min: 640px;
 
 .inventory-wrapper {
   background-color: white;
@@ -61,6 +62,7 @@ $melbourne_light_font: MelbourneLightFont;
         width: 90%;
         left: 50%;
         margin: 20px auto;
+        display: inline-block;
 
         .step {
           width: 100%;
@@ -185,6 +187,11 @@ $melbourne_light_font: MelbourneLightFont;
     margin: 0 auto;
 
     .overview {
+
+      // @media (max-width: $screen-sm-min) {
+      //   background-color: red;
+      // }
+
       height: 40px;
       width: 100%;
       background-color: grey;

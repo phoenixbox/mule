@@ -17,10 +17,13 @@
 // Landing page styles
 @import "landing/_modal";
 @import "landing/index";
+
 // Inventory page styles
+@import "inventory/mobile/_rooms";
 @import "inventory/index";
 @import "inventory/item";
 @import "inventory/room";
+
 @import "font-awesome";
 @import "variables";
 @import "imports";
