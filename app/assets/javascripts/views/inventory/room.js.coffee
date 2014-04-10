@@ -204,7 +204,7 @@ class Mule.Views.Room extends Backbone.View
             {
                 "lamps": [
                     "floor",
-                    "table"
+                    "desk"
                 ]
             }
         ],

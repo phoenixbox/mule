@@ -160,6 +160,7 @@ and (max-device-width : 568px) {
 													display: inline-block;
 													border-bottom: 1px dashed $mule-aqua;
 													padding-bottom: 20px;
+													width: 100%;
 
 													.title {
 
@@ -174,6 +175,9 @@ and (max-device-width : 568px) {
 															width: 100%;
 															height: 88%;
 															// background-color: red;
+															.table {
+																margin-bottom: 0px;
+															}
 
 															.image {
 																width: 90px;
