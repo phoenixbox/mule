@@ -149,6 +149,13 @@ and (max-device-width : 568px) {
 												}
 											}
 											.category-dropdown {
+												.item-container {
+													.description {
+														.type {
+															width: 63%;
+														}
+													}
+												}
 												.sub-category {
 													display: inline-block;
 													border-bottom: 1px dashed $mule-aqua;
@@ -157,31 +164,33 @@ and (max-device-width : 568px) {
 													.title {
 
 													}
-													.item-container {
+													.sub-item-container {
 														width: 33.33%;
-														background-color: blue;
+														// background-color: blue;
 														height: 100%;
 														float: left;
 
 														.description {
 															width: 100%;
 															height: 88%;
-															background-color: red;
+															// background-color: red;
 
 															.image {
 																width: 90px;
 																height: 90px;
-																background-color: orange;
+																// background-color: orange;
 															}
 															.type {
 																width: 90px;
-																background-color: yellow;
+																font-family: $melbourne_light_font;
+																// background-color: yellow;
+																min-height: 48px;
 																height: auto;
 															}
 														}
 
 														.quantity {
-															background-color: green;
+															// background-color: green;
 															width: 100%;
 															height: 40%;
 															padding-top: 0px;
@@ -194,7 +203,7 @@ and (max-device-width : 568px) {
 															.stepper {
 																float: left;
 																width: 67%;
-																background-color: brown;
+																// background-color: brown;
 																height: 100%;
 																margin-top: 0px;
 

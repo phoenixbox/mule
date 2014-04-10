@@ -3,7 +3,7 @@
     <%= @title %>
   </div>
   <% for subItem in @items: %>
-    <div class="item-container">
+    <div class="sub-item-container">
       <div class='description'>
         <div class='image <%= subItem %>'></div>
         <div class='type'>
@@ -13,8 +13,8 @@
       <div class='quantity'>
         <div class="badge counter">0</div>
         <div class="stepper">
-        <button type="button" class="btn btn-default decrement">-</button>
         <button type="button" class="btn btn-default increment">+</button>
+        <button type="button" class="btn btn-default decrement">-</button>
         </div>
       </div>
     </div>
