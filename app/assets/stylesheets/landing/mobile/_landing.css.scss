@@ -58,10 +58,16 @@ and (max-device-width : 568px) {
 	      .mule-process {
 
 	        .process-header {
+	        	line-height: 35px;
+	        	font-size: 32px;
+	        	letter-spacing: 2px;
+	        	padding-top: 10px;
 	        }
 
 	        .col-md-4 {
 	          .bounding-box {
+	          	margin: 0 auto;
+
 	            .border-box {
 	            }
 	            // Refactor sass to extend from base and only overwrite background-image
@@ -74,6 +80,7 @@ and (max-device-width : 568px) {
 	            .title {
 	            }
 	            .blurb {
+	            	font-size: 17px;
 	            }
 	          }
 
@@ -87,28 +94,35 @@ and (max-device-width : 568px) {
 	      .cta {
 
 	        .col-md-4 {
-	          .bounding-box {
+            .blurb {
+            	color: $mule-aqua;
+            	font-size: 18px;
+            	left: 50%;
+            	margin: 20px auto;
+            	font-size: 24px;
+            	font-family: $melbourne_light_font;
+            	text-align: center;
+            	width: 80%;
+            }
+            h2 {
+            }
 
-	            .blurb {
-	            }
-	            h2 {
-	            }
+            p {
+            }
+            .action-block {
 
-	            p {
-	            }
-	            .action-block {
-
-	              .title {
-	              }
-	              .title:hover {
-	              }
-	              .action-icon {
-	              }
-	              .action-icon:hover {
-	              }
-	            }
-	          }
-	        }
+              .title {
+              	font-size: 50px;
+              	height: 70px;
+              }
+              .title:hover {
+              }
+              .action-icon {
+              }
+              .action-icon:hover {
+              }
+            }
+          }
 	      }
 	      .message-reinforce {
 

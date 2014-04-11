@@ -59,10 +59,8 @@
   <div class="cta">
     <div class="row">
       <div class="col-md-4">
-        <div class="bounding-box">
-          <div class="blurb">
-            Take a quick walk throughout your house to get an idea of what will be part of your move, then start to make a list by using our free app.
-          </div>
+        <div class="blurb">
+          Take a quick walk throughout your house to get an idea of what will be part of your move, then start to make a list by using our free app.
         </div>
       </div>
       <div class="col-md-4">
@@ -74,10 +72,8 @@
         </div>
       </div>
       <div class="col-md-4">
-        <div class="bounding-box">
-          <div class="blurb">
-             Mule generates competitive bids from our qualified service providers based on your inventory. Bids are fixed, so the cost is completely transparent, always.
-          </div>
+        <div class="blurb">
+           Mule generates competitive bids from our qualified service providers based on your inventory. Bids are fixed, so the cost is completely transparent, always.
         </div>
       </div>
     </div>
