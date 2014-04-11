@@ -13,12 +13,14 @@ class Mule.Views.Room extends Backbone.View
     'click .increment': '_updateCounters'
     'click .glyphicon-pencil': '_toggleEditable'
     'click .glyphicon-remove': '_toggleCompletedState'
+    'click .room-name-input': '_changeSaveName'
 
   initialize: (options) ->
     @app        = options.app
     @delegate   = options.delegate
     @router     = @app.router
     @roomFurnitureCount = 0
+    @placeholder = "Done with room"
 
   render: ->
     @$el.html(@template(categories: @_categoryOptions(), view: @))
@@ -31,7 +33,28 @@ class Mule.Views.Room extends Backbone.View
   _title: (collection) ->
     _.keys(collection)
 
-  _getLayout: (collection) ->
+  _changeSaveName: (e) ->
+    e.preventDefault()
+    $target = $(e.target)
+    $saveButton = $target.parents('.room-inventory').find('.save-form')
+
+    $target.keydown (e) =>
+      if e.keyCode == 13
+        @_renameRoom()
+
+    $target.blur =>
+      @_renameRoom()
+
+  _renameRoom: ->
+    $button = @.$el.find('.save-form')
+    $input = @.$el.find('.room-name-input')
+    if $input.val() == ""
+      $button.val(@placeholder)
+    else
+      roomName = $input.val().split(" ")
+      oldName = $button.val().split(" ").splice(0,2)
+      newName = oldName.concat(roomName).join(" ")
+      $button.val(newName)
 
   _toggleEditable: (e) ->
     @delegate.trigger("nameRoom")
