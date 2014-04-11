@@ -17,6 +17,8 @@
 // Landing page styles
 @import "landing/_modal";
 @import "landing/index";
+@import "landing/mobile/_modal";
+@import "landing/mobile/_landing";
 
 // Inventory page styles
 @import "inventory/mobile/_rooms";

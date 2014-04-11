@@ -38,6 +38,7 @@ class Mule.Views.InventoryIndex extends Backbone.View
 
   _adjustBackground: ->
     $('#wrapper').css({"background-image":"none","background-color":"lightcyan"})
+    $('body').animate({scrollTop:0},0);
 
   _append: ->
     roomFormView = new Mule.Views.Room(app: @app, delegate:@)
