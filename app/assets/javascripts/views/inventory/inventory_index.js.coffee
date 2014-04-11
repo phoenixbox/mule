@@ -32,6 +32,10 @@ class Mule.Views.InventoryIndex extends Backbone.View
 
     @totalFurnitureCounter.text(@totalFurnitureCount.toString())
 
+  _decrementTotal: (amount) ->
+    @totalFurnitureCount -= amount
+    @totalFurnitureCounter.text(@totalFurnitureCount.toString())
+
   _adjustBackground: ->
     $('#wrapper').css({"background-image":"none","background-color":"lightcyan"})
 

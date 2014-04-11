@@ -234,10 +234,23 @@ and (max-device-width : 568px) {
 										}
 									}
 								}
-								.save-form {
+								.save-form, .remove-rooom {
 									font-size: 22px;
 									line-height: 22px;
+									float: left;
+								}
+								.save-form {
 									padding-top: 7px;
+									width: 80%;
+								}
+								.remove-room {
+									padding-top: 5px;
+									width: 18%;
+									height: 32px;
+									color: white;
+									background-color: red;
+									border: none;
+									margin-left: 4px;
 								}
 							}
 						}

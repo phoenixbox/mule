@@ -14,6 +14,7 @@ class Mule.Views.Room extends Backbone.View
     'click .glyphicon-pencil': '_toggleEditable'
     'click .glyphicon-remove': '_toggleCompletedState'
     'click .room-name-input': '_changeSaveName'
+    'click .remove-room': '_removeRoom'
 
   initialize: (options) ->
     @app        = options.app
@@ -49,12 +50,18 @@ class Mule.Views.Room extends Backbone.View
     $button = @.$el.find('.save-form')
     $input = @.$el.find('.room-name-input')
     if $input.val() == ""
-      $button.val(@placeholder)
+      $button.text(@placeholder)
     else
       roomName = $input.val().split(" ")
-      oldName = $button.val().split(" ").splice(0,2)
+      oldName = $button.text().split(" ").splice(0,2)
       newName = oldName.concat(roomName).join(" ")
-      $button.val(newName)
+      $button.text(newName)
+
+  _removeRoom: (e) ->
+    e.preventDefault()
+    removalAmount = parseInt(@.$el.find('.furniture-for-room').text())
+    @delegate._decrementTotal(removalAmount)
+    @.$el.find('.room-inventory').remove()
 
   _toggleEditable: (e) ->
     @delegate.trigger("nameRoom")
@@ -64,7 +71,6 @@ class Mule.Views.Room extends Backbone.View
 
     $input.keydown (e) =>
       if e.keyCode == 13
-
         $input.attr('readonly', true)
 
     if $input.prop('readonly')
@@ -96,8 +102,8 @@ class Mule.Views.Room extends Backbone.View
       @roomFurnitureCount +=1
       @delegate._incrementTotal(+1)
 
-    $itemCounter.text($itemCounterValue).toString()
-    $categoryCounter.text($categoryCounterValue).toString()
+    $itemCounter.text($itemCounterValue.toString())
+    $categoryCounter.text($categoryCounterValue.toString())
     @roomFurnitureCounter.text(@roomFurnitureCount.toString())
 
   _toggleRoom: (e) ->
