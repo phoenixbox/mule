@@ -66,7 +66,8 @@ and (max-device-width : 568px) {
 	        	line-height: 35px;
 	        	font-size: 32px;
 	        	letter-spacing: 2px;
-	        	padding-top: 10px;
+	        	padding-bottom: 10px;
+	        	padding-top: 20px;
 	        }
 
 	        .col-md-4 {
@@ -77,10 +78,13 @@ and (max-device-width : 568px) {
 	            }
 	            // Refactor sass to extend from base and only overwrite background-image
 	            .number-one {
+	            	margin-right: 110px;
 	            }
 	            .number-two {
+	            	margin-right: 105px;
 	            }
 	            .number-three {
+	            	margin-right: 110px;
 	            }
 	            .title {
 	            }
@@ -98,7 +102,7 @@ and (max-device-width : 568px) {
 	      }
 	      .cta {
 	      	.col-md-4:last-child {
-	      		padding-top: 20px;
+	      		padding-top: 50px;
 	      	}
 
 	        .col-md-4 {
@@ -151,6 +155,10 @@ and (max-device-width : 568px) {
             		margin: 0 auto;
             		text-align: center;
 
+            		.device-start:hover {
+            			cursor:pointer;
+            			color: $mule-dark-aqua;
+            		}
             		p {
 									color: $mule-aqua;
             			font-size: 18px;

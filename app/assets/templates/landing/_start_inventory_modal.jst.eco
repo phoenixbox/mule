@@ -8,7 +8,7 @@
         <form class="form-horizontal">
         <fieldset>
         <legend>Let us know your *email and the approx. number of rooms in your house so we can get started</legend>
-        <div class="dont-worry">Don"t worry you can add rooms and take them away later :)</div>
+        <div class="dont-worry">Don"t worry you can add & remove rooms later</div>
         <div class="residence-choice">
           <div class="residence-type-house"></div>
           <!-- <div class="residence-type-business"></div> -->
@@ -35,8 +35,8 @@
         </form>
       </div>
       <div class="modal-footer">
-        <div class="form-info">* We will send your inventory list to you by email so even if you dont use Mule you will be one step closer to a less stressful move :)</div>
-        <button type="button" class="btn btn-primary" id="startInventory">Start!</button>
+        <div class="form-info">* We will send your inventory list to you by email so even if you dont use Mule you will be one step closer to a less stressful move</div>
+        <button type="button" class="btn btn-primary" id="startInventory">START</button>
       </div>
     </div>
   </div>

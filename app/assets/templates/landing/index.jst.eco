@@ -51,7 +51,7 @@
             <div class="border-box">
               <div class="number-three"></div>
               <div class="title">Guide</div>
-              <div class="blurb">When you accept an offer you like, we protect your money in escrow until your move is completed. We provide all the necessary guidance and information related to your move for free to ensure that you are protected and happy during this big moving moment of your life.</div>
+              <div class="blurb">When you accept an offer you like, we protect your money in escrow, only charging you the move is completed. We provide all the necessary guidance and information related to your move for free to ensure that you are protected and happy during this big moving moment of your life.</div>
             </div>
           </div>
         </div>
@@ -72,7 +72,7 @@
             <div class="device-availability">
               <div class="snapshot"></div>
               <div class="device-cta">
-                <p>Our inventory app looks great on Android and iPhone browsers</p>
+                <p>Our inventory app looks great on Android and iPhone browsers, click <b class="device-start">start</b> to begin!</p>
               </div>
               <div class="platforms">
                 <ul>

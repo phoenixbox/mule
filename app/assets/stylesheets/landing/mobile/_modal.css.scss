@@ -26,8 +26,15 @@ and (max-device-width : 568px) {
 	}
 
 	.modal {
-	  .button {
-	    background-color: $mule-aqua;
+	  button {
+	  	background-color: $mule-aqua;
+	  	width: 100%;
+	  	font-size: 22px;
+	  	margin-top: 5px;
+	  	line-height: 25px;
+	  	padding-top: 8px;
+	  	letter-spacing: 2px;
+	  	font-family: $bebas_neue_font;
 	  }
 
 	  input {
@@ -50,8 +57,8 @@ and (max-device-width : 568px) {
 	  }
 
 	  .dont-worry {
-	    font-size: 10px;
-	    width: 100
+	    font-size: 15px;
+	    width: 100%;
 	  }
 
 	  .room-numbers {
@@ -88,8 +95,24 @@ and (max-device-width : 568px) {
 	  padding: 0px 15px;
 	  border-bottom:1px solid #eee;
 
+		button {
+			width: 5%;
+			background: white;
+			color: grey;
+			outline: none;
+			&:hover {
+				background-color: transparent;
+				color: $mule-dark-aqua;
+			}
+		}
 	  .close  {
-	   margin-top:2px;
+	  	margin-top: 10px;
+	  	margin-right: 0px;
+	  	line-height: 0px;
+	  	font-size: 30px;
+	  	width: 25px;
+	  	color: grey;
+	  	opacity: 1;
 	  }
 
 	  h3{
@@ -109,8 +132,8 @@ and (max-device-width : 568px) {
 	  }
 
 	  legend {
-	  	font-size: 18px;
-	  	padding-top: 10px;
+	  	font-size: 21px;
+	  	width: 80%;
 	  }
 
 	  .modal-content {
@@ -138,11 +161,11 @@ and (max-device-width : 568px) {
 	  box-shadow:inset 0 1px 0 #ffffff;
 
 	  .form-info {
-	    width: 80%;
-	    font-size: 12px;
-	    float: left;
-	    text-align: left;
-	    height: 100%;
+			width: 100%;
+    	font-size: 14px;
+    	float: left;
+    	text-align: center;
+ 		  height: 100%;
 	  }
 	}
 

@@ -1,4 +1,9 @@
 $mule-aqua: #43C1C7;
+$mule-grey: #6f6f6f;
+$mule-dark-aqua: #008282;
+$bebas_neue_font: BebasNeueFont;
+$melbourne_light_font: MelbourneLightFont;
+$screen-sm-min: 640px;
 
 .modal-backdrop{
   position:fixed;
@@ -29,17 +34,31 @@ $mule-aqua: #43C1C7;
   background-color: transparent;
   border: none;
   box-shadow: none;
+  font-family: $melbourne_light_font;
+  color: black;
 
-  .button {
+  button {
     background-color: $mule-aqua;
+    border: none;
+    font-size: 12px;
+    font-family: $bebas_neue_font;
+    color: white;
+
+    &:hover {
+      background-color: $mule-dark-aqua;
+    }
   }
 
-  input {
+  input, select {
     height: 30px;
     width: 70%;
+    &:focus {
+      border: 1px solid $mule-aqua;
+    }
   }
 
   legend {
+    font-size: 21px;
     width: 80%;
   }
 
@@ -51,10 +70,6 @@ $mule-aqua: #43C1C7;
     background-image: image-url("icons/house_icon_aqua_260.png");
     background-repeat: no-repeat;
     background-size:cover;
-  }
-  .dont-worry {
-    font-size: 12px;
-    width: 100
   }
 
   .room-numbers {
@@ -114,10 +129,10 @@ $mule-aqua: #43C1C7;
   box-shadow:inset 0 1px 0 #ffffff;
 
   .form-info {
-    width: 80%;
-    font-size: 12px;
+    width: 100%;
+    font-size: 14px;
     float: left;
-    text-align: left;
+    text-align: center;
     height: 100%;
   }
 }
