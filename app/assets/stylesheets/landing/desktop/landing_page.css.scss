@@ -1,0 +1,507 @@
+$mule-aqua: #43C1C7;
+$mule-dark-aqua: #008282;
+$mule-grey: #6f6f6f;
+$bebas_neue_font: BebasNeueFont;
+$melbourne_light_font: MelbourneLightFont;
+$desktop-normal-max: 1440px;
+$desktop-normal-min: 1024px;
+
+html {
+  .modal {
+    width: 630px;
+    margin-left: -310px;
+  }
+
+  height: 100%;
+  body {
+    background-size: cover;
+    font: 400 1.5em/1.5 "Lato", Helvetica, Arial, serif;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    // max-width: 1425px;
+
+    .nav {
+      height: 75px;
+      background-color: $mule-aqua;
+    }
+
+    .house-background {
+      position: relative;
+      height: 860px;
+      width: 100%;
+      background-image: url(/assets/hero_house.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      top: -80px;
+      z-index: -1;
+    }
+
+    .logo {
+      top: 12px;
+      position:relative;
+      background-image: image-url("mule_logo_landscape_100.png");
+      background-repeat: no-repeat;
+      background-size:cover;
+      height: 51px;
+      width: 100px;
+
+      @media only screen
+      and (min-width : 1224px) {
+        left: 50px;
+      }
+      background-color: transparent;
+    }
+
+    .opening {
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+
+      .mule-logo-container {
+        width: 100%;
+        position: fixed;
+        top: 20%;
+
+        .col-md-12 {
+          height: 260px;
+        }
+      }
+
+      .mule-logo {
+        background-image: image-url("mule_logo.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: relative;
+        top: 0%;
+        left: 0%;
+        z-index: 1;
+        margin: 0 auto;
+        max-width: 195px;
+        height: 100%;
+
+        h1 {
+          line-height: 130px;
+          font-size: 50px;
+        }
+      }
+
+      .header-copy {
+        position: fixed;
+        top: 50%;
+        width: 100%;
+        z-index: 1;
+
+        .row {
+          float: left;
+          width: 100%;
+
+          h2 {
+            font-size: 52px;
+            margin-left: 16px;
+            left: 50%;
+            width: 100%;
+            color: white;
+            font-family: $bebas_neue_font;
+            letter-spacing:5px
+          }
+        }
+      }
+
+      .subheader-copy {
+        position: fixed;
+        width: 100%;
+        top: 60%;
+        left: 0;
+        z-index: 1;
+
+        .row {
+          height: 100%;
+          margin-top: 30px;
+
+          ul {
+            list-style: none;
+            text-align: center;
+            vertical-align: middle;
+            height: 40px;
+            color: white;
+            font-size: 32px;
+            font-family: $melbourne_light_font;
+            letter-spacing:5px;
+
+            li {
+              display: inline;
+              margin: 0 4%;
+              font-size: 50px;
+            }
+          }
+        }
+        .keyword {
+          float: left;
+          height: 100%;
+          width: 260px;
+          overflow: auto;
+          margin-left: 50px;
+        }
+      }
+    }
+
+    .content {
+      width: 100%;
+      height: 100%;
+      text-align: justify;
+      position: absolute;
+      top: 80%;
+      margin: 0 auto;
+      background-color: $mule-grey;
+      z-index: 2;
+
+      .mule-process {
+        background-color: $mule-aqua;
+        position: relative;
+
+        .process-header {
+          text-align: center;
+          vertical-align: middle;
+          line-height: 60px;
+          height: 100%;
+          color: white;
+          font-size: 35px;
+          font-family: $melbourne_light_font;
+          letter-spacing: 5px;
+          padding-top: 1%;
+          max-width: 95%;
+          left: 50%;
+          margin: 0 auto;
+        }
+
+        .col-md-4 {
+          .bounding-box {
+             vertical-align: top;
+             margin: 10px auto;
+             height: 405px;
+             width: 85%;
+             padding-top: 10px;
+
+            .border-box {
+              height: 380px;
+              border: 5px solid white;
+              box-sizing: border-box;
+            }
+
+            .number-one, .number-two, .number-three {
+              margin: 4% auto;
+              height: 100px;
+              width: 60px;
+              left: 50%;
+              background-size: cover;
+              background-repeat: no-repeat;
+            }
+            .number-one {
+              background-image: image-url("icons/one_140.png");
+            }
+            .number-two {
+              background-image: image-url("icons/two_140.png");
+            }
+            .number-three {
+              background-image: image-url("icons/three_140.png");
+            }
+            .title {
+              color: white;
+              font-family: $bebas_neue_font;
+              font-size: 30px;
+              letter-spacing: 5px;
+              text-align: center;
+              vertical-align: middle;
+              height: 13%;
+              width: 100%;
+            }
+            .blurb {
+              color: white;
+              letter-spacing: -0.5px;
+              height: 50%;
+              width: 100%;
+              padding: 0px 10px 0px 10px;
+              font-family: $melbourne_light_font;
+              font-size: 18px;
+              line-height: 125%;
+
+              @media only screen
+              and (min-width : $desktop-normal-max) {
+                font-size: 22px;
+              }
+            }
+          }
+
+          h2 {
+            font-size: 30px;
+            padding: 25px 15px;
+            color: #434A54;
+          }
+
+          p {
+            color: #434A54;
+            font-size: 14px;
+            line-height: 1.8;
+            padding: 5px 15px;
+          }
+        }
+      }
+      .cta {
+        background-color: white;
+        position: relative;
+        width: 100%;
+
+        .col-md-4 {
+          margin-bottom: 30px;
+
+          .blurb {
+            width: 70%;
+            margin: 180px auto;
+            position:relative;
+            color: $mule-aqua;
+            font-family: $melbourne_light_font;
+            font-size: 32px;
+            text-align: center;
+            padding-top: 10px;
+
+            @media only screen
+            and (max-width : $desktop-normal-max) and (min-width: $desktop-normal-min) {
+              margin: 160px auto;
+              width: 90%;
+              font-size: 26px;
+              padding-top: 0px;
+            }
+          }
+          h2 {
+            font-size: 30px;
+            padding: 25px 15px;
+            color: #434A54;
+          }
+
+          .device-availability {
+            left: 50%;
+            margin:0 auto;
+            color: $mule-aqua;
+            font-size: 60px;
+
+            .snapshot {
+              width: 100%;
+              height: 380px;
+              background-repeat: no-repeat;
+              background-image: image-url("device_triple.png");
+              background-size: contain;
+
+              @media only screen
+              and (max-width : $desktop-normal-max) and (min-width: $desktop-normal-min) {
+
+              }
+            }
+            .platforms {
+              text-align: center;
+              ul {
+                list-style-type: none;
+                width: 100%;
+                margin: 0;
+              }
+
+              li {
+                display: inline;
+              }
+            }
+            .device-cta {
+              font-family: $melbourne_light_font;
+              font-size: 14px;
+              color: $mule-aqua;
+              left: 50%;
+              margin: 0 auto;
+              text-align: center;
+
+              @media only screen
+              and (max-width : $desktop-normal-max) and (min-width: $desktop-normal-min) {
+                margin-top: -80px;
+              }
+
+              .device-start:hover {
+                cursor:pointer;
+                color: $mule-dark-aqua;
+              }
+              p {
+                color: $mule-aqua;
+                font-size: 18px;
+                margin-bottom: 0;
+              }
+            }
+          }
+
+          p {
+            color: #434A54;
+            font-size: 14px;
+            line-height: 1.8;
+            padding: 5px 15px;
+          }
+          .action-block {
+            margin: 0 auto;
+            width: 100%;
+            height: 100%;
+
+            .title {
+              color: $mule-aqua;
+              height: 100px;
+              letter-spacing: 5px;
+              font-size: 65px;
+              font-family: $bebas_neue_font;
+              text-align: center;
+              vertical-align: middle;
+            }
+            .title:hover {
+              cursor: pointer;
+              color: $mule-dark-aqua;
+            }
+            .action-icon {
+              background-image: image-url("icons/notes_icon_400.png");
+              background-repeat: no-repeat;
+              background-position: center;
+              background-size:contain;
+              height: 400px;
+              width: 100%;
+              left: 50%;
+              margin: 0 auto;
+            }
+            .action-icon:hover {
+              cursor: pointer;
+              background-image: image-url("icons/notes_icon_dark_aqua_400.png");
+            }
+          }
+          .bounding-box {
+            margin: 10px auto;
+            height: 500px;
+            width: 95%;
+            vertical-align: middle;
+          }
+        }
+      }
+      .message-reinforce {
+        background-color: $mule-aqua;
+
+        .col-md-4 {
+          .bounding-box {
+            vertical-align: top;
+            margin: 10px auto;
+            height: 100%;
+            width: 85%;
+
+            .number {
+              margin-top: 4%;
+              height: 30%;
+              width: 25%;
+              left: 50%;
+              margin: 0 auto;
+              background-color: $mule-grey;
+            }
+            .title {
+              color: white;
+              letter-spacing: 5px;
+              font-size: 46px;
+              font-family: BebasNeueFont;
+              text-align: center;
+              padding-top: 10px;
+              position: relative;
+            }
+            .footer-logo {
+              left: 50%;
+              margin: 0 auto;
+              width: 60%;
+              height: 100px;
+              border: 5px solid white;
+              box-sizing: border-box;
+            }
+            .blurb {
+              color: white;
+              letter-spacing: -0.5px;
+              height: 50%;
+              width: 100%;
+              padding: 0px 10px 0px 10px;
+              font-family: $melbourne_light_font;
+              font-size: 18px;
+              line-height: 150%;
+            }
+          }
+        }
+        .col-md-12 {
+          height: 370px;
+          background-color: white;
+
+          .footer-logo {
+            width:70%;
+            margin: 20px auto;
+            height: 200px;
+            background-image: image-url("mule_logo_landscape_400_aqua.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            left: 50%;
+          }
+          .blurb, .sub-blurb {
+            top: 30%;
+            margin: 20px auto;
+            width: 100%;
+            color: $mule-aqua;
+            font-family: $melbourne_light_font;
+            text-align: center;
+          }
+          .blurb {
+            font-size: 32px;
+          }
+          .sub-blurb {
+            cursor: pointer;
+            font-size: 22px;
+
+            &:hover {
+              color: $mule-dark-aqua;
+              cursor:pointer;
+            }
+          }
+        }
+      }
+    }
+    #footer {
+      .col-md-12 {
+        height: 100px;
+        width: 100%;
+        background-color: $mule-aqua;
+        color: white;
+
+        .social-row {
+          .business-info {
+            width: 29%;
+            height: 50px;
+            float: left;
+            background-repeat: no-repeat;
+            background-image: image-url("mule_logo_landscape_100.png");
+            background-size: contain;
+            margin-left: 3%;
+            margin-top: 25px;
+          }
+          .icons {
+            width: 65%;
+            font-size: 25px;
+            text-align: right;
+            float: left;
+            margin-top: 7px;
+            margin-top: 32px;
+
+            ul {
+              list-style-type: none;
+            }
+
+            li {
+              display: inline;
+              margin-left: 15px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -2,7 +2,7 @@ parallaxScroll = () =>
   currentScrollPosition = $(this).scrollTop()
   $('.opening').css
     'background-position' : '50% ' + ( -currentScrollPosition / 4 ) + 'px'
-  $('.hero-image').css
+  $('.mule-logo').css
     'margin-top' : ( currentScrollPosition / 4 ) + "px"
     'opacity' : 1 - ( currentScrollPosition / 250 )
   $('.header-copy').css

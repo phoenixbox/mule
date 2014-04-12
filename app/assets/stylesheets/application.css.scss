@@ -12,20 +12,22 @@
  *= require_self
  *= require_tree .
  */
- // Common page styles
-@import "common/touristjs";
+
+
 // Landing page styles
 @import "landing/_modal";
-@import "landing/index";
+@import "landing/desktop/landing_page";
 @import "landing/mobile/_modal";
-@import "landing/mobile/_landing";
+@import "landing/mobile/_landing_page";
 
 // Inventory page styles
-@import "inventory/mobile/_rooms";
-@import "inventory/index";
+@import "inventory/mobile/_inventory";
+@import "inventory/inventory";
 @import "inventory/item";
 @import "inventory/room";
 
+ // Common page styles
+@import "common/touristjs";
 @import "font-awesome";
 @import "variables";
 @import "imports";
