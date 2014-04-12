@@ -12,7 +12,6 @@ html {
 
   height: 100%;
   body {
-    background-image: url(/assets/hero_house.jpg);
     background-size: cover;
     font: 400 1.5em/1.5 "Lato", Helvetica, Arial, serif;
     text-align: center;
@@ -22,6 +21,15 @@ html {
     .nav {
       height: 75px;
       background-color: $mule-aqua;
+    }
+
+    .house-background {
+      position:relative;
+      height: 100%;
+      width: 100%;
+      background-image: url(/assets/hero_house.jpg);
+      background-repeat: no-repeat;
+      background-size:cover;
     }
 
     .logo {
@@ -74,7 +82,7 @@ html {
           width: 100%;
 
           h2 {
-            font-size: 44px;
+            font-size: 39px;
             margin-left: 16px;
             left: 50%;
             width: 100%;
@@ -356,7 +364,7 @@ html {
           }
           .blurb, .sub-blurb {
             top: 30%;
-            margin: 0 auto;
+            margin: 20px auto;
             width: 100%;
             color: $mule-aqua;
             font-family: $melbourne_light_font;
@@ -381,6 +389,37 @@ html {
         height: 100px;
         width: 100%;
         background-color: $mule-aqua;
+        color: white;
+
+        .social-row {
+          .business-info {
+            width: 29%;
+            height: 50px;
+            float: left;
+            background-repeat: no-repeat;
+            background-image: image-url("mule_logo_landscape_100.png");
+            background-size: contain;
+            margin-left: 9px;
+            margin-top: 25px;
+          }
+          .icons {
+            width: 65%;
+            font-size: 25px;
+            text-align: right;
+            float: left;
+            margin-top: 7px;
+            margin-top: 32px;
+
+            ul {
+              list-style-type: none;
+            }
+
+            li {
+              display: inline;
+              margin-left: 15px;
+            }
+          }
+        }
       }
     }
   }

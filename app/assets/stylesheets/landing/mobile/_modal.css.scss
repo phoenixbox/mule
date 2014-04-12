@@ -43,13 +43,14 @@ and (max-device-width : 568px) {
 	    left: 50%;
 	    margin: 0 auto;
 	    width: 104px;
-	    height: 120px;
+	    height: 110px;
 	    background-image: image-url("icons/house_icon_aqua_260.png");
 	    background-repeat: no-repeat;
 	    background-size: cover;
 	  }
+
 	  .dont-worry {
-	    font-size: 12px;
+	    font-size: 10px;
 	    width: 100
 	  }
 
@@ -77,7 +78,7 @@ and (max-device-width : 568px) {
   		margin: 0px;
   	  overflow: hidden;
   	  position: fixed;
-  	  top: 11%;
+  	  top: 0;
   		width: 100%;
   	  z-index: 1050;
 	}

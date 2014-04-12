@@ -1,6 +1,8 @@
 <div class="nav">
   <div class="logo"></div>
 </div>
+<div class="house-background">
+</div>
 <div class="opening">
   <div class="hero-image">
   </div>
@@ -67,11 +69,23 @@
         <div class="bounding-box">
           <div class="action-block" data-toggle="modal" data-target="#myModal">
             <div class="title">START</div>
-            <div class="action-icon"></div>
+            <div class="device-availability">
+              <div class="snapshot"></div>
+              <div class="device-cta">
+                <p>Our inventory app looks great on Android and iPhone browsers</p>
+              </div>
+              <div class="platforms">
+                <ul>
+                  <li><i class="fa fa-android"></i></li>
+                  <li><i class="fa fa-apple"></i></li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>
       <div class="col-md-4">
+
         <div class="blurb">
            Mule generates competitive bids from our qualified service providers based on your inventory. Bids are fixed, so the cost is completely transparent, always.
         </div>
@@ -114,6 +128,19 @@
   <div id="footer">
     <div class="row">
       <div class="col-md-12">
+        <div class="social-row">
+          <div class="business-info">
+
+          </div>
+          <div class="icons">
+            <ul>
+              <li><i class="fa fa-facebook"></i></li>
+              <li><i class="fa fa-twitter"></i></li>
+              <li><i class="fa fa-pinterest"></i></li>
+              <li><i class="fa fa-youtube"></i></li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   </div>
