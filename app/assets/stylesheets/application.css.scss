@@ -15,16 +15,17 @@
 
 
 // Landing page styles
-@import "landing/_modal";
+@import "landing/desktop/modal";
 @import "landing/desktop/landing_page";
-@import "landing/mobile/_modal";
 @import "landing/mobile/_landing_page";
+@import "landing/mobile/_modal";
+
 
 // Inventory page styles
+@import "inventory/desktop/inventory";
+@import "inventory/desktop/item";
+@import "inventory/desktop/room";
 @import "inventory/mobile/_inventory";
-@import "inventory/inventory";
-@import "inventory/item";
-@import "inventory/room";
 
  // Common page styles
 @import "common/touristjs";
