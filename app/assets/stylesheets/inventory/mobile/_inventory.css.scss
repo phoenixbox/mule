@@ -171,14 +171,12 @@ and (max-device-width : 568px) {
 													}
 													.sub-item-container {
 														width: 33.33%;
-														// background-color: blue;
 														height: 100%;
 														float: left;
 
 														.description {
 															width: 100%;
 															height: 88%;
-															// background-color: red;
 															.table {
 																margin-bottom: 0px;
 															}
@@ -186,19 +184,16 @@ and (max-device-width : 568px) {
 															.image {
 																width: 90px;
 																height: 90px;
-																// background-color: orange;
 															}
 															.type {
 																width: 90px;
 																font-family: $melbourne_light_font;
-																// background-color: yellow;
 																min-height: 48px;
 																height: auto;
 															}
 														}
 
 														.quantity {
-															// background-color: green;
 															width: 100%;
 															height: 40%;
 															padding-top: 0px;
@@ -211,7 +206,6 @@ and (max-device-width : 568px) {
 															.stepper {
 																float: left;
 																width: 67%;
-																// background-color: brown;
 																height: 100%;
 																margin-top: 0px;
 

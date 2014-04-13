@@ -191,9 +191,9 @@ class Mule.Views.Room extends Backbone.View
           }
         ],
         "sofas": [
-            "2 seat",
-            "3 seat",
-            "+4 seat",
+            "two seat",
+            "three seat",
+            "four seat",
             "futon",
             "sectional"
         ],
@@ -216,10 +216,10 @@ class Mule.Views.Room extends Backbone.View
             },
             {
                 "dining": [
-                    "2 seat",
-                    "4 seat",
-                    "6 seat",
-                    "+8 seat"
+                    "two seat",
+                    "four seat",
+                    "six seat",
+                    "eight seat"
                 ]
             }
         ],

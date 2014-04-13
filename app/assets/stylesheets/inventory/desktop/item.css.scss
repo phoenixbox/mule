@@ -16,8 +16,14 @@ $melbourne_light_font: MelbourneLightFont;
       margin: 0 auto;
       position: relative;
 
-      &.beds {
+      &.bed {
         background-image: image-url("icons/bed_icon_aqua_240.png");
+      }
+      &.spring {
+        background-image: image-url("icons/bed_spring_icon_aqua_240.png");
+      }
+      &.mattress {
+        background-image: image-url("icons/bed_mattress_icon_aqua_240.png");
       }
       &.sofas {
         background-image: image-url("icons/sofa_icon_aqua_240.png");
