@@ -28,7 +28,8 @@
 @import "inventory/mobile/_inventory";
 
  // Common page styles
-@import "common/touristjs";
+@import "common/desktop/touristjs";
+@import "common/mobile/_touristjs";
 @import "font-awesome";
 @import "variables";
 @import "imports";

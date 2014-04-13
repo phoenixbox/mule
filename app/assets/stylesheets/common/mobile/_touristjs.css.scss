@@ -1,0 +1,20 @@
+$mule-aqua: #43C1C7;
+$bebas_neue_font: BebasNeueFont;
+// Tourist.js site tour stylings
+body {
+	.popover {
+	  padding-bottom: 10px;
+	  width: 230px;
+	  left: 5px;
+
+	  button {
+	  	background-color: $mule-aqua;
+	  	border: none;
+	  	font-size: 12px;
+
+	  	&:hover {
+	  		background-color: purple;
+	  	}
+	  }
+	}
+}

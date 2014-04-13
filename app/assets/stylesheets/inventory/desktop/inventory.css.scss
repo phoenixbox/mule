@@ -27,7 +27,6 @@ $screen-sm-min: 640px;
   .summary {
     width: 80%;
     margin: 0 auto;
-    min-height: 300px;
 
     .process {
       .header {
@@ -58,7 +57,7 @@ $screen-sm-min: 640px;
         }
       }
       .steps {
-        height: 180px;
+        height: 100%;
         width: 90%;
         left: 50%;
         margin: 20px auto;
@@ -197,7 +196,7 @@ $screen-sm-min: 640px;
       background-color: grey;
 
       .button-container {
-        margin-top: 40px;
+        margin-top: 20px;
 
         button {
           color: white;
@@ -227,13 +226,14 @@ $screen-sm-min: 640px;
           margin-top: 7px;
 
           .description {
-            width: 61%;
+            width: 59%;
             text-align: right;
             float: left;
+            padding-right: 5%;
           }
 
           .furniture-for-house {
-            width: 20%;
+            width: 39%;
             text-align: left;
             float: left;
             padding-left: 10px;

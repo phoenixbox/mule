@@ -36,8 +36,17 @@ $melbourne_light_font: MelbourneLightFont;
       width: 95%;
       float:left;
 
+      input:hover {
+        cursor: pointer;
+      }
+
+      .glyphicon-pencil {
+        display: none;
+      }
+
       .glyphicon-pencil:hover {
         color: purple;
+        display: none;
       }
 
       .name {

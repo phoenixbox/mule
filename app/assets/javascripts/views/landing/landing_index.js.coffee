@@ -24,8 +24,8 @@ class Mule.Views.LandingIndex extends Backbone.View
       data: { user: { email: email } },
       success:(data) =>
         room_number = @.$el.find('.room-numbers').find(":selected").text()
-        window.localStorage.setItem("roomNumber",room_number,);
-        window.localStorage.setItem("email",data.email,);
+        window.localStorage.setItem("roomNumber",room_number);
+        window.localStorage.setItem("email",data.email);
         @$el.parents().children().find('.modal-backdrop').remove()
         @$el.remove()
         @router.navigate("inventory", trigger: true)

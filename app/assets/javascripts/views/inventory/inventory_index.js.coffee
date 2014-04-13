@@ -67,7 +67,11 @@ class Mule.Views.InventoryIndex extends Backbone.View
   _appendChosenNumberOfRooms: ->
     rooms = parseInt(window.localStorage.roomNumber)
     @_append() for [1..rooms]
-    # @_startTour()
+    @_checkIfTutorialCompleted()
+
+  _checkIfTutorialCompleted: ->
+    unless (window.localStorage.tutorialCompleted == 'true')
+      @_startTour()
 
   _itemTypes: ->
     ['beds','sofas','chairs','tables','cabinets','stereos','tv\'s','computers','lamps','bookcases','mirrors','paintings','appliances','pianos', 'other']
@@ -84,27 +88,10 @@ class Mule.Views.InventoryIndex extends Backbone.View
 
   _steps: -> [
     {
-      content: "<p>Lets get started!</p>" + "<p class=\"action\">" + "  Click the pencil to give your first room a name" + "</p>"
-      highlightTarget: true
-      my: "bottom left"
-      at: "top center"
-      target: @.$el.find('.glyphicon-pencil')
-      setup: (tour, options) ->
-        options.view.bind "nameRoom", @nameRoom
-        return
-      teardown: (tour, options) ->
-        options.view.unbind "nameRoom", @nameRoom
-        return
-      bind: ["nameRoom"]
-      nameRoom: (tour) ->
-        tour.next()
-        return
-    }
-    {
-      content: "<p>Great!</p>" + "<p>" + "  Enter the most suitable name for your room, when you are done, click "+ "<b>" + "Next Step"+ "</b>" + "</p>"
+      content: "<p>Lets get started!</p>" + "<p>" + "  Enter the most suitable name for your room, when you are done, click "+ "<b>" + "Next Step"+ "</b>" + "</p>"
       highlightTarget: true
       nextButton: true
-      my: "bottom center"
+      my: "bottom left"
       at: "top center"
       setup: (tour, options) ->
         options.view.bind "showRoom", @showRoom
@@ -136,10 +123,10 @@ class Mule.Views.InventoryIndex extends Backbone.View
         setTimeout(waitForDrawer, 500)
     }
     {
-      content: "<p>Super!</p>" + "<p>" + "  Here we see the broad categories of furnitute options to select from, click the arrow to reveal the " + "<b>" + "bed" + "</b>" + " options</p>"
+      content: "<p>Super!</p>" + "<p>" + "  Here we see the broad categories of furnitute options to select from, click the arrow to reveal the options for " + "<b>" + "Beds" + "</b>" + "</p>"
       highlightTarget: true
-      my: "bottom left"
-      at: "top center"
+      my: "top left"
+      at: "bottom left"
       setup: (tour, options) ->
         options.view.bind "incrementItemCount", @incrementItemCount
         target: options.view.$el.find('.category-reveal')
@@ -156,8 +143,8 @@ class Mule.Views.InventoryIndex extends Backbone.View
     {
       content: "<p>Wahoo!</p>" + "<p>" + "  This is the good stuff. Click on the plus button to increase the furniture count by one" + "</p>"
       highlightTarget: true
-      my: "top right"
-      at: "bottom center"
+      my: "top left"
+      at: "bottom left"
       setup: (tour, options) ->
         options.view.bind "explainFurnitureCount", @explainFurnitureCount
         target: $(_.first(options.view.$el.find('.increment')))
@@ -176,7 +163,7 @@ class Mule.Views.InventoryIndex extends Backbone.View
       content: "<p>Woot!</p>" + "<p>" + "  When you add a furniture item, the total furniture item count for the room is updated" + "</p>"
       nextButton: true
       highlightTarget: true
-      my: "top center"
+      my: "top right"
       at: "bottom center"
       setup: (tour, options) ->
         target: options.view.$el.find('.furniture-for-room')
@@ -187,10 +174,10 @@ class Mule.Views.InventoryIndex extends Backbone.View
     }
     {
 
-      content: "<p>Yahoo!</p>" + "<p>" + "  Lets mark this room done for the moment. Just click " + "<b>" + "DONE "+ "</b>" + " to mark it ready.</p>"
+      content: "<p>Yahoo!</p>" + "<p>" + "  Lets mark this room done for the moment. Just click " + "<b>" + "DONE "+ "</b>" + " to mark it ready. (P.S the big red X will delete the room)</p>"
       highlightTarget: true
-      my: "top center"
-      at: "bottom center"
+      my: "bottom center"
+      at: "top center"
       setup: (tour, options) ->
         options.view.bind "roomComplete", @roomComplete
         target: options.view.$el.find('.save-form')
@@ -204,9 +191,11 @@ class Mule.Views.InventoryIndex extends Backbone.View
     }
   ]
   _successStep: ->
-    content: "<p>Nice job! Now you know your way around</p>" + "<p>Take a walk around your house and add your furniture to your rooms list. When you are done just click here!</p>"
+    content: "<p>Nice job! Now you know your way around</p>" + "<p>Take a walk around your house and add your furniture to your rooms list. When you are done just click "+ "<b>" + "Finish!" + "</b>" + "</p>"
     nextButton: true
     highlightTarget: true
     my: "bottom right"
     at: "top center"
     target: @.$el.find('.finish')
+    teardown: (tour, options) ->
+      window.localStorage.setItem("tutorialCompleted",true);
