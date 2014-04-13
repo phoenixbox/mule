@@ -99,8 +99,15 @@ and (max-device-width : 568px) {
 	        	padding-top: 20px;
 	        }
 
+	        .row {
+	        	margin-right: 0px;
+	        	margin-left: 0px;
+	        }
+
 	        .col-md-4 {
 	          .bounding-box {
+	          	width: 95%;
+
 	          	margin: 0 auto;
 
 	            .border-box {
@@ -130,6 +137,10 @@ and (max-device-width : 568px) {
 	        }
 	      }
 	      .cta {
+	      	.row {
+	      		margin-right: 0px;
+	      		margin-left: 0px;
+	      	}
 	        .col-md-4 {
 	        	margin-bottom: 0px;
 
@@ -157,7 +168,7 @@ and (max-device-width : 568px) {
             		background-repeat: no-repeat;
             		background-image: image-url("device_pair.png");
             		background-size: contain;
-            		margin-left: 7px;
+            		margin-left: 0px;
             	}
             	.platforms {
 		            ul {
@@ -208,13 +219,17 @@ and (max-device-width : 568px) {
           }
 	      }
 	      .message-reinforce {
-
+	      	.row {
+	      		margin-right: 0px;
+	      		margin-left: 0px;
+	      	}
 	        .col-md-4 {
 	          .bounding-box {
 
 	            .number {
 	            }
 	            .title {
+	            	font-size: 36px;
 	            }
 	            .footer-logo {
 	            }
@@ -244,6 +259,10 @@ and (max-device-width : 568px) {
 	      }
 	    }
 	    #footer {
+	    	max-width: 100%;
+	    	overflow-x: hidden;
+	    	margin: 0;
+
 	      .col-md-12 {
 	      }
 	    }
