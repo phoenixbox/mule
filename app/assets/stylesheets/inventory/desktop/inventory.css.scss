@@ -186,11 +186,6 @@ $screen-sm-min: 640px;
     margin: 0 auto;
 
     .overview {
-
-      // @media (max-width: $screen-sm-min) {
-      //   background-color: red;
-      // }
-
       height: 40px;
       width: 100%;
       background-color: grey;
@@ -238,6 +233,208 @@ $screen-sm-min: 640px;
             float: left;
             padding-left: 10px;
             padding-top: 1px;
+          }
+        }
+      }
+    }
+    .room {
+      width: 97%;
+      margin: 4px auto 4px;
+
+      .header{
+        .toggle-room {
+          width: 10%;
+        }
+        .header-details{
+          width: 90%;
+
+          .name {
+            width: 40%;
+
+            input {
+              line-height: 15px;
+              padding-left: 5px;
+              width: 100%;
+            }
+            span {
+              display: none;
+            }
+          }
+          .contents-summary {
+            width: 60%;
+
+            .furniture-count {
+              width: 80%;
+              padding-top: 8px;
+
+              .title, .furniture-for-room {
+                font-family: $melbourne_light_font;
+                font-size: 16px;
+              }
+              .title {
+                margin-left: 4%;
+              }
+              .furniture-for-room {
+
+              }
+              .counter {
+                width: auto;
+                line-height: 22px;
+              }
+            }
+            .completion-indicator {
+              width: 20%;
+              margin-right: 0px;
+              padding-top: 0px;
+
+              .glyphicon {
+                font-size: 15px;
+              }
+            }
+          }
+        }
+      }
+      .room-inventory {
+        .contents-form {
+          form {
+            margin: 0px;
+          }
+
+          .row {
+            margin-top: 4px;
+
+            .col-md-12 {
+              padding-left: 0px;
+              padding-right: 0px;
+            }
+
+            .category {
+              margin-bottom: 4px;
+
+              .category-container {
+                .category-header {
+                  height: 35px;
+
+                  .details {
+
+                    .title, .contents-summary {
+                      font-size: 18px;
+                      font-family: $melbourne_light_font;
+                    }
+                    .title {
+                      padding-top: 6px;
+                    }
+                    .contents-summary {
+                      .item-title, .furniture-for-category {
+                        color: grey;
+                      }
+                    }
+                  }
+                }
+                .category-dropdown {
+                  .item-container {
+                    .description {
+                      .type {
+                        width: 63%;
+                      }
+                    }
+                  }
+                  .sub-category {
+                    display: inline-block;
+                    border-bottom: 1px dashed $mule-aqua;
+                    padding-bottom: 20px;
+                    width: 100%;
+
+                    .title {
+
+                    }
+                    .sub-item-container {
+                      width: 33.33%;
+                      // background-color: blue;
+                      height: 100%;
+                      float: left;
+
+                      .description {
+                        width: 100%;
+                        height: 88%;
+                        // background-color: red;
+                        .table {
+                          margin-bottom: 0px;
+                        }
+
+                        .image {
+                          width: 90px;
+                          height: 90px;
+                          // background-color: orange;
+                        }
+                        .type {
+                          width: 90px;
+                          font-family: $melbourne_light_font;
+                          // background-color: yellow;
+                          min-height: 48px;
+                          height: auto;
+                        }
+                      }
+
+                      .quantity {
+                        // background-color: green;
+                        width: 100%;
+                        height: 40%;
+                        padding-top: 0px;
+
+                        .counter {
+                          margin-top: 15px;
+                          border-radius: 15px;
+                        }
+
+                        .stepper {
+                          float: left;
+                          width: 67%;
+                          // background-color: brown;
+                          height: 100%;
+                          margin-top: 0px;
+
+                          button {
+                            left: 50%;
+                            float: left;
+                            width: 60%;
+                            height: 50%;
+                            border-radius: 0px;
+                            margin-left: 13px;
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+                .save {
+                  height: 42px;
+
+                  .save-category {
+                    margin-top: 5px;
+                  }
+                }
+              }
+            }
+          }
+          .save-form, .remove-rooom {
+            float: left;
+            line-height: 22px;
+          }
+          .save-form {
+            font-size: 18px;
+            padding-top: 6px;
+            width: 80%;
+          }
+          .remove-room {
+            font-size: 17px;
+            padding-top: 5px;
+            width: 18%;
+            height: 32px;
+            color: white;
+            background-color: red;
+            border: none;
+            margin-left: 4px;
           }
         }
       }
