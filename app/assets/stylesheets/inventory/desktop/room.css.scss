@@ -159,6 +159,10 @@ $melbourne_light_font: MelbourneLightFont;
     display: none;
     height: 100%;
 
+    form {
+      margin: 0;
+    }
+
     .row {
       text-transform:capitalize;
       width: 98%;
@@ -440,22 +444,37 @@ $melbourne_light_font: MelbourneLightFont;
     }
 
     .save {
-
-      .save-form {
+      .save-form, .remove-rooom {
+        line-height: 22px;
+        float: left;
         border: none;
-        background-color: #43c1c7;
         color: white;
+        height: 30px;
+      }
+      .save-form {
         font-family: $bebas_neue_font;
-        font-size: 36px;
-        line-height: 28px;
+        background-color: $mule-aqua;
+        font-family: BebasNeueFont;
+        background-color: #43c1c7;
+        font-size: 23px;
+        line-height: 34px;
         letter-spacing: 2px;
-        padding-top: 10px;
-        float: right;
-        width: 100%;
+        padding-top: 0px;
+        width: 90%;
 
         &:hover {
           background-color: lightblue;
         }
+      }
+      .remove-room {
+        padding-top: 5px;
+        width: 9%;
+        height: 30px;
+        color: white;
+        background-color: red;
+        border: none;
+        margin-left: 4px;
+        font-size: 16px;
       }
     }
   }
