@@ -106,7 +106,11 @@ and (max-device-width : 568px) {
 									.completion-indicator {
 										width: 20%;
 										margin-right: 0px;
-										padding-top: 4px;
+										padding-top: 0px;
+
+										.glyphicon {
+											font-size: 15px;
+										}
 									}
 								}
 							}
@@ -235,15 +239,16 @@ and (max-device-width : 568px) {
 									}
 								}
 								.save-form, .remove-rooom {
-									font-size: 22px;
-									line-height: 22px;
 									float: left;
+									line-height: 22px;
 								}
 								.save-form {
-									padding-top: 7px;
+									font-size: 18px;
+									padding-top: 6px;
 									width: 80%;
 								}
 								.remove-room {
+									font-size: 17px;
 									padding-top: 5px;
 									width: 18%;
 									height: 32px;
