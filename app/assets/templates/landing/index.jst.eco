@@ -1,4 +1,12 @@
 <div class="nav">
+  <form class="form-inline pull-right" role="form" action="/session" method='POST'>
+  <div class="form-group">
+    <label class="sr-only" for="exampleInputEmail2">email</label>
+    <input type="email" class="form-control" name="user[email]" id="exampleInputEmail2" placeholder="email">
+  </div>
+  <button type="submit" class="btn btn-default">Sign in</button>
+</form>
+
   <div class="logo"></div>
 </div>
 <div class="house-background">
