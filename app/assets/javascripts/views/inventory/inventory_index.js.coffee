@@ -4,6 +4,12 @@ class Mule.Views.InventoryIndex extends Backbone.View
 
   events:
     'click .addRoom': '_append'
+    'click #logout': 'logout'
+
+  logout: ->
+    debugger
+    @session = new Mule.Models.Session(@user.attributes).destroy()
+    window.location.href = "/"
 
   className: 'inventory'
 
