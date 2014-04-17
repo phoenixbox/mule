@@ -18,4 +18,5 @@ window.render_partial = ( path, options = {} ) ->
     "<p class='error'>Sorry, there is no partial named '#{ path }'.</p>"
 
 $(document).ready ->
+  new FastClick(document.body)
   Mule.initialize()
