@@ -3,8 +3,9 @@ class Mule.Views.InventoryIndex extends Backbone.View
   template: JST['inventory/index']
 
   events:
-    'click .addRoom': '_append'
+    'click .addRoom': 'addRoom'
     'click #logout': 'logout'
+    'click #finish': 'summary'
 
   logout: ->
     debugger
@@ -17,15 +18,22 @@ class Mule.Views.InventoryIndex extends Backbone.View
     @app        = options.app
     @router     = @app.router
 
-    @user = new Mule.Models.User()
+    @user = new Mule.Models.User(fetch: true)
+    @app.user = @user
+    $('body').animate({scrollTop:0},0);
     @listenTo(@user, 'change', @render)
     @totalFurnitureCount = 0
 
+  summary: (e) ->
+    e.preventDefault()
+    @router.navigate('summary', trigger: true)
+    return
+
   render: ->
+    console.log 'rendering'
     @$el.html(@template(user: @user))
-    @_renderTable()
-    @_appendChosenNumberOfRooms()
-    @_adjustBackground()
+    @renderTable()
+    @appendRooms()
     @totalFurnitureCounter = @.$el.find('.furniture-for-house')
     @
 
@@ -41,19 +49,25 @@ class Mule.Views.InventoryIndex extends Backbone.View
     @totalFurnitureCount -= amount
     @totalFurnitureCounter.text(@totalFurnitureCount.toString())
 
-  _adjustBackground: ->
-    $('#wrapper').css({"background-image":"none","background-color":"lightcyan"})
-    $('body').animate({scrollTop:0},0);
 
-  _append: ->
-    roomFormView = new Mule.Views.Room(app: @app, delegate:@)
-    @$('.rooms-wrapper').append(roomFormView.render().el)
-
-  _renderTable: ->
+  renderTable: ->
     _.each @_itemTypes(), (item) =>
       itemView = new Mule.Views.Item(app: @app, name: item)
       @$('.summary-table > tbody:last').append(itemView.render().el);
     @_wrapCellGroupsWithRow(@$('td'))
+
+  addRoom: (e) ->
+    e.preventDefault()
+    #TODO replace this with @user.rooms.create() . it will POST to the API, api should add a room associated to the user
+    room = new Mule.Models.Room()
+    @user.rooms.add(room)
+
+  appendRooms: ->
+    $target = @$('.rooms-wrapper')
+    @user.rooms.each (room) =>
+      room.view?.remove()
+      room.view = new Mule.Views.Room(app: @app, delegate:@, model: room)
+      $target.append(room.view.render().el)
 
   _startTour: ->
     $tour = new Tourist.Tour
@@ -67,11 +81,6 @@ class Mule.Views.InventoryIndex extends Backbone.View
     run = () ->
       $tour.start()
     setTimeout(run, 500)
-
-  _appendChosenNumberOfRooms: ->
-    rooms = parseInt(window.localStorage.roomNumber)
-    @_append() for [1..rooms]
-    @_checkIfTutorialCompleted()
 
   _checkIfTutorialCompleted: ->
     unless (window.localStorage.tutorialCompleted == 'true')

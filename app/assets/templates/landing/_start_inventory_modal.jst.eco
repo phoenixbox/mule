@@ -16,7 +16,7 @@
         <!-- Text input-->
         <div class="form-group">
           <div class="col-md-12">
-          <input id="textinput" name="textinput" type="text" placeholder="your@email.com" class="form-control input-md">
+          <input id="new_user_email" name="email" type="email" placeholder="your@email.com" class="form-control input-md">
           </div>
         </div>
         <select class="form-control room-numbers">
@@ -36,7 +36,7 @@
       </div>
       <div class="modal-footer">
         <div class="form-info">* We will send your inventory list to you by email so even if you dont use Mule you will be one step closer to a less stressful move</div>
-        <button type="button" class="btn btn-primary" id="startInventory">START</button>
+        <button type="button" type="submit" class="btn btn-primary" id="startInventory">START</button>
       </div>
     </div>
   </div>

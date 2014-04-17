@@ -20,6 +20,7 @@ class Mule.Views.Room extends Backbone.View
     @app        = options.app
     @delegate   = options.delegate
     @router     = @app.router
+    @model      = if options.model then options.model else new Mule.Models.Room()
     @roomFurnitureCount = 0
     @placeholder = "Done with room"
 

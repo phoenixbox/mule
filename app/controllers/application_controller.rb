@@ -14,6 +14,12 @@ class ApplicationController < ActionController::Base
     params.require(:user).permit(:email)
   end
 
+  def default_serializer_options
+    {
+      root: false
+    }
+  end
+
   private
 
   def current_user?

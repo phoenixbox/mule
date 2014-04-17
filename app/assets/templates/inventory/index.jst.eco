@@ -54,7 +54,7 @@
     <div class="overview">
       <div class="button-container">
         <button type="button" class="btn btn-default addRoom">Add a Room</button>
-        <button type="button" class="btn btn-default finish">Finish!</button>
+        <button type="button" id="finish" class="btn btn-default finish">Finish!</button>
         <div class="room-totalizer">
           <div class='description'>Furniture for house: </div>
           <div class='furniture-for-house'>0<div>
