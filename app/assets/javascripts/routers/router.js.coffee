@@ -14,4 +14,4 @@ class Mule.Routers extends Backbone.Router
 
   inventory: ->
     view = new Mule.Views.InventoryIndex(app: @app, collection: @collection)
-    $('#wrapper').html(view.render().el)
+    $('#wrapper').html(view.el)

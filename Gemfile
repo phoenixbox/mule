@@ -19,7 +19,6 @@ gem 'bootstrap-sass', '~> 3.1.1.0'
 gem 'twitter-bootstrap-rails', '~> 2.2.8'
 gem 'font-awesome-rails', '~> 4.0.3.1'
 
-gem 'pry'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
@@ -27,9 +26,7 @@ gem 'pry'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 gem 'tourist-rails', '~> 0.0.1'
-
-# Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-gem 'turbolinks'
+gem 'fastclick-rails'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
@@ -37,12 +34,8 @@ gem 'backbone-on-rails'
 
 gem 'rails_12factor'
 
-group :doc do
-  # bundle exec rake doc:rails generates the API under doc/api.
-  gem 'sdoc', require: false
-end
-
 group :test, :development do
+  gem 'pry'
   gem 'jasmine-rails'
   gem 'jasmine-jquery-rails', '~> 2.0.2'
 end

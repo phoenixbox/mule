@@ -10,7 +10,7 @@ class Mule.Views.LandingIndex extends Backbone.View
   initialize: (options) ->
     @app        = options.app
     @router     = @app.router
-    @collection.on('reset', @render, this)
+    @listenTo(@collection, "reset", @render)
 
   render: ->
     @$el.html(@template(room: @model));
