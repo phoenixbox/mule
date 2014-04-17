@@ -2,8 +2,6 @@ class Mule.Views.InventoryIndex extends Backbone.View
 
   template: JST['inventory/index']
 
-  collection: Mule.Collections.Rooms
-
   events:
     'click .addRoom': '_append'
 
@@ -12,9 +10,10 @@ class Mule.Views.InventoryIndex extends Backbone.View
   initialize: (options) ->
     @app        = options.app
     @router     = @app.router
-    @user = window.localStorage.email
+
+    @user = new Mule.Models.User()
+    @listenTo(@user, 'change', @render)
     @totalFurnitureCount = 0
-    @
 
   render: ->
     @$el.html(@template(user: @user))
@@ -51,7 +50,7 @@ class Mule.Views.InventoryIndex extends Backbone.View
     @_wrapCellGroupsWithRow(@$('td'))
 
   _startTour: ->
-    $tour = new Tourist.Tour(
+    $tour = new Tourist.Tour
       successStep: @_successStep()
       tipClass: "Bootstrap"
       tipOptions:
@@ -59,7 +58,6 @@ class Mule.Views.InventoryIndex extends Backbone.View
       steps: @_steps()
       stepOptions:
         view: @
-    )
     run = () ->
       $tour.start()
     setTimeout(run, 500)

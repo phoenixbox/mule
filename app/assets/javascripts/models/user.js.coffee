@@ -1,4 +1,8 @@
 class Mule.Models.User extends Backbone.Model
-  defaults: {
+  url: 'users'
+
+  initialize: ->
+    @deferred = @fetch()
+
+  defaults:
     email: "tempuser@mule.com"
-  }
