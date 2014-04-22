@@ -18,26 +18,22 @@ gem 'compass-rails', '~> 1.1.6'
 gem 'bootstrap-sass', '~> 3.1.1.0'
 gem 'twitter-bootstrap-rails', '~> 2.2.8'
 gem 'font-awesome-rails', '~> 4.0.3.1'
-
-
-# See https://github.com/sstephenson/execjs#readme for more supported runtimes
-# gem 'therubyracer', platforms: :ruby
-
-# Use jquery as the JavaScript library
 gem 'jquery-rails'
 gem 'tourist-rails', '~> 0.0.1'
 gem 'fastclick-rails'
-
-# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 1.2'
 gem 'backbone-on-rails'
-
 gem 'rails_12factor'
 
 group :test, :development do
   gem 'pry'
   gem 'jasmine-rails'
   gem 'jasmine-jquery-rails', '~> 2.0.2'
+
+end
+
+group :development, :test do
+  gem 'rspec-rails', '~> 3.0.0.beta'
+  gem 'shoulda-matchers'
 end
 
 # Use ActiveModel has_secure_password
