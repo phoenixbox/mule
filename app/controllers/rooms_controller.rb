@@ -15,7 +15,7 @@ class RoomsController < UserOwnedController
     if @room
       render json: @room
     else
-      render json: @room.errors.full_messages.to_sentence, status: :unprocessable_entity
+      render json: {message: "Room Not Found"}, status: :not_found
     end
   end
 
@@ -36,16 +36,16 @@ class RoomsController < UserOwnedController
   end
 
 private
-
-  def room_params
-    params.require(:room).permit(:name, :type, :beds, :tables, :chairs, :electronics, :accessories, contents: [:name, :type, :beds, :tables, :chairs, :electronics, :accessories])
-  end
-
   def set_room
     @room = @current_user.rooms.where(id: params[:id]).first
     unless @room
       render json: {message: "room not found"}, status: :unprocessable_entity
+      puts "ROOM NOT FOUND"
+      return
     end
   end
 
+  def room_params
+    params.require(:room).permit(:name, :type, :beds, :tables, :chairs, :electronics, :accessories, contents: [:name, :type, :beds, :tables, :chairs, :electronics, :accessories])
+  end
 end
