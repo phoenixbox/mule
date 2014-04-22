@@ -9,6 +9,7 @@ Mule::Application.routes.draw do
   resource :users
   resource :session
 
+  get '/monkey', to: 'main#monkey'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

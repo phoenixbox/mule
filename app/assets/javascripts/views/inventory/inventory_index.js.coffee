@@ -2,17 +2,16 @@ class Mule.Views.InventoryIndex extends Backbone.View
 
   template: JST['inventory/index']
 
+  className: 'inventory'
+
   events:
     'click .addRoom': 'addRoom'
     'click #logout': 'logout'
     'click #finish': 'summary'
 
   logout: ->
-    debugger
     @session = new Mule.Models.Session(@user.attributes).destroy()
     window.location.href = "/"
-
-  className: 'inventory'
 
   initialize: (options) ->
     @app        = options.app
