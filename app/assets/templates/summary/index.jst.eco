@@ -7,13 +7,9 @@
 	<h1>Your Inventory Summary</h1>
 	<a href="/inventory">back</a>
 	<h1><%= @user.get('email') %></h1>
-
 	<% if @rooms.length: %>
 	  <% for room in @rooms.models: %>
 	  <div class="room-summary">
-
-			<%- render_partial 'summary/beds', {roomName: room.name, subtitle: 'beds', beds: room.beds } %>
-
 	  </div>
 	  <% end %>
 	<% else: %>

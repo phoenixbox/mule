@@ -24,6 +24,9 @@ class Mule.Views.Room extends Backbone.View
     @user       = @app.user
     @delayed_update_room = _.debounce(@update_room, 1000)
     @render()
+    @updateRoom = _.throttle(@_update_room, 1000)
+    @roomFurnitureCount = 0
+    @placeholder = "Done with room"
 
   render: ->
     @$el.html(@template(model: @model, categories: @categoryOptions(), view: @))
@@ -44,6 +47,13 @@ class Mule.Views.Room extends Backbone.View
   removeRoom: (e) ->
     e.preventDefault()
     @model.destroy
+      data: JSON.stringify(@user.key)
+      contentType: 'application/json'
+    @remove()
+
+  _changeSaveName: (e) ->
+    e.preventDefault()
+    @model.destroy
       error: =>
         window.location.href = '/inventory'
       success: =>
@@ -57,6 +67,10 @@ class Mule.Views.Room extends Backbone.View
       $button.text(@placeholder)
     else
       $button.text($value)
+      roomName = $input.val().split(" ")
+      oldName = $button.text().split(" ").splice(0,2)
+      newName = oldName.concat(roomName).join(" ")
+      $button.text(newName)
 
   _updateCounters: (e) ->
     $target = $(e.target)
