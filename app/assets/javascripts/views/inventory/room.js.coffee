@@ -14,13 +14,14 @@ class Mule.Views.Room extends Backbone.View
     'click .glyphicon-pencil': '_toggleEditable'
     'click .glyphicon-remove': '_toggleCompletedState'
     'click .room-name-input': '_changeSaveName'
-    'click .remove-room': '_removeRoom'
+    'click .remove-room': 'removeRoom'
 
   initialize: (options) ->
     @app        = options.app
     @delegate   = options.delegate
     @router     = @app.router
-    @model      = if options.model then options.model else new Mule.Models.Room()
+    @user       = @app.user
+    @updateRoom = _.throttle(@_update_room, 1000)
     @roomFurnitureCount = 0
     @placeholder = "Done with room"
 
@@ -34,6 +35,16 @@ class Mule.Views.Room extends Backbone.View
 
   _title: (collection) ->
     _.keys(collection)
+
+  updateRoom: (e) ->
+    debugger
+
+  removeRoom: (e) ->
+    e.preventDefault()
+    @model.destroy
+      data: JSON.stringify(@user.key)
+      contentType: 'application/json'
+    @remove()
 
   _changeSaveName: (e) ->
     e.preventDefault()
@@ -57,12 +68,6 @@ class Mule.Views.Room extends Backbone.View
       oldName = $button.text().split(" ").splice(0,2)
       newName = oldName.concat(roomName).join(" ")
       $button.text(newName)
-
-  _removeRoom: (e) ->
-    e.preventDefault()
-    removalAmount = parseInt(@.$el.find('.furniture-for-room').text())
-    @delegate._decrementTotal(removalAmount)
-    @.$el.find('.room-inventory').remove()
 
   _toggleEditable: (e) ->
     @delegate.trigger("nameRoom")

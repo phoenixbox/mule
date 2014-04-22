@@ -1,4 +1,5 @@
 <h1>this is the summary</h1>
+<a href="/inventory">back</a>
 <h1><%= @user.get('email') %></h1>
 
 <% if @rooms.length: %>

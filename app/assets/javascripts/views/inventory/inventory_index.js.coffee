@@ -5,7 +5,7 @@ class Mule.Views.InventoryIndex extends Backbone.View
   className: 'inventory'
 
   events:
-    'click .addRoom': 'addRoom'
+    'click .add-room': 'addRoom'
     'click #logout': 'logout'
     'click #finish': 'summary'
 
@@ -57,9 +57,7 @@ class Mule.Views.InventoryIndex extends Backbone.View
 
   addRoom: (e) ->
     e.preventDefault()
-    #TODO replace this with @user.rooms.create() . it will POST to the API, api should add a room associated to the user
-    room = new Mule.Models.Room()
-    @user.rooms.add(room)
+    @user.rooms.create(@user.key())
 
   appendRooms: ->
     $target = @$('.rooms-wrapper')
