@@ -14,9 +14,7 @@ class UsersController < ApplicationController
   	@user = User.create(params[:user])
     rooms = params[:rooms].to_i
   	if @user.save
-      rooms.times do |i|
-        @user.rooms.create(contents: {name: "room-#{i+1}"})
-      end
+      rooms.times{|i| @user.rooms.create(name: "room-#{i+1}")}
       session[:user_id] = @user.id
   		render :json => @user
   	else
