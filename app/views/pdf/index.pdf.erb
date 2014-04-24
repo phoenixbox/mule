@@ -1,0 +1,10 @@
+<div class="pdf-logo">
+    <%= wicked_pdf_image_tag('mule_logo_landscape_200_aqua.png') %>
+</div>
+<h1>Mule Inventory</h1>
+
+<div class='inventory'>
+  <%= render :partial => 'pdf/inventory.html.erb', :formats => [:html] %>
+</div>
+
+<%= wicked_pdf_stylesheet_link_tag "pdf/summary" %>

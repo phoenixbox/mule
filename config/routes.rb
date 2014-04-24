@@ -8,8 +8,7 @@ Mule::Application.routes.draw do
   resource :inventory
   resource :users
   resource :session
-
-  get '/monkey', to: 'main#monkey'
+  resources :pdf, defaults: { format: :pdf }
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
