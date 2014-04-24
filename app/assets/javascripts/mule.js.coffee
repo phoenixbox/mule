@@ -5,6 +5,8 @@ window.Mule =
   Routers: {}
 
   initialize: ->
+    @user = new Mule.Models.User()
+    @session = new Mule.Models.Session(@user.attributes)
     @router = new Mule.Routers(app: this)
     Backbone.history.start({pushState: true})
 

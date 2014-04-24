@@ -5,7 +5,7 @@
     </div>
     <div class='header-details'>
       <div class='name'>
-        <input class="room-name-input" type="text" placeholder="Room Name"/>
+        <input class="room-name-input" type="text" value="<%= @model.get('name') %>" placeholder="Room Name"/>
         <span class="glyphicon glyphicon-pencil"></span>
       </div>
       <div class='contents-summary'>

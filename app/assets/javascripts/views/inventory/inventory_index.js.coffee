@@ -10,15 +10,15 @@ class Mule.Views.InventoryIndex extends Backbone.View
     'click #finish': 'summary'
 
   logout: ->
-    @session = new Mule.Models.Session(@user.attributes).destroy()
+    @session.destroy()
     window.location.href = "/"
 
   initialize: (options) ->
     @app        = options.app
     @router     = @app.router
+    @user       = @app.user
+    @session    = @app.session
 
-    @user = new Mule.Models.User(fetch: true)
-    @app.user = @user
     $('body').animate({scrollTop:0},0);
     @listenTo(@user, 'change', @render)
     @totalFurnitureCount = 0
@@ -66,6 +66,19 @@ class Mule.Views.InventoryIndex extends Backbone.View
       room.view = new Mule.Views.Room(app: @app, delegate:@, model: room)
       $target.append(room.view.render().el)
 
+  _itemTypes: ->
+    ['beds','sofas','chairs','tables','cabinets','stereos','tv\'s','computers','lamps','bookcases','mirrors','paintings','appliances','pianos', 'other']
+
+  _itemsPerRow: ->
+    5
+
+  _desiredNumberOfRows: (numberOfCells) ->
+    numberOfCells/@_itemsPerRow()
+
+  _wrapCellGroupsWithRow: (cells) ->
+    numberOfRows = @_desiredNumberOfRows(cells.length)
+    $(cells.splice(0,5)).wrapAll( "<tr/>") for [1..numberOfRows]
+
   _startTour: ->
     $tour = new Tourist.Tour
       successStep: @_successStep()
@@ -82,19 +95,6 @@ class Mule.Views.InventoryIndex extends Backbone.View
   _checkIfTutorialCompleted: ->
     unless (window.localStorage.tutorialCompleted == 'true')
       @_startTour()
-
-  _itemTypes: ->
-    ['beds','sofas','chairs','tables','cabinets','stereos','tv\'s','computers','lamps','bookcases','mirrors','paintings','appliances','pianos', 'other']
-
-  _itemsPerRow: ->
-    5
-
-  _desiredNumberOfRows: (numberOfCells) ->
-    numberOfCells/@_itemsPerRow()
-
-  _wrapCellGroupsWithRow: (cells) ->
-    numberOfRows = @_desiredNumberOfRows(cells.length)
-    $(cells.splice(0,5)).wrapAll( "<tr/>") for [1..numberOfRows]
 
   _steps: -> [
     {

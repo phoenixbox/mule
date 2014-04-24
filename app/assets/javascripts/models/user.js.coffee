@@ -2,9 +2,9 @@ class Mule.Models.User extends Backbone.Model
   url: 'users'
 
   initialize: (options) ->
-    @deferred = @fetch() if options.fetch
+    @deferred = @fetch()
     @rooms = new Mule.Collections.Rooms()
-    @touch = _.debounce(@_touch, 50)
+    @touch = _.debounce(@_throttle_touch, 50)
     @listenTo(@rooms, 'change add', @touch)
 
   defaults:
@@ -14,12 +14,12 @@ class Mule.Models.User extends Backbone.Model
     {user: {key: @get('email')}}
 
   parse: (resp) ->
+    _.each resp.rooms, (room) ->
+      _.extend room, room.contents
+      delete room.contents
     @rooms.add(resp.rooms)
     delete resp.rooms
     resp
 
-  _touch: =>
+  _throttle_touch: =>
     @trigger('change')
-
-  logger: (e) ->
-    console.log 'add', e

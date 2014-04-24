@@ -6,8 +6,10 @@ class Mule.Views.SummaryIndex extends Backbone.View
     @app        = options.app
     @router     = @app.router
     @user       = @app.user
-    @render()
+    @user       = @app.user
+    @listenTo(@user, 'change', @render)
 
   render: ->
+    debugger
     @$el.html(@template(user: @user, rooms: @user.rooms))
     @
