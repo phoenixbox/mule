@@ -8,6 +8,10 @@ Mule::Application.routes.draw do
   resources :pdf, defaults: { format: :pdf }
 
   get '/monkey', to: 'main#monkey'
+
+  # catch all loose routes and send to backbone
+  get ':id' => 'main#index'
+  get ':id/:id' => 'main#index'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

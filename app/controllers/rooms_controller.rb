@@ -2,7 +2,6 @@ class RoomsController < UserOwnedController
 
   def create
     @room = @user.rooms.new(contents: room_params)
-    binding.pry
     if @room.save
       render json: @room
     else
