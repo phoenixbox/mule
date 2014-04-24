@@ -2,7 +2,7 @@ class RoomsController < UserOwnedController
   before_filter :set_room, only: [:show, :update, :destroy]
 
   def create
-    @room = @user.rooms.new
+    @room = @current_user.rooms.new
     if @room.save
       render json: @room
     else
@@ -32,11 +32,11 @@ class RoomsController < UserOwnedController
 private
 
   def room_params
-    params.require(:room).permit(contents: [:name, :type, :beds, :tables, :chairs, :electronics, :accessories])
+    params.require(:room).permit(:name, :type, :beds, :tables, :chairs, :electronics, :accessories, contents: [:name, :type, :beds, :tables, :chairs, :electronics, :accessories])
   end
 
   def set_room
-    @room = @user.rooms.where(id: params[:id]).first
+    @room = @current_user.rooms.where(id: params[:id]).first
     unless @room
       render json: {message: "room not found"}, status: :unprocessable_entity
     end
