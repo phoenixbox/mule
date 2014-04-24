@@ -17,7 +17,6 @@ class UserOwnedController < ApplicationController
   end
 
   def user_params
-    binding.pry
     params.require(:user).permit(:key).with_indifferent_access
   end
 end
