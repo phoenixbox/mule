@@ -13,7 +13,7 @@ class Mule.Views.Room extends Backbone.View
     'click .increment': '_updateCounters'
     'click .glyphicon-pencil': '_toggleEditable'
     'click .glyphicon-remove': '_toggleCompletedState'
-    'keyup .room-name-input': 'updateRoom'
+    'keyup .room-name-input': 'delayed_update_room'
     'click .remove-room': 'removeRoom'
 
   initialize: (options) ->
@@ -21,7 +21,7 @@ class Mule.Views.Room extends Backbone.View
     @delegate   = options.delegate
     @router     = @app.router
     @user       = @app.user
-    @updateRoom = _.debounce(@_delayed_update_room, 1000)
+    @delayed_update_room = _.debounce(@update_room, 1000)
     @roomFurnitureCount = 0
     @placeholder = "Done with room"
     @render()
@@ -41,17 +41,16 @@ class Mule.Views.Room extends Backbone.View
   _get_value: (element) ->
     element.val() if element.is('input')
 
-  _delayed_update_room: (e) ->
+  update_room: (e) ->
     $target = $(e.currentTarget)
     attr = $target.attr('name')
     value = @_get_value($target)
     @model.set(attr, value)
+    @model.persist()
 
   removeRoom: (e) ->
     e.preventDefault()
     @model.destroy
-      data: @user.key()
-      processData: true
       error: =>
         window.location.href = '/inventory'
       success: =>
