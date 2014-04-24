@@ -8,12 +8,7 @@ class Mule.Models.User extends Backbone.Model
   defaults:
     email: "tempuser@mule.com"
 
-  key: ->
-    {user: {key: @get('email')}}
-
   parse: (resp) ->
-    _.each resp.rooms, (room) ->
-      _.extend room, room.contents
     @rooms.add(resp.rooms)
     delete resp.rooms
     resp

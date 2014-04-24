@@ -22,6 +22,7 @@ class Mule.Views.InventoryIndex extends Backbone.View
     $('body').animate({scrollTop:0},0);
     @render()
     @listenTo(@user, 'change', @render)
+    @listenTo(@user.rooms, 'add remove', @render)
     @totalFurnitureCount = 0
 
   summary: (e) ->
@@ -58,7 +59,7 @@ class Mule.Views.InventoryIndex extends Backbone.View
 
   addRoom: (e) ->
     e.preventDefault()
-    @user.rooms.create(@user.key(), wait: true)
+    @user.rooms.create()
 
   appendRooms: ->
     $target = @$('.rooms-wrapper')
