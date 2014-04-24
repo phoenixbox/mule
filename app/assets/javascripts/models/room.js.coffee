@@ -9,10 +9,10 @@ class Mule.Models.Room extends Backbone.Model
     accessories: 0
 
   initialize: (args) ->
-    @persist = _.debounce(@_delayed_persist, 1000)
+    @persist = _.debounce(@_delayed_persist, 3000)
 
   _delayed_persist: (params) =>
-    @save(params, slient: true)
+    @save(params, silent: true)
 
   parse: (resp) ->
     resp
