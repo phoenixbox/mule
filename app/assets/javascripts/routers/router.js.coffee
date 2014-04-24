@@ -7,7 +7,7 @@ class Mule.Routers extends Backbone.Router
   initialize: (options)->
     @app = options.app
     @app.router = this
-    
+
   index: ->
     @view?.remove()
     @view = new Mule.Views.LandingIndex(app: @app)
