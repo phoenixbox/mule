@@ -42,9 +42,13 @@ class Mule.Views.Room extends Backbone.View
   removeRoom: (e) ->
     e.preventDefault()
     @model.destroy
-      data: JSON.stringify(@user.key)
-      contentType: 'application/json'
-    @remove()
+      data: @user.key()
+      processData: true
+      error: =>
+        window.location.href = '/inventory'
+      success: =>
+        @remove()
+
 
   _changeSaveName: (e) ->
     e.preventDefault()
