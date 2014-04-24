@@ -25,7 +25,6 @@ class Mule.Views.Room extends Backbone.View
     @roomFurnitureCount = 0
     @placeholder = "Done with room"
     @render()
-    @listenTo(@model, 'change', @render)
 
   render: ->
     @$el.html(@template(model: @model, categories: @_categoryOptions(), view: @))
