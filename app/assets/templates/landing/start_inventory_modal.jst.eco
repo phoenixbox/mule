@@ -11,9 +11,7 @@
         <div class="dont-worry">Don"t worry you can add & remove rooms later</div>
         <div class="residence-choice">
           <div class="residence-type-house"></div>
-          <!-- <div class="residence-type-business"></div> -->
         </div>
-        <!-- Text input-->
         <div class="form-group">
           <div class="col-md-12">
           <input id="new_user_email" name="email" type="email" placeholder="your@email.com" class="form-control input-md">
