@@ -4,14 +4,14 @@ class Mule.Views.Room extends Backbone.View
 
   className: 'room room-inventory'
 
-  placeholder: 'Done with room'
+  placeholder: 'Room'
   roomFurnitureCount: 0
 
   events:
     'click .toggle-room': 'toggleRoom'
     'keyup .room-name-input': 'rename_room'
     'click .toggle-category': '_toggleCategory'
-    'click .save-form': '_saveRoom'
+    'click .save-form': 'done_with_room'
     'click .save-category': '_doneWithCategory'
     'click .decrement': '_updateCounters'
     'click .increment': '_updateCounters'
@@ -31,21 +31,15 @@ class Mule.Views.Room extends Backbone.View
     @roomFurnitureCounter = @.$el.find('.furniture-for-room')
     @
 
-  _items: (collection) ->
-    _.first(_.values(collection))
-
-  _title: (collection) ->
-    _.keys(collection)
-
-  _get_value: (element) ->
-    element.val() if element.is('input')
-
   update_room: (e) ->
     $target = $(e.currentTarget)
     attr = $target.attr('name')
     value = @_get_value($target)
     @model.set(attr, value)
     @model.persist()
+
+  _get_value: (element) ->
+    element.val() if element.is('input')
 
   removeRoom: (e) ->
     e.preventDefault()
@@ -57,14 +51,12 @@ class Mule.Views.Room extends Backbone.View
 
   rename_room: (e) ->
     @delayed_update_room(e) if e
-    $button = @$('.save-form')
+    $button = @$('.save-form .name')
     $value = @$('.room-name-input').val()
     if $value == ""
       $button.text(@placeholder)
     else
-      oldName = $button.text().split(" ").splice(0,2)
-      newName = oldName.concat($value).join(" ")
-      $button.text(newName)
+      $button.text($value)
 
   _updateCounters: (e) ->
     $target = $(e.target)
@@ -127,14 +119,11 @@ class Mule.Views.Room extends Backbone.View
   _scrollToTargetPosition: (targetPosition) ->
     $('body').animate({scrollTop:targetPosition}, 600);
 
-  _saveRoom: (e) ->
+  done_with_room: (e) ->
     e.preventDefault()
     $target = $(e.target)
     @close_drawer()
     @$('.completion-indicator > .glyphicon').addClass('glyphicon-ok')
-
-  _findRoomDrawer: ->
-    @$('.contents-form')
 
   _toggleDrawer: (drawer, target) ->
     drawer.slideToggle
@@ -144,6 +133,7 @@ class Mule.Views.Room extends Backbone.View
           target.addClass('glyphicon-chevron-down').removeClass('glyphicon-chevron-right')
         else
           target.addClass('glyphicon-chevron-right').removeClass('glyphicon-chevron-down')
+
   _categoryOptions: ->
     {
         "beds": [

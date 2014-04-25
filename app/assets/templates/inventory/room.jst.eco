@@ -78,7 +78,7 @@
         </div>
       </div>
     <div class="save">
-      <button class="save-form">DONE WITH ROOM</button>
+      <button class="save-form">DONE WITH <span class="name">ROOM</span></button>
       <button class="remove-room">
         <span class="glyphicon glyphicon-remove"></span>
       </button>
