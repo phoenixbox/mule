@@ -65,7 +65,7 @@ class Mule.Views.InventoryIndex extends Backbone.View
     $target = @$('.rooms-wrapper')
     @user.rooms.each (room) =>
       room.view?.remove()
-      room.view = new Mule.Views.Room(app: @app, delegate:@, model: room)
+      room.view = new Mule.Views.Room(app: @app, delegate: @, model: room)
       $target.append(room.view.el)
 
   _itemTypes: ->

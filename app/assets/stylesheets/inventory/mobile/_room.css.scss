@@ -9,6 +9,7 @@ $melbourne_light_font: MelbourneLightFont;
   left: 50%;
   margin: 10px auto 10px;
 
+
   .header {
     height: 40px;
     width: 100%;
@@ -156,9 +157,6 @@ $melbourne_light_font: MelbourneLightFont;
     }
   }
   .contents-form {
-    display: none;
-    height: 100%;
-
     form {
       margin: 0;
     }

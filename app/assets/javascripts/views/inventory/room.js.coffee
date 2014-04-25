@@ -2,18 +2,19 @@ class Mule.Views.Room extends Backbone.View
 
   template: JST['inventory/room']
 
-  className: 'room'
+  className: 'room room-inventory'
+
+  placeholder: 'Done with room'
+  roomFurnitureCount: 0
 
   events:
-    'click .toggle-room': '_toggleRoom'
+    'click .toggle-room': 'toggleRoom'
+    'keyup .room-name-input': 'rename_room'
     'click .toggle-category': '_toggleCategory'
     'click .save-form': '_saveRoom'
     'click .save-category': '_doneWithCategory'
     'click .decrement': '_updateCounters'
     'click .increment': '_updateCounters'
-    'click .glyphicon-pencil': '_toggleEditable'
-    'click .glyphicon-remove': '_toggleCompletedState'
-    'keyup .room-name-input': 'delayed_update_room'
     'click .remove-room': 'removeRoom'
 
   initialize: (options) ->
@@ -22,12 +23,11 @@ class Mule.Views.Room extends Backbone.View
     @router     = @app.router
     @user       = @app.user
     @delayed_update_room = _.debounce(@update_room, 1000)
-    @roomFurnitureCount = 0
-    @placeholder = "Done with room"
     @render()
 
   render: ->
     @$el.html(@template(model: @model, categories: @_categoryOptions(), view: @))
+    @rename_room()
     @roomFurnitureCounter = @.$el.find('.furniture-for-room')
     @
 
@@ -55,46 +55,16 @@ class Mule.Views.Room extends Backbone.View
       success: =>
         @remove()
 
-
-  _changeSaveName: (e) ->
-    e.preventDefault()
-    $target = $(e.target)
-    $saveButton = $target.parents('.room-inventory').find('.save-form')
-
-    $target.keydown (e) =>
-      if e.keyCode == 13
-        @_renameRoom()
-
-    $target.blur =>
-      @_renameRoom()
-
-  _renameRoom: ->
-    $button = @.$el.find('.save-form')
-    $input = @.$el.find('.room-name-input')
-    if $input.val() == ""
+  rename_room: (e) ->
+    @delayed_update_room(e) if e
+    $button = @$('.save-form')
+    $value = $('.room-name-input').val()
+    if $value == ""
       $button.text(@placeholder)
     else
-      roomName = $input.val().split(" ")
       oldName = $button.text().split(" ").splice(0,2)
-      newName = oldName.concat(roomName).join(" ")
+      newName = oldName.concat($value).join(" ")
       $button.text(newName)
-
-  _toggleEditable: (e) ->
-    @delegate.trigger("nameRoom")
-    e.preventDefault()
-    $target = $(e.target)
-    $input = $target.parents('.name').children('.room-name-input')
-
-    $input.keydown (e) =>
-      if e.keyCode == 13
-        $input.attr('readonly', true)
-
-    if $input.prop('readonly')
-      $input.attr('readonly', false)
-      $input.focus()
-
-    $input.blur =>
-      $input.attr('readonly', true)
 
   _updateCounters: (e) ->
     $target = $(e.target)
@@ -122,14 +92,21 @@ class Mule.Views.Room extends Backbone.View
     $categoryCounter.text($categoryCounterValue.toString())
     @roomFurnitureCounter.text(@roomFurnitureCount.toString())
 
-  _toggleRoom: (e) ->
-    @delegate.trigger("showCategory")
-    $target = $(e.target)
-    $roomDrawer = @_findRoomDrawer($target)
-    @_toggleDrawer($roomDrawer, $target)
+  open: ->
+    @$('.toggle-room').hasClass('open')
 
-    targetScrollPosition = $target.position().top
-    @_scrollToTargetPosition(targetScrollPosition)
+  toggleRoom: (e) ->
+    $target = $(e.target)
+    if @open() then @close_drawer() else @open_drawer()
+    @_scrollToTargetPosition($(e.target).position().top)
+
+  open_drawer: (e) =>
+    @$('.toggle-room').addClass('open')
+    @$('.contents-form').addClass('open')
+
+  close_drawer: (e) ->
+    @$('.toggle-room').removeClass('open')
+    @$('.contents-form').removeClass('open')
 
   _toggleCategory: (e) ->
     e.preventDefault()
@@ -151,19 +128,13 @@ class Mule.Views.Room extends Backbone.View
     $('body').animate({scrollTop:targetPosition}, 600);
 
   _saveRoom: (e) ->
-    @delegate.trigger("roomComplete")
     e.preventDefault()
     $target = $(e.target)
-    $roomDrawer = @_findRoomDrawer($target)
-    $icon = $target.parents('.room-inventory').find('.completion-indicator').children()
-    $icon.addClass('glyphicon-ok')
+    @close_drawer()
+    @$('.completion-indicator > .glyphicon').addClass('glyphicon-ok')
 
-    $chevron = $target.parents('.room-inventory').find('.glyphicon-chevron-down')
-
-    @_toggleDrawer($roomDrawer, $chevron)
-
-  _findRoomDrawer: (target) ->
-    target.parents('.room-inventory').children('.contents-form')
+  _findRoomDrawer: ->
+    @$('.contents-form')
 
   _toggleDrawer: (drawer, target) ->
     drawer.slideToggle
@@ -173,7 +144,6 @@ class Mule.Views.Room extends Backbone.View
           target.addClass('glyphicon-chevron-down').removeClass('glyphicon-chevron-right')
         else
           target.addClass('glyphicon-chevron-right').removeClass('glyphicon-chevron-down')
-
   _categoryOptions: ->
     {
         "beds": [
