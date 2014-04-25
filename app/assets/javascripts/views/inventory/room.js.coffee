@@ -134,167 +134,166 @@ class Mule.Views.Room extends Backbone.View
         else
           target.addClass('glyphicon-chevron-right').removeClass('glyphicon-chevron-down')
 
+  # These options should be better utilized so we don't have to pass as much into the partial.
   categoryOptions: ->
-    {
-        "beds": [
-          {
-              "king": [
-                  "frame",
-                  "box spring",
-                  "mattress"
-              ]
-          },
-          {
-              "queen": [
-                  "frame",
-                  "box spring",
-                  "mattress"
-              ]
-          },
-          {
-              "single": [
-                  "frame",
-                  "box spring",
-                  "mattress"
-              ]
-          },
-          {
-              "toddler": [
-                  "frame",
-                  "box spring",
-                  "mattress"
-              ]
-          }
-        ],
-        "sofas": [
-            "two seat",
-            "three seat",
-            "four seat",
-            "futon",
-            "sectional"
-        ],
-        "chairs": [
-            "chair",
-            "stool",
-            "office",
-            "lounge",
-            "folding",
-            "bean bag",
-            "bench"
-        ],
-        "tables": [
-            {
-                "general": [
-                    "coffee",
-                    "side",
-                    "office"
-                ]
-            },
-            {
-                "dining": [
-                    "two seat",
-                    "four seat",
-                    "six seat",
-                    "eight seat"
-                ]
-            }
-        ],
-        "lighting": [
-            {
-                "general": [
-                    "ceiling fixture",
-                    "chandelier"
-                ]
-            },
-            {
-                "lamps": [
-                    "floor",
-                    "desk"
-                ]
-            }
-        ],
-        "storage": [
-            {
-                "wardrobes": [
-                    "dresser",
-                    "freestanding"
-                ]
-            },
-            {
-                "cabinets": [
-                    "china",
-                    "filing",
-                    "entertainment center"
-                ]
-            },
-            {
-                "miscellaneous": [
-                    "bookcase",
-                    "storage bin",
-                    "suitcase",
-                    "dufflebag",
-                    "trunk"
-                ]
-            }
-        ],
-        "electronics": [
-            "tv",
-            "stereo",
-            "speakers",
-            "computer",
-            "printer"
-        ],
-        "music": [
-            {
-                "general": [
-                    "drums",
-                    "instrument"
-                ]
-            },
-            {
-                "pianos": [
-                    "grand",
-                    "baby",
-                    "upright"
-                ]
-            }
-        ],
-        "appliances": [
-            "fridge",
-            "freezer",
-            "oven",
-            "air conditioner",
-            "dryer",
-            "washer"
-        ],
-        "other": [
-            {
-                "miscellaneous": [
-                    "mirror",
-                    "picture",
-                    "rugs",
-                    "stroller",
-                    "car seat",
-                    "plants",
-                    "grill"
-                ]
-            },
-            {
-                "kids": [
-                    "play house",
-                    "play pen",
-                    "dollhouse"
-                ]
-            },
-            {
-                "sports": [
-                    "skis",
-                    "snowboard",
-                    "bicycle",
-                    "golf clubs",
-                    "pool table",
-                    "ping pong"
-                ]
-            }
-        ]
-    }
+    "beds": [
+      {
+          "king": [
+              "frame",
+              "box spring",
+              "mattress"
+          ]
+      },
+      {
+          "queen": [
+              "frame",
+              "box spring",
+              "mattress"
+          ]
+      },
+      {
+          "single": [
+              "frame",
+              "box spring",
+              "mattress"
+          ]
+      },
+      {
+          "toddler": [
+              "frame",
+              "box spring",
+              "mattress"
+          ]
+      }
+    ],
+    "sofas": [
+        "two seat",
+        "three seat",
+        "four seat",
+        "futon",
+        "sectional"
+    ],
+    "chairs": [
+        "chair",
+        "stool",
+        "office",
+        "lounge",
+        "folding",
+        "bean bag",
+        "bench"
+    ],
+    "tables": [
+        {
+            "general": [
+                "coffee",
+                "side",
+                "office"
+            ]
+        },
+        {
+            "dining": [
+                "two seat",
+                "four seat",
+                "six seat",
+                "eight seat"
+            ]
+        }
+    ],
+    "lighting": [
+        {
+            "general": [
+                "ceiling fixture",
+                "chandelier"
+            ]
+        },
+        {
+            "lamps": [
+                "floor",
+                "desk"
+            ]
+        }
+    ],
+    "storage": [
+        {
+            "wardrobes": [
+                "dresser",
+                "freestanding"
+            ]
+        },
+        {
+            "cabinets": [
+                "china",
+                "filing",
+                "entertainment center"
+            ]
+        },
+        {
+            "miscellaneous": [
+                "bookcase",
+                "storage bin",
+                "suitcase",
+                "dufflebag",
+                "trunk"
+            ]
+        }
+    ],
+    "electronics": [
+        "tv",
+        "stereo",
+        "speakers",
+        "computer",
+        "printer"
+    ],
+    "music": [
+        {
+            "general": [
+                "drums",
+                "instrument"
+            ]
+        },
+        {
+            "pianos": [
+                "grand",
+                "baby",
+                "upright"
+            ]
+        }
+    ],
+    "appliances": [
+        "fridge",
+        "freezer",
+        "oven",
+        "air conditioner",
+        "dryer",
+        "washer"
+    ],
+    "other": [
+        {
+            "miscellaneous": [
+                "mirror",
+                "picture",
+                "rugs",
+                "stroller",
+                "car seat",
+                "plants",
+                "grill"
+            ]
+        },
+        {
+            "kids": [
+                "play house",
+                "play pen",
+                "dollhouse"
+            ]
+        },
+        {
+            "sports": [
+                "skis",
+                "snowboard",
+                "bicycle",
+                "golf clubs",
+                "pool table",
+                "ping pong"
+            ]
+        }
+    ]
