@@ -10,12 +10,12 @@ class Mule.Views.Room extends Backbone.View
   events:
     'click .toggle-room': 'toggleRoom'
     'keyup .room-name-input': 'rename_room'
-    'click .toggle-category': '_toggleCategory'
     'click .save-form': 'done_with_room'
+    'click .remove-room': 'removeRoom'
+    'click .toggle-category': '_toggleCategory'
     'click .save-category': '_doneWithCategory'
     'click .decrement': '_updateCounters'
     'click .increment': '_updateCounters'
-    'click .remove-room': 'removeRoom'
 
   initialize: (options) ->
     @app        = options.app
