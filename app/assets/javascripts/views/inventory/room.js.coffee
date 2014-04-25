@@ -26,7 +26,7 @@ class Mule.Views.Room extends Backbone.View
     @render()
 
   render: ->
-    @$el.html(@template(model: @model, categories: @_categoryOptions(), view: @))
+    @$el.html(@template(model: @model, categories: @categoryOptions(), view: @))
     @rename_room()
     @roomFurnitureCounter = @.$el.find('.furniture-for-room')
     @
@@ -134,7 +134,7 @@ class Mule.Views.Room extends Backbone.View
         else
           target.addClass('glyphicon-chevron-right').removeClass('glyphicon-chevron-down')
 
-  _categoryOptions: ->
+  categoryOptions: ->
     {
         "beds": [
           {
