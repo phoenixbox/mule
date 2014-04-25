@@ -58,7 +58,7 @@ class Mule.Views.Room extends Backbone.View
   rename_room: (e) ->
     @delayed_update_room(e) if e
     $button = @$('.save-form')
-    $value = $('.room-name-input').val()
+    $value = @$('.room-name-input').val()
     if $value == ""
       $button.text(@placeholder)
     else
