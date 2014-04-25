@@ -71,18 +71,9 @@ $melbourne_light_font: MelbourneLightFont;
           padding-left: 15px;
           font-size: 15px
         }
-        input::-webkit-input-placeholder {
-           color: gray;
-        }
-
-        input:-moz-placeholder {
-           color: gray;
-        }
-
-        input::-moz-placeholder {
-           color: gray;
-        }
-
+        input::-webkit-input-placeholder,
+        input:-moz-placeholder,
+        input::-moz-placeholder,
         input:-ms-input-placeholder {
            color: gray;
         }
