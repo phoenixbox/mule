@@ -1,12 +1,12 @@
 <h1>this is the summary</h1>
+<a href="/inventory">back</a>
 <h1><%= @user.get('email') %></h1>
 
 <% if @rooms.length: %>
-  <% for room in @rooms: %>
-    <p>another room</p>
-    <p><%# room.get('name') %></p>
-    <p><%# room.get('type') %></p>
+  <% for room in @rooms.models: %>
+    <p>name: <%= room.get('name') %></p>
+    <p>type: <%= room.get('type') %></p>
   <% end %>
 <% else: %>
-  No Rooms Saved
+  No Rooms
 <% end %>

@@ -19,6 +19,7 @@
 //= require backbone
 //= require tourist
 //= require mule
+//= require interface/tour_guide
 //= require_tree ../templates
 //= require_tree ./models
 //= require_tree ./collections

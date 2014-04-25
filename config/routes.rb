@@ -1,14 +1,17 @@
 Mule::Application.routes.draw do
   mount JasmineRails::Engine => '/specs' if defined?(JasmineRails)
-  # The priority is based upon order of creation: first created -> highest priority.
-  # See how all your routes lay out with "rake routes".
-
-  # You can have the root of your site routed with "root"
   root 'main#index'
   resource :inventory
   resource :users
   resource :session
+  resources :rooms, except: [:new, :edit]
   resources :pdf, defaults: { format: :pdf }
+
+  get '/monkey', to: 'main#monkey'
+
+  # catch all loose routes and send to backbone
+  get ':id' => 'main#index'
+  get ':id/:id' => 'main#index'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
