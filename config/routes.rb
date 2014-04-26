@@ -5,10 +5,11 @@ Mule::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'main#index'
-  resource :inventory
-  resource :users
-  resource :session
-  resources :pdf, defaults: { format: :pdf }
+  resource :inventory, only: [:show]
+  resource :summary, only: [:show]
+  resource :users, only: [:show, :create, :update]
+  resource :session, only: [:create, :destroy]
+  resources :pdf, defaults: { format: :pdf }, only: [:index]
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

@@ -16,7 +16,6 @@ class Mule.Views.InventoryIndex extends Backbone.View
   initialize: (options) ->
     @app        = options.app
     @router     = @app.router
-
     @user = new Mule.Models.User(fetch: true)
     @app.user = @user
     $('body').animate({scrollTop:0},0);

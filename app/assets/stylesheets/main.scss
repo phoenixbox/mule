@@ -1,6 +1,7 @@
 // Place all the styles related to the main controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+$mule-light-aqua: #E2FDFE;
 
 #wrapper {
   width: 100%;
@@ -8,4 +9,8 @@
   margin: 0 auto;
   background-color: transparent;
   background-size: cover;
+
+  .inventory {
+		background-color: $mule-light-aqua;
+  }
 }

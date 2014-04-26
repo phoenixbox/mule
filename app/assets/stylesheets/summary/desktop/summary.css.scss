@@ -1,0 +1,36 @@
+$mule-aqua: #43C1C7;
+$mule-light-aqua: #E2FDFE;
+$mule-grey: #6f6f6f;
+$bebas_neue_font: BebasNeueFont;
+$melbourne_light_font: MelbourneLightFont;
+
+.summary {
+	.inventory-summary {
+		width: 90%;
+		left: 50%;
+  	margin: 0 auto;
+
+		font-family: $melbourne_light_font;
+
+		h3, h4 {
+			text-align: left;
+			padding-left: 10px;
+			text-transform: capitalize;
+		}
+		.room-summary {
+			overflow: hidden;
+			border: 3px solid $mule-aqua;
+
+			table {
+			  float: left;
+			  width: 100%;
+			  font-size: 16px;
+				margin-left: 10px;
+			}
+
+			table, td, th {
+
+			}
+		}
+	}
+}

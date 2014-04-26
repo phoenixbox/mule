@@ -1,0 +1,22 @@
+<h3><%= @roomName %></h3>
+<h4><%= @subtitle %></h4>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Frames</th>
+      <th>Mattresses</th>
+      <th>Box Springs</th>
+    </tr>
+  </thead>
+  <tbody>
+		<% for bed in @beds: %>
+	    <tr>
+	      <td><%= bed.type %></td>
+	      <td><%= bed.frames %></td>
+	      <td><%= bed.matresses %></td>
+	      <td><%= bed.box_springs %></td>
+	    </tr>
+		<% end %>
+  </tbody>
+</table>
