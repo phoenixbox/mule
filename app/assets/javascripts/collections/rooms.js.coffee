@@ -1,3 +1,9 @@
 class Mule.Collections.Rooms extends Backbone.Collection
-  url: '/rooms/'
+
+  url: ->
+    "/rooms"
+
   model: Mule.Models.Room
+
+  parse: (response) ->
+    debugger

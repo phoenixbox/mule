@@ -9,6 +9,7 @@ $melbourne_light_font: MelbourneLightFont;
   left: 50%;
   margin: 10px auto 10px;
 
+
   .header {
     height: 40px;
     width: 100%;
@@ -70,18 +71,9 @@ $melbourne_light_font: MelbourneLightFont;
           padding-left: 15px;
           font-size: 15px
         }
-        input::-webkit-input-placeholder {
-           color: gray;
-        }
-
-        input:-moz-placeholder {
-           color: gray;
-        }
-
-        input::-moz-placeholder {
-           color: gray;
-        }
-
+        input::-webkit-input-placeholder,
+        input:-moz-placeholder,
+        input::-moz-placeholder,
         input:-ms-input-placeholder {
            color: gray;
         }
@@ -156,9 +148,6 @@ $melbourne_light_font: MelbourneLightFont;
     }
   }
   .contents-form {
-    display: none;
-    height: 100%;
-
     form {
       margin: 0;
     }
