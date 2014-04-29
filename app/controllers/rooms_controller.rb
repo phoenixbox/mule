@@ -36,6 +36,11 @@ class RoomsController < UserOwnedController
   end
 
 private
+
+  def room_params
+    params.require(:room).permit(:name, :type, :beds, :tables, :chairs, :electronics, :accessories, contents: [:name, :type, :beds, :tables, :chairs, :electronics, :accessories])
+  end
+
   def set_room
     @room = @current_user.rooms.where(id: params[:id]).first
     unless @room
@@ -45,7 +50,4 @@ private
     end
   end
 
-  def room_params
-    params.require(:room).permit(:name, :type, :beds, :tables, :chairs, :electronics, :accessories, contents: [:name, :type, :beds, :tables, :chairs, :electronics, :accessories])
-  end
 end

@@ -37,7 +37,7 @@ class Mule.TourGuide
       at: "top center"
       setup: (tour, options) ->
         options.view.bind "showCategory", @showCategory
-        target: options.view.$el.find('.glyphicon')
+        target: options.view.$el.find('.glyphicon-chevron-right')
       teardown: (tour, options) ->
         options.view.unbind "showCategory", @showCategory
         return
@@ -123,6 +123,6 @@ class Mule.TourGuide
     my: "bottom right"
     at: "top center"
     setup: (tour, options) ->
-      target: options.view.$el.find('.finish')
+      target: $('.finish')
     teardown: (tour, options) ->
       window.localStorage.setItem("tutorialCompleted",true);

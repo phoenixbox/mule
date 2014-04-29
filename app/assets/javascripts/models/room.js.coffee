@@ -8,9 +8,6 @@ class Mule.Models.Room extends Backbone.Model
     electronics: 0
     accessories: 0
 
-  url: ->
-    "/rooms/#{@id}"
-
   initialize: (args) ->
     @persist = _.debounce(@_delayed_persist, 3000)
 

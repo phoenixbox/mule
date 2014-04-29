@@ -4,6 +4,8 @@ class Mule.Views.InventoryIndex extends Backbone.View
 
   className: 'inventory'
 
+  totalFurnitureCount: 0
+
   events:
     'click .add-room': 'addRoom'
     'click #logout': 'logout'
@@ -21,10 +23,8 @@ class Mule.Views.InventoryIndex extends Backbone.View
 
     $('body').animate({scrollTop:0},0);
     @render()
-    @_checkIfTutorialCompleted()
     @listenTo(@user, 'change', @render)
     @listenTo(@user.rooms, 'add remove', @render)
-    @totalFurnitureCount = 0
 
   summary: (e) ->
     e.preventDefault()
@@ -36,6 +36,7 @@ class Mule.Views.InventoryIndex extends Backbone.View
     @$el.html(@template(user: @user))
     @appendRooms()
     @totalFurnitureCounter = @.$el.find('.furniture-for-house')
+    @_checkIfTutorialCompleted()
     @
 
   _incrementTotal: (amount) ->

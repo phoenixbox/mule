@@ -1,7 +1,6 @@
 <div class='nav'>
   <button href="/logout" id="logout" class="pull-right btn btn-default btn-xs">Logout</button>
-  <div class='logo'>
-  </div>
+  <div class='logo'></div>
 </div>
 <div class='inventory-summary'>
 	<h1>Your Inventory Summary</h1>
@@ -10,6 +9,8 @@
 	<% if @rooms.length: %>
 	  <% for room in @rooms.models: %>
 	  <div class="room-summary">
+      <p>name: <%= room.get('name') %></p>
+      <p>type: <%= room.get('type') %></p>
 	  </div>
 	  <% end %>
 	<% else: %>

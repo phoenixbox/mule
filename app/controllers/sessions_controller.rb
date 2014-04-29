@@ -28,7 +28,4 @@ private
     end
   end
 
-  def logout_user
-    session[:user_id] = nil
-  end
 end

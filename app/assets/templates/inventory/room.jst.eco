@@ -50,11 +50,11 @@
       <div class="col-md-12 category">
         <%- render_partial 'inventory/form_double_column_section', {title: 'other', category: @categories.other, view: @view, columnLayout: {column_width: 6, splice: 2}} %>
       </div>
-    <div class="save">
-      <button class="save-form">DONE WITH <span class="name">ROOM</span></button>
-      <button class="remove-room">
-        <span class="glyphicon glyphicon-remove"></span>
-      </button>
     </div>
+  <div class="save">
+    <button class="save-form">DONE WITH <span class="name">ROOM</span></button>
+    <button class="remove-room">
+      <span class="glyphicon glyphicon-remove"></span>
+    </button>
   </div>
 </div>
