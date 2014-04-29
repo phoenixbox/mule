@@ -3,12 +3,14 @@ development:
   encoding: unicode
   database: mule_development
   pool: 5
+  host: localhost
   timeout: 5000
 
 test:
   adapter: postgresql
   encoding: unicode
   database: mule_test
+  host: localhost
   pool: 5
   timeout: 5000
 
