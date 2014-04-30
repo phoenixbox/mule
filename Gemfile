@@ -9,6 +9,8 @@ gem 'rails_12factor'
 gem 'unicorn-rails'
 gem 'active_model_serializers'
 gem 'wicked_pdf'
+gem 'countries'
+gem 'country_select'
 
 # asset helpers
 gem 'sass-rails', '~> 4.0.0'
@@ -16,6 +18,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'compass-rails', '~> 1.1.6'
 gem 'jquery-rails'
+gem "bower-rails", "~> 0.7.1"
 
 # styles
 gem 'bootstrap-sass', '~> 3.1.1.0'
