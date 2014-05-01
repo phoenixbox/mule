@@ -35,7 +35,7 @@ class Mule.Views.InventoryIndex extends Backbone.View
     console.log 'rendering '
     @$el.html(@template(user: @user))
     @appendRooms()
-    @totalFurnitureCounter = @.$el.find('.furniture-for-house')
+    @totalFurnitureCounter = @$('.furniture-for-house')
     @_checkIfTutorialCompleted()
     @
 
