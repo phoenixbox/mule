@@ -1,5 +1,4 @@
 class Mule.Models.Item extends Backbone.Model
-  defaults: {
+  defaults:
     title: "",
     count: 0
-  }

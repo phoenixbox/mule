@@ -5,15 +5,16 @@ class Mule.Views.Category extends Backbone.View
   className: "col-md-12 category"
 
   events:
-    'click .toggle-category': '_toggleCategory'
+    'click .toggle-category': 'toggle'
     'click .save-category': '_doneWithCategory'
     'click .decrement': '_updateCounters'
     'click .increment': '_updateCounters'
 
   initialize: (options) ->
-    defaults = _.pick options, "title", "columnLayout"
+    defaults = _.pick options, "title", "room"
     _.extend @, defaults
-    @category = @model.categoryOptions[@title]
+    @defaults = @room.categoryOptions[@title]
+    @model = new Mule.Models.Category(type: @title)
     @delayed_update_room = _.debounce(@update_room, 1000)
     @render()
 
@@ -21,42 +22,49 @@ class Mule.Views.Category extends Backbone.View
     @$el.html @template
       model: @model
       title: @title
-      columnLayout: @columnLayout
-      category: @category
+    @render_subitems()
+    @
 
-  update_room: (e) ->
-    $target = $(e.currentTarget)
-    attr = $target.attr('name')
-    value = @_get_value($target)
-    @model.set(attr, value)
-    @model.persist()
+  render_subitems: ->
+    $target = @$(".contents")
+    items = @model.get("items")
+    @views = {}
+    if _.isArray(items)
+      _.each items, (item) =>
+        @views[item] = view = JST['inventory/item_form_segment'](item: item)
+        $target.append view
 
-  _get_value: (element) ->
-    element.val() if element.is('input')
+    if _.isObject(items)
+      _.each items, (item) =>
+        @views[item] = view = JST['inventory/sub_item_form_segment'](items: items, title: @model.get('title'))
+        $target.append view
 
-  # open: ->
-  #   @$('.toggle-room').hasClass('open')
-  #
-  # toggleDrawer: (e) ->
-  #   $target = $(e.target)
-  #   if @open() then @close_drawer() else @open_drawer()
-  #   @_scrollToTargetPosition($(e.target).position().top)
-  #
-  # open_drawer: (e) =>
-  #   @$('.toggle-room').addClass('open')
-  #   @$('.contents-form').addClass('open')
-  #
-  # close_drawer: (e) ->
-  #   @$('.toggle-room').removeClass('open')
-  #   @$('.contents-form').removeClass('open')
+  # update_room: (e) ->
+  #   $target = $(e.currentTarget)
+  #   attr = $target.attr('name')
+  #   value = @_get_value($target)
+  #   @model.set(attr, value)
+  #   @model.persist()
+#
+  # _get_value: (element) ->
+  #   element.val() if element.is('input')
 
-  # _toggleCategory: (e) ->
-  #   e.preventDefault()
-  #   @delegate.trigger("incrementItemCount")
-  #   $target = $(e.target)
-  #   $categoryDrawer = $target.parents('.category-container').children('.category-dropdown')
-  #   @_toggleDrawer($categoryDrawer, $target)
-  #
+  toggle: (e) ->
+    if @open() then @close_drawer() else @open_drawer()
+    # @scrollToTargetPosition($(e.target).position().top)
+
+  open: ->
+    @$('.category-dropdown').is(':visible')
+
+  open_drawer: (e) =>
+    @$('.glyphicon-chevron-right').removeClass('glyphicon-chevron-right').addClass('glyphicon-chevron-down')
+    @$('.category-dropdown').show()
+
+  close_drawer: (e) ->
+    @$('.glyphicon-chevron-down').removeClass('glyphicon-chevron-down').addClass('glyphicon-chevron-right')
+    @$('.category-dropdown').hide()
+
+
   #   targetScrollPosition = $target.parents('.row').position().top + $target.position().top
   #   @_scrollToTargetPosition(targetScrollPosition)
 
@@ -66,5 +74,5 @@ class Mule.Views.Category extends Backbone.View
   #   $chevron = $target.parents('.category-container').find('.glyphicon-chevron-down')
   #   $chevron.click()
 
-  _scrollToTargetPosition: (targetPosition) ->
+  scrollToTargetPosition: (targetPosition) ->
     $('body').animate({scrollTop:targetPosition}, 600);

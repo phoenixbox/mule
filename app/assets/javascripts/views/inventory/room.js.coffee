@@ -57,7 +57,6 @@ class Mule.Views.Room extends Backbone.View
 
   toggleRoom: (e) ->
     $target = $(e.target)
-    @delegate.trigger("showCategory")
     if @open() then @close_drawer() else @open_drawer()
     @_scrollToTargetPosition($(e.target).position().top)
 
@@ -79,26 +78,24 @@ class Mule.Views.Room extends Backbone.View
     @delegate.trigger("roomComplete")
     @$('.completion-indicator > .glyphicon').addClass('glyphicon-ok')
 
-  category_defaults:
-    beds: {column_width: 6, splice: 2}
-    sofas: {column_width: 6, splice: 3}
-    chairs: {column_width: 6, splice: 3}
-    tables: {column_width: 6, splice: 1}
-    lighting: {column_width: 6, splice: 1}
-    storage: {column_width: 6, splice: 2}
-    electronics: {column_width: 6, splice: 3}
-    music: {column_width: 6, splice: 1}
-    appliances: {column_width: 6, splice: 3}
-    other: {column_width: 6, splice: 2}
+  category_defaults: [
+    "beds"
+    "sofas"
+    "chairs"
+    "tables"
+    "lighting"
+    "storage"
+    "electronics"
+    "music"
+    "appliances"
+    "other"
+  ]
 
   render_categories: ->
     $target = @$('.category-container')
     @views = {}
-    titles = _.keys(@category_defaults)
-    _.each titles, (title) =>
-      columnLayout = @category_defaults[title]
+    _.each @category_defaults, (title) =>
       @views[title] = view = new Mule.Views.Category
         title: title
-        columnLayout: columnLayout
-        model: @model
+        room: @model
       $target.append view.$el
