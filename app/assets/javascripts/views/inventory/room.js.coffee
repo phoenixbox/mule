@@ -31,12 +31,9 @@ class Mule.Views.Room extends Backbone.View
   update_room: (e) ->
     $target = $(e.currentTarget)
     attr = $target.attr('name')
-    value = @_get_value($target)
+    value = $target.val() if $target.is('input')
     @model.set(attr, value)
     @model.persist()
-
-  _get_value: (element) ->
-    element.val() if element.is('input')
 
   removeRoom: (e) ->
     e.preventDefault()
@@ -78,7 +75,7 @@ class Mule.Views.Room extends Backbone.View
     @delegate.trigger("roomComplete")
     @$('.completion-indicator > .glyphicon').addClass('glyphicon-ok')
 
-  category_defaults: [
+  category_order: [
     "beds"
     "sofas"
     "chairs"
@@ -94,7 +91,7 @@ class Mule.Views.Room extends Backbone.View
   render_categories: ->
     $target = @$('.category-container')
     @views = {}
-    _.each @category_defaults, (title) =>
+    _.each @category_order, (title) =>
       @views[title] = view = new Mule.Views.Category
         title: title
         room: @model

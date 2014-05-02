@@ -13,8 +13,7 @@ class Mule.Views.Category extends Backbone.View
   initialize: (options) ->
     defaults = _.pick options, "title", "room"
     _.extend @, defaults
-    @defaults = @room.categoryOptions[@title]
-    @model = new Mule.Models.Category(type: @title)
+    @model = new Mule.Models.Category(title: @title)
     @delayed_update_room = _.debounce(@update_room, 1000)
     @render()
 
@@ -22,22 +21,28 @@ class Mule.Views.Category extends Backbone.View
     @$el.html @template
       model: @model
       title: @title
-    @render_subitems()
+    @render_items()
     @
 
-  render_subitems: ->
+  item_form_segment: JST['inventory/_item_form_segment']
+  sub_item_form_segment: JST['inventory/_sub_item_form_segment']
+
+  render_items: ->
     $target = @$(".contents")
+    $target.html("")
     items = @model.get("items")
     @views = {}
-    if _.isArray(items)
-      _.each items, (item) =>
-        @views[item] = view = JST['inventory/item_form_segment'](item: item)
-        $target.append view
+    _.each items, (item) =>
+      if _.isObject(item)
+        title = _.first(_.keys(item))
+        items = item[title]
+        @views[item] = view = @sub_item_form_segment
+          title: title
+          items: items
+      else
+        @views[item] = view = @item_form_segment(item: item)
+      $target.append view
 
-    if _.isObject(items)
-      _.each items, (item) =>
-        @views[item] = view = JST['inventory/sub_item_form_segment'](items: items, title: @model.get('title'))
-        $target.append view
 
   # update_room: (e) ->
   #   $target = $(e.currentTarget)
@@ -51,7 +56,8 @@ class Mule.Views.Category extends Backbone.View
 
   toggle: (e) ->
     if @open() then @close_drawer() else @open_drawer()
-    # @scrollToTargetPosition($(e.target).position().top)
+    debugger
+    #TODO FIX THIS @scrollToTargetPosition($(e.target).position().top) 
 
   open: ->
     @$('.category-dropdown').is(':visible')
