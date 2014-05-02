@@ -18,7 +18,6 @@
   <div class="category-dropdown">
     <div class="container">
       <div class="col-md-<%- [@model.get('column_width'), 'contents'].join(' ') %> ">
-
       </div>
     </div>
     <div class="save">

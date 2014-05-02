@@ -6,9 +6,9 @@ class Mule.Views.Category extends Backbone.View
 
   events:
     'click .toggle-category': 'toggle'
-    'click .save-category': '_doneWithCategory'
-    'click .decrement': '_updateCounters'
-    'click .increment': '_updateCounters'
+    'click .save-category': 'save_category'
+    'click .decrement': 'updateCounters'
+    'click .increment': 'updateCounters'
 
   initialize: (options) ->
     defaults = _.pick options, "title", "room"
@@ -16,6 +16,7 @@ class Mule.Views.Category extends Backbone.View
     @model = new Mule.Models.Category(title: @title)
     @delayed_update_room = _.debounce(@update_room, 1000)
     @render()
+    @listenTo(@model, 'change', @render)
 
   render: ->
     @$el.html @template
@@ -30,34 +31,37 @@ class Mule.Views.Category extends Backbone.View
   render_items: ->
     $target = @$(".contents")
     $target.html("")
-    items = @model.get("items")
-    @views = {}
-    _.each items, (item) =>
+    @Views = {}
+    # THIS IS THE OLD TEMPLATE LOGIC :)
+    # can probably be refactored
+    _.each @model.get('items'), (item) =>
       if _.isObject(item)
         title = _.first(_.keys(item))
-        items = item[title]
-        @views[item] = view = @sub_item_form_segment
-          title: title
-          items: items
+        subItems = item[title]
+        @Views[item] = view = @sub_item_form_segment
+          item: title
+          options: subItems
       else
-        @views[item] = view = @item_form_segment(item: item)
+        @Views[item] = view = @item_form_segment(item: item)
       $target.append view
 
 
-  # update_room: (e) ->
-  #   $target = $(e.currentTarget)
-  #   attr = $target.attr('name')
-  #   value = @_get_value($target)
-  #   @model.set(attr, value)
-  #   @model.persist()
-#
-  # _get_value: (element) ->
-  #   element.val() if element.is('input')
+  updateCounters: (e) ->
+
+  update_room: (e) ->
+    $target = $(e.currentTarget)
+    attr = $target.attr('name')
+    value = @_get_value($target)
+    @model.set(attr, value)
+    @model.persist()
+
+  _get_value: (element) ->
+    element.val() if element.is('input')
 
   toggle: (e) ->
     if @open() then @close_drawer() else @open_drawer()
     debugger
-    #TODO FIX THIS @scrollToTargetPosition($(e.target).position().top) 
+    #TODO FIX THIS @scrollToTargetPosition($(e.target).position().top)
 
   open: ->
     @$('.category-dropdown').is(':visible')
@@ -74,7 +78,7 @@ class Mule.Views.Category extends Backbone.View
   #   targetScrollPosition = $target.parents('.row').position().top + $target.position().top
   #   @_scrollToTargetPosition(targetScrollPosition)
 
-  # _doneWithCategory: (e) ->
+  # save_category: (e) ->
   #   e.preventDefault()
   #   $target = $(e.target)
   #   $chevron = $target.parents('.category-container').find('.glyphicon-chevron-down')

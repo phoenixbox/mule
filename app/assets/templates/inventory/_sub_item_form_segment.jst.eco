@@ -1,13 +1,13 @@
 <div class='sub-category'>
   <div class='title'>
-    <%= @title %>
+    <%= @item %>
   </div>
-  <% for subItem in @items: %>
+  <% for option in @options: %>
     <div class="sub-item-container">
       <div class='description'>
-        <div class='image <%= subItem %>'></div>
+        <div class='image <%= option %>'></div>
         <div class='type'>
-          <%= subItem %>
+          <%= option %>
         </div>
       </div>
       <div class='quantity'>
