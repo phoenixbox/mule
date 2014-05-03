@@ -6,6 +6,7 @@ CategoryOptions =
   sofas:
     column_width: 6
     splice: 3
+    count: 0
     items: [
       {type: "two seat", count: 0}
       {type: "three seat", count: 0}
@@ -14,8 +15,9 @@ CategoryOptions =
       {type: "sectional", count: 0}
     ]
   chairs:
-    column_width: 6,
+    column_width: 6
     splice: 3
+    count: 0
     items: [
       {type: "chair", count: 0}
       {type: "stool", count: 0}
@@ -28,6 +30,7 @@ CategoryOptions =
   electronics:
     column_width: 6
     splice: 3
+    count: 0
     items: [
       {type: "tv", count: 0}
       {type: "stereo", count: 0}
@@ -49,164 +52,170 @@ CategoryOptions =
   beds:
     column_width: 6
     splice: 2
+    count: 0
     items: [
       {
-        type: "king",
+        type: "king"
         options: [
-          "frame",
-          "box spring",
-          "mattress"
+          {type: "frame", count: 0 }
+          {type: "box spring", count: 0 }
+          {type: "mattress", count: 0 }
         ]
       }
       {
-        type: "queen",
+        type: "queen"
         options: [
-          "frame",
-          "box spring",
-          "mattress"
+          {type: "frame", count: 0 }
+          {type: "box spring", count: 0 }
+          {type: "mattress", count: 0 }
         ]
       }
       {
-        type: "single",
+        type: "single"
         options: [
-          "frame",
-          "box spring",
-          "mattress"
+          {type: "frame", count: 0 }
+          {type: "box spring", count: 0 }
+          {type: "mattress", count: 0 }
         ]
       }
       {
-        type: "toddler",
+        type: "toddler"
         options: [
-          "frame",
-          "box spring",
-          "mattress"
+          {type: "frame", count: 0 }
+          {type: "box spring", count: 0 }
+          {type: "mattress", count: 0 }
         ]
       }
     ]
   tables:
     column_width: 6
     splice: 1
+    count: 0
     items: [
       {
-        type: "general",
+        type: "general"
         options: [
-          "coffee",
-          "side",
-          "office"
+          {type: "coffee", count: 0 }
+          {type: "side", count: 0 }
+          {type: "office", count: 0 }
         ]
       }
       {
-        type: "dining",
+        type: "dining"
         options: [
-          "two seat",
-          "four seat",
-          "six seat",
-          "eight seat"
+          {type: "two seat", count: 0 }
+          {type: "four seat", count: 0 }
+          {type: "six seat", count: 0 }
+          {type: "eight seat", count: 0 }
         ]
       }
     ]
   lighting:
     column_width: 6
     splice: 1
+    count: 0
     items:[
       {
-        type: "general",
+        type: "general"
         options: [
-          "ceiling fixture",
-          "chandelier"
+          {type: "ceiling fixture", count: 0 }
+          {type: "chandelier", count: 0 }
         ]
       }
       {
-        type: "lamps",
+        type: "lamps"
         options: [
-          "floor",
-          "desk"
+          {type: "floor", count: 0 }
+          {type: "desk", count: 0 }
         ]
       }
     ]
   storage:
     column_width: 6
     splice: 2
+    count: 0
     items:[
       {
-        type: "wardrobes",
+        type: "wardrobes"
         options: [
-          "dresser",
-          "freestanding"
+          {type: "dresser", count: 0 }
+          {type: "freestanding", count: 0 }
         ]
       }
       {
-        type: "cabinets",
+        type: "cabinets"
         options: [
-          "china",
-          "filing",
-          "entertainment center"
+          {type: "china", count: 0 }
+          {type: "filing", count: 0 }
+          {type: "entertainment center", count: 0 }
         ]
       }
       {
-        type: "miscellaneous",
+        type: "miscellaneous"
         options: [
-          "bookcase",
-          "storage bin",
-          "suitcase",
-          "dufflebag",
-          "trunk"
+          {type: "bookcase", count: 0 }
+          {type: "storage bin", count: 0 }
+          {type: "suitcase", count: 0 }
+          {type: "dufflebag", count: 0 }
+          {type: "trunk", count: 0 }
         ]
       }
     ]
   music:
     column_width: 6
     splice: 1
+    count: 0
     items:[
       {
-        type: "general",
+        type: "general"
         options: [
-          "drums",
-          "instrument"
+          {type: "drums", count: 0 }
+          {type: "instrument", count: 0 }
         ]
       }
       {
-        type: "pianos",
+        type: "pianos"
         options: [
-          "grand",
-          "baby",
-          "upright"
+          {type: "grand", count: 0 }
+          {type: "baby", count: 0 }
+          {type: "upright", count: 0 }
         ]
       }
     ]
   other:
     column_width: 6
     splice: 2
+    count: 0
     items:[
       {
-        type: "miscellaneous",
+        type: "miscellaneous"
         options: [
-          "mirror",
-          "picture",
-          "rugs",
-          "stroller",
-          "car seat",
-          "plants",
-          "grill"
+          {type: "mirror", count: 0 }
+          {type: "picture", count: 0 }
+          {type: "rugs", count: 0 }
+          {type: "stroller", count: 0 }
+          {type: "car seat", count: 0 }
+          {type: "plants", count: 0 }
+          {type: "grill", count: 0 }
         ]
       }
       {
-        type: "sports",
+        type: "sports"
         options: [
-          "skis",
-          "snowboard",
-          "bicycle",
-          "golf clubs",
-          "pool table",
-          "ping pong"
+          {type: "skis", count: 0 }
+          {type: "snowboard", count: 0 }
+          {type: "bicycle", count: 0 }
+          {type: "golf clubs", count: 0 }
+          {type: "pool table", count: 0 }
+          {type: "ping pong", count: 0 }
         ]
       }
       {
-        type: "kids",
+        type: "kids"
         options: [
-          "play house",
-          "play pen",
-          "dollhouse"
+          {type: "play house", count: 0 }
+          {type: "play pen", count: 0 }
+          {type: "dollhouse", count: 0 }
         ]
       }
     ]

@@ -5,16 +5,16 @@
   <% for option in @item.options: %>
     <div class="sub-item-container">
       <div class='description'>
-        <div class='image <%= option %>'></div>
+        <div class='image <%= option.type %>'></div>
         <div class='type'>
-          <%= option %>
+          <%= option.type %>
         </div>
       </div>
       <div class='quantity'>
-        <div data-subitem='<%= option %>' class="badge counter">0</div>
+        <div data-subitem='<%= option.type %>' class="badge counter"><%= option.count || 0 %></div>
         <div class="stepper">
-        <button data-subitem='<%= option %>' type="button" class="btn btn-default increment-subitem">+</button>
-        <button data-subitem='<%= option %>' type="button" class="btn btn-default decrement-subitem">-</button>
+        <button data-subitem='<%= option.type %>' type="button" class="btn btn-default increment-subitem">+</button>
+        <button data-subitem='<%= option.type %>' type="button" class="btn btn-default decrement-subitem">-</button>
         </div>
       </div>
     </div>

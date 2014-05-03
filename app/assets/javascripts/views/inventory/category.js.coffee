@@ -11,12 +11,9 @@ class Mule.Views.Category extends Backbone.View
   initialize: (options) ->
     defaults = _.pick options, "title", "room"
     _.extend @, defaults
-    @model = new Mule.Models.Category(title: @title)
-    @room.categories ||= {}
-    @room.categories[@title] = @model
+    @model = new Mule.Models.Category(title: @title, room: @room)
     @delayed_update_room = _.debounce(@update_room, 1000)
     @render()
-    @listenTo(@model, 'change', @render)
 
   render: ->
     @$el.html @template
