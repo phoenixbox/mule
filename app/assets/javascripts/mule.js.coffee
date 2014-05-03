@@ -6,64 +6,209 @@ CategoryOptions =
   sofas:
     column_width: 6
     splice: 3
-    items: ["two seat","three seat","four seat","futon","sectional"]
+    items: [
+      {type: "two seat", count: 0}
+      {type: "three seat", count: 0}
+      {type: "four seat", count: 0}
+      {type: "futon", count: 0}
+      {type: "sectional", count: 0}
+    ]
   chairs:
     column_width: 6,
     splice: 3
-    items: ["chair","stool","office","lounge","folding","bean bag","bench"],
+    items: [
+      {type: "chair", count: 0}
+      {type: "stool", count: 0}
+      {type: "office", count: 0}
+      {type: "lounge", count: 0}
+      {type: "folding", count: 0}
+      {type: "bean bag", count: 0}
+      {type: "bench", count: 0}
+      ],
   electronics:
     column_width: 6
     splice: 3
-    items: ["tv","stereo","speakers","computer","printer"]
+    items: [
+      {type: "tv", count: 0}
+      {type: "stereo", count: 0}
+      {type: "speakers", count: 0}
+      {type: "computer", count: 0}
+      {type: "printer", count: 0}
+      ]
   appliances:
     column_width: 6
     splice: 3
-    items: ["fridge","freezer","oven","air conditioner","dryer","washer"],
+    items: [
+      {type: "fridge", count: 0}
+      {type: "freezer", count: 0}
+      {type: "oven", count: 0}
+      {type: "air conditioner", count: 0}
+      {type: "dryer", count: 0}
+      {type: "washer", count: 0}
+      ],
   beds:
     column_width: 6
     splice: 2
     items: [
-      {"king": ["frame","box spring","mattress"]}
-      {"queen": ["frame","box spring","mattress"]}
-      {"single": ["frame","box spring","mattress"]}
-      {"toddler": ["frame","box spring","mattress"]}
+      {
+        type: "king",
+        options: [
+          "frame",
+          "box spring",
+          "mattress"
+        ]
+      }
+      {
+        type: "queen",
+        options: [
+          "frame",
+          "box spring",
+          "mattress"
+        ]
+      }
+      {
+        type: "single",
+        options: [
+          "frame",
+          "box spring",
+          "mattress"
+        ]
+      }
+      {
+        type: "toddler",
+        options: [
+          "frame",
+          "box spring",
+          "mattress"
+        ]
+      }
     ]
   tables:
     column_width: 6
     splice: 1
     items: [
-      {"general": ["coffee","side","office"]}
-      {"dining": ["two seat","four seat","six seat","eight seat"]}
+      {
+        type: "general",
+        options: [
+          "coffee",
+          "side",
+          "office"
+        ]
+      }
+      {
+        type: "dining",
+        options: [
+          "two seat",
+          "four seat",
+          "six seat",
+          "eight seat"
+        ]
+      }
     ]
   lighting:
     column_width: 6
     splice: 1
     items:[
-      {"general": ["ceiling fixture","chandelier"]}
-      {"lamps": ["floor","desk"]}
+      {
+        type: "general",
+        options: [
+          "ceiling fixture",
+          "chandelier"
+        ]
+      }
+      {
+        type: "lamps",
+        options: [
+          "floor",
+          "desk"
+        ]
+      }
     ]
   storage:
     column_width: 6
     splice: 2
     items:[
-      {"wardrobes": ["dresser","freestanding"]}
-      {"cabinets": ["china","filing","entertainment center"]}
-      {"miscellaneous": ["bookcase","storage bin","suitcase","dufflebag","trunk"]}
+      {
+        type: "wardrobes",
+        options: [
+          "dresser",
+          "freestanding"
+        ]
+      }
+      {
+        type: "cabinets",
+        options: [
+          "china",
+          "filing",
+          "entertainment center"
+        ]
+      }
+      {
+        type: "miscellaneous",
+        options: [
+          "bookcase",
+          "storage bin",
+          "suitcase",
+          "dufflebag",
+          "trunk"
+        ]
+      }
     ]
   music:
     column_width: 6
     splice: 1
     items:[
-      {"general": ["drums","instrument"]}
-      {"pianos": ["grand","baby","upright"]}
+      {
+        type: "general",
+        options: [
+          "drums",
+          "instrument"
+        ]
+      }
+      {
+        type: "pianos",
+        options: [
+          "grand",
+          "baby",
+          "upright"
+        ]
+      }
     ]
   other:
     column_width: 6
     splice: 2
     items:[
-      {"miscellaneous": ["mirror","picture","rugs","stroller","car seat","plants","grill"]}
-      {"sports": ["skis","snowboard","bicycle","golf clubs","pool table","ping pong"]}
-      {"kids": ["play house","play pen","dollhouse"]}
+      {
+        type: "miscellaneous",
+        options: [
+          "mirror",
+          "picture",
+          "rugs",
+          "stroller",
+          "car seat",
+          "plants",
+          "grill"
+        ]
+      }
+      {
+        type: "sports",
+        options: [
+          "skis",
+          "snowboard",
+          "bicycle",
+          "golf clubs",
+          "pool table",
+          "ping pong"
+        ]
+      }
+      {
+        type: "kids",
+        options: [
+          "play house",
+          "play pen",
+          "dollhouse"
+        ]
+      }
     ]
 
 

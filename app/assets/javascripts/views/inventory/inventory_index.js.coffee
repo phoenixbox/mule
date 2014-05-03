@@ -20,7 +20,6 @@ class Mule.Views.InventoryIndex extends Backbone.View
     @router     = @app.router
     @user       = @app.user
     @session    = @app.session
-
     $('body').animate({scrollTop:0},0);
     @render()
     @listenTo(@user, 'change', @render)
@@ -38,18 +37,6 @@ class Mule.Views.InventoryIndex extends Backbone.View
     @totalFurnitureCounter = @$('.furniture-for-house')
     @_checkIfTutorialCompleted()
     @
-
-  _incrementTotal: (amount) ->
-    if @totalFurnitureCount == 0 and amount > 0
-       @totalFurnitureCount += amount
-    else
-      if @totalFurnitureCount > 0 then @totalFurnitureCount += amount
-
-    @totalFurnitureCounter.text(@totalFurnitureCount.toString())
-
-  _decrementTotal: (amount) ->
-    @totalFurnitureCount -= amount
-    @totalFurnitureCounter.text(@totalFurnitureCount.toString())
 
   addRoom: (e) ->
     e.preventDefault()

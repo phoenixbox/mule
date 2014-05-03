@@ -17,6 +17,10 @@ class Mule.Views.Item extends Backbone.View
 
   render: ->
     @$el.html(@template(item: @item, options: @options))
+    if @room.get('contents')[@category.title]
+      items = @room.get('contents')[@category.title].items
+    else
+      debugger
     @undelegateEvents()
     @delegateEvents()
     @
@@ -36,18 +40,18 @@ class Mule.Views.Item extends Backbone.View
   updateCounters: (e, direction, type) ->
     e.preventDefault()
     $target = $(e.currentTarget)
-    $data = $target.data().subitem
-    $obj = @$(".counter[data-#{type}='#{$data}']")
-    @[direction]($obj, type, $data)
+    $data = $target.data()[type]
+    $counter_el = @$(".counter[data-#{type}='#{$data}']")
+    @[direction]($counter_el, type, $data)
 
-  increment: (obj, type, subitem) ->
-    count = parseInt(obj.text()) + 1
-    obj.text(count)
+  increment: (counter_el, type, subitem) ->
+    count = parseInt(counter_el.text()) + 1
+    counter_el.text(count)
     @update_room(count, subitem)
 
-  decrement: (obj, type, subitem) ->
-    count = parseInt(obj.text()) - 1
-    obj.text(count)
+  decrement: (counter_el, type, subitem) ->
+    count = parseInt(counter_el.text()) - 1
+    counter_el.text(count)
     @update_room(count, subitem)
 
   update_room: (count, subitem) ->

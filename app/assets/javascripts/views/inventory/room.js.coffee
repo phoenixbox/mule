@@ -93,7 +93,6 @@ class Mule.Views.Room extends Backbone.View
     @views = {}
     category_order = _.uniq(_.union(_.keys(@model.get('contents')), @category_order))
     _.each category_order, (title) =>
-      debugger
       @views[title] = view = new Mule.Views.Category
         title: title
         room: @model
