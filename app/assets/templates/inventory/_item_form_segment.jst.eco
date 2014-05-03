@@ -6,10 +6,10 @@
     </div>
   </div>
   <div class='quantity'>
-    <div class="badge counter">0</div>
+    <div data-item='<%= @item %>' class="badge counter">0</div>
     <div class="stepper">
-    <button type="button" class="btn btn-default decrement">-</button>
-    <button type="button" class="btn btn-default increment">+</button>
+    <button data-item='<%= @item %>' type="button" class="btn btn-default decrement">-</button>
+    <button data-item='<%= @item %>' type="button" class="btn btn-default increment">+</button>
     </div>
   </div>
 </div>
