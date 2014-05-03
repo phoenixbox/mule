@@ -1,8 +1,8 @@
 <div class='sub-category'>
   <div class='title'>
-    <%= @item %>
+    <%= @item.type %>
   </div>
-  <% for option in @options: %>
+  <% for option in @item.options: %>
     <div class="sub-item-container">
       <div class='description'>
         <div class='image <%= option %>'></div>

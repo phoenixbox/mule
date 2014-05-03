@@ -30,19 +30,10 @@ class Mule.Views.Category extends Backbone.View
     $target.html("")
     @Views = {}
     _.each @model.get('items'), (item) =>
-      if _.isObject(item)
-        title = _.first(_.keys(item))
-        subItems = item[title]
-        @Views[title] = view = new Mule.Views.Item
-          category: @
-          room: @room
-          item: title
-          options: subItems
-      else
-        @Views[item] = view = new Mule.Views.Item
-          category: @
-          room: @room
-          item: item
+      @Views[item.type] = view = new Mule.Views.Item
+        item: item
+        room: @room
+        category: @
       $target.append view.$el
 
   update_room: (e) ->
@@ -57,7 +48,6 @@ class Mule.Views.Category extends Backbone.View
 
   toggle: (e) ->
     if @open() then @close_drawer() else @open_drawer()
-    #TODO FIX THIS @scrollToTargetPosition($(e.target).position().top)
 
   open: ->
     @$('.category-dropdown').is(':visible')

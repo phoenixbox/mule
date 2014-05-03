@@ -9,18 +9,16 @@ class Mule.Views.Item extends Backbone.View
   sub_item_form_segment: JST['inventory/_sub_item_form_segment']
 
   initialize: (args) ->
-    @template = if args.options then @sub_item_form_segment else @item_form_segment
-    _.extend(@, _.pick(args, 'item', 'options', 'room', 'category'))
-    @room.items ||= {}
-    @room.items[@item] = @item
+    _.extend(@, _.pick(args, 'item', 'room', 'category'))
+    @template = if @item.options then @sub_item_form_segment else @item_form_segment
     @render()
 
   render: ->
-    @$el.html(@template(item: @item, options: @options))
-    if @room.get('contents')[@category.title]
-      items = @room.get('contents')[@category.title].items
-    else
-      debugger
+    @$el.html(@template(item: @item))
+    # if @room.get('contents')[@category.title]
+    #   items = @room.get('contents')[@category.title].items
+    # else
+    #   debugger
     @undelegateEvents()
     @delegateEvents()
     @
