@@ -10,7 +10,30 @@
 	  <% for room in @rooms.models: %>
 	  <div class="room-summary">
       <p>name: <%= room.get('name') %></p>
-      <p>type: <%= room.get('type') %></p>
+
+    <!--       room contents go here -->
+      <% if _.keys(room.get('contents')): %>
+        <% for title in _.keys(room.get('contents')): %>
+          <p>category: <%= title %></p>
+
+          <% for item in room.get('contents')[title].items: %>
+            <p>item type: <%= item.type %></p>
+            <p>item count: <%= item.count %></p>
+            <% if item.options: %>
+              <% for option in item.options: %>
+                <p>option type: <%= option.type %></p>
+                <p>option count: <%= option.count %></p>
+              <% end %>
+            <% end %>
+
+          <% end %>
+
+        <% end %>
+      <% else: %>
+        <p>Room has no contents</p>
+      <% end %>
+
+    <!--  room contents end here -->
 	  </div>
 	  <% end %>
 	<% else: %>

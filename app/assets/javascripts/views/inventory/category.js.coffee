@@ -11,8 +11,9 @@ class Mule.Views.Category extends Backbone.View
   initialize: (options) ->
     defaults = _.pick options, "title", "room"
     _.extend @, defaults
-    @model = new Mule.Models.Category(title: @title, room: @room)
+    @model = new Mule.Models.Category(null, title: @title, room: @room)
     @delayed_update_room = _.debounce(@update_room, 1000)
+    @update_count = _.debounce(@_update_count, 300)
     @render()
 
   render: ->
@@ -20,7 +21,17 @@ class Mule.Views.Category extends Backbone.View
       model: @model
       title: @title
     @render_items()
+    @update_count()
     @
+
+  _update_count: () ->
+    $target = @$('.furniture-for-category')
+    counts = @$('.contents .counter')
+    count = _.inject counts, ((memo, el) ->
+      memo + parseInt($(el).text())
+    ), 0
+    $target.text(count)
+    @room.view.update_count()
 
   render_items: ->
     $target = @$(".contents")

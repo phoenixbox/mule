@@ -9,8 +9,9 @@ class Mule.Views.SummaryIndex extends Backbone.View
     @router     = @app.router
     @user       = @app.user
     @rooms      = @user.rooms
-    @render()
-    @listenTo(@user, 'change', @render)
+    @_render = _.throttle(@render, 100)
+    @listenTo(@user, 'change', @_render)
+    @_render()
 
   render: ->
     @$el.html(@template(user: @user, rooms: @rooms))

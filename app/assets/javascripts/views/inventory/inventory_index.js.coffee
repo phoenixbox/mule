@@ -21,9 +21,11 @@ class Mule.Views.InventoryIndex extends Backbone.View
     @user       = @app.user
     @session    = @app.session
     $('body').animate({scrollTop:0},0);
+    @_render = _.debounce(@render, 100)
+    @update_count = _.debounce(@_update_count, 500)
     @render()
-    @listenTo(@user, 'change', @render)
-    @listenTo(@user.rooms, 'add remove', @render)
+    @listenTo(@user, 'change', @_render)
+    @listenTo(@user.rooms, 'add remove', @_render)
 
   summary: (e) ->
     e.preventDefault()
@@ -34,8 +36,8 @@ class Mule.Views.InventoryIndex extends Backbone.View
     console.log 'rendering '
     @$el.html(@template(user: @user))
     @appendRooms()
-    @totalFurnitureCounter = @$('.furniture-for-house')
     @_checkIfTutorialCompleted()
+    @update_count()
     @
 
   addRoom: (e) ->
@@ -48,6 +50,14 @@ class Mule.Views.InventoryIndex extends Backbone.View
       room.view?.remove()
       room.view = new Mule.Views.Room(app: @app, delegate: @, model: room)
       $target.append(room.view.el)
+
+  _update_count: () ->
+    $target = @$('.furniture-for-house')
+    counts = @$('.furniture-for-room')
+    count = _.inject counts, ((memo, el) ->
+      memo + parseInt($(el).text())
+    ), 0
+    $target.text(count)
 
   _checkIfTutorialCompleted: ->
     unless window.localStorage.tutorialCompleted == 'true'

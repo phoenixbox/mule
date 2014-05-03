@@ -15,8 +15,8 @@ class Mule.Views.Item extends Backbone.View
     @render()
 
   merge_defaults: ->
-    cat_defaults = @room.get('contents')[@category.title]
-    if cat_defaults
+    if @room.get('contents') && @room.get('contents')[@category.title]
+      cat_defaults = @room.get('contents')[@category.title]
       items = cat_defaults.items
       item = _.findWhere(items, {type: @item.type})
       @item = item if item
@@ -47,9 +47,9 @@ class Mule.Views.Item extends Backbone.View
     @[direction]($counter_el, type, $data)
 
   increment: (counter_el, type, target_item) ->
-    count = parseInt(counter_el.text()) + 1
-    counter_el.text(count)
-    @update_room(count, target_item)
+    item_count = parseInt(counter_el.text()) + 1
+    counter_el.text(item_count)
+    @update_room(item_count, target_item)
 
   decrement: (counter_el, type, target_item) ->
     count = parseInt(counter_el.text()) - 1
@@ -58,6 +58,7 @@ class Mule.Views.Item extends Backbone.View
     @update_room(count, target_item)
 
   update_room: (count, type) ->
+    @category.update_count()
     opts = {}
     opts[@category.title] = {}
     opts[@category.title].items ||= []

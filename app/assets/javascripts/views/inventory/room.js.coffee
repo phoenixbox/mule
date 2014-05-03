@@ -5,7 +5,6 @@ class Mule.Views.Room extends Backbone.View
   className: 'room room-inventory'
 
   placeholder: 'Room'
-  roomFurnitureCount: 0
 
   events:
     'click .save-form': 'done_with_room'
@@ -18,6 +17,8 @@ class Mule.Views.Room extends Backbone.View
     @delegate   = options.delegate
     @router     = @app.router
     @user       = @app.user
+    @model.view = @
+    @update_count = _.debounce(@_update_count, 400)
     @delayed_update_room = _.debounce(@update_room, 1000)
     @render()
 
@@ -25,8 +26,16 @@ class Mule.Views.Room extends Backbone.View
     @$el.html @template(model: @model)
     @rename_room()
     @render_categories()
-    # TODO on change update this counter BS. @roomFurnitureCounter = @$('.furniture-for-room')
     @
+
+  _update_count: () ->
+    $target = @$('.furniture-for-room')
+    counts = @$('.furniture-for-category')
+    count = _.inject counts, ((memo, el) ->
+      memo + parseInt($(el).text())
+    ), 0
+    $target.text(count)
+    @delegate.update_count()
 
   update_room: (e) ->
     $target = $(e.currentTarget)
