@@ -13,8 +13,8 @@
       <div class='quantity'>
         <div data-subitem='<%= option %>' class="badge counter">0</div>
         <div class="stepper">
-        <button data-subitem='<%= option %>' type="button" class="btn btn-default increment">+</button>
-        <button data-subitem='<%= option %>' type="button" class="btn btn-default decrement">-</button>
+        <button data-subitem='<%= option %>' type="button" class="btn btn-default increment-subitem">+</button>
+        <button data-subitem='<%= option %>' type="button" class="btn btn-default decrement-subitem">-</button>
         </div>
       </div>
     </div>

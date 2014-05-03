@@ -20,7 +20,9 @@ class RoomsController < UserOwnedController
   end
 
   def update
-    if @room.update(room_params)
+    contents = @room.contents.deep_merge(room_params[:contents])
+    name = room_params[:name]
+    if @room.update(name: name, contents: contents)
       render json: @room
     else
       render json: @room.errors.full_messages.to_sentence, status: :unprocessable_entity
@@ -38,7 +40,7 @@ class RoomsController < UserOwnedController
 private
 
   def room_params
-    params.require(:room).permit(:name, :type, :beds, :tables, :chairs, :electronics, :accessories, contents: [:name, :type, :beds, :tables, :chairs, :electronics, :accessories])
+    params.require(:room).permit!
   end
 
   def set_room
