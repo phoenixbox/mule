@@ -220,8 +220,6 @@ CategoryOptions =
       }
     ]
 
-
-
 window.Mule =
   Models: {}
   Collections: {}

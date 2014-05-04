@@ -47,12 +47,11 @@ html {
 
     .house-background {
       position: relative;
-      height: 555px;
+      height: auto;
       max-width: 980px;
       left: 0;
       margin: 0 auto;
       top: 0px;
-      z-index: -1;
 
       .primary-cta, .device {
         height: 100%;
@@ -64,7 +63,7 @@ html {
         .header {
           font-size: 44px;
           line-height: 65px;
-          margin-top: 85px;
+          margin-top: 130px;
         }
         .subheader {
           font-size: 28px;
@@ -92,13 +91,31 @@ html {
       .device {
         .screenshot {
           width: 52%;
-          height: 430px;
+          height: 420px;
           margin: 30px auto 0px auto;
           background-image: image-url("device_single.png");
           background-repeat: no-repeat;
           background-size: contain;
         }
-        .cta {
+
+        .instructions {
+          font-size: 16px;
+          width: 100%;
+        }
+
+        .dont-worry {
+          font-size: 12px;
+          width: 100%;
+        }
+
+        .form-group {
+          margin-top: 10px;
+        }
+        .start-inventory {
+          form {
+            width: 80%;
+            margin: 0 auto;
+          }
           .header {
             font-size: 40px;
             text-align: center;
@@ -110,10 +127,25 @@ html {
           .subheader {
             font-size: 25px;
           }
+          button {
+            background-color: $mule-aqua;
+            width: 80%;
+            font-size: 22px;
+            margin-top: 15px;
+            line-height: 25px;
+            padding-top: 8px;
+            letter-spacing: 2px;
+            font-family: $bebas_neue_font;
+            outline: none;
+            border: none;
+
+            &:hover {
+              background-color: $mule-dark-aqua;
+            }
+          }
         }
       }
     }
-
     .logo {
       top: 12px;
       position:relative;
@@ -229,7 +261,7 @@ html {
       height: 100%;
       text-align: justify;
       position: absolute;
-      top: 65%;
+      top: 79%;
       margin: 0 auto;
       background-color: $mule-grey;
       z-index: 2;
@@ -238,8 +270,6 @@ html {
         font-family: 'Roboto';
 
         .col-md-4 {
-          // padding: 0px;
-
           .bounding-box {
               vertical-align: top;
               margin: 0px auto;
@@ -297,7 +327,7 @@ html {
                 margin-right: 5px;
               }
               .pickup, .dropoff {
-                font-size: 18px;
+                font-size: 16px;
                 color: $mule-aqua;
                 height: 65px;
                 margin-top: 5px;
@@ -391,79 +421,124 @@ html {
           }
         }
       }
-      .mule-process {
-        background-color: $mule-aqua;
-        position: relative;
+      .value-propositions {
+        height: auto;
+        background: white;
 
-        .process-header {
-          text-align: center;
-          vertical-align: middle;
-          line-height: 60px;
+        .container {
+          width: 80%;
           height: 100%;
-          color: white;
-          font-size: 35px;
-          font-family: 'Roboto';
-          letter-spacing: 5px;
-          padding-top: 1%;
-          max-width: 95%;
-          left: 50%;
           margin: 0 auto;
-        }
 
-        .number-one, .number-two, .number-three {
-          margin: 4% auto;
-          height: 100px;
-          width: 60px;
-          left: 50%;
-          background-size: cover;
-          background-repeat: no-repeat;
-        }
-        .number-one {
-          background-image: image-url("icons/one_140.png");
-        }
-        .number-two {
-          background-image: image-url("icons/two_140.png");
-        }
-        .number-three {
-          background-image: image-url("icons/three_140.png");
-        }
-        .title {
-          color: white;
-          font-family: $bebas_neue_font;
-          font-size: 30px;
-          letter-spacing: 5px;
-          text-align: center;
-          vertical-align: middle;
-          height: 13%;
-          width: 100%;
-        }
-        .blurb {
-          color: white;
-          letter-spacing: -0.5px;
-          height: 50%;
-          width: 100%;
-          padding: 0px 10px 0px 10px;
-          font-family: 'Roboto';
-          font-size: 18px;
-          line-height: 125%;
-
-          @media only screen
-          and (min-width : $desktop-normal-max) {
-            font-size: 22px;
+          .a-to-b {
+            width: 680px;
+            height: 280px;
+            background-color: transparent;
+            margin: 0 auto;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-image: image-url("a_to_b_800.png");
+            margin-top: 20px;
           }
-        }
+          .logo {
+            background-image: image-url("mule_logo_landscape_400_aqua.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            margin: 0 auto;
+            height: 120px;
+            width: 200px
+          }
+          .header, .subheader {
+            font-family: 'Roboto';
+            color: $mule-aqua;
+            text-align: center;
+            vertical-align: middle;
+            height: 28px;
+            width: 100%;
+          }
+          .header {
+            font-size: 28px;
+            margin-top: 30px;
+          }
+          .subheader {
+            font-size: 20px;
+          }
+          .propositions {
+            margin-top: 30px;
+            margin-bottom: 30px;
 
-        h2 {
-          font-size: 30px;
-          padding: 25px 15px;
-          color: #434A54;
-        }
+            .header {
+              width: auto;
+              background-color: $mule-aqua;
+              color: white;
+              font-size: 20px;
+              height: 100%;
+              margin-top: 0px;
+            }
+            .col-md-2, .col-md-10 {
+              padding: 0;
+            }
+            .insurance {
+              .icon {
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-image: image-url("icons/breakage_icon_aqua_240.png");
+              }
+            }
+            .price-transparency {
+              .icon {
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-image: image-url("icons/dollar_bill_icon_aqua_240.png");
+              }
+            }
+            .reputation {
+              .icon {
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-image: image-url("icons/reputation_icon_aqua_240.png");
+              }
+            }
+            .insurance, .price-transparency, .reputation {
+              margin: 20px auto;
+              height: 130px;
+              width: 80%;
 
-        p {
-          color: #434A54;
-          font-size: 14px;
-          line-height: 1.8;
-          padding: 5px 15px;
+              .blurb {
+                font-size: 18px;
+                color: $mule-aqua;
+                padding: 0px 10px;
+                margin-top: 10px;
+              }
+            }
+            .insurance, .reputation {
+              .header, .blurb {
+                float:left;
+              }
+              .header {
+                padding-left: 20px;
+                padding-right: 20px;
+                text-align: left;
+                margin-left: 10px;
+              }
+            }
+            .price-transparency {
+              .header, .blurb {
+                float: right;
+              }
+              .header {
+                padding-left: 20px;
+                padding-right: 20px;
+                text-align: right;
+                margin-right: 10px;
+              }
+            }
+            .icon {
+              height: 110px;
+              width: 110px;
+            }
+          }
         }
       }
       .cta {
@@ -471,6 +546,10 @@ html {
         position: relative;
         width: 100%;
         padding-top: 40px;
+
+        .row {
+          margin: 0;
+        }
 
         .col-md-4 {
           margin-bottom: 30px;
@@ -523,6 +602,7 @@ html {
                 list-style-type: none;
                 width: 100%;
                 margin: 0;
+                padding: 0;
               }
 
               li {
@@ -650,44 +730,39 @@ html {
             }
           }
         }
-        .col-md-12 {
-          height: 370px;
-          background-color: white;
+      }
+    }
+    .slogan {
+      .col-md-12 {
+        height: 370px;
+        background-color: white;
 
-          .footer-logo {
-            width:70%;
-            margin: 20px auto;
-            height: 200px;
-            background-image: image-url("mule_logo_landscape_400_aqua.png");
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: contain;
-            left: 50%;
-          }
-          .blurb, .sub-blurb {
-            top: 30%;
-            margin: 20px auto;
-            width: 100%;
-            color: $mule-aqua;
-            font-family: 'Roboto';
-            text-align: center;
-          }
-          .blurb {
-            font-size: 26px;
-          }
-          .sub-blurb {
-            cursor: pointer;
-            font-size: 22px;
-
-            &:hover {
-              color: $mule-dark-aqua;
-              cursor:pointer;
-            }
-          }
+        .footer-logo {
+          width:50%;
+          margin: 20px auto;
+          height: 200px;
+          background-image: image-url("mule_logo_landscape_400_aqua.png");
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: contain;
+          float: left;
+        }
+        .blurb, .sub-blurb {
+          top: 30%;
+          margin: 20px auto;
+          width: 100%;
+          color: $mule-aqua;
+          font-family: 'Roboto';
+          text-align: center;
+        }
+        .blurb {
+          font-size: 16px;
+          line-height: 80px;
         }
       }
     }
     #footer {
+      font-family: 'Roboto';
       .col-md-12 {
         height: 100px;
         width: 100%;
@@ -696,7 +771,7 @@ html {
 
         .social-row {
           .business-info {
-            width: 29%;
+            width: 100px;
             height: 50px;
             float: left;
             background-repeat: no-repeat;
@@ -705,12 +780,19 @@ html {
             margin-left: 3%;
             margin-top: 25px;
           }
+          .blurb {
+            font-size: 14px;
+            line-height: 100px;
+            width: auto;
+            float: left;
+            margin-left: 20px;
+          }
           .icons {
-            width: 65%;
+            width: auto;
             font-size: 25px;
             text-align: right;
-            float: left;
-            margin-top: 7px;
+            float: right;
+            margin-right: 30px;
             margin-top: 32px;
 
             ul {
