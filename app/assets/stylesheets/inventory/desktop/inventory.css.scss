@@ -288,6 +288,7 @@ $screen-sm-min: 640px;
               padding-top: 0px;
 
               .glyphicon {
+
                 font-size: 15px;
               }
             }
@@ -538,10 +539,17 @@ $screen-sm-min: 640px;
                   }
                 }
                 .category-dropdown {
+                  .category-dropdown-container {
+                    .col-md-6 {
+                      width: 100%;
+                    }
+                  }
                   .item-container {
                     .description {
                       .type {
                         width: 63%;
+                        margin-top: 20px;
+
                       }
                     }
                   }
@@ -549,7 +557,8 @@ $screen-sm-min: 640px;
                     display: inline-block;
                     border-bottom: 1px dashed $mule-aqua;
                     padding-bottom: 20px;
-                    width: 100%;
+                    float: left;
+                    width: 50%;
 
                     .title {
 
