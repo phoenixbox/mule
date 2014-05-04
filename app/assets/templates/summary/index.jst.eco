@@ -7,36 +7,46 @@
 	<a href="/inventory">back</a>
 	<h1><%= @user.get('email') %></h1>
 	<% if @rooms.length: %>
+    <div class="room-count">You have <%= @rooms.length %> rooms</div>
 	  <% for room in @rooms.models: %>
-	  <div class="room-summary">
-      <p>name: <%= room.get('name') %></p>
-
-    <!--       room contents go here -->
-      <% if _.keys(room.get('contents')): %>
-        <% for title in _.keys(room.get('contents')): %>
-          <p>category: <%= title %></p>
-
-          <% for item in room.get('contents')[title].items: %>
-            <p>item type: <%= item.type %></p>
-            <p>item count: <%= item.count %></p>
-            <% if item.options: %>
-              <% for option in item.options: %>
-                <p>option type: <%= option.type %></p>
-                <p>option count: <%= option.count %></p>
+    <div class="row">
+      <div class="room-summary">
+        <h3 class="name"><%= room.get('name') %></h3>
+        <% if _.keys(room.get('contents')): %>
+          <% for title in _.keys(room.get('contents')): %>
+            <p class="category"><%= title %></p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Item</th>
+                  <th class="count-header">Count</th>
+                </tr>
+              </thead>
+              <tbody>
+            <% for item in room.get('contents')[title].items: %>
+              <tr>
+                <td class="item-type"><%= item.type %></td>
+                <td class="item-count"><%= item.count %></td>
+              </tr>
+              <% if item.options: %>
+                <% for option in item.options: %>
+                  <tr>
+                    <td class="option-type"><%= option.type %></td>
+                    <td class="option-count"><%= option.count %></td>
+                  </tr>
+                <% end %>
               <% end %>
+              </tbody>
+            </table>
             <% end %>
-
           <% end %>
-
+        <% else: %>
+          <p>Room has no contents</p>
         <% end %>
-      <% else: %>
-        <p>Room has no contents</p>
-      <% end %>
-
-    <!--  room contents end here -->
-	  </div>
-	  <% end %>
-	<% else: %>
-	  No Rooms Saved
-	<% end %>
+      </div>
+    </div>
+    <% end %>
+  <% else: %>
+    No Rooms Saved
+  <% end %>
 </div>
