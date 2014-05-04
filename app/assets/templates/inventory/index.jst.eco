@@ -6,57 +6,13 @@
 <div class='inventory-wrapper'>
   <div class='summary-header'>Create Your Inventory</div>
   <div class="personalization"><%= @user.get('email') %></div>
-  <div class="summary row">
-    <div class="col-md-12">
-      <div class="process">
-        <div class="header">
-          <div class="description">
-            <ul>
-              <li>Trust</li>
-              <li>Transparency</li>
-              <li>Control</li>
-            </ul>
-          </div>
-          <div class="copy">
-            <p>We know the moving process can be stressful. Our aim is to put you at ease through the whole experience by providing you with competitive bids from qualified service providers. Check out the Mule process below</p>
-          </div>
-        </div>
-        <div class="steps">
-          <div class="col-md-4">
-            <div class="step">
-              <div class="number">1</div>
-              <div class="copy">
-                <p>Take an inventory of all the things which you want to be part of your move.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="step">
-              <div class="number">2</div>
-              <div class="copy">
-                <p>Our qualified service providers will offer you competitive bids in an effort to win your business</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="step">
-              <div class="number">3</div>
-              <div class="copy">
-                <p>Assess your options and choose a service provider, while Mule guides you through the moving process one step at a time</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
   <div class="rooms-wrapper">
     <div class="overview">
       <div class="button-container">
-        <button type="button" class="btn btn-default add-room">Add a Room</button>
+        <button type="button" class="btn btn-default add-room">Add Room</button>
         <button type="button" id="finish" class="btn btn-default finish">Finish!</button>
         <div class="room-totalizer">
-          <div class='description'>Furniture for house: </div>
+          <div class='description'>Number of Items: </div>
           <div class='furniture-for-house'>0<div>
         </div>
       </div>

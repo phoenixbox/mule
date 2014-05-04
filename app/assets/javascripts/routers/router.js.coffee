@@ -11,7 +11,7 @@ class Mule.Routers extends Backbone.Router
   index: ->
     @view?.remove()
     @view = new Mule.Views.LandingIndex(app: @app)
-    $('#wrapper').append(@view.render().el)
+    $('.start-inventory').append(@view.render().el)
 
   inventory: ->
     @view?.remove()

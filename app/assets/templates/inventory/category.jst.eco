@@ -16,23 +16,9 @@
     </div>
   </div>
   <div class="category-dropdown">
-    <div class="col-md-<%- @columnLayout.column_width%>">
-      <% for item in @category.splice(0,@columnLayout.splice): %>
-        <% if _.isUndefined(item[0]): %>
-          <%- render_partial 'inventory/sub_item_form_segment', {items: _.first(_.values(item)), title: _.keys(item), view: @view } %>
-        <% else: %>
-          <%- render_partial 'inventory/item_form_segment', { title: @title, item: item } %>
-        <% end %>
-      <% end %>
-    </div>
-    <div class="col-md-<%- @columnLayout.column_width%>">
-      <% for item in @category.splice(0,@columnLayout.splice): %>
-        <% if _.isUndefined(item[0]): %>
-          <%- render_partial 'inventory/sub_item_form_segment', {items: _.first(_.values(item)), title: _.keys(item), view: @view } %>
-        <% else: %>
-          <%- render_partial 'inventory/item_form_segment', { title: @title, item: item } %>
-        <% end %>
-      <% end %>
+    <div class="category-dropdown-container">
+      <div class="contents col-md-<%= @model.get('column_width') %>">
+      </div>
     </div>
     <div class="save">
       <input class="save-category" name="saveForm" type="submit" value="DONE WITH <%= @title %>">

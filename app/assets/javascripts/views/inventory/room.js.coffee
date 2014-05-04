@@ -5,54 +5,49 @@ class Mule.Views.Room extends Backbone.View
   className: 'room room-inventory'
 
   placeholder: 'Room'
-  roomFurnitureCount: 0
 
   events:
-    'click .toggle-room': 'toggleRoom'
-    'keyup .room-name-input': 'rename_room'
     'click .save-form': 'done_with_room'
+    'click .toggle-room': 'toggleRoom'
     'click .remove-room': 'removeRoom'
-    'click .toggle-category': '_toggleCategory'
-    'click .save-category': '_doneWithCategory'
-    'click .decrement': '_updateCounters'
-    'click .increment': '_updateCounters'
+    'keyup .room-name-input': 'rename_room'
 
   initialize: (options) ->
     @app        = options.app
     @delegate   = options.delegate
     @router     = @app.router
     @user       = @app.user
+    @model.view = @
+    @update_count = _.debounce(@_update_count, 400)
     @delayed_update_room = _.debounce(@update_room, 1000)
     @render()
 
   render: ->
-    @$el.html(@template(model: @model, categories: @categoryOptions(), view: @))
+    @$el.html @template(model: @model)
     @rename_room()
-    @roomFurnitureCounter = @.$el.find('.furniture-for-room')
+    @render_categories()
     @
+
+  _update_count: () ->
+    $target = @$('.furniture-for-room')
+    counts = @$('.furniture-for-category')
+    count = _.inject counts, ((memo, el) ->
+      memo + parseInt($(el).text())
+    ), 0
+    $target.text(count)
+    @delegate.update_count()
 
   update_room: (e) ->
     $target = $(e.currentTarget)
     attr = $target.attr('name')
-    value = @_get_value($target)
+    value = $target.val() if $target.is('input')
     @model.set(attr, value)
     @model.persist()
-
-  _get_value: (element) ->
-    element.val() if element.is('input')
 
   removeRoom: (e) ->
     e.preventDefault()
     @model.destroy()
     @remove()
-
-  _changeSaveName: (e) ->
-    e.preventDefault()
-    @model.destroy
-      error: =>
-        window.location.href = '/inventory'
-      success: =>
-        @remove()
 
   rename_room: (e) ->
     @delayed_update_room(e) if e
@@ -63,38 +58,11 @@ class Mule.Views.Room extends Backbone.View
     else
       $button.text($value)
 
-  _updateCounters: (e) ->
-    $target = $(e.target)
-
-    $itemCounter = $target.parents('.quantity').children('.counter')
-    $itemCounterValue = parseInt($itemCounter.text())
-
-    $categoryCounter = $target.parents('.category-container').children('.category-header').find('.counter')
-    $categoryCounterValue = parseInt($categoryCounter.text())
-
-    if $target.is('.decrement')
-      if $itemCounterValue > 0
-        $itemCounterValue -=1
-        if $categoryCounterValue > 0 then $categoryCounterValue -=1
-        if @roomFurnitureCount > 0 then @roomFurnitureCount -=1
-        @delegate._incrementTotal(-1)
-    else
-      @delegate.trigger("explainFurnitureCount")
-      $itemCounterValue += 1
-      $categoryCounterValue +=1
-      @roomFurnitureCount +=1
-      @delegate._incrementTotal(+1)
-
-    $itemCounter.text($itemCounterValue.toString())
-    $categoryCounter.text($categoryCounterValue.toString())
-    @roomFurnitureCounter.text(@roomFurnitureCount.toString())
-
   open: ->
     @$('.toggle-room').hasClass('open')
 
   toggleRoom: (e) ->
     $target = $(e.target)
-    @delegate.trigger("showCategory")
     if @open() then @close_drawer() else @open_drawer()
     @_scrollToTargetPosition($(e.target).position().top)
 
@@ -106,22 +74,6 @@ class Mule.Views.Room extends Backbone.View
     @$('.toggle-room').removeClass('open')
     @$('.contents-form').removeClass('open')
 
-  _toggleCategory: (e) ->
-    e.preventDefault()
-    @delegate.trigger("incrementItemCount")
-    $target = $(e.target)
-    $categoryDrawer = $target.parents('.category-container').children('.category-dropdown')
-    @_toggleDrawer($categoryDrawer, $target)
-
-    targetScrollPosition = $target.parents('.row').position().top + $target.position().top
-    @_scrollToTargetPosition(targetScrollPosition)
-
-  _doneWithCategory: (e) ->
-    e.preventDefault()
-    $target = $(e.target)
-    $chevron = $target.parents('.category-container').find('.glyphicon-chevron-down')
-    $chevron.click()
-
   _scrollToTargetPosition: (targetPosition) ->
     $('body').animate({scrollTop:targetPosition}, 600);
 
@@ -132,175 +84,25 @@ class Mule.Views.Room extends Backbone.View
     @delegate.trigger("roomComplete")
     @$('.completion-indicator > .glyphicon').addClass('glyphicon-ok')
 
-  _toggleDrawer: (drawer, target) ->
-    drawer.slideToggle
-      duration: 200
-      complete: ->
-        if drawer.is(':visible')
-          target.addClass('glyphicon-chevron-down').removeClass('glyphicon-chevron-right')
-        else
-          target.addClass('glyphicon-chevron-right').removeClass('glyphicon-chevron-down')
+  category_order: [
+    "beds"
+    "sofas"
+    "chairs"
+    "tables"
+    "lighting"
+    "storage"
+    "electronics"
+    "music"
+    "appliances"
+    "other"
+  ]
 
-  # These options should be better utilized so we don't have to pass as much into the partial.
-  categoryOptions: ->
-    "beds": [
-      {
-          "king": [
-              "frame",
-              "box spring",
-              "mattress"
-          ]
-      },
-      {
-          "queen": [
-              "frame",
-              "box spring",
-              "mattress"
-          ]
-      },
-      {
-          "single": [
-              "frame",
-              "box spring",
-              "mattress"
-          ]
-      },
-      {
-          "toddler": [
-              "frame",
-              "box spring",
-              "mattress"
-          ]
-      }
-    ],
-    "sofas": [
-        "two seat",
-        "three seat",
-        "four seat",
-        "futon",
-        "sectional"
-    ],
-    "chairs": [
-        "chair",
-        "stool",
-        "office",
-        "lounge",
-        "folding",
-        "bean bag",
-        "bench"
-    ],
-    "tables": [
-        {
-            "general": [
-                "coffee",
-                "side",
-                "office"
-            ]
-        },
-        {
-            "dining": [
-                "two seat",
-                "four seat",
-                "six seat",
-                "eight seat"
-            ]
-        }
-    ],
-    "lighting": [
-        {
-            "general": [
-                "ceiling fixture",
-                "chandelier"
-            ]
-        },
-        {
-            "lamps": [
-                "floor",
-                "desk"
-            ]
-        }
-    ],
-    "storage": [
-        {
-            "wardrobes": [
-                "dresser",
-                "freestanding"
-            ]
-        },
-        {
-            "cabinets": [
-                "china",
-                "filing",
-                "entertainment center"
-            ]
-        },
-        {
-            "miscellaneous": [
-                "bookcase",
-                "storage bin",
-                "suitcase",
-                "dufflebag",
-                "trunk"
-            ]
-        }
-    ],
-    "electronics": [
-        "tv",
-        "stereo",
-        "speakers",
-        "computer",
-        "printer"
-    ],
-    "music": [
-        {
-            "general": [
-                "drums",
-                "instrument"
-            ]
-        },
-        {
-            "pianos": [
-                "grand",
-                "baby",
-                "upright"
-            ]
-        }
-    ],
-    "appliances": [
-        "fridge",
-        "freezer",
-        "oven",
-        "air conditioner",
-        "dryer",
-        "washer"
-    ],
-    "other": [
-        {
-            "miscellaneous": [
-                "mirror",
-                "picture",
-                "rugs",
-                "stroller",
-                "car seat",
-                "plants",
-                "grill"
-            ]
-        },
-        {
-            "kids": [
-                "play house",
-                "play pen",
-                "dollhouse"
-            ]
-        },
-        {
-            "sports": [
-                "skis",
-                "snowboard",
-                "bicycle",
-                "golf clubs",
-                "pool table",
-                "ping pong"
-            ]
-        }
-    ]
+  render_categories: ->
+    $target = @$('.category-container')
+    @views = {}
+    category_order = _.uniq(_.union(_.keys(@model.get('contents')), @category_order))
+    _.each category_order, (title) =>
+      @views[title] = view = new Mule.Views.Category
+        title: title
+        room: @model
+      $target.append view.$el

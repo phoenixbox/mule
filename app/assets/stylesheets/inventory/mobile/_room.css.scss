@@ -56,7 +56,7 @@ $melbourne_light_font: MelbourneLightFont;
 
         float:left;
         color: white;
-        font-family: $melbourne_light_font;
+        font-family: 'Roboto';
         font-size: 24px;
         text-align: center;
 
@@ -93,7 +93,7 @@ $melbourne_light_font: MelbourneLightFont;
 
         .furniture-count, .packaging-count, .completion-indicator {
           color: white;
-          font-family: $bebas_neue_font;
+          font-family: 'Roboto';
           font-size: 24px;
           padding-top: 4px;
           float: left;
@@ -173,7 +173,7 @@ $melbourne_light_font: MelbourneLightFont;
           .category-header {
             height: 40px;
             width: 100%;
-            font-family: $melbourne_light_font;
+            font-family: 'Roboto';
 
 
             .toggle-category {
@@ -210,7 +210,7 @@ $melbourne_light_font: MelbourneLightFont;
               .contents-summary{
                 float:left;
                 width: 50%;
-                font-family: $bebas_neue_font;
+                font-family: 'Roboto';
 
                 .item-title, .furniture-for-category {
                   color: white;
@@ -231,7 +231,7 @@ $melbourne_light_font: MelbourneLightFont;
 
             .title {
               text-align: left;
-              font-family: $melbourne_light_font;
+              font-family: 'Roboto';
               font-size: 22px;
               padding: 5px 0px 5px 0px;
             }
@@ -240,7 +240,7 @@ $melbourne_light_font: MelbourneLightFont;
             border: none;
             background-color: #43c1c7;
             color: white;
-            font-family: $bebas_neue_font;
+            font-family: 'Roboto';
             font-size: 26px;
             line-height: 18px;
             letter-spacing: 2px;
@@ -405,7 +405,7 @@ $melbourne_light_font: MelbourneLightFont;
           }
           .type {
             width: 63%;
-            font-family: $melbourne_light_font;
+            font-family: 'Roboto';
             font-size: 16px;
             float: left;
             margin-top: 10%;
@@ -441,7 +441,7 @@ $melbourne_light_font: MelbourneLightFont;
         height: 30px;
       }
       .save-form {
-        font-family: $bebas_neue_font;
+        font-family: 'Roboto';
         background-color: $mule-aqua;
         font-family: BebasNeueFont;
         background-color: #43c1c7;

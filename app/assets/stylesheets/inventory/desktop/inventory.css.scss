@@ -14,14 +14,14 @@ $screen-sm-min: 640px;
 
   .summary-header {
     color: $mule-aqua;
-    font-size: 65px;
-    font-family: $melbourne_light_font;
-    letter-spacing:5px;
+    font-size: 45px;
+    font-family: 'Roboto';
+    margin-top: 20px;
   }
 
   .personalization {
-    font-size: 30px;
-    font-family: $melbourne_light_font;
+    font-size: 20px;
+    font-family: 'Roboto';
   }
 
   .summary {
@@ -38,7 +38,7 @@ $screen-sm-min: 640px;
         .description {
           height: 100%;
           width: 100%;
-          font-family: $melbourne_light_font;
+          font-family: 'Roboto';
           font-size: 20px;
           ul {
             list-style-type: none;
@@ -52,7 +52,7 @@ $screen-sm-min: 640px;
           color: black;
           height: 100%;
           width: 100%;
-          font-family: $melbourne_light_font;
+          font-family: 'Roboto';
           font-size: 18px;
         }
       }
@@ -76,7 +76,7 @@ $screen-sm-min: 640px;
             border-radius: 25px;
             background: #43c1c7;
             font-size: 38px;
-            font-family: BebasNeueFont;
+            font-family: 'Roboto';
             text-align: center;
             line-height: 55px;
             left: 50%;
@@ -85,7 +85,7 @@ $screen-sm-min: 640px;
 
           .copy {
             padding-top: 10px;
-            font-family: $melbourne_light_font;
+            font-family: 'Roboto';
             font-size: 16px;
             text-align: center;
           }
@@ -117,7 +117,7 @@ $screen-sm-min: 640px;
       font-size: 20px;
       text-align: center;
       padding: 10px 0px 10px 0px;
-      font-family: $melbourne_light_font;
+      font-family: 'Roboto';
       color: $mule-grey;
     }
 
@@ -200,8 +200,8 @@ $screen-sm-min: 640px;
           border-radius: 0px;
           height: 40px;
           width: 15%;
-          font-family: $melbourne_light_font;
-          font-size: 18px;
+          font-family: 'Roboto';
+          font-size: 14px;
           text-shadow: 0px 0px 0px rgba(255, 255, 255, 0);
         }
 
@@ -213,7 +213,7 @@ $screen-sm-min: 640px;
         }
         .room-totalizer {
           color: white;
-          font-family: $melbourne_light_font;
+          font-family: 'Roboto';
           font-size: 18px;
           width: 70%;
           float: left;
@@ -268,7 +268,7 @@ $screen-sm-min: 640px;
               padding-top: 8px;
 
               .title, .furniture-for-room {
-                font-family: $melbourne_light_font;
+                font-family: 'Roboto';
                 font-size: 16px;
               }
               .title {
@@ -288,6 +288,7 @@ $screen-sm-min: 640px;
               padding-top: 0px;
 
               .glyphicon {
+
                 font-size: 15px;
               }
             }
@@ -524,7 +525,7 @@ $screen-sm-min: 640px;
 
                     .title, .contents-summary {
                       font-size: 18px;
-                      font-family: $melbourne_light_font;
+                      font-family: 'Roboto';
                     }
                     .title {
                       padding-top: 6px;
@@ -532,15 +533,23 @@ $screen-sm-min: 640px;
                     .contents-summary {
                       .item-title, .furniture-for-category {
                         color: grey;
+                        font-size: 16px;
                       }
                     }
                   }
                 }
                 .category-dropdown {
+                  .category-dropdown-container {
+                    .col-md-6 {
+                      width: 100%;
+                    }
+                  }
                   .item-container {
                     .description {
                       .type {
                         width: 63%;
+                        margin-top: 20px;
+
                       }
                     }
                   }
@@ -548,7 +557,8 @@ $screen-sm-min: 640px;
                     display: inline-block;
                     border-bottom: 1px dashed $mule-aqua;
                     padding-bottom: 20px;
-                    width: 100%;
+                    float: left;
+                    width: 50%;
 
                     .title {
 
@@ -574,7 +584,7 @@ $screen-sm-min: 640px;
                         }
                         .type {
                           width: 90px;
-                          font-family: $melbourne_light_font;
+                          font-family: 'Roboto';
                           // background-color: yellow;
                           min-height: 48px;
                           height: auto;
@@ -617,6 +627,10 @@ $screen-sm-min: 640px;
 
                   .save-category {
                     margin-top: 5px;
+                    text-transform: uppercase;
+                    font-size: 20px;
+                    line-height: 28px;
+                    padding-top: 0px;
                   }
                 }
               }
@@ -627,8 +641,8 @@ $screen-sm-min: 640px;
             line-height: 22px;
           }
           .save-form {
+            text-transform: uppercase;
             font-size: 18px;
-            padding-top: 6px;
             width: 80%;
           }
           .remove-room {

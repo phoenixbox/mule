@@ -9,18 +9,80 @@ $melbourne_light_font: MelbourneLightFont;
 		width: 90%;
 		left: 50%;
   	margin: 0 auto;
+		font-family: 'Roboto';
 
-		font-family: $melbourne_light_font;
-
-		h3, h4 {
-			text-align: left;
-			padding-left: 10px;
-			text-transform: capitalize;
+		.row {
+			margin: 0px;
+			padding: 0px;
+			width: 50%;
+			float: left;
 		}
+
+		h1 {
+			font-size: 26px;
+		}
+
+		h2 {
+			font-size: 20px;
+		}
+
+		.col-md-6 {
+			float:left;
+		}
+		.room-count {
+			margin: 20px auto;
+		}
+
 		.room-summary {
+			width: 90%;
 			overflow: hidden;
 			border: 3px solid $mule-aqua;
 			margin-bottom: 10px;
+			margin: 0 auto;
+
+
+			.name {
+
+			}
+
+			.category {
+				width: 93%;
+				font-size: 20px;
+				text-align: left;
+				margin-left: 12px;
+				text-transform: capitalize;
+				padding-bottom: 5px;
+				border-bottom: 1px solid rgba(67, 193, 199, .8);
+			}
+
+			.count-header {
+				text-align: center;
+			}
+
+			.item-type {
+				text-align: left;
+				text-transform: capitalize;
+				padding-left: 13px;
+			}
+
+			.item-count {
+
+			}
+
+			.option-type {
+
+			}
+
+			.option-count {
+
+			}
+
+			h3, h4 {
+				font-size: 30px;
+				text-align: left;
+				padding-left: 10px;
+				text-transform: capitalize;
+			}
 
 			table {
 			  float: left;
