@@ -1,6 +1,6 @@
 class Mule.Views.LandingIndex extends Backbone.View
 
-  template: JST['landing/start_inventory_modal']
+  template: JST['landing/start_inventory_form']
 
   events:
     'click #startInventory': 'startInventory'
@@ -17,7 +17,7 @@ class Mule.Views.LandingIndex extends Backbone.View
 
   startInventory: (e) ->
     e.preventDefault()
-    email = @$('#new_user_email').val()
+    email = $('#new_user_email').val()
     room_number = @.$el.find('.room-numbers').find(":selected").text()
     @user = new Mule.Models.User(email: email, rooms: room_number)
     @app.user = @user
