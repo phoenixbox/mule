@@ -516,26 +516,16 @@ html {
                 margin-top: 10px;
               }
             }
-            .insurance, .reputation {
+            .insurance, .reputation, .price-transparency {
               .header, .blurb {
                 float:left;
               }
               .header {
+                width: 97%;
                 padding-left: 20px;
                 padding-right: 20px;
                 text-align: left;
                 margin-left: 10px;
-              }
-            }
-            .price-transparency {
-              .header, .blurb {
-                float: right;
-              }
-              .header {
-                padding-left: 20px;
-                padding-right: 20px;
-                text-align: right;
-                margin-right: 10px;
               }
             }
             .icon {
