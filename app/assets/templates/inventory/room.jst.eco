@@ -9,7 +9,7 @@
       </div>
       <div class='contents-summary'>
         <div class='furniture-count'>
-          <div class="title">Items of Furniture:</div>
+          <div class="title">Items:</div>
           <div class="counter furniture-for-room">0</div>
         </div>
         <div class='completion-indicator'>

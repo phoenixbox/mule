@@ -19,19 +19,20 @@ and (max-device-width : 568px) {
 
 			.inventory-wrapper {
 				width: 100%;
+				min-height: 0px;
 
 				.personalization {
-					padding: 10px 0px;
+					padding: 0px;
 				}
 
 				.summary-header {
-					font-size: 42px;
-					padding-top: 20px;
+					font-size: 28px;
+					padding-top: 0px;
 				}
 
 				.rooms-wrapper {
 					width: 100%;
-					min-height: 150px;
+					min-height: 0px;
 
 					.overview {
 						.button-container {
@@ -39,8 +40,9 @@ and (max-device-width : 568px) {
 								width: 50%;
 
 								.description {
-									font-size: 16px;
+									font-size: 12px;
 									width: 78%;
+									padding-top: 4px;
 								}
 
 								.furniture-for-house {
@@ -53,7 +55,7 @@ and (max-device-width : 568px) {
 
 							button {
 								padding: 0px;
-								font-size: 16px;
+								font-size: 13px;
 								width: 25%;
 							}
 						}
@@ -73,9 +75,7 @@ and (max-device-width : 568px) {
 									width: 40%;
 
 									input {
-										line-height: 15px;
-										padding-left: 5px;
-										width: 100%;
+										font-size: 12px;
 									}
 									span {
 										display: none;
@@ -86,10 +86,10 @@ and (max-device-width : 568px) {
 
 									.furniture-count {
 										width: 80%;
-										padding-top: 8px;
+										padding-top: 7px;
 
 										.title, .furniture-for-room {
-											font-family: $melbourne_light_font;
+											font-family: 'Roboto';
 											font-size: 16px;
 										}
 										.title {
@@ -140,7 +140,7 @@ and (max-device-width : 568px) {
 
 													.title, .contents-summary {
 														font-size: 18px;
-														font-family: $melbourne_light_font;
+														font-family: 'Roboto';
 													}
 													.title {
 														padding-top: 6px;
@@ -187,7 +187,7 @@ and (max-device-width : 568px) {
 															}
 															.type {
 																width: 90px;
-																font-family: $melbourne_light_font;
+																font-family: 'Roboto';
 																min-height: 48px;
 																height: auto;
 															}

@@ -28,6 +28,19 @@ html {
       background-color: $mule-aqua;
       display: block;
 
+      #logout {
+        background-color: white;
+        width: 65px;
+        font-size: 14px;
+        margin-top: 23px;
+        line-height: 25px;
+        padding-top: 0px;
+        font-family: 'Roboto';
+        outline: none;
+        border: none;
+        margin-right: 20px;
+      }
+
       .sign-in {
         height: 75px;
         width: 240px;
@@ -139,7 +152,7 @@ html {
             line-height: 25px;
             padding-top: 8px;
             letter-spacing: 2px;
-            font-family: $bebas_neue_font;
+            font-family: 'Roboto';
             outline: none;
             border: none;
 
@@ -216,7 +229,7 @@ html {
             left: 50%;
             width: 100%;
             color: white;
-            font-family: $bebas_neue_font;
+            font-family: 'Roboto';
             letter-spacing:5px
           }
         }
@@ -644,7 +657,7 @@ html {
               height: 100px;
               letter-spacing: 5px;
               font-size: 65px;
-              font-family: $bebas_neue_font;
+              font-family: 'Roboto';
               text-align: center;
               vertical-align: middle;
             }
@@ -776,10 +789,10 @@ html {
           }
           .blurb {
             font-size: 14px;
-            line-height: 100px;
             width: auto;
             float: left;
             margin-left: 20px;
+            margin-top: 40px;
           }
           .icons {
             width: auto;
