@@ -53,6 +53,10 @@ html {
       margin: 0 auto;
       top: 0px;
 
+      .mobile {
+        display: none;
+      }
+
       .primary-cta, .device {
         height: 100%;
         color: $mule-aqua;
@@ -266,8 +270,11 @@ html {
       background-color: $mule-grey;
       z-index: 2;
 
-      .mule-process, .testimonials {
+      .testimonials {
         font-family: 'Roboto';
+        background-color: $mule-aqua;
+        color: white;
+        height: 580px;
 
         .col-md-4 {
           .bounding-box {
@@ -284,11 +291,6 @@ html {
             }
           }
         }
-      }
-      .testimonials {
-        background-color: $mule-aqua;
-        color: white;
-        height: 580px;
 
         .row {
           margin: 0;
