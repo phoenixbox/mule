@@ -30,10 +30,12 @@
               </tr>
               <% if item.options: %>
                 <% for option in item.options: %>
-                  <tr>
-                    <td class="option-type"><%= option.type %></td>
-                    <td class="option-count"><%= option.count %></td>
-                  </tr>
+                  <% if option.count > 0: %>
+                    <tr>
+                      <td class="option-type"><%= option.type %></td>
+                      <td class="option-count"><%= option.count %></td>
+                    </tr>
+                  <% end %>
                 <% end %>
               <% end %>
               </tbody>
