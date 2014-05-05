@@ -9,8 +9,9 @@ class Mule.Views.Category extends Backbone.View
     'click .save-category': 'save_category'
 
   initialize: (options) ->
-    defaults = _.pick options, "title", "room"
+    defaults = _.pick options, "title", "room", "delegate"
     _.extend @, defaults
+    @delegate   = options.delegate
     @model = new Mule.Models.Category(null, title: @title, room: @room)
     @delayed_update_room = _.debounce(@update_room, 1000)
     @update_count = _.debounce(@_update_count, 300)
@@ -56,6 +57,7 @@ class Mule.Views.Category extends Backbone.View
 
   toggle: (e) ->
     if @open() then @close_drawer() else @open_drawer()
+    @delegate.trigger("incrementItemCount")
 
   open: ->
     @$('.category-dropdown').is(':visible')

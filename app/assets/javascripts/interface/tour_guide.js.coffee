@@ -37,7 +37,7 @@ class Mule.TourGuide
       at: "top center"
       setup: (tour, options) ->
         options.view.bind "showCategory", @showCategory
-        target: options.view.$el.find('.glyphicon-chevron-right')
+        target: options.view.$el.find('.glyphicon')
       teardown: (tour, options) ->
         options.view.unbind "showCategory", @showCategory
         return
@@ -73,7 +73,7 @@ class Mule.TourGuide
       at: "bottom left"
       setup: (tour, options) ->
         options.view.bind "explainFurnitureCount", @explainFurnitureCount
-        target: $(_.first(options.view.$el.find('.increment')))
+        target: $(_.first(options.view.$el.find('.increment-subitem')))
       teardown: (tour, options) ->
         options.view.unbind "explainFurnitureCount", @explainFurnitureCount
         topPosition = $(options.view.$el.find('.room-inventory')[0]).position().top
@@ -120,8 +120,8 @@ class Mule.TourGuide
     content: "<p>Nice job! Now you know your way around</p>" + "<p>Take a walk around your house and add your furniture to your rooms list. When you are done just click "+ "<b>" + "Finish!" + "</b>" + "</p>"
     nextButton: true
     highlightTarget: true
-    my: "bottom right"
-    at: "top center"
+    my: "top right"
+    at: "bottom right"
     setup: (tour, options) ->
       target: $('.finish')
     teardown: (tour, options) ->

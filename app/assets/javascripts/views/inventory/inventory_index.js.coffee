@@ -24,6 +24,7 @@ class Mule.Views.InventoryIndex extends Backbone.View
     @_render = _.debounce(@render, 100)
     @update_count = _.debounce(@_update_count, 500)
     @render()
+    @_checkIfTutorialCompleted()
     @listenTo(@user, 'change', @_render)
     @listenTo(@user.rooms, 'add remove', @_render)
 
@@ -36,7 +37,6 @@ class Mule.Views.InventoryIndex extends Backbone.View
     console.log 'rendering '
     @$el.html(@template(user: @user))
     @appendRooms()
-    @_checkIfTutorialCompleted()
     @update_count()
     @
 

@@ -35,6 +35,7 @@ class Mule.Views.Room extends Backbone.View
       memo + parseInt($(el).text())
     ), 0
     $target.text(count)
+    @delegate.trigger("explainFurnitureCount")
     @delegate.update_count()
 
   update_room: (e) ->
@@ -63,6 +64,7 @@ class Mule.Views.Room extends Backbone.View
 
   toggleRoom: (e) ->
     $target = $(e.target)
+    @delegate.trigger("showCategory")
     if @open() then @close_drawer() else @open_drawer()
     @_scrollToTargetPosition($(e.target).position().top)
 
@@ -105,4 +107,5 @@ class Mule.Views.Room extends Backbone.View
       @views[title] = view = new Mule.Views.Category
         title: title
         room: @model
+        delegate: @delegate
       $target.append view.$el
