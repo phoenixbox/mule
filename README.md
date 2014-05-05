@@ -1,4 +1,4 @@
 # Mule
 ### Moving Revolutionized
 
-Proof of concept landing page for Mule
+Proof of concept landing page for Mule.
