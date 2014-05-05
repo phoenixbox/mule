@@ -10,15 +10,21 @@ class UsersController < ApplicationController
   end
 
   def create
-  	params.permit!
-  	@user = User.create(params[:user])
-    rooms = params[:rooms].to_i
-  	if @user.save
+    binding.pry
+  	@user = User.create(user_params)
+    rooms = params[:user][:rooms].to_s.to_i
+  	if rooms && @user.save
       rooms.times{|i| @user.rooms.create(name: "room-#{i+1}")}
       session[:user_id] = @user.id
-  		render :json => @user
+  		redirect_to inventory_path
   	else
-  	  render :json => { :errors => @user.errors.full_messages }, :status => 422
+  	  render :back
   	end
+  end
+
+private
+
+  def user_params
+  	params.require(:user).permit(:email)
   end
 end
