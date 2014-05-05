@@ -23,7 +23,6 @@ CategoryOptions =
       {type: "stool", count: 0}
       {type: "office", count: 0}
       {type: "lounge", count: 0}
-      {type: "folding", count: 0}
       {type: "bean bag", count: 0}
       {type: "bench", count: 0}
       ],
@@ -42,8 +41,7 @@ CategoryOptions =
     column_width: 6
     splice: 3
     items: [
-      {type: "fridge", count: 0}
-      {type: "freezer", count: 0}
+      {type: "fridge freezer", count: 0}
       {type: "oven", count: 0}
       {type: "air conditioner", count: 0}
       {type: "dryer", count: 0}
@@ -103,10 +101,10 @@ CategoryOptions =
       {
         type: "dining"
         options: [
-          {type: "two seat", count: 0 }
-          {type: "four seat", count: 0 }
-          {type: "six seat", count: 0 }
-          {type: "eight seat", count: 0 }
+          {type: "two chairs", count: 0 }
+          {type: "four chairs", count: 0 }
+          {type: "six chairs", count: 0 }
+          {type: "eight chairs", count: 0 }
         ]
       }
     ]
@@ -213,8 +211,7 @@ CategoryOptions =
       {
         type: "kids"
         options: [
-          {type: "play house", count: 0 }
-          {type: "play pen", count: 0 }
+          {type: "toy box", count: 0 }
           {type: "dollhouse", count: 0 }
         ]
       }

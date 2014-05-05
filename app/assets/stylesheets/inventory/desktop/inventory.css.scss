@@ -326,7 +326,6 @@ $screen-sm-min: 640px;
                   &.mattress {
                     background-image: image-url("icons/bed_mattress_icon_aqua_240.png");
                   }
-
                   // Chairs
                   &.chairs {
                     background-image: image-url("icons/chair_icon_aqua_240.png");
@@ -343,25 +342,38 @@ $screen-sm-min: 640px;
                     background-image: image-url("icons/side_table_icon_aqua_240.png");
                   }
                   &.office {
-                    background-image: image-url("icons/office_table_icon_aqua_240.png");
+                    background-image: image-url("icons/office_chair_icon_aqua_240.png");
                   }
-
+                  // Sofas
                   &.two.seat {
-                    background-image: image-url("icons/sofa_icon_aqua_240.png");
+                    background-image: image-url("icons/sofa_two_icon_aqua_240.png");
+                  }
+                  &.three.seat {
+                    background-image: image-url("icons/sofa_three_icon_aqua_240.png");
                   }
                   &.four.seat {
-                    background-image: image-url("icons/sofa_icon_aqua_240.png");
+                    background-image: image-url("icons/sofa_four_icon_aqua_240.png");
                   }
-                  &.six.seat {
-                    background-image: image-url("icons/sofa_icon_aqua_240.png");
+                  &.futon {
+                    background-image: image-url("icons/sofa_futon_icon_aqua_240.png");
                   }
-                  &.eight.seat {
-                    background-image: image-url("icons/sofa_icon_aqua_240.png");
+                  // Tables
+                  &.two.chairs {
+                    background-image: image-url("icons/dining_two_icon_aqua_240.png");
+                  }
+                  &.four.chairs {
+                    background-image: image-url("icons/dining_four_icon_aqua_240.png");
+                  }
+                  &.six.chairs {
+                    background-image: image-url("icons/dining_six_icon_aqua_240.png");
+                  }
+                  &.eight.chairs {
+                    background-image: image-url("icons/dining_eight_icon_aqua_240.png");
                   }
 
                   // Lighting
                   &.ceiling.fixture {
-                    background-image: image-url("icons/chandelier_icon_aqua_240.png");
+                    background-image: image-url("icons/ceiling_fixture_icon_aqua_240.png");
                   }
                   &.chandelier {
                     background-image: image-url("icons/chandelier_icon_aqua_240.png");
@@ -391,7 +403,7 @@ $screen-sm-min: 640px;
                     background-image: image-url("icons/suitcase_icon_aqua_240.png");
                   }
                   &.china {
-                    background-image: image-url("icons/chair_icon_aqua_240.png");
+                    background-image: image-url("icons/cabinet_icon_aqua_240.png");
                   }
                   &.filing {
                     background-image: image-url("icons/file_cabinet_icon_aqua_240.png");
@@ -417,10 +429,10 @@ $screen-sm-min: 640px;
                     background-image: image-url("icons/piano_icon_aqua_240.png");
                   }
                   &.baby {
-                    background-image: image-url("icons/piano_icon_aqua_240.png");
+                    background-image: image-url("icons/piano_baby_icon_aqua_240.png");
                   }
                   &.upright {
-                    background-image: image-url("icons/piano_icon_aqua_240.png");
+                    background-image: image-url("icons/piano_upright_icon_aqua_240.png");
                   }
 
                   // Kitchen
@@ -448,10 +460,10 @@ $screen-sm-min: 640px;
                     background-image: image-url("icons/winter_sports_icon_aqua_240.png");
                   }
                   &.snowboard {
-                    background-image: image-url("icons/winter_sports_icon_aqua_240.png");
+                    background-image: image-url("icons/snowboard_icon_aqua_240.png");
                   }
                   &.bicycle {
-                    background-image: image-url("icons/winter_sports_icon_aqua_240.png");
+                    background-image: image-url("icons/bicycle_icon_aqua_240.png");
                   }
                   &.stroller {
                     background-image: image-url("icons/stroller_icon_aqua_240.png");
@@ -474,14 +486,14 @@ $screen-sm-min: 640px;
                   &.grill {
                     background-image: image-url("icons/grill_icon_aqua_240.png");
                   }
-                  &.play.house {
+                  &.toy.box {
                     background-image: image-url("icons/teddy_icon_aqua_240.png");
                   }
                   &.play.pen {
                     background-image: image-url("icons/teddy_icon_aqua_240.png");
                   }
                   &.dollhouse {
-                    background-image: image-url("icons/teddy_icon_aqua_240.png");
+                    background-image: image-url("icons/doll_house_icon_aqua_240.png");
                   }
 
                   &.cabinets {
