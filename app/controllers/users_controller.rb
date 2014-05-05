@@ -10,7 +10,6 @@ class UsersController < ApplicationController
   end
 
   def create
-    binding.pry
   	@user = User.create(user_params)
     rooms = params[:user][:rooms].to_s.to_i
   	if rooms && @user.save
