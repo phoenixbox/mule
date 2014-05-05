@@ -278,7 +278,7 @@ html {
       height: 100%;
       text-align: justify;
       position: absolute;
-      top: 93%;
+      top: 90%;
       margin: 0 auto;
       background-color: $mule-grey;
       z-index: 2;
@@ -420,17 +420,32 @@ html {
               background-color: white;
               color: $mule-aqua;
 
+              .name {
+                font-size: 16px;
+                margin-top: 10px;
+              }
               .profile {
-                margin: 20px 10px 0px 0px;
-                background-color: $mule-aqua;
+                margin: 20px 10px 0px 10px;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: contain;
                 width: 45px;
                 height: 45px;
                 -moz-border-radius: 50%;
                 -webkit-border-radius: 50%;
                 border-radius: 50%;
+
+                &.mary {
+                  background-image: image-url("mary_profile.png");
+                }
+                &.sarah {
+                  background-image: image-url("sarah_profile.png");
+                }
+                &.niall {
+                  background-image: image-url("niall_profile.png");
+                }
               }
               .quote {
-                margin-top: 10px;
                 font-size: 14px;
                 font-style: italic;
               }
@@ -593,7 +608,7 @@ html {
 
             .screenshot {
               width: 100%;
-              height: 240px;
+              height: 300px;
               background-repeat: no-repeat;
               background-image: image-url("device_triple.png");
               background-size: contain;
