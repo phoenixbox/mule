@@ -33,6 +33,35 @@
       <div class="device">
         <div class="screenshot"></div>
         <div class="start-inventory">
+          <form class="form-horizontal" action="/users" method="post">
+            <fieldset>
+              <div class="instructions">
+                Enter your *email and the approx. number of rooms in your house to start
+              </div>
+            <div class="dont-worry">(Don't worry you can add & remove rooms later)</div>
+            <div class="residence-choice">
+              <div class="residence-type-house"></div>
+            </div>
+            <div class="form-group">
+              <div class="col-md-12">
+                <input id="new_user_email" name="user[email]" type="email" placeholder="your@email.com" class="form-control input-md">
+              </div>
+            </div>
+            <select name="user[rooms]" class="form-control room-numbers">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+              <option>6</option>
+              <option>7</option>
+              <option>8</option>
+              <option>9</option>
+              <option>10+</option>
+            </select>
+            </fieldset>
+            <button type="button" type="submit" class="btn btn-primary" id="startInventory">START</button>
+          </form>
         </div>
       </div>
     </div>
@@ -49,6 +78,35 @@
             Mule Makes Moving House Simple
           </div>
           <div class="start-inventory">
+            <form class="form-horizontal" action="/users" method="post">
+              <fieldset>
+                <div class="instructions">
+                  Enter your *email and the approx. number of rooms in your house to start
+                </div>
+              <div class="dont-worry">(Don't worry you can add & remove rooms later)</div>
+              <div class="residence-choice">
+                <div class="residence-type-house"></div>
+              </div>
+              <div class="form-group">
+                <div class="col-md-12">
+                  <input id="new_user_email" name="user[email]" type="email" placeholder="your@email.com" class="form-control input-md">
+                </div>
+              </div>
+              <select name="user[rooms]" class="form-control room-numbers">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+                <option>10+</option>
+              </select>
+              </fieldset>
+              <button type="submit" class="btn btn-primary" id="startInventory">START</button>
+            </form>
           </div>
         </div>
         <div class="header">The Mule Process</div>
