@@ -1,478 +1,79 @@
-<div class="nav">
-  <div class="sign-in">
-    <form class="form-inline pull-right" role="form" action="/session" method='POST'>
-      <div class="form-group">
-        <label class="sr-only" for="exampleInputEmail2">email</label>
-        <input type="email" class="form-control" name="user[email]" id="exampleInputEmail2" placeholder="email">
+
+<div id="content">
+
+  <div id="signup">
+    <form class="overlay" action="/" method="post">
+      <hgroup>
+        <h1>Path</h1>
+        <p class="tagline">The place for your personal life.</p>
+      </hgroup>
+
+      <div class="field required field-string">
+        <label for="id_name">Your name</label>
+        <input type="text" name="name" id="id_name" placeholder="Your name">
       </div>
-      <button type="submit" class="btn btn-default">Sign in</button>
+        <div class="field required field-email">
+          <label for="id_email">Email address</label>
+          <input type="email" name="email" id="id_email" placeholder="Email address">
+        </div>
+        <div class="field required field-password">
+          <label for="id_password">Password</label>
+          <input type="password" name="password" id="id_password" placeholder="Password">
+        </div>
+      <div class="field buttons">
+        <button type="submit">Get Started</button>
+      </div>
+      <p class="terms more"></p>
+      <p class="learn" style="opacity: 1;">
+        <a href="#about">Learn More About Path</a>
+      </p>
     </form>
   </div>
-  <div class="logo"></div>
+
+<div id="about">
+  <hgroup class="title">
+    <h1>Path is the place for your personal life.</h1>
+    <p>It is the beautiful, ad-free place for private messaging and sharing photos, videos, music, and more with the people in your life who matter most.</p>
+  </hgroup>
+
+  <section class="features">
+    <article class="innercircle">
+      <h2>Inner Circle</h2>
+      <p>Choose who sees each post. Post moments and filter your feed to only your closest friends.</p>
+    </article>
+    <article class="messaging">
+      <h2>Messaging</h2>
+      <p>Message with text, your voice, and stickers. Be yourself and express yourself beautifully.</p>
+    </article>
+    <article class="post">
+      <h2>Post Anywhere</h2>
+      <p>Share privately only on Path, or post to Facebook, Twitter, Foursquare, and Tumblr.</p>
+    </article>
+  </section>
+
+  <section class="download">
+    <h3>Path is available free for iPhone, iPad, Android, and Kindle Fire.</h3>
+    <ul class="stores">
+  <li class="apple"><a href="http://itunes.apple.com/us/app/path/id403639508?mt=8">App Store</a></li>
+  <li class="google"><a href="https://play.google.com/store/apps/details?id=com.path">Google Play Store</a></li>
+  <li class="amazon"><a href="http://www.amazon.com/gp/product/B00DWIVMPO">Kindle Store</a></li>
+</ul>
+
+  </section>
 </div>
-<div class="house-background">
-  <div class="desktop">
-    <div class="col-md-6">
-      <div class="primary-cta">
-        <div class="header">
-          From Inventory To Guaranteed Quote Within 24hrs
-        </div>
-        <div class="subheader">
-          Mule Makes Moving House Simple
-        </div>
-        <div class="bullets">
-          <ul>
-            <li>Take your inventory</li>
-            <li>Get quotes from trusted moving companies</li>
-            <li>Move happy</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-6">
-      <div class="device">
-        <div class="screenshot"></div>
-        <div class="start-inventory">
-          <form class="form-horizontal" action="/users" method="post">
-            <fieldset>
-              <div class="instructions">
-                Enter your *email and the approx. number of rooms in your house to start
-              </div>
-            <div class="dont-worry">(Don't worry you can add & remove rooms later)</div>
-            <div class="residence-choice">
-              <div class="residence-type-house"></div>
-            </div>
-            <div class="form-group">
-              <div class="col-md-12">
-                <input id="new_user_email" name="user[email]" type="email" placeholder="your@email.com" class="form-control input-md">
-              </div>
-            </div>
-            <select name="user[rooms]" class="form-control room-numbers">
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-              <option>5</option>
-              <option>6</option>
-              <option>7</option>
-              <option>8</option>
-              <option>9</option>
-              <option>10+</option>
-            </select>
-            </fieldset>
-            <button type="submit" class="btn btn-primary" id="startInventory">START</button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="mobile">
-    <div class="col-md-12">
-      <div class="primary-cta">
-        <div class="header">
-          From Inventory To Guaranteed Quote Within 24hrs
-        </div>
-        <div class="device">
-          <div class="screenshot"></div>
-          <div class="subheader">
-            Mule Makes Moving House Simple
-          </div>
-          <div class="start-inventory">
-            <form class="form-horizontal" action="/users" method="post">
-              <fieldset>
-                <div class="instructions">
-                  Enter your *email and the approx. number of rooms in your house to start
-                </div>
-              <div class="dont-worry">(Don't worry you can add & remove rooms later)</div>
-              <div class="residence-choice">
-                <div class="residence-type-house"></div>
-              </div>
-              <div class="form-group">
-                <div class="col-md-12">
-                  <input id="new_user_email" name="user[email]" type="email" placeholder="your@email.com" class="form-control input-md">
-                </div>
-              </div>
-              <select name="user[rooms]" class="form-control room-numbers">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-                <option>6</option>
-                <option>7</option>
-                <option>8</option>
-                <option>9</option>
-                <option>10+</option>
-              </select>
-              </fieldset>
-              <button type="submit" class="btn btn-primary" id="startInventory">START</button>
-            </form>
-          </div>
-        </div>
-        <div class="header">The Mule Process</div>
-        <div class="bullets">
-          <ul>
-            <li>Take your inventory</li>
-            <li>Get quotes from trusted moving companies</li>
-            <li>Move happy</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="content">
-  <div class="testimonials">
-    <div class="row">
-      <div class="process-header">
-        Recent Boulder Moves With Mule Movers
-      </div>
-      <div class="col-md-4">
-        <div class="bounding-box">
-          <div class="border-box">
-            <div class="row travel">
-              <div class="col-md-4">
-                <div class="pickup">
-                  <div class="city">Boulder</div>
-                  <div class="state">CO</div>
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div class="distance"></div>
-                <div class="mileage">45 miles</div>
-              </div>
-              <div class="col-md-4">
-                <div class="dropoff">
-                  <div class="city">Denver</div>
-                  <div class="state">CO</div>
-                </div>
-              </div>
-            </div>
-            <div class="row time">
-              <div class="col-md-4">
-                <div class="dates">
-                  March
-                </div>
-              </div>
-              <div class="col-md-4">
-              </div>
-              <div class="col-md-4">
-                <div class="cost">
-                  $1300
-                </div>
-              </div>
-            </div>
-            <div class="row summary">
-              <div class="col-md-6">
-                <div class="house">
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="rooms">
-                  8 Rooms
-                </div>
-                <div class="trucks">
-                  1 40ft Truck
-                </div>
-                <div class="movers">
-                  3 Movers
-                </div>
-              </div>
-            </div>
-            <div class="row services">
-              <div class="col-md-12">
-                <div class="header">SERVICES</div>
-                <ul>
-                  <li>Professional Packaging</li>
-                  <li>Full Replacement Value Insurance</li>
-                  <li>Furniture Disassembly</li>
-                </ul>
-              </div>
-            </div>
-            <div class="row testimonial">
-              <div class="col-md-2">
-                <div class="profile mary"></div>
-              </div>
-              <div class="col-md-10">
-                <div class="name">Mary Anne</div>
-                <div class="quote">
-                  "Made the whole moving process a dream!"
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="bounding-box">
-          <div class="border-box">
-            <div class="row travel">
-              <div class="col-md-4">
-                <div class="pickup">
-                  <div class="city">Boulder</div>
-                  <div class="state">CO</div>
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div class="distance"></div>
-                <div class="mileage">109 miles</div>
-              </div>
-              <div class="col-md-4">
-                <div class="dropoff">
-                  <div class="city">Vail</div>
-                  <div class="state">CO</div>
-                </div>
-              </div>
-            </div>
-            <div class="row time">
-              <div class="col-md-4">
-                <div class="dates">
-                  April
-                </div>
-              </div>
-              <div class="col-md-4">
-              </div>
-              <div class="col-md-4">
-                <div class="cost">
-                  $1600
-                </div>
-              </div>
-            </div>
-            <div class="row summary">
-              <div class="col-md-6">
-                <div class="house">
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="rooms">
-                  6 Rooms
-                </div>
-                <div class="trucks">
-                  1 40ft Truck
-                </div>
-                <div class="movers">
-                  2 Movers
-                </div>
-              </div>
-            </div>
-            <div class="row services">
-              <div class="col-md-12">
-                <div class="header">SERVICES</div>
-                <ul>
-                  <li>Piano Move</li>
-                  <li>Bulky Item Crating</li>
-                </ul>
-              </div>
-            </div>
-            <div class="row testimonial">
-              <div class="col-md-2">
-                <div class="profile sarah niall"></div>
-              </div>
-              <div class="col-md-10">
-                <div class="name">Niall</div>
-                <div class="quote">
-                  "By far the easiest way to move. Will be recommending to all of my friends back home"
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="bounding-box">
-          <div class="border-box">
-            <div class="row travel">
-              <div class="col-md-4">
-                <div class="pickup">
-                  <div class="city">Boulder</div>
-                  <div class="state">CO</div>
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div class="distance"></div>
-                <div class="mileage">103 miles</div>
-              </div>
-              <div class="col-md-4">
-                <div class="dropoff">
-                  <div class="city">Fort Collins</div>
-                  <div class="state">CO</div>
-                </div>
-              </div>
-            </div>
-            <div class="row time">
-              <div class="col-md-4">
-                <div class="dates">
-                  May
-                </div>
-              </div>
-              <div class="col-md-4">
-              </div>
-              <div class="col-md-4">
-                <div class="cost">
-                  $2400
-                </div>
-              </div>
-            </div>
-            <div class="row summary">
-              <div class="col-md-6">
-                <div class="house">
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="rooms">
-                  10 Rooms
-                </div>
-                <div class="trucks">
-                  1 40ft Truck
-                </div>
-                <div class="movers">
-                  4 Movers
-                </div>
-              </div>
-            </div>
-            <div class="row services">
-              <div class="col-md-12">
-                <div class="header">SERVICES</div>
-                <ul>
-                  <li>Professional Packaging</li>
-                  <li>Temporary Storage</li>
-                  <li>Extra Pick-Up Locations</li>
-                </ul>
-              </div>
-            </div>
-            <div class="row testimonial">
-              <div class="col-md-2">
-                <div class="profile sarah"></div>
-              </div>
-              <div class="col-md-10">
-                <div class="name">Sarah</div>
-                <div class="quote">
-                  "I had heard lots of moving horror stories, Mule put my mind at ease"
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="value-propositions">
-    <div class="row container">
-      <div class="header">
-        There are many ways to move from A to B
-      </div>
-      <div class="a-to-b"></div>
-      <div class="subheader">
-        We let you choose the best option for you
-      </div>
-      <div class="propositions">
-        <div class="row insurance">
-          <div class="col-md-2">
-            <div class="icon"></div>
-          </div>
-          <div class="col-md-10">
-            <div class="header">Replacement Insurance</div>
-            <div class="blurb">If your goods are damaged in transit will they be replaced at their full value or only at 60c per pound? Mule makes sure you know in advance.</div>
-          </div>
-        </div>
-        <div class="row price-transparency">
-          <div class="col-md-2">
-            <div class="icon"></div>
-          </div>
-          <div class="col-md-10">
-            <div class="header">Price Transparency</div>
-            <div class="blurb">We hate hidden costs and make sure that you dont suffer any. All our prices based on your inventory are fixed so you know exactly how much you will be paying.</div>
-          </div>
-        </div>
-        <div class="row reputation">
-          <div class="col-md-2">
-            <div class="icon"></div>
-          </div>
-          <div class="col-md-10">
-            <div class="header">Reputable Movers</div>
-            <div class="blurb">Mule moving companies are screened to ensure their quality. We let you know exactly what kind of company wants to win your business so you can make your most informed decision.</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="message-reinforce">
-    <div class="row">
-      <div class="col-md-4">
-        <div class="bounding-box">
-          <div class="title">Trust</div>
-          <div class="blurb">
-            You need to know that the people helping you move home are trustworthy. We make sure that you know about the people and employees behind the moving companies.
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="bounding-box">
-          <div class="title">Transparency</div>
-          <div class="blurb">
-            Not only do we ensure that you know how much your move is going to cost, we educate you about all the other steps involved along the way.
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="bounding-box">
-          <div class="title">Control</div>
-          <div class="blurb">
-            Mule empowers its user to make the best choice for them. You get to choose the services you want, which levels of insurance coverage you are most comfortable with and whom you want handling your posessions.
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="cta">
-    <div class="row">
-      <div class="col-md-4">
-        <div class="blurb">
-          One quick walk around your house and you're done!
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="action-block" data-toggle="modal" data-target="#myModal">
-          <div class="device-availability">
-            <div class="screenshot"></div>
-            <div class="device-cta">
-              <p>Our inventory app looks great on Android and iPhone browsers</p>
-            </div>
-            <div class="platforms">
-              <ul>
-                <li><i class="fa fa-android"></i></li>
-                <li><i class="fa fa-apple"></i></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="blurb">
-           We take care of the rest, finding you a company fast which suits your move.
-        </div>
-      </div>
-    </div>
-  </div>
-  <div id="footer">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="social-row">
-          <div class="business-info">
-          </div>
-          <div class="blurb">
-            <p>Empowering People Through The Big Moves In Life</p>
-          </div>
-          <div class="icons">
-            <ul>
-              <li><i class="fa fa-facebook"></i></li>
-              <li><i class="fa fa-twitter"></i></li>
-              <li><i class="fa fa-pinterest"></i></li>
-              <li><i class="fa fa-youtube"></i></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+
+    <footer class="main">
+      <nav class="sitemap">
+        <ul>
+          <li><span>Path © 2014</span></li>
+          <li><a href="/support">Support</a></li>
+          <li><a href="/privacy">Privacy</a></li>
+          <li><a href="/terms">Terms</a></li>
+          <li><a href="/developers">Developers</a></li>
+          <li><a href="/press">Press</a></li>
+          <li class="icon twitter"><a href="https://twitter.com/path">Twitter</a></li>
+          <li class="icon facebook"><a href="https://facebook.com/path">Facebook</a></li>
+        </ul>
+      </nav>
+    </footer>
 </div>

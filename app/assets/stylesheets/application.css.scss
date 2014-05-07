@@ -10,11 +10,13 @@
  *
  */
 
-// Landing page styles
-@import "landing/desktop/modal";
-@import "landing/desktop/landing_page";
-@import "landing/mobile/_landing_page";
-@import "landing/mobile/_modal";
+@import "blair";
+
+// // Landing page styles
+// @import "landing/desktop/modal";
+// @import "landing/desktop/landing_page";
+// @import "landing/mobile/_landing_page";
+// @import "landing/mobile/_modal";
 
 // Inventory page styles
 @import "inventory/desktop/inventory";
