@@ -1,79 +1,37 @@
+<div class="site-wrapper">
+  <div class="site-wrapper-inner">
+    <div class="cover-container">
 
-<div id="content">
-
-  <div id="signup">
-    <form class="overlay" action="/" method="post">
-      <hgroup>
-        <h1>Path</h1>
-        <p class="tagline">The place for your personal life.</p>
-      </hgroup>
-
-      <div class="field required field-string">
-        <label for="id_name">Your name</label>
-        <input type="text" name="name" id="id_name" placeholder="Your name">
-      </div>
-        <div class="field required field-email">
-          <label for="id_email">Email address</label>
-          <input type="email" name="email" id="id_email" placeholder="Email address">
+      <div class="masthead clearfix">
+        <div class="inner">
+          <h3 class="masthead-brand">
+            Mule
+          </h3>
+          <ul class="nav masthead-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#">Features</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
         </div>
-        <div class="field required field-password">
-          <label for="id_password">Password</label>
-          <input type="password" name="password" id="id_password" placeholder="Password">
-        </div>
-      <div class="field buttons">
-        <button type="submit">Get Started</button>
       </div>
-      <p class="terms more"></p>
-      <p class="learn" style="opacity: 1;">
-        <a href="#about">Learn More About Path</a>
-      </p>
-    </form>
+
+      <div class="inner cover">
+        <h1 class="cover-heading">Mule</h1>
+        <%= form_tag do %>
+          <p class="lead">
+            <%= email_field_tag :email %>
+          </p>
+          <p class="lead">
+          <%= button_tag "Get Started", class: "btn btn-lg btn-block btn-default" %>
+          </p>
+        <% end %>
+      </div>
+
+      <div class="mastfoot">
+        <div class="inner">
+          <p>Mule Moving</p>
+        </div>
+      </div>
+    </div>
   </div>
-
-<div id="about">
-  <hgroup class="title">
-    <h1>Path is the place for your personal life.</h1>
-    <p>It is the beautiful, ad-free place for private messaging and sharing photos, videos, music, and more with the people in your life who matter most.</p>
-  </hgroup>
-
-  <section class="features">
-    <article class="innercircle">
-      <h2>Inner Circle</h2>
-      <p>Choose who sees each post. Post moments and filter your feed to only your closest friends.</p>
-    </article>
-    <article class="messaging">
-      <h2>Messaging</h2>
-      <p>Message with text, your voice, and stickers. Be yourself and express yourself beautifully.</p>
-    </article>
-    <article class="post">
-      <h2>Post Anywhere</h2>
-      <p>Share privately only on Path, or post to Facebook, Twitter, Foursquare, and Tumblr.</p>
-    </article>
-  </section>
-
-  <section class="download">
-    <h3>Path is available free for iPhone, iPad, Android, and Kindle Fire.</h3>
-    <ul class="stores">
-  <li class="apple"><a href="http://itunes.apple.com/us/app/path/id403639508?mt=8">App Store</a></li>
-  <li class="google"><a href="https://play.google.com/store/apps/details?id=com.path">Google Play Store</a></li>
-  <li class="amazon"><a href="http://www.amazon.com/gp/product/B00DWIVMPO">Kindle Store</a></li>
-</ul>
-
-  </section>
-</div>
-
-    <footer class="main">
-      <nav class="sitemap">
-        <ul>
-          <li><span>Path © 2014</span></li>
-          <li><a href="/support">Support</a></li>
-          <li><a href="/privacy">Privacy</a></li>
-          <li><a href="/terms">Terms</a></li>
-          <li><a href="/developers">Developers</a></li>
-          <li><a href="/press">Press</a></li>
-          <li class="icon twitter"><a href="https://twitter.com/path">Twitter</a></li>
-          <li class="icon facebook"><a href="https://facebook.com/path">Facebook</a></li>
-        </ul>
-      </nav>
-    </footer>
 </div>

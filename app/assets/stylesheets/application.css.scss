@@ -10,7 +10,6 @@
  *
  */
 
-@import "blair";
 
 // // Landing page styles
 // @import "landing/desktop/modal";
@@ -19,19 +18,20 @@
 // @import "landing/mobile/_modal";
 
 // Inventory page styles
-@import "inventory/desktop/inventory";
-@import "inventory/desktop/item";
-@import "inventory/desktop/room";
-@import "inventory/mobile/_inventory";
-
-// Summary page styles
-@import "summary/desktop/summary";
-@import "summary/mobile/_summary";
-
- // Common page styles
-@import "common/desktop/touristjs";
-@import "common/mobile/_touristjs";
-@import "font-awesome";
-@import "variables";
+// @import "inventory/desktop/inventory";
+// @import "inventory/desktop/item";
+// @import "inventory/desktop/room";
+// @import "inventory/mobile/_inventory";
+//
+// // Summary page styles
+// @import "summary/desktop/summary";
+// @import "summary/mobile/_summary";
+//
+//  // Common page styles
+// @import "common/desktop/touristjs";
+// @import "common/mobile/_touristjs";
+// @import "font-awesome";
+// @import "variables";
 @import "imports";
-@import "fonts";
+// @import "fonts";
+@import "blair";
