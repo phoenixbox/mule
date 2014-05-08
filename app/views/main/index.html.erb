@@ -16,22 +16,50 @@
       </div>
 
       <div class="inner cover">
-        <h1 class="cover-heading">Mule</h1>
-        <%= form_tag do %>
-          <p class="lead">
-            <%= email_field_tag :email %>
-          </p>
-          <p class="lead">
-          <%= button_tag "Get Started", class: "btn btn-lg btn-block btn-default" %>
-          </p>
-        <% end %>
-      </div>
-
-      <div class="mastfoot">
-        <div class="inner">
-          <p>Mule Moving</p>
+        <div id="logo">
+          <%= image_tag "mule_logo_landscape_200.png", class: "img-responsive" %>
         </div>
+        <h1 class="cover-heading">Makes Moving Simple</h1>
+        <p class="lead">
+          Get Matched with a Mover Today!
+        </p>
+        <%= form_tag do %>
+        <div class="field">
+          <%= email_field_tag :email %>
+        </div>
+        <div class="field">
+          <%= button_tag "Get Started", class: "btn btn-get-started" %>
+        </div>
+        <% end %>
       </div>
     </div>
   </div>
 </div>
+<div class="row highlights">
+  <div class="col-md-4 highlight-trust">
+    <%= image_tag "dollar_bill_icon_aqua_240.png", class: "img-responsive" %>
+    <h1>Trust</h1>
+    <h3 class="highlight">
+      Find out if your movers are insured.
+    </h3>
+  </div>
+  <div class="col-md-4 highlight-trans">
+    <%= image_tag "dollar_bill_icon_aqua_240.png", class: "img-responsive" %>
+    <h1>Transparancy</h1>
+    <h3 class="highlight">
+      No Hidden Costs! Once we get information about your move, our quotes are final.
+    </h3>
+  </div>
+  <div class="col-md-4 highlight-control">
+    <%= image_tag "dollar_bill_icon_aqua_240.png", class: "img-responsive" %>
+    <h1>Control</h1>
+    <h3 class="highlight">
+      Your move in your hands, every step of the process.
+    </h3>
+  </div>
+</div>
+<div class="row footer">
+  <hr>
+  <h1 class="footer">Helping You Through The Big Moves in Life.</h1>
+</div>
+<div class="foot-space"></div>
