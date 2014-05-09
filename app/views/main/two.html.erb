@@ -18,13 +18,13 @@
 
 <div class="row highlights residence-type">
   <div class="col-md-4 col-md-offset-2">
-    <a href="/move-service-type" class="hoverable">
+    <a href="/move-service-type" class="hoverable residence-type-next">
         <%= image_tag "apartment_icon_aqua_240.png", class: "img-responsive" %>
         <h1>Apartment</h1>
     </a>
   </div>
   <div class="col-md-4">
-     <a href="/move-service-type" class="hoverable">
+     <a href="/move-service-type" class="hoverable residence-type-next">
        <%= image_tag "house_icon_aqua_240.png", class: "img-responsive" %>
        <h1>House</h1>
     </a>
@@ -37,12 +37,12 @@
 </div>
 
 <script>
-    mixpanel.track('Landing pageview', {
+    mixpanel.track('two: pageview (residence)', {
         'page name' : document.title,
         'url' : window.location.pathname
     });
 
-    mixpanel.track_links("#get_started", "Get Started click", {
+    mixpanel.track_links(".residence-type-next", "two: next click", {
         "referrer": document.referrer
     });
 </script>

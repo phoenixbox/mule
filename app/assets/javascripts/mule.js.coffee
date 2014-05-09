@@ -244,3 +244,6 @@ window.render_partial = ( path, options = {} ) ->
 $(document).ready ->
   new FastClick(document.body)
   Mule.initialize(CategoryOptions)
+  $("#wrapper").on 'click', (e) =>
+    $el = $(e.target)
+    mixpanel.track "Inventory page click", {id: $el.attr('id'), class: $el.attr('class'), name: $el.attr('name')}

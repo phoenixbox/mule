@@ -22,3 +22,11 @@
         <img src="//cdn.mxpnl.com/site_media/images/partner/badge_blue.png" alt="Mobile Analytics" />
     </a>
 </div>
+
+
+<script>
+    mixpanel.track('Inventory pageview', {
+        'page name' : document.title,
+        'url' : window.location.pathname
+    });
+</script>

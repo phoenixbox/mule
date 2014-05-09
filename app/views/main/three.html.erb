@@ -18,14 +18,14 @@
 
 <div class="row highlights residence-type">
   <div class="col-md-4 col-md-offset-2">
-      <a href="/addresses" class="hoverable">
+      <a href="/addresses" class="hoverable service-type-next">
           <%= image_tag "self_service_icon_aqua_240.png", class: "img-responsive" %>
               <h1>No</h1>
               </a>
 
   </div>
   <div class="col-md-4">
-      <a href="/addresses" class="hoverable">
+      <a href="/addresses" class="hoverable service-type-next">
           <%= image_tag "full_service_icon_aqua_240.png", class: "img-responsive" %>
               <h1>Yes</h1>
               <p>(This will cost extra)</p>
@@ -40,12 +40,12 @@
 </div>
 
 <script>
-    mixpanel.track('Landing pageview', {
+    mixpanel.track('three: pageview (service)', {
         'page name' : document.title,
         'url' : window.location.pathname
     });
 
-    mixpanel.track_links("#get_started", "Get Started click", {
+    mixpanel.track_links(".service-type-next", "three: next click", {
         "referrer": document.referrer
     });
 </script>

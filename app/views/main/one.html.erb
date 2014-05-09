@@ -60,12 +60,12 @@
 </div>
 
 <script>
-    mixpanel.track('Landing pageview', {
+    mixpanel.track('one: pageview (landing)', {
         'page name' : document.title,
         'url' : window.location.pathname
     });
 
-    mixpanel.track_links("#get_started", "Get Started click", {
+    mixpanel.track_links("#get_started", "one: next click", {
         "referrer": document.referrer
     });
 </script>
