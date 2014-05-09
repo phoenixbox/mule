@@ -1,11 +1,5 @@
-<div class='nav'>
-  <button href="/logout" id="logout" class="pull-right btn btn-default btn-xs">Logout</button>
-  <div class='logo'>
-  </div>
-</div>
 <div class='inventory-wrapper'>
   <div class='summary-header'>Create Your Inventory</div>
-  <div class="personalization"><%= @user.get('email') %></div>
   <div class="rooms-wrapper">
     <div class="overview">
       <div class="button-container">

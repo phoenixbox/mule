@@ -13,82 +13,109 @@ $get-started-border: rgba(0, 0, 0, 0.1);
 $dense: Dense-Regular;
 
 /* Links */
-a,
-a:focus,
-a:hover {
-  color: white;
-}
 
 html,
 body {
-  height: 100%;
-  background-color: #333;
-  overflow-x: hidden;
-  overflow-y: scroll;
+    height: 100%;
+    background-color: white;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
+
+a,
+a:focus,
+a:hover {
+    color: black;
+    text-decoration: none;
+}
+
 body {
-  color: #fff;
-  text-align: center;
+    color: #fff;
+    text-align: center;
+}
+
+.hoverable:hover {
+    img {
+        background-color: purple;
+    }
+}
+
+.tour-container {
+    color: black;
 }
 
 .site-wrapper {
-  display: table;
-  width: 100%;
-  height: 85%; /* For at least Firefox */
-  min-height: 85%;
-  background-image: url(<%= asset_path 'landing_hero.png' %>);
-  background-repeat: no-repeat;
-  background-size: cover;
+    a,
+    a:focus,
+    a:hover {
+        color: white;
+    }
+
+    display: table;
+    width: 100%;
+    height: 85%; /* For at least Firefox */
+    min-height: 85%;
+    background-image: url(<%= asset_path 'landing_hero.png' %>);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &.not-landing {
+        height: 10%;
+        min-height: 10%;
+    }
 }
+
 .site-wrapper-inner {
-  display: table-cell;
-  vertical-align: top;
+    display: table-cell;
+    vertical-align: top;
 }
+
 .cover-container {
-  margin-right: auto;
-  margin-left: auto;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .inner {
-  padding: 30px;
+    padding: 30px;
 }
 
 #logo {
 }
 
-
 /*
  * Header Nav stuff
  */
 .masthead-brand {
-  margin-top: 10px;
-  margin-bottom: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .masthead-nav > li {
-  display: inline-block;
+    display: inline-block;
 }
+
 .masthead-nav > li + li {
-  margin-left: 20px;
+    margin-left: 20px;
 }
+
 .masthead-nav > li > a {
-  padding-right: 0;
-  padding-left: 0;
-  font-size: 16px;
-  font-weight: bold;
-  color: #fff; /* IE8 proofing */
-  color: rgba(255,255,255,.75);
-  text-shadow: 0 1px 3px $white50;
-  border-bottom: 2px solid transparent;
+    padding-right: 0;
+    padding-left: 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff; /* IE8 proofing */
+    color: rgba(255, 255, 255, .75);
+    text-shadow: 0 1px 3px $white50;
+    border-bottom: 2px solid transparent;
 }
 
 @media (min-width: 768px) {
-  .masthead-brand {
-    float: left;
-  }
-  .masthead-nav {
-    float: right;
-  }
+    .masthead-brand {
+        float: left;
+    }
+    .masthead-nav {
+        float: right;
+    }
 }
 
 // END HEADER NAV
@@ -98,96 +125,97 @@ body {
  */
 
 .cover {
-  padding: 0 20px;
-  text-shadow: 0 1px 3px $white50;
+    padding: 0 20px;
+    text-shadow: 0 1px 3px $white50;
 }
 
 .cover #logo {
-  margin-left: auto;
-  margin-right: auto;
-  display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-block;
 }
 
 .cover-heading {
-  font-size: 4.5em;
+    font-size: 4.5em;
 }
 
 .cover .so-nice {
-  max-width: 450px;
-  margin-left: auto;
-  margin-right: auto;
+    max-width: 450px;
+    margin-left: auto;
+    margin-right: auto;
 
-  .field {
-    margin-bottom: 0.75em;
-  }
+    .field {
+        margin-bottom: 0.75em;
+    }
 
-  .btn-get-started, .btn-get-started:hover, .btn-get-started:active {
-    @extend .btn-block;
-    @extend .btn-lg;
-    @include button-variant($get-started-color, $get-started-background, $get-started-border);
-    text-shadow: none;
-  }
+    .btn-get-started, .btn-get-started:hover, .btn-get-started:active {
+        @extend .btn-block;
+        @extend .btn-lg;
+        @include button-variant($get-started-color, $get-started-background, $get-started-border);
+        text-shadow: none;
+    }
 
-  input[type="text"], input[type="email"] {
-    color: $white50;
-    height: 48px;
-    text-decoration: none solid $white50;
-    width: 100%;
-    background: rgba(255, 255, 255, 0.901961) none repeat scroll 0% 0% / auto padding-box border-box;
-    border: 1px solid rgba(255, 255, 255, 0);
-    border-radius: 6px;
-    font: normal normal normal 18px/normal 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
-    margin: 0px;
-    outline: $white50 none 0px;
-    padding: 12px;
-  }
+    input[type="text"], input[type="email"] {
+        color: $white50;
+        height: 48px;
+        text-decoration: none solid $white50;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.901961) none repeat scroll 0% 0% / auto padding-box border-box;
+        border: 1px solid rgba(255, 255, 255, 0);
+        border-radius: 6px;
+        font: normal normal normal 18px/normal 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+        margin: 0px;
+        outline: $white50 none 0px;
+        padding: 12px;
+    }
 
-} // END FORM
+}
 
+// END FORM
 
 // Below fold highlights
 
 .highlights {
-  background: white;
-  border-top: 5px solid $mule-aqua;
-  color: black;
+    background: white;
+    color: black;
 
-  img {
-    margin-left: auto;
-    margin-right: auto;
-  }
-  h1, h2, h3 {
-    font-weight: 100;
-  }
+    img {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    h1, h2, h3 {
+        font-weight: 100;
+    }
+
+    &.add-border {
+        border-top: 5px solid $mule-aqua;
+    }
+
+    &.residence-type {
+        min-height: 600px;
+    }
 }
-
-div[class^="highlight"] {
-}
-
-.hightlight-trust {}
-.hightlight-trans {}
-.hightlight-control {}
-
 
 // Footer
 div.footer {
-  background: white;
-
-  hr {
-    border-top: 3px solid $mule-aqua;
-    margin-left: 20%;
-    margin-right: 20%;
-  }
+    background: white;
+    hr {
+        border-top: 3px solid $mule-aqua;
+        margin-left: 20%;
+        margin-right: 20%;
+    }
 }
+
 h1.footer {
-  color: black;
-  margin: 1em;
+    color: black;
+    margin: 1em;
 }
 
 .foot-space {
-  background: $mule-aqua;
-  height: 50px;
-  width: 100%;
+    background: $mule-aqua;
+    height: 50px;
+    width: 100%;
+
 }
 
 /*
@@ -195,25 +223,25 @@ h1.footer {
  */
 
 @media (min-width: 768px) {
-  /* Pull out the header and footer */
-  .masthead {
-    position: fixed;
-    top: 0;
-  }
-  /* Start the vertical centering */
-  .site-wrapper-inner {
-    vertical-align: middle;
-  }
-  /* Handle the widths */
-  .masthead,
-  .cover-container {
-    width: 100%; /* Must be percentage or pixels for horizontal alignment */
-  }
+    /* Pull out the header and footer */
+    .cover-container .masthead {
+        position: fixed;
+        top: 0;
+    }
+    /* Start the vertical centering */
+    .site-wrapper-inner {
+        vertical-align: middle;
+    }
+    /* Handle the widths */
+    .masthead,
+    .cover-container {
+        width: 100%; /* Must be percentage or pixels for horizontal alignment */
+    }
 }
 
 @media (min-width: 992px) {
-  .masthead,
-  .cover-container {
-    width: 800px;
-  }
+    .masthead,
+    .cover-container {
+        width: 800px;
+    }
 }

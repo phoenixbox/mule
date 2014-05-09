@@ -10,20 +10,15 @@ class UsersController < ApplicationController
   end
 
   def create
-  	@user = User.create(user_params)
-    rooms = params[:user][:rooms].to_s.to_i
-  	if rooms && @user.save
-      rooms.times{|i| @user.rooms.create(name: "room-#{i+1}")}
-      session[:user_id] = @user.id
-  		redirect_to inventory_path
-  	else
-  	  redirect_to root_path
-  	end
+  	@user = User.create!(user_params)
+    @user.rooms.create(name: "room-1")
+    session[:user_id] = @user.id
+    redirect_to inventory_path
   end
 
 private
 
   def user_params
-  	params.require(:user).permit(:email)
+    {email: "#{Time.now.to_i}@example.com"}
   end
 end

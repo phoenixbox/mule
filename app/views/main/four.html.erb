@@ -1,0 +1,71 @@
+<div class="site-wrapper not-landing">
+  <div class="site-wrapper-inner">
+    <div class="cover-container">
+      <div class="masthead clearfix">
+        <div class="inner">
+          <h3 class="masthead-brand">
+            Mule
+          </h3>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+<div class="row footer" style="margin: 30px 0">
+    <h1 class="footer">Where are you moving?</h1>
+</div>
+
+<div class="row highlights residence-type">
+
+    <div class="row">
+
+
+  <div class="col-md-5 col-md-offset-1">
+
+          <h1>From</h1>
+          <div class="col-md-6">
+          <input type="text" placeholder="From City" name="current-city" class="form-control" >
+          </div>
+          <div class="col-md-6">
+          <%= select_tag :state, options_for_select(us_states, "CO"), class: "form-control" %>
+          </div>
+  </div>
+  <div class="col-md-5">
+          <h1>To</h1>
+          <div class="col-md-6">
+              <input type="text" placeholder="To City" name="new-city" class="form-control" >
+          </div>
+          <div class="col-md-6">
+              <%= select_tag :state, options_for_select(us_states, "CO"), class: "form-control" %>
+          </div>
+  </div>
+    </div>
+          <div class="row" style="margin-top: 60px;">
+                  <div class="cover">
+                  <div class="so-nice">
+                      <div class="field">
+                        <form action="/users" method="POST">
+                            <input type="submit" class="btn btn-get-started" value="Next">
+                        </form>
+                      </div>
+                  </div>
+                              </div>
+                              </div>
+</div>
+<div class="foot-space" style="padding: 20px; height: 70px">
+    <a href="https://mixpanel.com/f/partner" class="pull-right">
+        <img src="//cdn.mxpnl.com/site_media/images/partner/badge_blue.png" alt="Mobile Analytics" />
+    </a>
+</div>
+
+<script>
+    mixpanel.track('Landing pageview', {
+        'page name' : document.title,
+        'url' : window.location.pathname
+    });
+
+    mixpanel.track_links("#get_started", "Get Started click", {
+        "referrer": document.referrer
+    });
+</script>

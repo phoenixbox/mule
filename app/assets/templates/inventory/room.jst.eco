@@ -1,6 +1,6 @@
 <div class="room-inventory">
   <div class='header'>
-    <div class='toggle-room'>
+    <div class='toggle-room open'>
       <span class="glyphicon"></span>
     </div>
     <div class='header-details'>
@@ -18,7 +18,7 @@
       </div>
     </div>
   </div>
-  <div class='contents-form'>
+  <div class='contents-form open'>
     <div class='row category-container'>
     </div>
   <div class="save">
