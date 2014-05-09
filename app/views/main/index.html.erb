@@ -1,17 +1,11 @@
 <div class="site-wrapper">
   <div class="site-wrapper-inner">
     <div class="cover-container">
-
       <div class="masthead clearfix">
         <div class="inner">
           <h3 class="masthead-brand">
             Mule
           </h3>
-          <ul class="nav masthead-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#">Features</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
         </div>
       </div>
 
@@ -23,14 +17,11 @@
         <p class="lead">
           Get Matched with a Mover Today!
         </p>
-        <%= form_tag do %>
-        <div class="field">
-          <%= email_field_tag :email %>
+        <div class="so-nice">
+            <div class="field">
+              <%= button_tag "Get Started", class: "btn btn-get-started", id: "get_started" %>
+            </div>
         </div>
-        <div class="field">
-          <%= button_tag "Get Started", class: "btn btn-get-started", id: "get_started" %>
-        </div>
-        <% end %>
       </div>
     </div>
   </div>
