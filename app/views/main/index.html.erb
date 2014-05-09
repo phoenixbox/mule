@@ -28,7 +28,7 @@
           <%= email_field_tag :email %>
         </div>
         <div class="field">
-          <%= button_tag "Get Started", class: "btn btn-get-started" %>
+          <%= button_tag "Get Started", class: "btn btn-get-started", id: "get_started" %>
         </div>
         <% end %>
       </div>
@@ -62,4 +62,19 @@
   <hr>
   <h1 class="footer">Helping You Through The Big Moves in Life.</h1>
 </div>
-<div class="foot-space"></div>
+<div class="foot-space" style="padding: 20px; height: 70px">
+    <a href="https://mixpanel.com/f/partner" class="pull-right">
+        <img src="//cdn.mxpnl.com/site_media/images/partner/badge_blue.png" alt="Mobile Analytics" />
+    </a>
+</div>
+
+<script>
+    mixpanel.track('Landing pageview', {
+        'page name' : document.title,
+        'url' : window.location.pathname
+    });
+
+    mixpanel.track_links("#get_started", "Get Started click", {
+        "referrer": document.referrer
+    });
+</script>
