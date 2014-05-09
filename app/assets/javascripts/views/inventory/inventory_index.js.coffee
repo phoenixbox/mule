@@ -30,6 +30,7 @@ class Mule.Views.InventoryIndex extends Backbone.View
 
   summary: (e) ->
     e.preventDefault()
+    mixpanel.track "FINISH: click to summary!"
     @router.navigate('summary', trigger: true)
     return
 

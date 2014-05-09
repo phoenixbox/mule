@@ -5,7 +5,6 @@
 <div class='inventory-summary'>
 	<h1>Your Inventory</h1>
 	<a href="/inventory">back</a>
-	<h1><%= @user.get('email') %></h1>
 	<% if @rooms.length: %>
     <div class="room-count">You have <%= @rooms.length %> rooms</div>
 	  <% for room in @rooms.models: %>
